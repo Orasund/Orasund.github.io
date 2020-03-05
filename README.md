@@ -1,6 +1,6 @@
 # Games and Projects done by Lucas Payr
 
-* [Katakomben](Orasund.github.io/elm-playground/Katakomben)
+* [Katakomben](/elm-playground/Katakomben)
 
 ## Welcome to GitHub Pages
 
