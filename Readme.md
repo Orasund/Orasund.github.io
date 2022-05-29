@@ -1,0 +1,1 @@
+Use `elmstatic build` to build
