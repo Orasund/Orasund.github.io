@@ -3,18 +3,15 @@ title: "TDD, Where Did It All Go Wrong"
 tags: video
 ---
 
-This is another example of a blog post.
+[Source](https://www.youtube.com/watch?v=EZ05e7EMOLM)
 
-# Heading 1
+Type driven might be good, but it slows everything done.
 
-## Heading 2
+* Pipeline slows down
+* Time until the code gets shipped slows down
+* Tests get added that actually don't help a lot
+* Refactoring gets harder
 
-### Heading 3
+Instead one should focus the tests on the individual use cases.
 
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
-
-**Bold** *italic* _underline_ `inline code`.
+* Make test that implement the feature not the implementation detail.

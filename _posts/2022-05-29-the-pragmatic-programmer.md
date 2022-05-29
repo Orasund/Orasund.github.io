@@ -3,6 +3,9 @@ title: "The Pragmatic Programmer"
 tags: book
 ---
 
-## Test
+## Chapter 5: Your Knowledge Portfolio (Page 37 in pdf)
 
-It allows you to write pages in Elm, and blog posts in Markdown. 
+Goals
+
+* One new language every year -> exercism
+* One technical book each quarter
