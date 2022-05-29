@@ -1,5 +1,6 @@
 ---
 title: "The Pragmatic Programmer"
+tags: book
 ---
 
 ## Test

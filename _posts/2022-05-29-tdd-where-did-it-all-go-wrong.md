@@ -1,6 +1,6 @@
 ---
-title: "Another post"
-tags: other
+title: "TDD, Where Did It All Go Wrong"
+tags: video
 ---
 
 This is another example of a blog post.

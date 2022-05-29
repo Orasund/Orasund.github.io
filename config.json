@@ -6,8 +6,8 @@
     },
     "feed": {
         "type": "rss",
-        "title": "Author's fancy blog",
-        "description": "Author's blog posts",
+        "title": "Randnotizen und Codezeilen",
+        "description": "Randnotizen und Codezeilen",
         "id": "https://example.com",
         "link": "https://example.com/posts",
         "image": "https://example.com/img/logo.png",
@@ -20,7 +20,7 @@
         }
     },
     "tags": [
-        "other",
-        "software"
+        "video",
+        "book"
     ]
 }
