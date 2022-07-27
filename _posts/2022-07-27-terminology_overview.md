@@ -1,6 +1,6 @@
 ---
 title: "Terminology Overview"
-tags: terminology
+tags: Collection
 ---
 
 **MODERN** Terminology. If something is not here... maybe its outdated?
