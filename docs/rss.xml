@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Randnotizen und Codezeilen</title>
+        <title>Programmers side nodes</title>
         <link>https://example.com/posts</link>
-        <description>Randnotizen und Codezeilen</description>
-        <lastBuildDate>Sun, 29 May 2022 17:39:47 GMT</lastBuildDate>
+        <description>Programmers side nodes</description>
+        <lastBuildDate>Wed, 27 Jul 2022 17:27:42 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
         <image>
-            <title>Randnotizen und Codezeilen</title>
+            <title>Programmers side nodes</title>
             <url>https://example.com/img/logo.png</url>
             <link>https://example.com/posts</link>
         </image>
@@ -19,31 +19,61 @@
             <link>https://example.com/posts/2022-05-29-tdd-where-did-it-all-go-wrong</link>
             <guid>https://example.com/posts/2022-05-29-tdd-where-did-it-all-go-wrong</guid>
             <pubDate>Sun, 29 May 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[This is another example of a blog post.
+            <description><![CDATA[Source
 
-Heading 1
+Type driven might be good, but it slows everything done.
 
-Heading 2
+Pipeline slows down
+Time until the code gets shipped slows down
+Tests get added that actually don't help a lot
+Refactoring gets harder
 
-Heading 3
+Instead one should focus the tests on the individual use cases.
 
-Heading 4
-
-Heading 5
-
-Heading 6
-
-Bold italic underline inline code....]]></description>
+Make test that implement the feature not the implementation detail....]]></description>
         </item>
         <item>
             <title><![CDATA[The Pragmatic Programmer]]></title>
             <link>https://example.com/posts/2022-05-29-the-pragmatic-programmer</link>
             <guid>https://example.com/posts/2022-05-29-the-pragmatic-programmer</guid>
             <pubDate>Sun, 29 May 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Test
+            <description><![CDATA[Chapter 5: Your Knowledge Portfolio (Page 37 in pdf)
 
-It allows you to write pages in Elm, and blog posts in Markdown.
+Goals
+
+One new language every year -> exercism
+One technical book each quarter
 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[The Little Typer]]></title>
+            <link>https://example.com/posts/2022-06-11-the-little-typer</link>
+            <guid>https://example.com/posts/2022-06-11-the-little-typer</guid>
+            <pubDate>Sat, 11 Jun 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Terminology Overview]]></title>
+            <link>https://example.com/posts/2022-07-27-terminology_overview</link>
+            <guid>https://example.com/posts/2022-07-27-terminology_overview</guid>
+            <pubDate>Wed, 27 Jul 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[MODERN Terminology. If something is not here... maybe its outdated?
+
+Code Structuring
+
+Test Driven Design (TDD)
+
+  Create tests first, then implement them and recheck if the tests work
+
+  This does not mean to test everything. Or to have a test coverage of 80%.
+
+  Video: Ian Cooper - TDD, Where did it all go wrong
+
+Behaviour Driven Design (BDD)
+
+  Same as TDD but rephrased: Create an executable Specification (can be a test), then implement it and check if the specification holds.
+
+  Daniel Terho...]]></description>
         </item>
     </channel>
 </rss>
