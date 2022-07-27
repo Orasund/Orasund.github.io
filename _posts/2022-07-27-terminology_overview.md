@@ -1,4 +1,3 @@
-
 ---
 title: "Terminology Overview"
 tags: terminology
