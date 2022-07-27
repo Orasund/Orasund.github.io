@@ -36,6 +36,12 @@ tags: Collection
   * Create Objects only if you have to and remove them again once you don't need them anymore. 
   
   Good fits: DDD, Reactive Programming, Actor Model, Onion Architecture
+
+* Reactive Programming
+
+  Model Events as streams of data. Use functions to manipulate this data.
+  
+  Good for front-End or Streaming in the backend.
   
 * Keep it Simple Stupid (KISS)
   
@@ -47,6 +53,6 @@ tags: Collection
   
   Best combinied with Functional Programming
   
-  Does not replace Comment.
+  Does not replace comments.
   
   
