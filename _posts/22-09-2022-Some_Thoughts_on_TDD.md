@@ -1,4 +1,7 @@
-# Some Thoughts on Test Driven Development
+---
+title: "Some Thoughts on Test Driven Development"
+tags: Collection
+---
 
 Tests are quite useful. They can verify that our code behaves correctly. 
 The be used as save guards to ensure we don't break behaviour in unexpected places.
