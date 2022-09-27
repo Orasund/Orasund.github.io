@@ -3,11 +3,26 @@ title: "Some Thoughts on Test Driven Development"
 tags: Collection
 ---
 
-Tests are quite useful. They can verify that our code behaves correctly. 
-The be used as save guards to ensure we don't break behaviour in unexpected places.
-They can also be used as documentation to explain the behaviour of a code via examples.
+tltr;
+* Make less tests with higher coverage.
+* Write that are more valuable than the time they take to run.
+* Use tests as requirements not as documentation.
 
-But Test Driven Development goes a bit further than that. In TDD - or at least the form of TDD, that i encountered - you try to test as much as possible.
+# What is TDD
+
+The core idea of TDD is to first write down your requirements as tests and then implement them. If all tests passed, then you can assume that you implemented a correct soluction.
+
+[Video: Ian Cooper - TDD, Where did it all go wrong](https://www.youtube.com/watch?v=EZ05e7EMOLM)
+[Daniel Terhorst-North about the creation of BDD](https://open.spotify.com/episode/5Pkv1z1jwix8sVXPj1yqBD?si=FccsNh9KSnmhVtKTDKMdJw)
+
+"Behaviour Driven Development" will often be used to empathis this.
+
+This style is very hard to actually pull off, as you are required to actually have requirements in form of tests to begin with.
+
+Thats why the industry mostly uses TDD as a synonym for a high code coverage.
+
+# Reasons against TDD
+
 From my experience the original intend of TDD was been completely lost:
 If someone says they develop test driven, then they don't mean that they start with test and that they see their tests as some form of specification.
 Rather, I noticest that what they actually mean is that they try to have a high test coverage - usually at about 80%.
@@ -34,5 +49,11 @@ My guess for a reason, why this might be the case, would be the more expressive 
 A type annotation is in a sense a proof (see Curry–Howard correspondence). So i somehow see a relation to the whole validate vs verify topic.
 But that a topic for another day.
 
-As a small after thought: Another reason against a lot of tests is that it slows everything down - my time spent on a ticket, the time the pipeline need to complete, the time to refactor.
-Where as less tests that are really meaningfull and bring a lot of back for the buck will have the same effect but will waste less of my time.
+## Code Coverage of 80% does not come naturally
+I've never seen anyone actually do TDD in a way where they end up with a code coverage of 80% by their first attempt. Most often you have around 50% by the first try, then check your code coverage and create the missing tests. Thats because a lot of tests are useless(Mocking a lot with no real data) or testing unwanted behaviour(Fail states).
+
+## Harder to refactor
+If you go for a bottom-up approach, then you are also directly testing implementation decitions. This means whenever you want to switch to a different implementation, you will have to adapt or rewrite all associated tests.
+
+## Longer Pipeline Time
+A project with a code coverage of 80% or a bottom-up-TDD approach will take much longer as to complete the pipeline. This slows down development my a massive amount. It's not only that the CD/CI process takes longer, developers are thrown out of their flow if they have to wait 30 to 60min just to see if the PR is green or not.
