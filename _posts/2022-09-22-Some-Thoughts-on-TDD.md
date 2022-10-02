@@ -49,6 +49,9 @@ My guess for a reason, why this might be the case, would be the more expressive 
 A type annotation is in a sense a proof (see Curry–Howard correspondence). So i somehow see a relation to the whole validate vs verify topic.
 But that a topic for another day.
 
+## Mocking leads to false assumtions
+Mocking is needed to acutally archive TDD but this might result in false mocks. But writing tests without mocks can be done. The solution is to seperate effects from logic and then only test the logic. To tests effect we can use system tests.
+
 ## Code Coverage of 80% does not come naturally
 I've never seen anyone actually do TDD in a way where they end up with a code coverage of 80% by their first attempt. Most often you have around 50% by the first try, then check your code coverage and create the missing tests. Thats because a lot of tests are useless(Mocking a lot with no real data) or testing unwanted behaviour(Fail states).
 
