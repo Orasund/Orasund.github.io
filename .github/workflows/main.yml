@@ -63,10 +63,7 @@ jobs:
       - name: elm-tooling install
         run: npx --no-install elm-tooling install
       
-      - name: elmstatic install
-        run: npx --no-install elmstatic install
-      
       # Finally, run whatever you want.
 
       - name: elmstatic build
-        run: elmstatic build
+        run: npx --no-install elmstatic build
