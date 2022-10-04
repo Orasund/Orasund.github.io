@@ -4,7 +4,7 @@
         <title>Programmers side nodes</title>
         <link>https://example.com/posts</link>
         <description>Programmers side nodes</description>
-        <lastBuildDate>Wed, 27 Jul 2022 17:27:42 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 04 Oct 2022 08:28:24 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -54,8 +54,8 @@ One technical book each quarter
         </item>
         <item>
             <title><![CDATA[Terminology Overview]]></title>
-            <link>https://example.com/posts/2022-07-27-terminology_overview</link>
-            <guid>https://example.com/posts/2022-07-27-terminology_overview</guid>
+            <link>https://example.com/posts/2022-07-27-terminology-overview</link>
+            <guid>https://example.com/posts/2022-07-27-terminology-overview</guid>
             <pubDate>Wed, 27 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[MODERN Terminology. If something is not here... maybe its outdated?
 
@@ -74,6 +74,37 @@ Behaviour Driven Design (BDD)
   Same as TDD but rephrased: Create an executable Specification (can be a test), then implement it and check if the specification holds.
 
   Daniel Terho...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Tracery.io]]></title>
+            <link>https://example.com/posts/2022-09-18-tracery-io</link>
+            <guid>https://example.com/posts/2022-09-18-tracery-io</guid>
+            <pubDate>Sun, 18 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Practical Low-Effort PCG: Tracery and data-oriented PCG authoring
+https://www.youtube.com/watch?v=Np9FRl847qM
+
+Poems in an accidental language
+https://www.youtube.com/watch?v=NlClzGbemu8
+...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Some Thoughts on Test Driven Development]]></title>
+            <link>https://example.com/posts/2022-09-22-Some-Thoughts-on-TDD</link>
+            <guid>https://example.com/posts/2022-09-22-Some-Thoughts-on-TDD</guid>
+            <pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[tltr;
+Make less tests with higher coverage.
+Write that are more valuable than the time they take to run.
+Use tests as requirements not as documentation.
+
+What is TDD
+
+The core idea of TDD is to first write down your requirements as tests and then implement them. If all tests passed, then you can assume that you implemented a correct soluction.
+
+Video: Ian Cooper - TDD, Where did it all go wrong
+Daniel Terhorst-North about the creation of BDD
+
+"Behaviour Driven Development" will often be used to ...]]></description>
         </item>
     </channel>
 </rss>
