@@ -5629,7 +5629,7 @@ var $author$project$Page$header = A2(
 		[
 			$elm$html$Html$Attributes$class('navigation'),
 			$Orasund$elm_layout$Layout$spaceBetween,
-			$Orasund$elm_layout$Layout$centerContent
+			$Orasund$elm_layout$Layout$alignCenter
 		]),
 	_List_fromArray(
 		[
