@@ -56,20 +56,6 @@ styles =
         , class "navigation"
             [ textAlign center
             , backgroundColor <| hex "f2fae8"
-            , padding <| px 10
-            , marginTop <| px -20
-            , descendants
-                [ ul
-                    [ margin <| px 0
-                    , padding <| px 0
-                    , wideScreen [ lineHeight <| px 64 ]
-                    ]
-                , li
-                    [ display inlineBlock
-                    , marginRight <| px 20
-                    ]
-                ]
-            , wideScreen [ marginTop <| px 0, padding <| px 0, textAlign right ]
             , Css.padding <| Css.px 16
             ]
         , class "content" [ Css.maxWidth <| vw 100 ]

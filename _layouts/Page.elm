@@ -55,7 +55,7 @@ markdown s =
 header : Html Never
 header =
     [ a [ href "/posts" ]
-        [ text "Functional Field Notes" ]
+        [ text "Functional Fieldnotes" ]
         |> Layout.el []
     , [ a [ href "/about" ]
             [ text "About" ]
