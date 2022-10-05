@@ -8974,7 +8974,9 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$maxWidth(
-							$rtfeldman$elm_css$Css$vw(100))
+							$rtfeldman$elm_css$Css$vw(100)),
+							$rtfeldman$elm_css$Css$padding(
+							$rtfeldman$elm_css$Css$px(16))
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
