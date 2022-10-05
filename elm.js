@@ -5472,6 +5472,9 @@ var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
 var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $Orasund$elm_layout$Layout$alignCenter = A2($elm$html$Html$Attributes$style, 'align-items', 'center');
 var $Orasund$elm_layout$Layout$centerContent = A2($elm$html$Html$Attributes$style, 'justify-content', 'center');
+var $Orasund$elm_layout$Layout$alignBaseline = A2($elm$html$Html$Attributes$style, 'align-items', 'baseline');
+var $Orasund$elm_layout$Layout$centered = _List_fromArray(
+	[$Orasund$elm_layout$Layout$alignBaseline, $Orasund$elm_layout$Layout$alignCenter]);
 var $Orasund$elm_layout$Layout$el = F2(
 	function (attrs, content) {
 		return A2(
@@ -5518,6 +5521,13 @@ var $Orasund$elm_layout$Layout$row = function (attrs) {
 			attrs));
 };
 var $Orasund$elm_layout$Layout$spaceBetween = A2($elm$html$Html$Attributes$style, 'justify-content', 'space-between');
+var $elm$core$String$fromFloat = _String_fromNumber;
+var $Orasund$elm_layout$Layout$spacing = function (n) {
+	return A2(
+		$elm$html$Html$Attributes$style,
+		'gap',
+		$elm$core$String$fromFloat(n) + 'px');
+};
 var $author$project$Page$twitterIcon = function () {
 	var pathNode = A3(
 		$elm$html$Html$node,
@@ -5552,15 +5562,19 @@ var $author$project$Page$footer = A2(
 			A2($Orasund$elm_layout$Layout$el, _List_Nil, $Orasund$elm_layout$Layout$none),
 			A2(
 			$Orasund$elm_layout$Layout$row,
-			_List_Nil,
+			_Utils_ap(
+				_List_fromArray(
+					[
+						$Orasund$elm_layout$Layout$spacing(16)
+					]),
+				$Orasund$elm_layout$Layout$centered),
 			_List_fromArray(
 				[
 					A2(
 					$Orasund$elm_layout$Layout$el,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('link'),
-							$Orasund$elm_layout$Layout$centerContent
+							$elm$html$Html$Attributes$class('link')
 						]),
 					A2(
 						$elm$html$Html$a,
@@ -5576,8 +5590,7 @@ var $author$project$Page$footer = A2(
 					$Orasund$elm_layout$Layout$el,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('link'),
-							$Orasund$elm_layout$Layout$centerContent
+							$elm$html$Html$Attributes$class('link')
 						]),
 					A2(
 						$elm$html$Html$a,
@@ -5594,8 +5607,7 @@ var $author$project$Page$footer = A2(
 					$Orasund$elm_layout$Layout$el,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('link'),
-							$Orasund$elm_layout$Layout$centerContent
+							$elm$html$Html$Attributes$class('link')
 						]),
 					A2(
 						$elm$html$Html$a,
@@ -5635,7 +5647,10 @@ var $author$project$Page$header = A2(
 					]))),
 			A2(
 			$Orasund$elm_layout$Layout$row,
-			_List_Nil,
+			_List_fromArray(
+				[
+					$Orasund$elm_layout$Layout$spacing(16)
+				]),
 			_List_fromArray(
 				[
 					A2(
@@ -5919,7 +5934,6 @@ var $rtfeldman$elm_css$Css$Global$each = F2(
 						snippetCreators))));
 	});
 var $rtfeldman$elm_css$Css$EmUnits = 0;
-var $elm$core$String$fromFloat = _String_fromNumber;
 var $rtfeldman$elm_css$Css$Internal$lengthConverter = F3(
 	function (units, unitLabel, numericValue) {
 		return {
@@ -8996,7 +9010,9 @@ var $author$project$Styles$styles = function () {
 									$rtfeldman$elm_css$Css$padding(
 									$rtfeldman$elm_css$Css$px(0)),
 									$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$right)
-								]))
+								])),
+							$rtfeldman$elm_css$Css$padding(
+							$rtfeldman$elm_css$Css$px(16))
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
@@ -9034,26 +9050,8 @@ var $author$project$Styles$styles = function () {
 											$rtfeldman$elm_css$Css$verticalAlign($rtfeldman$elm_css$Css$baseline)
 										]))
 								])),
-							wideScreen(
-							_List_fromArray(
-								[
-									$rtfeldman$elm_css$Css$lineHeight(
-									$rtfeldman$elm_css$Css$px(64)),
-									$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$right),
-									$rtfeldman$elm_css$Css$Global$descendants(
-									_List_fromArray(
-										[
-											A2(
-											$rtfeldman$elm_css$Css$Global$class,
-											'link',
-											_List_fromArray(
-												[
-													$rtfeldman$elm_css$Css$display($rtfeldman$elm_css$Css$inlineBlock),
-													$rtfeldman$elm_css$Css$marginRight(
-													$rtfeldman$elm_css$Css$px(20))
-												]))
-										]))
-								]))
+							$rtfeldman$elm_css$Css$padding(
+							$rtfeldman$elm_css$Css$px(16))
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
