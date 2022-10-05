@@ -1,4 +1,4 @@
-module Page exposing (footer, header, layout, main, markdown, parseBlocks)
+module Page exposing (footer, header, layout, main, markdown, parseBlocks, tableOfContent)
 
 import Elmstatic exposing (..)
 import Html exposing (..)
@@ -50,6 +50,64 @@ markdown list =
             [ Html.text string ]
     )
         |> Html.div [ attribute "class" "markdown" ]
+
+
+tableOfContent : List Markdown.Block.Block -> List (Html Never)
+tableOfContent list =
+    [ Html.h1 [] [ Html.text "Table of Content" ]
+    , list
+        |> List.filterMap
+            (\block ->
+                case block of
+                    Markdown.Block.Heading headingLevel inlines ->
+                        let
+                            n =
+                                case headingLevel of
+                                    Markdown.Block.H1 ->
+                                        1
+
+                                    Markdown.Block.H2 ->
+                                        2
+
+                                    Markdown.Block.H3 ->
+                                        3
+
+                                    Markdown.Block.H4 ->
+                                        4
+
+                                    Markdown.Block.H5 ->
+                                        5
+
+                                    Markdown.Block.H6 ->
+                                        6
+
+                            text =
+                                inlines
+                                    |> List.map
+                                        (\inline ->
+                                            case inline of
+                                                Markdown.Block.Text s ->
+                                                    s
+
+                                                _ ->
+                                                    ""
+                                        )
+                                    |> String.concat
+                        in
+                        ("...."
+                            |> List.repeat (n - 1)
+                            |> String.concat
+                        )
+                            ++ text
+                            |> Html.text
+                            |> Layout.el []
+                            |> Just
+
+                    _ ->
+                        Nothing
+            )
+        |> Layout.column []
+    ]
 
 
 parseBlocks : String -> List Markdown.Block.Block
@@ -135,62 +193,7 @@ main =
         \content ->
             content.content
                 |> parseBlocks
-                |> (\blocks ->
-                        [ Html.h1 [] [ Html.text "Table of Content" ]
-                        , blocks
-                            |> List.filterMap
-                                (\block ->
-                                    case block of
-                                        Markdown.Block.Heading headingLevel inlines ->
-                                            let
-                                                n =
-                                                    case headingLevel of
-                                                        Markdown.Block.H1 ->
-                                                            1
-
-                                                        Markdown.Block.H2 ->
-                                                            2
-
-                                                        Markdown.Block.H3 ->
-                                                            3
-
-                                                        Markdown.Block.H4 ->
-                                                            4
-
-                                                        Markdown.Block.H5 ->
-                                                            5
-
-                                                        Markdown.Block.H6 ->
-                                                            6
-
-                                                text =
-                                                    inlines
-                                                        |> List.map
-                                                            (\inline ->
-                                                                case inline of
-                                                                    Markdown.Block.Text s ->
-                                                                        s
-
-                                                                    _ ->
-                                                                        ""
-                                                            )
-                                                        |> String.concat
-                                            in
-                                            (".."
-                                                |> List.repeat (n - 1)
-                                                |> String.concat
-                                            )
-                                                ++ text
-                                                |> Html.text
-                                                |> Layout.el []
-                                                |> Just
-
-                                        _ ->
-                                            Nothing
-                                )
-                            |> Layout.column []
-                        , markdown blocks
-                        ]
-                   )
+                |> markdown
+                |> List.singleton
                 |> layout content.title
                 |> Ok
