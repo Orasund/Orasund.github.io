@@ -40,10 +40,10 @@ styles =
             [ fontFamilies [ "Proza Libre", "Helvetica", .value sansSerif ]
             , lineHeight <| Css.em 1.1
             ]
-        , h1 [ fontSize <| Css.em 2.0, marginBottom <| rem 1.61616 ]
-        , h2 [ fontSize <| Css.em 1.33333, marginBottom <| rem 1.21212 ]
-        , h3 [ fontSize <| Css.em 1.2, marginBottom <| rem 0.80808 ]
-        , each [ h4, h5, h6 ] [ fontSize <| Css.em 1.0, marginBottom <| rem 0.60606 ]
+        , class "title" [ fontSize <| Css.em 2.0, marginBottom <| rem 1.61616 ]
+        , h1 [ fontSize <| Css.em 1.33333, marginBottom <| rem 1.21212 ]
+        , h2 [ fontSize <| Css.em 1.2, marginBottom <| rem 0.80808 ]
+        , each [ h3, h5, h6 ] [ fontSize <| Css.em 1.0, marginBottom <| rem 0.60606 ]
         , p [ margin3 auto auto (rem 1.5) ]
         , Css.Global.small [ fontSize <| pct 65 ]
         , class "header-logo"
