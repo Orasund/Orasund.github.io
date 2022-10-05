@@ -52,25 +52,20 @@ markdown s =
     Markdown.toHtmlWith mdOptions [ attribute "class" "markdown" ] s
 
 
-header : List (Html Never)
+header : Html Never
 header =
-    [ div [ class "navigation" ]
-        [ ul []
-            [ li []
-                [ a [ href "/posts" ]
-                    [ text "Posts" ]
-                ]
-            , li []
-                [ a [ href "/about" ]
-                    [ text "About" ]
-                ]
-            , li []
-                [ a [ href "/contact" ]
-                    [ text "Contact" ]
-                ]
-            ]
-        ]
+    [  a [ href "/posts" ]
+            [ text "Posts" ]
+            |> Layout.el []
+        
+    ,   [ a [ href "/about" ]
+            [ text "About" ]
+        
+        , a [ href "/contact" ]
+            [ text "Contact" ]
+        ] |> Layout.row []
     ]
+        |> Layout.row [ class "navigation" , Layout.spaceBetween]
 
 
 footer : Html Never
@@ -105,8 +100,7 @@ footer =
 
 layout : String -> List (Html Never) -> List (Html Never)
 layout title contentItems =
-    header
-        ++ [ div [ class "sidebar" ]
+    [ header, div [ class "sidebar" ]
                 []
            , div [ class "sidebar2" ]
                 []

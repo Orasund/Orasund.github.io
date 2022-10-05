@@ -5611,74 +5611,55 @@ var $author$project$Page$footer = A2(
 				]))
 		]));
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
-var $elm$html$Html$li = _VirtualDom_node('li');
-var $elm$html$Html$ul = _VirtualDom_node('ul');
-var $author$project$Page$header = _List_fromArray(
-	[
-		A2(
-		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('navigation')
-			]),
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$ul,
-				_List_Nil,
+var $author$project$Page$header = A2(
+	$Orasund$elm_layout$Layout$row,
+	_List_fromArray(
+		[
+			$elm$html$Html$Attributes$class('navigation'),
+			$Orasund$elm_layout$Layout$spaceBetween
+		]),
+	_List_fromArray(
+		[
+			A2(
+			$Orasund$elm_layout$Layout$el,
+			_List_Nil,
+			A2(
+				$elm$html$Html$a,
 				_List_fromArray(
 					[
-						A2(
-						$elm$html$Html$li,
-						_List_Nil,
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$a,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$href('/posts')
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text('Posts')
-									]))
-							])),
-						A2(
-						$elm$html$Html$li,
-						_List_Nil,
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$a,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$href('/about')
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text('About')
-									]))
-							])),
-						A2(
-						$elm$html$Html$li,
-						_List_Nil,
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$a,
-								_List_fromArray(
-									[
-										$elm$html$Html$Attributes$href('/contact')
-									]),
-								_List_fromArray(
-									[
-										$elm$html$Html$text('Contact')
-									]))
-							]))
-					]))
-			]))
-	]);
+						$elm$html$Html$Attributes$href('/posts')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text('Posts')
+					]))),
+			A2(
+			$Orasund$elm_layout$Layout$row,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$href('/about')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('About')
+						])),
+					A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$href('/contact')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('Contact')
+						]))
+				]))
+		]));
 var $rtfeldman$elm_css$Css$Structure$Selector = F3(
 	function (a, b, c) {
 		return {$: 0, a: a, b: b, c: c};
@@ -9119,46 +9100,45 @@ var $author$project$Styles$styles = function () {
 }();
 var $author$project$Page$layout = F2(
 	function (title, contentItems) {
-		return _Utils_ap(
-			$author$project$Page$header,
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$div,
+		return _List_fromArray(
+			[
+				$author$project$Page$header,
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('sidebar')
+					]),
+				_List_Nil),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('sidebar2')
+					]),
+				_List_Nil),
+				A2(
+				$elm$html$Html$div,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('content')
+					]),
+				_Utils_ap(
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$class('sidebar')
+							A2(
+							$elm$html$Html$h1,
+							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$text(title)
+								]))
 						]),
-					_List_Nil),
-					A2(
-					$elm$html$Html$div,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('sidebar2')
-						]),
-					_List_Nil),
-					A2(
-					$elm$html$Html$div,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$class('content')
-						]),
-					_Utils_ap(
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$h1,
-								_List_Nil,
-								_List_fromArray(
-									[
-										$elm$html$Html$text(title)
-									]))
-							]),
-						contentItems)),
-					$author$project$Page$footer,
-					$author$project$Elmstatic$stylesheet('/styles.css'),
-					$author$project$Styles$styles
-				]));
+					contentItems)),
+				$author$project$Page$footer,
+				$author$project$Elmstatic$stylesheet('/styles.css'),
+				$author$project$Styles$styles
+			]);
 	});
 var $elm$html$Html$span = _VirtualDom_node('span');
 var $author$project$Post$tagsToHtml = function (tags) {
