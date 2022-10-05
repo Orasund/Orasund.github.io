@@ -55,7 +55,6 @@ styles =
             ]
         , class "navigation"
             [ textAlign center
-            , borderBottom3 (px 2) solid (hex "3c8765")
             , backgroundColor <| hex "f2fae8"
             , padding <| px 10
             , marginTop <| px -20
@@ -63,7 +62,7 @@ styles =
                 [ ul
                     [ margin <| px 0
                     , padding <| px 0
-                    , wideScreen [ lineHeight <| px 100 ]
+                    , wideScreen [ lineHeight <| px 64 ]
                     ]
                 , li
                     [ display inlineBlock
@@ -75,7 +74,6 @@ styles =
         , class "content" [ Css.maxWidth <| vw 100 ]
         , class "footer"
             [ textAlign center
-            , borderTop3 (px 2) solid (hex "2f4858")
             , backgroundColor <| hex "348aa7"
             , Css.color <| hex "ffffff"
             , descendants
@@ -83,7 +81,7 @@ styles =
                 , svg [ paddingRight <| px 5, verticalAlign baseline ]
                 ]
             , wideScreen
-                [ lineHeight <| px 80
+                [ lineHeight <| px 64
                 , textAlign right
                 , descendants
                     [ class "link"

@@ -5468,7 +5468,21 @@ var $author$project$Elmstatic$layout = F2(
 			});
 	});
 var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
-var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
+var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
+var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
+var $Orasund$elm_layout$Layout$alignCenter = A2($elm$html$Html$Attributes$style, 'align-items', 'center');
+var $Orasund$elm_layout$Layout$centerContent = A2($elm$html$Html$Attributes$style, 'justify-content', 'center');
+var $Orasund$elm_layout$Layout$el = F2(
+	function (attrs, content) {
+		return A2(
+			$elm$html$Html$div,
+			A2(
+				$elm$core$List$cons,
+				A2($elm$html$Html$Attributes$style, 'display', 'flex'),
+				attrs),
+			_List_fromArray(
+				[content]));
+	});
 var $author$project$Page$githubIcon = function () {
 	var pathNode = A3(
 		$elm$html$Html$node,
@@ -5484,20 +5498,26 @@ var $author$project$Page$githubIcon = function () {
 		'svg',
 		_List_fromArray(
 			[
-				A2($elm$html$Html$Attributes$attribute, 'width', '16'),
-				A2($elm$html$Html$Attributes$attribute, 'height', '16'),
+				A2($elm$html$Html$Attributes$attribute, 'width', '32'),
+				A2($elm$html$Html$Attributes$attribute, 'height', '32'),
 				A2($elm$html$Html$Attributes$attribute, 'viewBox', '0 0 16 16')
 			]),
 		_List_fromArray(
 			[pathNode]));
 }();
-var $elm$html$Html$img = _VirtualDom_node('img');
-var $elm$html$Html$Attributes$src = function (url) {
-	return A2(
-		$elm$html$Html$Attributes$stringProperty,
-		'src',
-		_VirtualDom_noJavaScriptOrHtmlUri(url));
+var $Orasund$elm_layout$Layout$none = $elm$html$Html$text('');
+var $Orasund$elm_layout$Layout$row = function (attrs) {
+	return $elm$html$Html$div(
+		_Utils_ap(
+			_List_fromArray(
+				[
+					A2($elm$html$Html$Attributes$style, 'display', 'flex'),
+					A2($elm$html$Html$Attributes$style, 'flex-direction', 'row'),
+					A2($elm$html$Html$Attributes$style, 'flex-wrap', 'wrap')
+				]),
+			attrs));
 };
+var $Orasund$elm_layout$Layout$spaceBetween = A2($elm$html$Html$Attributes$style, 'justify-content', 'space-between');
 var $author$project$Page$twitterIcon = function () {
 	var pathNode = A3(
 		$elm$html$Html$node,
@@ -5513,89 +5533,81 @@ var $author$project$Page$twitterIcon = function () {
 		'svg',
 		_List_fromArray(
 			[
-				A2($elm$html$Html$Attributes$attribute, 'width', '16'),
-				A2($elm$html$Html$Attributes$attribute, 'height', '16'),
+				A2($elm$html$Html$Attributes$attribute, 'width', '32'),
+				A2($elm$html$Html$Attributes$attribute, 'height', '32'),
 				A2($elm$html$Html$Attributes$attribute, 'viewBox', '0 0 16 16')
 			]),
 		_List_fromArray(
 			[pathNode]));
 }();
 var $author$project$Page$footer = A2(
-	$elm$html$Html$div,
+	$Orasund$elm_layout$Layout$row,
 	_List_fromArray(
 		[
+			$Orasund$elm_layout$Layout$spaceBetween,
 			$elm$html$Html$Attributes$class('footer')
 		]),
 	_List_fromArray(
 		[
+			A2($Orasund$elm_layout$Layout$el, _List_Nil, $Orasund$elm_layout$Layout$none),
 			A2(
-			$elm$html$Html$img,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$alt('Author\'s blog'),
-					$elm$html$Html$Attributes$src('/img/logo.png'),
-					A2($elm$html$Html$Attributes$attribute, 'style', 'float: left; padding-top: 7px'),
-					A2($elm$html$Html$Attributes$attribute, 'width', '75')
-				]),
-			_List_Nil),
-			A2(
-			$elm$html$Html$div,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('link')
-				]),
-			_List_fromArray(
-				[
-					$author$project$Page$githubIcon,
-					A2(
-					$elm$html$Html$a,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$href('https://github.com')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('Author\'s GitHub')
-						]))
-				])),
-			A2(
-			$elm$html$Html$div,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('link')
-				]),
-			_List_fromArray(
-				[
-					$author$project$Page$twitterIcon,
-					A2(
-					$elm$html$Html$a,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$href('https://twitter.com')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('Author\'s Twitter')
-						]))
-				])),
-			A2(
-			$elm$html$Html$div,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('link')
-				]),
+			$Orasund$elm_layout$Layout$row,
+			_List_Nil,
 			_List_fromArray(
 				[
 					A2(
-					$elm$html$Html$a,
+					$Orasund$elm_layout$Layout$el,
 					_List_fromArray(
 						[
-							$elm$html$Html$Attributes$href('https://www.npmjs.com/package/elmstatic')
+							$elm$html$Html$Attributes$class('link'),
+							$Orasund$elm_layout$Layout$centerContent
 						]),
+					A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$href('https://www.linkedin.com/in/lucas-payr-8462911b9/')
+							]),
+						_List_fromArray(
+							[
+								$elm$html$Html$text('Build by Lucas Payr')
+							]))),
+					A2(
+					$Orasund$elm_layout$Layout$el,
 					_List_fromArray(
 						[
-							$elm$html$Html$text('Created with Elmstatic')
-						]))
+							$elm$html$Html$Attributes$class('link'),
+							$Orasund$elm_layout$Layout$centerContent
+						]),
+					A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$href('https://github.com/Orasund'),
+								A2($elm$html$Html$Attributes$style, 'display', 'flex'),
+								$Orasund$elm_layout$Layout$centerContent,
+								$Orasund$elm_layout$Layout$alignCenter
+							]),
+						_List_fromArray(
+							[$author$project$Page$githubIcon]))),
+					A2(
+					$Orasund$elm_layout$Layout$el,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$class('link'),
+							$Orasund$elm_layout$Layout$centerContent
+						]),
+					A2(
+						$elm$html$Html$a,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$href('https://twitter.com/edzgou'),
+								A2($elm$html$Html$Attributes$style, 'display', 'flex'),
+								$Orasund$elm_layout$Layout$centerContent,
+								$Orasund$elm_layout$Layout$alignCenter
+							]),
+						_List_fromArray(
+							[$author$project$Page$twitterIcon])))
 				]))
 		]));
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
@@ -5603,24 +5615,6 @@ var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$ul = _VirtualDom_node('ul');
 var $author$project$Page$header = _List_fromArray(
 	[
-		A2(
-		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('header-logo')
-			]),
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$img,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$alt('Author\'s blog'),
-						$elm$html$Html$Attributes$src('/img/logo.png'),
-						A2($elm$html$Html$Attributes$attribute, 'width', '100')
-					]),
-				_List_Nil)
-			])),
 		A2(
 		$elm$html$Html$div,
 		_List_fromArray(
@@ -5745,7 +5739,6 @@ var $rtfeldman$elm_css$Css$prop3 = F4(
 var $rtfeldman$elm_css$Css$border3 = $rtfeldman$elm_css$Css$prop3('border');
 var $rtfeldman$elm_css$Css$borderBottom3 = $rtfeldman$elm_css$Css$prop3('border-bottom');
 var $rtfeldman$elm_css$Css$borderRadius = $rtfeldman$elm_css$Css$prop1('border-radius');
-var $rtfeldman$elm_css$Css$borderTop3 = $rtfeldman$elm_css$Css$prop3('border-top');
 var $rtfeldman$elm_css$Css$center = $rtfeldman$elm_css$Css$prop1('center');
 var $rtfeldman$elm_css$Css$Structure$ClassSelector = function (a) {
 	return {$: 0, a: a};
@@ -8983,11 +8976,6 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$center),
-							A3(
-							$rtfeldman$elm_css$Css$borderBottom3,
-							$rtfeldman$elm_css$Css$px(2),
-							$rtfeldman$elm_css$Css$solid,
-							$rtfeldman$elm_css$Css$hex('3c8765')),
 							$rtfeldman$elm_css$Css$backgroundColor(
 							$rtfeldman$elm_css$Css$hex('f2fae8')),
 							$rtfeldman$elm_css$Css$padding(
@@ -9008,7 +8996,7 @@ var $author$project$Styles$styles = function () {
 											_List_fromArray(
 												[
 													$rtfeldman$elm_css$Css$lineHeight(
-													$rtfeldman$elm_css$Css$px(100))
+													$rtfeldman$elm_css$Css$px(64))
 												]))
 										])),
 									$rtfeldman$elm_css$Css$Global$li(
@@ -9043,11 +9031,6 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$center),
-							A3(
-							$rtfeldman$elm_css$Css$borderTop3,
-							$rtfeldman$elm_css$Css$px(2),
-							$rtfeldman$elm_css$Css$solid,
-							$rtfeldman$elm_css$Css$hex('2f4858')),
 							$rtfeldman$elm_css$Css$backgroundColor(
 							$rtfeldman$elm_css$Css$hex('348aa7')),
 							$rtfeldman$elm_css$Css$color(
@@ -9074,7 +9057,7 @@ var $author$project$Styles$styles = function () {
 							_List_fromArray(
 								[
 									$rtfeldman$elm_css$Css$lineHeight(
-									$rtfeldman$elm_css$Css$px(80)),
+									$rtfeldman$elm_css$Css$px(64)),
 									$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$right),
 									$rtfeldman$elm_css$Css$Global$descendants(
 									_List_fromArray(

@@ -3,6 +3,7 @@ module Page exposing (footer, header, layout, main, markdown)
 import Elmstatic exposing (..)
 import Html exposing (..)
 import Html.Attributes as Attr exposing (alt, attribute, class, href, src)
+import Layout
 import Markdown
 import Styles
 
@@ -19,7 +20,7 @@ M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.3
                 ]
                 []
     in
-    Html.node "svg" [ attribute "width" "16", attribute "height" "16", attribute "viewBox" "0 0 16 16" ] [ pathNode ]
+    Html.node "svg" [ attribute "width" "32", attribute "height" "32", attribute "viewBox" "0 0 16 16" ] [ pathNode ]
 
 
 twitterIcon : Html Never
@@ -34,7 +35,7 @@ M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-
                 ]
                 []
     in
-    Html.node "svg" [ attribute "width" "16", attribute "height" "16", attribute "viewBox" "0 0 16 16" ] [ pathNode ]
+    Html.node "svg" [ attribute "width" "32", attribute "height" "32", attribute "viewBox" "0 0 16 16" ] [ pathNode ]
 
 
 markdown : String -> Html Never
@@ -53,11 +54,7 @@ markdown s =
 
 header : List (Html Never)
 header =
-    [ div [ class "header-logo" ]
-        [ img [ alt "Author's blog", src "/img/logo.png", attribute "width" "100" ]
-            []
-        ]
-    , div [ class "navigation" ]
+    [ div [ class "navigation" ]
         [ ul []
             [ li []
                 [ a [ href "/posts" ]
@@ -78,29 +75,32 @@ header =
 
 footer : Html Never
 footer =
-    div [ class "footer" ]
-        [ img
-            [ alt "Author's blog"
-            , src "/img/logo.png"
-            , attribute "style" "float: left; padding-top: 7px"
-            , attribute "width" "75"
+    [ Layout.el [] Layout.none
+    , [ a
+            [ href "https://www.linkedin.com/in/lucas-payr-8462911b9/"
             ]
-            []
-        , div [ class "link" ]
-            [ githubIcon
-            , a [ href "https://github.com" ]
-                [ text "Author's GitHub" ]
+            [ text "Build by Lucas Payr" ]
+            |> Layout.el [ class "link", Layout.centerContent ]
+      , a
+            [ href "https://github.com/Orasund"
+            , Attr.style "display" "flex"
+            , Layout.centerContent
+            , Layout.alignCenter
             ]
-        , div [ class "link" ]
-            [ twitterIcon
-            , a [ href "https://twitter.com" ]
-                [ text "Author's Twitter" ]
+            [ githubIcon ]
+            |> Layout.el [ class "link", Layout.centerContent ]
+      , a
+            [ href "https://twitter.com/edzgou"
+            , Attr.style "display" "flex"
+            , Layout.centerContent
+            , Layout.alignCenter
             ]
-        , div [ class "link" ]
-            [ a [ href "https://www.npmjs.com/package/elmstatic" ]
-                [ text "Created with Elmstatic" ]
-            ]
-        ]
+            [ twitterIcon ]
+            |> Layout.el [ class "link", Layout.centerContent ]
+      ]
+        |> Layout.row []
+    ]
+        |> Layout.row [ Layout.spaceBetween, class "footer" ]
 
 
 layout : String -> List (Html Never) -> List (Html Never)
