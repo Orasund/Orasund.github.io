@@ -5644,7 +5644,7 @@ var $author$project$Page$header = A2(
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text('Functional Field Notes')
+						$elm$html$Html$text('Functional Fieldnotes')
 					]))),
 			A2(
 			$Orasund$elm_layout$Layout$row,
@@ -8187,7 +8187,6 @@ var $rtfeldman$elm_css$Css$Preprocess$mapLastProperty = F2(
 var $rtfeldman$elm_css$Css$important = $rtfeldman$elm_css$Css$Preprocess$mapLastProperty($rtfeldman$elm_css$Css$makeImportant);
 var $rtfeldman$elm_css$Css$inlineBlock = {f: 0, a5: 'inline-block'};
 var $rtfeldman$elm_css$Css$left = $rtfeldman$elm_css$Css$prop1('left');
-var $rtfeldman$elm_css$Css$Global$li = $rtfeldman$elm_css$Css$Global$typeSelector('li');
 var $rtfeldman$elm_css$Css$lineHeight = $rtfeldman$elm_css$Css$prop1('line-height');
 var $rtfeldman$elm_css$Css$margin = $rtfeldman$elm_css$Css$prop1('margin');
 var $rtfeldman$elm_css$Css$margin3 = $rtfeldman$elm_css$Css$prop3('margin');
@@ -8226,7 +8225,6 @@ var $rtfeldman$elm_css$Css$PxUnits = 0;
 var $rtfeldman$elm_css$Css$px = A2($rtfeldman$elm_css$Css$Internal$lengthConverter, 0, 'px');
 var $rtfeldman$elm_css$Css$RemUnits = 0;
 var $rtfeldman$elm_css$Css$rem = A2($rtfeldman$elm_css$Css$Internal$lengthConverter, 0, 'rem');
-var $rtfeldman$elm_css$Css$right = $rtfeldman$elm_css$Css$prop1('right');
 var $rtfeldman$elm_css$Css$sansSerif = {K: 0, a5: 'sans-serif'};
 var $rtfeldman$elm_css$Css$Structure$Screen = 1;
 var $rtfeldman$elm_css$Css$Media$screen = 1;
@@ -8779,7 +8777,6 @@ var $rtfeldman$elm_css$VirtualDom$Styled$toUnstyled = function (vdom) {
 	}
 };
 var $rtfeldman$elm_css$Html$Styled$toUnstyled = $rtfeldman$elm_css$VirtualDom$Styled$toUnstyled;
-var $rtfeldman$elm_css$Css$Global$ul = $rtfeldman$elm_css$Css$Global$typeSelector('ul');
 var $rtfeldman$elm_css$Css$verticalAlign = function (fn) {
 	return A3(
 		$rtfeldman$elm_css$Css$Internal$getOverloadedProperty,
@@ -8974,44 +8971,6 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$center),
 							$rtfeldman$elm_css$Css$backgroundColor(
 							$rtfeldman$elm_css$Css$hex('f2fae8')),
-							$rtfeldman$elm_css$Css$padding(
-							$rtfeldman$elm_css$Css$px(10)),
-							$rtfeldman$elm_css$Css$marginTop(
-							$rtfeldman$elm_css$Css$px(-20)),
-							$rtfeldman$elm_css$Css$Global$descendants(
-							_List_fromArray(
-								[
-									$rtfeldman$elm_css$Css$Global$ul(
-									_List_fromArray(
-										[
-											$rtfeldman$elm_css$Css$margin(
-											$rtfeldman$elm_css$Css$px(0)),
-											$rtfeldman$elm_css$Css$padding(
-											$rtfeldman$elm_css$Css$px(0)),
-											wideScreen(
-											_List_fromArray(
-												[
-													$rtfeldman$elm_css$Css$lineHeight(
-													$rtfeldman$elm_css$Css$px(64))
-												]))
-										])),
-									$rtfeldman$elm_css$Css$Global$li(
-									_List_fromArray(
-										[
-											$rtfeldman$elm_css$Css$display($rtfeldman$elm_css$Css$inlineBlock),
-											$rtfeldman$elm_css$Css$marginRight(
-											$rtfeldman$elm_css$Css$px(20))
-										]))
-								])),
-							wideScreen(
-							_List_fromArray(
-								[
-									$rtfeldman$elm_css$Css$marginTop(
-									$rtfeldman$elm_css$Css$px(0)),
-									$rtfeldman$elm_css$Css$padding(
-									$rtfeldman$elm_css$Css$px(0)),
-									$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$right)
-								])),
 							$rtfeldman$elm_css$Css$padding(
 							$rtfeldman$elm_css$Css$px(16))
 						])),
