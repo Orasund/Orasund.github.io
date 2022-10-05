@@ -9349,6 +9349,7 @@ var $author$project$Posts$main = function () {
 		});
 }();
 var $author$project$Tag$main = $author$project$Posts$main;
+var $elm$html$Html$hr = _VirtualDom_node('hr');
 var $elm$html$Html$Attributes$align = $elm$html$Html$Attributes$stringProperty('align');
 var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
 var $elm$html$Html$blockquote = _VirtualDom_node('blockquote');
@@ -9370,7 +9371,6 @@ var $elm$html$Html$h3 = _VirtualDom_node('h3');
 var $elm$html$Html$h4 = _VirtualDom_node('h4');
 var $elm$html$Html$h5 = _VirtualDom_node('h5');
 var $elm$html$Html$h6 = _VirtualDom_node('h6');
-var $elm$html$Html$hr = _VirtualDom_node('hr');
 var $elm$html$Html$img = _VirtualDom_node('img');
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $elm$html$Html$li = _VirtualDom_node('li');
@@ -18085,21 +18085,6 @@ var $author$project$Page$parseBlocks = function (s) {
 							A2($elm$core$List$map, $dillonkearns$elm_markdown$Markdown$Parser$deadEndToString, errs))))));
 	}
 };
-var $author$project$Post$main = A2(
-	$author$project$Elmstatic$layout,
-	$author$project$Elmstatic$decodePost,
-	function (content) {
-		return $elm$core$Result$Ok(
-			A2(
-				$author$project$Page$layout,
-				content.aB,
-				_List_fromArray(
-					[
-						$author$project$Post$metadataHtml(content),
-						$author$project$Page$markdown(
-						$author$project$Page$parseBlocks(content.b8))
-					])));
-	});
 var $Orasund$elm_layout$Layout$column = function (attrs) {
 	return $elm$html$Html$div(
 		_Utils_ap(
@@ -18113,6 +18098,93 @@ var $Orasund$elm_layout$Layout$column = function (attrs) {
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
 };
+var $author$project$Page$tableOfContent = function (list) {
+	return _List_fromArray(
+		[
+			A2(
+			$elm$html$Html$h1,
+			_List_Nil,
+			_List_fromArray(
+				[
+					$elm$html$Html$text('Table of Content')
+				])),
+			A2(
+			$Orasund$elm_layout$Layout$column,
+			_List_Nil,
+			A2(
+				$elm$core$List$filterMap,
+				function (block) {
+					if (block.$ === 4) {
+						var headingLevel = block.a;
+						var inlines = block.b;
+						var text = $elm$core$String$concat(
+							A2(
+								$elm$core$List$map,
+								function (inline) {
+									if (inline.$ === 7) {
+										var s = inline.a;
+										return s;
+									} else {
+										return '';
+									}
+								},
+								inlines));
+						var n = function () {
+							switch (headingLevel) {
+								case 0:
+									return 1;
+								case 1:
+									return 2;
+								case 2:
+									return 3;
+								case 3:
+									return 4;
+								case 4:
+									return 5;
+								default:
+									return 6;
+							}
+						}();
+						return $elm$core$Maybe$Just(
+							A2(
+								$Orasund$elm_layout$Layout$el,
+								_List_Nil,
+								$elm$html$Html$text(
+									_Utils_ap(
+										$elm$core$String$concat(
+											A2($elm$core$List$repeat, n - 1, '....')),
+										text))));
+					} else {
+						return $elm$core$Maybe$Nothing;
+					}
+				},
+				list))
+		]);
+};
+var $author$project$Post$main = A2(
+	$author$project$Elmstatic$layout,
+	$author$project$Elmstatic$decodePost,
+	function (content) {
+		return $elm$core$Result$Ok(
+			A2(
+				$author$project$Page$layout,
+				content.aB,
+				function (blocks) {
+					return _Utils_ap(
+						_List_fromArray(
+							[
+								$author$project$Post$metadataHtml(content)
+							]),
+						_Utils_ap(
+							$author$project$Page$tableOfContent(blocks),
+							_List_fromArray(
+								[
+									A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+									$author$project$Page$markdown(blocks)
+								])));
+				}(
+					$author$project$Page$parseBlocks(content.b8))));
+	});
 var $author$project$Elmstatic$Page = F4(
 	function (content, format, siteTitle, title) {
 		return {b8: content, cf: format, bc: siteTitle, aB: title};
@@ -18132,70 +18204,8 @@ var $author$project$Page$main = A2(
 			A2(
 				$author$project$Page$layout,
 				content.aB,
-				function (blocks) {
-					return _List_fromArray(
-						[
-							A2(
-							$elm$html$Html$h1,
-							_List_Nil,
-							_List_fromArray(
-								[
-									$elm$html$Html$text('Table of Content')
-								])),
-							A2(
-							$Orasund$elm_layout$Layout$column,
-							_List_Nil,
-							A2(
-								$elm$core$List$filterMap,
-								function (block) {
-									if (block.$ === 4) {
-										var headingLevel = block.a;
-										var inlines = block.b;
-										var text = $elm$core$String$concat(
-											A2(
-												$elm$core$List$map,
-												function (inline) {
-													if (inline.$ === 7) {
-														var s = inline.a;
-														return s;
-													} else {
-														return '';
-													}
-												},
-												inlines));
-										var n = function () {
-											switch (headingLevel) {
-												case 0:
-													return 1;
-												case 1:
-													return 2;
-												case 2:
-													return 3;
-												case 3:
-													return 4;
-												case 4:
-													return 5;
-												default:
-													return 6;
-											}
-										}();
-										return $elm$core$Maybe$Just(
-											A2(
-												$Orasund$elm_layout$Layout$el,
-												_List_Nil,
-												$elm$html$Html$text(
-													_Utils_ap(
-														$elm$core$String$concat(
-															A2($elm$core$List$repeat, n - 1, '..')),
-														text))));
-									} else {
-										return $elm$core$Maybe$Nothing;
-									}
-								},
-								blocks)),
-							$author$project$Page$markdown(blocks)
-						]);
-				}(
-					$author$project$Page$parseBlocks(content.b8))));
+				$elm$core$List$singleton(
+					$author$project$Page$markdown(
+						$author$project$Page$parseBlocks(content.b8)))));
 	});
 _Platform_export({'Page':{'init':$author$project$Page$main($elm$json$Json$Decode$value)(0)},'Tag':{'init':$author$project$Tag$main($elm$json$Json$Decode$value)(0)},'Posts':{'init':$author$project$Posts$main($elm$json$Json$Decode$value)(0)},'Post':{'init':$author$project$Post$main($elm$json$Json$Decode$value)(0)}});}(this));
