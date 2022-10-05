@@ -57,7 +57,10 @@ styles =
             , backgroundColor <| hex "f2fae8"
             , Css.padding <| Css.px 16
             ]
-        , class "content" [ Css.maxWidth <| vw 100 ]
+        , class "content"
+            [ Css.maxWidth <| vw 100
+            , Css.padding <| Css.px 16
+            ]
         , class "footer"
             [ textAlign center
             , backgroundColor <| hex "348aa7"
