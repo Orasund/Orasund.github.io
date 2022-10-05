@@ -4995,7 +4995,7 @@ var $author$project$Elmstatic$decodePostList = A5(
 	A2($elm$json$Json$Decode$field, 'siteTitle', $elm$json$Json$Decode$string),
 	A2($elm$json$Json$Decode$field, 'title', $elm$json$Json$Decode$string));
 var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$html$Html$h3 = _VirtualDom_node('h3');
+var $elm$html$Html$h2 = _VirtualDom_node('h2');
 var $elm$json$Json$Encode$string = _Json_wrap;
 var $elm$html$Html$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -8888,19 +8888,11 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
-							$rtfeldman$elm_css$Css$em(2.66667)),
-							$rtfeldman$elm_css$Css$marginBottom(
-							$rtfeldman$elm_css$Css$rem(2.0202))
-						])),
-					$rtfeldman$elm_css$Css$Global$h2(
-					_List_fromArray(
-						[
-							$rtfeldman$elm_css$Css$fontSize(
 							$rtfeldman$elm_css$Css$em(2.0)),
 							$rtfeldman$elm_css$Css$marginBottom(
 							$rtfeldman$elm_css$Css$rem(1.61616))
 						])),
-					$rtfeldman$elm_css$Css$Global$h3(
+					$rtfeldman$elm_css$Css$Global$h2(
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
@@ -8908,7 +8900,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$marginBottom(
 							$rtfeldman$elm_css$Css$rem(1.21212))
 						])),
-					$rtfeldman$elm_css$Css$Global$h4(
+					$rtfeldman$elm_css$Css$Global$h3(
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
@@ -8919,7 +8911,7 @@ var $author$project$Styles$styles = function () {
 					A2(
 					$rtfeldman$elm_css$Css$Global$each,
 					_List_fromArray(
-						[$rtfeldman$elm_css$Css$Global$h5, $rtfeldman$elm_css$Css$Global$h6]),
+						[$rtfeldman$elm_css$Css$Global$h4, $rtfeldman$elm_css$Css$Global$h5, $rtfeldman$elm_css$Css$Global$h6]),
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
@@ -9172,7 +9164,7 @@ var $author$project$Posts$main = function () {
 					_List_fromArray(
 						[
 							A2(
-							$elm$html$Html$h3,
+							$elm$html$Html$h2,
 							_List_Nil,
 							_List_fromArray(
 								[
