@@ -1,10 +1,12 @@
-module Page exposing (footer, header, layout, main, markdown)
+module Page exposing (footer, header, layout, main, markdown, parseBlocks)
 
 import Elmstatic exposing (..)
 import Html exposing (..)
 import Html.Attributes as Attr exposing (alt, attribute, class, href, src)
 import Layout
-import Markdown
+import Markdown.Block
+import Markdown.Parser
+import Markdown.Renderer
 import Styles
 
 
@@ -38,18 +40,33 @@ M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-
     Html.node "svg" [ attribute "width" "32", attribute "height" "32", attribute "viewBox" "0 0 16 16" ] [ pathNode ]
 
 
-markdown : String -> Html Never
-markdown s =
-    let
-        mdOptions : Markdown.Options
-        mdOptions =
-            { defaultHighlighting = Just "elm"
-            , githubFlavored = Just { tables = False, breaks = False }
-            , sanitize = False
-            , smartypants = True
-            }
-    in
-    Markdown.toHtmlWith mdOptions [ attribute "class" "markdown" ] s
+markdown : List Markdown.Block.Block -> Html Never
+markdown list =
+    (case Markdown.Renderer.render Markdown.Renderer.defaultHtmlRenderer list of
+        Ok listHtml ->
+            listHtml
+
+        Err string ->
+            [ Html.text string ]
+    )
+        |> Html.div [ attribute "class" "markdown" ]
+
+
+parseBlocks : String -> List Markdown.Block.Block
+parseBlocks s =
+    case Markdown.Parser.parse s of
+        Ok list ->
+            list
+
+        Err errs ->
+            errs
+                |> List.map Markdown.Parser.deadEndToString
+                |> String.join ","
+                |> (++) "Parsing Error: "
+                |> Markdown.Block.Text
+                |> List.singleton
+                |> Markdown.Block.Paragraph
+                |> List.singleton
 
 
 header : Html Never
@@ -105,7 +122,7 @@ layout title contentItems =
     , div [ class "sidebar2" ]
         []
     , div [ class "content" ]
-        ([ h1 [Attr.class "title"] [ text title ] ] ++ contentItems)
+        ([ h1 [ Attr.class "title" ] [ text title ] ] ++ contentItems)
     , footer
     , Elmstatic.stylesheet "/styles.css"
     , Styles.styles
@@ -116,4 +133,64 @@ main : Elmstatic.Layout
 main =
     Elmstatic.layout Elmstatic.decodePage <|
         \content ->
-            Ok <| layout content.title [ markdown content.content ]
+            content.content
+                |> parseBlocks
+                |> (\blocks ->
+                        [ Html.h1 [] [ Html.text "Table of Content" ]
+                        , blocks
+                            |> List.filterMap
+                                (\block ->
+                                    case block of
+                                        Markdown.Block.Heading headingLevel inlines ->
+                                            let
+                                                n =
+                                                    case headingLevel of
+                                                        Markdown.Block.H1 ->
+                                                            1
+
+                                                        Markdown.Block.H2 ->
+                                                            2
+
+                                                        Markdown.Block.H3 ->
+                                                            3
+
+                                                        Markdown.Block.H4 ->
+                                                            4
+
+                                                        Markdown.Block.H5 ->
+                                                            5
+
+                                                        Markdown.Block.H6 ->
+                                                            6
+
+                                                text =
+                                                    inlines
+                                                        |> List.map
+                                                            (\inline ->
+                                                                case inline of
+                                                                    Markdown.Block.Text s ->
+                                                                        s
+
+                                                                    _ ->
+                                                                        ""
+                                                            )
+                                                        |> String.concat
+                                            in
+                                            (".."
+                                                |> List.repeat (n - 1)
+                                                |> String.concat
+                                            )
+                                                ++ text
+                                                |> Html.text
+                                                |> Layout.el []
+                                                |> Just
+
+                                        _ ->
+                                            Nothing
+                                )
+                            |> Layout.column []
+                        , markdown blocks
+                        ]
+                   )
+                |> layout content.title
+                |> Ok
