@@ -64,7 +64,7 @@ header =
       ]
         |> Layout.row [ Layout.spacing 16 ]
     ]
-        |> Layout.row [ class "navigation", Layout.spaceBetween, Layout.centerContent ]
+        |> Layout.row [ class "navigation", Layout.spaceBetween, Layout.alignCenter ]
 
 
 footer : Html Never
