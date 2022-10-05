@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Wed, 05 Oct 2022 16:29:28 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 05 Oct 2022 17:06:05 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -108,6 +108,23 @@ Video: Ian Cooper - TDD, Where did it all go wrong
 Daniel Terhorst-North about the creation of BDD
 
 "Behaviour Driven Development" will often be used to ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Simple Software]]></title>
+            <link>https://example.com/posts/2022-10-05-simple-software</link>
+            <guid>https://example.com/posts/2022-10-05-simple-software</guid>
+            <pubDate>Wed, 05 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[I would describe my programming philosophy as "creating simple software".
+Here is what i mean by that.
+
+Keep it Simple and Stupid
+
+There are a lot of programming paradims and trends floating around.
+But for actual, every day work these are often a complete overkill.
+Things may be simple and they may be boring. Thats good. That's exactly what we are looking after.
+If a solution feels stupidly simple, then its a good indicator, that is is worth considering.
+
+The part about keeping your programm st...]]></description>
         </item>
     </channel>
 </rss>
