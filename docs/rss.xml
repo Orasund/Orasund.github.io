@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Programmers side nodes</title>
+        <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
-        <description>Programmers side nodes</description>
-        <lastBuildDate>Wed, 05 Oct 2022 08:47:18 GMT</lastBuildDate>
+        <description>Functional Fieldnotes</description>
+        <lastBuildDate>Wed, 05 Oct 2022 09:34:11 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
         <image>
-            <title>Programmers side nodes</title>
+            <title>Functional Fieldnotes</title>
             <url>https://example.com/img/logo.png</url>
             <link>https://example.com/posts</link>
         </image>
