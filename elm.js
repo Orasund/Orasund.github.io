@@ -8884,7 +8884,9 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$lineHeight(
 							$rtfeldman$elm_css$Css$em(1.1))
 						])),
-					$rtfeldman$elm_css$Css$Global$h1(
+					A2(
+					$rtfeldman$elm_css$Css$Global$class,
+					'title',
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
@@ -8892,7 +8894,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$marginBottom(
 							$rtfeldman$elm_css$Css$rem(1.61616))
 						])),
-					$rtfeldman$elm_css$Css$Global$h2(
+					$rtfeldman$elm_css$Css$Global$h1(
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
@@ -8900,7 +8902,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$marginBottom(
 							$rtfeldman$elm_css$Css$rem(1.21212))
 						])),
-					$rtfeldman$elm_css$Css$Global$h3(
+					$rtfeldman$elm_css$Css$Global$h2(
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
@@ -8911,7 +8913,7 @@ var $author$project$Styles$styles = function () {
 					A2(
 					$rtfeldman$elm_css$Css$Global$each,
 					_List_fromArray(
-						[$rtfeldman$elm_css$Css$Global$h4, $rtfeldman$elm_css$Css$Global$h5, $rtfeldman$elm_css$Css$Global$h6]),
+						[$rtfeldman$elm_css$Css$Global$h3, $rtfeldman$elm_css$Css$Global$h5, $rtfeldman$elm_css$Css$Global$h6]),
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
@@ -9078,7 +9080,10 @@ var $author$project$Page$layout = F2(
 						[
 							A2(
 							$elm$html$Html$h1,
-							_List_Nil,
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$class('title')
+								]),
 							_List_fromArray(
 								[
 									$elm$html$Html$text(title)
