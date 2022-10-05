@@ -54,18 +54,17 @@ markdown s =
 
 header : Html Never
 header =
-    [  a [ href "/posts" ]
-            [ text "Posts" ]
-            |> Layout.el []
-        
-    ,   [ a [ href "/about" ]
+    [ a [ href "/posts" ]
+        [ text "Posts" ]
+        |> Layout.el []
+    , [ a [ href "/about" ]
             [ text "About" ]
-        
-        , a [ href "/contact" ]
+      , a [ href "/contact" ]
             [ text "Contact" ]
-        ] |> Layout.row []
+      ]
+        |> Layout.row [ Layout.spacing 16 ]
     ]
-        |> Layout.row [ class "navigation" , Layout.spaceBetween]
+        |> Layout.row [ class "navigation", Layout.spaceBetween ]
 
 
 footer : Html Never
@@ -75,7 +74,7 @@ footer =
             [ href "https://www.linkedin.com/in/lucas-payr-8462911b9/"
             ]
             [ text "Build by Lucas Payr" ]
-            |> Layout.el [ class "link", Layout.centerContent ]
+            |> Layout.el [ class "link" ]
       , a
             [ href "https://github.com/Orasund"
             , Attr.style "display" "flex"
@@ -83,7 +82,7 @@ footer =
             , Layout.alignCenter
             ]
             [ githubIcon ]
-            |> Layout.el [ class "link", Layout.centerContent ]
+            |> Layout.el [ class "link" ]
       , a
             [ href "https://twitter.com/edzgou"
             , Attr.style "display" "flex"
@@ -91,25 +90,26 @@ footer =
             , Layout.alignCenter
             ]
             [ twitterIcon ]
-            |> Layout.el [ class "link", Layout.centerContent ]
+            |> Layout.el [ class "link" ]
       ]
-        |> Layout.row []
+        |> Layout.row ([ Layout.spacing 16 ] ++ Layout.centered)
     ]
         |> Layout.row [ Layout.spaceBetween, class "footer" ]
 
 
 layout : String -> List (Html Never) -> List (Html Never)
 layout title contentItems =
-    [ header, div [ class "sidebar" ]
-                []
-           , div [ class "sidebar2" ]
-                []
-           , div [ class "content" ]
-                ([ h1 [] [ text title ] ] ++ contentItems)
-           , footer
-           , Elmstatic.stylesheet "/styles.css"
-           , Styles.styles
-           ]
+    [ header
+    , div [ class "sidebar" ]
+        []
+    , div [ class "sidebar2" ]
+        []
+    , div [ class "content" ]
+        ([ h1 [] [ text title ] ] ++ contentItems)
+    , footer
+    , Elmstatic.stylesheet "/styles.css"
+    , Styles.styles
+    ]
 
 
 main : Elmstatic.Layout

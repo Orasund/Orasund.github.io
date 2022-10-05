@@ -70,6 +70,7 @@ styles =
                     ]
                 ]
             , wideScreen [ marginTop <| px 0, padding <| px 0, textAlign right ]
+            , Css.padding <| Css.px 16
             ]
         , class "content" [ Css.maxWidth <| vw 100 ]
         , class "footer"
@@ -80,16 +81,7 @@ styles =
                 [ a [ Css.color <| hex "ffffff", textDecoration none ]
                 , svg [ paddingRight <| px 5, verticalAlign baseline ]
                 ]
-            , wideScreen
-                [ lineHeight <| px 64
-                , textAlign right
-                , descendants
-                    [ class "link"
-                        [ display inlineBlock
-                        , marginRight <| px 20
-                        ]
-                    ]
-                ]
+            , Css.padding <| Css.px 16
             ]
         , class "post-metadata"
             [ marginTop <| Css.em -0.5
