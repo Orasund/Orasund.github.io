@@ -9201,8 +9201,8 @@ var $author$project$Styles$styles = function () {
 						]))
 				])));
 }();
-var $author$project$Page$layout = F2(
-	function (title, contentItems) {
+var $author$project$Page$layout = F3(
+	function (title, sidebarItems, contentItems) {
 		return _List_fromArray(
 			[
 				$author$project$Page$header,
@@ -9341,9 +9341,10 @@ var $author$project$Posts$main = function () {
 		$author$project$Elmstatic$decodePostList,
 		function (content) {
 			return $elm$core$Result$Ok(
-				A2(
+				A3(
 					$author$project$Page$layout,
 					content.aB,
+					_List_Nil,
 					postListContent(
 						sortPosts(content.dt))));
 		});
@@ -18085,16 +18086,6 @@ var $author$project$Page$parseBlocks = function (s) {
 							A2($elm$core$List$map, $dillonkearns$elm_markdown$Markdown$Parser$deadEndToString, errs))))));
 	}
 };
-var $Orasund$elm_layout$Layout$column = function (attrs) {
-	return $elm$html$Html$div(
-		_Utils_ap(
-			_List_fromArray(
-				[
-					A2($elm$html$Html$Attributes$style, 'display', 'flex'),
-					A2($elm$html$Html$Attributes$style, 'flex-direction', 'column')
-				]),
-			attrs));
-};
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
 };
@@ -18109,7 +18100,7 @@ var $author$project$Page$tableOfContent = function (list) {
 					$elm$html$Html$text('Table of Content')
 				])),
 			A2(
-			$Orasund$elm_layout$Layout$column,
+			$elm$html$Html$ul,
 			_List_Nil,
 			A2(
 				$elm$core$List$filterMap,
@@ -18149,9 +18140,15 @@ var $author$project$Page$tableOfContent = function (list) {
 							A2(
 								$Orasund$elm_layout$Layout$el,
 								_List_Nil,
-								$elm$html$Html$text(
-									$elm$core$String$concat(
-										A2($elm$core$List$repeat, n - 1, '        ')) + ('• ' + text))));
+								A2(
+									$elm$html$Html$li,
+									_List_Nil,
+									$elm$core$List$singleton(
+										$elm$html$Html$text(
+											_Utils_ap(
+												$elm$core$String$concat(
+													A2($elm$core$List$repeat, n - 1, '....')),
+												text))))));
 					} else {
 						return $elm$core$Maybe$Nothing;
 					}
@@ -18164,9 +18161,10 @@ var $author$project$Post$main = A2(
 	$author$project$Elmstatic$decodePost,
 	function (content) {
 		return $elm$core$Result$Ok(
-			A2(
+			A3(
 				$author$project$Page$layout,
 				content.aB,
+				_List_Nil,
 				function (blocks) {
 					return _Utils_ap(
 						_List_fromArray(
@@ -18199,9 +18197,10 @@ var $author$project$Page$main = A2(
 	$author$project$Elmstatic$decodePage,
 	function (content) {
 		return $elm$core$Result$Ok(
-			A2(
+			A3(
 				$author$project$Page$layout,
 				content.aB,
+				_List_Nil,
 				$elm$core$List$singleton(
 					$author$project$Page$markdown(
 						$author$project$Page$parseBlocks(content.b8)))));
