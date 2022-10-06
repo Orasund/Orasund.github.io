@@ -98,6 +98,7 @@ tableOfContent list =
                             |> List.repeat (n - 1)
                             |> String.concat
                         ) ++ text
+                            |> Html.text
                             |> List.singleton
                             |> Html.li []
                             |> Layout.el []
