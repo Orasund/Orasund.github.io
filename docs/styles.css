@@ -8,7 +8,7 @@ body {
     grid-gap: 20px 0;
     gap: 20px 0;
     grid-template-columns: minmax(1fr, 100vw);
-    grid-template-rows: 64px auto 64px;
+    grid-template-rows: 64px 50px 0 auto 0 64px;
     grid-template-areas:
         "navigation"
         "sidebar"
