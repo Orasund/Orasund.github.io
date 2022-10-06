@@ -8,21 +8,19 @@ body {
     grid-gap: 20px 0;
     gap: 20px 0;
     grid-template-columns: minmax(1fr, 100vw);
-    grid-template-rows: 64px 0 0 auto 64px;
+    grid-template-rows: 64px auto 64px;
     grid-template-areas:
         "navigation"
-        "sidebar"
-        "sidebar2"
         "content"
         "footer"
 }
 
 .sidebar {
-    grid-area: sidebar;
+    display: none;
 }
 
 .sidebar2 {
-    grid-area: sidebar2;
+    display: none;
 }
 
 .content {
@@ -46,5 +44,13 @@ body {
             "navigation navigation navigation"
             "sidebar     content    sidebar2"
             "footer      footer     footer";
+    }
+
+    .sidebar {
+        grid-area: sidebar;
+    }
+
+    .sidebar2 {
+        grid-area: sidebar2;
     }
 }
