@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Thu, 06 Oct 2022 17:02:10 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 06 Oct 2022 18:38:56 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -125,6 +125,35 @@ Things may be simple and they may be boring. Thats good. That's exactly what we 
 If a solution feels stupidly simple, then its a good indicator, that is is worth considering.
 
 The part about keeping your programm st...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Exploring Monads]]></title>
+            <link>https://example.com/posts/2022-10-06-exploring-monads</link>
+            <guid>https://example.com/posts/2022-10-06-exploring-monads</guid>
+            <pubDate>Thu, 06 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Categories
+
+> Categories are algebraically closed sets of functions.
+
+We are mostly interested in functions from Types to Types or in other words, in the Category of Types.
+
+Functors
+
+A functor is a function from one category to another.
+
+From a programmers perspective a functor is a structure for which the following function can be defined.
+
+map: (a -> b) -> Functor -> Functor
+
+Example:
+
+map: (a -> b) -> Optional -> Optional
+
+Semi-Group
+
+A semi group has a combine function defined
+
+combine: Sem...]]></description>
         </item>
         <item>
             <title><![CDATA[Functional Design Patterns]]></title>
