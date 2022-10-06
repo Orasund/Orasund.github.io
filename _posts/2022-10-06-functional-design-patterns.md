@@ -34,15 +34,21 @@ Main use for Monads is doing effects. Famous monads are: Reader monad, writer mo
 
 Basic idea is to define an algebraic data type that specifies allows state transitions and to then have a run function that can manipulate state base on an input:
 
-`update: Msg -> State -> State`
+```
+update: Msg -> State -> State
+```
 
 If you really want to get fancy, you can have the result again be a list of commands
 
-`update: Msg -> State -> (State, List Msg)`
+```
+update: Msg -> State -> (State, List Msg)
+```
 
 Join this up with a step function and you are all good to go
 
-`step : (State,List Msg) -> (State,List Msg)`
+```
+step : (State,List Msg) -> (State,List Msg)
+```
 
 Side note: `(State,List Msg)` is an IO monad. This is because by the fact that list is monad, it self is a monad. and it both reads and writes `State`.
 
