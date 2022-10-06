@@ -40,5 +40,5 @@ main =
                             ++ [ Html.hr [] [], Page.markdown blocks ]
                    )
             )
-                |> Page.layout content.title
+                |> Page.layout content.title []
                 |> Ok

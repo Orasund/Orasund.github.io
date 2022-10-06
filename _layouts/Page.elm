@@ -172,8 +172,8 @@ footer =
         |> Layout.row [ Layout.spaceBetween, class "footer" ]
 
 
-layout : String -> List (Html Never) -> List (Html Never)
-layout title contentItems =
+layout : String -> List (Html Never) -> List (Html Never) -> List (Html Never)
+layout title sidebarItems contentItems =
     [ header
     , div [ class "sidebar" ]
         []
@@ -195,5 +195,5 @@ main =
                 |> parseBlocks
                 |> markdown
                 |> List.singleton
-                |> layout content.title
+                |> layout content.title []
                 |> Ok
