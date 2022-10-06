@@ -12,8 +12,8 @@ body {
     grid-template-areas:
         "navigation"
         "sidebar"
-        "content"
         "sidebar2"
+        "content"
         "footer"
 }
 
@@ -38,7 +38,7 @@ body {
     grid-area: footer;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
     body {
         grid-template-rows: 64px 1fr 64px;
         grid-template-columns: 1fr minmax(400px, 800px) 1fr;
