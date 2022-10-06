@@ -18150,10 +18150,8 @@ var $author$project$Page$tableOfContent = function (list) {
 								$Orasund$elm_layout$Layout$el,
 								_List_Nil,
 								$elm$html$Html$text(
-									_Utils_ap(
-										$elm$core$String$concat(
-											A2($elm$core$List$repeat, n - 1, '....')),
-										text))));
+									$elm$core$String$concat(
+										A2($elm$core$List$repeat, n - 1, '        ')) + ('• ' + text))));
 					} else {
 						return $elm$core$Maybe$Nothing;
 					}
