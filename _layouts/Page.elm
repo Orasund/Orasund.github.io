@@ -94,19 +94,19 @@ tableOfContent list =
                                         )
                                     |> String.concat
                         in
-                        ("        "
+                        ("...."
                             |> List.repeat (n - 1)
                             |> String.concat
-                        ) ++ "• "
-                            ++ text
-                            |> Html.text
+                        ) ++ text
+                            |> List.singleton
+                            |> Html.li []
                             |> Layout.el []
                             |> Just
 
                     _ ->
                         Nothing
             )
-        |> Layout.column []
+        |> Html.ul []
     ]
 
 
