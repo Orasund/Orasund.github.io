@@ -11,6 +11,7 @@ body {
     grid-template-rows: 64px auto 64px;
     grid-template-areas:
         "navigation"
+        "sidebar"
         "content"
         "footer"
 }

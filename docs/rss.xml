@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Thu, 06 Oct 2022 15:15:34 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 06 Oct 2022 16:34:23 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -125,6 +125,20 @@ Things may be simple and they may be boring. Thats good. That's exactly what we 
 If a solution feels stupidly simple, then its a good indicator, that is is worth considering.
 
 The part about keeping your programm st...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Functional Design Patterns]]></title>
+            <link>https://example.com/posts/2022-10-06-functional-design-patterns</link>
+            <guid>https://example.com/posts/2022-10-06-functional-design-patterns</guid>
+            <pubDate>Thu, 06 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[There is this myth, that functional programming does not have any design patterns. See Functional Design Patterns by Scott Wlaschin
+
+While this might hold for some of the more known patterns, it is definitely not true in general.
+Design Patterns for Functional programming are generally more abstract, hard to pin it down to a use case. I would see it more like a set of tools that you can use, but don't have to.
+
+Monad
+
+A monad is a fancy word for a data structure where the following function can ...]]></description>
         </item>
     </channel>
 </rss>
