@@ -4,7 +4,7 @@ import Elmstatic exposing (..)
 import Html exposing (..)
 import Html.Attributes as Attr exposing (alt, attribute, class, href, src)
 import Page
-
+import Layout
 
 tagsToHtml : List String -> List (Html Never)
 tagsToHtml tags =
