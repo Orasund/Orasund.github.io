@@ -39,5 +39,5 @@ main =
                             ++ [ Html.hr [] [], Page.markdown blocks ]
                    )
             )
-                |> Page.layout content.title Page.tableOfContent blocks
+                |> Page.layout content.title (Page.tableOfContent content.content) blocks
                 |> Ok
