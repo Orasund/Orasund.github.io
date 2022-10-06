@@ -9350,6 +9350,16 @@ var $author$project$Posts$main = function () {
 		});
 }();
 var $author$project$Tag$main = $author$project$Posts$main;
+var $Orasund$elm_layout$Layout$column = function (attrs) {
+	return $elm$html$Html$div(
+		_Utils_ap(
+			_List_fromArray(
+				[
+					A2($elm$html$Html$Attributes$style, 'display', 'flex'),
+					A2($elm$html$Html$Attributes$style, 'flex-direction', 'column')
+				]),
+			attrs));
+};
 var $elm$html$Html$hr = _VirtualDom_node('hr');
 var $elm$html$Html$Attributes$align = $elm$html$Html$Attributes$stringProperty('align');
 var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
@@ -18164,8 +18174,16 @@ var $author$project$Post$main = A2(
 			A3(
 				$author$project$Page$layout,
 				content.aB,
-				$author$project$Page$tableOfContent(
-					$author$project$Page$parseBlocks(content.b8)),
+				$elm$core$List$singleton(
+					A2(
+						$Orasund$elm_layout$Layout$column,
+						_List_fromArray(
+							[
+								A2($elm$html$Html$Attributes$style, 'position', 'sticky'),
+								A2($elm$html$Html$Attributes$style, 'top', '0')
+							]),
+						$author$project$Page$tableOfContent(
+							$author$project$Page$parseBlocks(content.b8)))),
 				function (blocks) {
 					return _Utils_ap(
 						_List_fromArray(
