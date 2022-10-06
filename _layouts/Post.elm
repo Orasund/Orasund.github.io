@@ -39,5 +39,5 @@ main =
                             ++ [ Html.hr [] [], Page.markdown blocks ]
                    )
             )
-                |> Page.layout content.title (content.content|> Page.parseBlocks|>Page.tableOfContent|> Layout.el [Attr.style "position" "sticky", Attr.style "top" "0"] )
+                |> Page.layout content.title (content.content|> Page.parseBlocks|>Page.tableOfContent|> Layout.column [Attr.style "position" "sticky", Attr.style "top" "0"] )
                 |> Ok
