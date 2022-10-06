@@ -9219,7 +9219,7 @@ var $author$project$Page$layout = F3(
 					[
 						$elm$html$Html$Attributes$class('sidebar2')
 					]),
-				_List_Nil),
+				sidebarItems),
 				A2(
 				$elm$html$Html$div,
 				_List_fromArray(
@@ -18164,20 +18164,19 @@ var $author$project$Post$main = A2(
 			A3(
 				$author$project$Page$layout,
 				content.aB,
-				_List_Nil,
+				$author$project$Page$tableOfContent(
+					$author$project$Page$parseBlocks(content.b8)),
 				function (blocks) {
 					return _Utils_ap(
 						_List_fromArray(
 							[
 								$author$project$Post$metadataHtml(content)
 							]),
-						_Utils_ap(
-							$author$project$Page$tableOfContent(blocks),
-							_List_fromArray(
-								[
-									A2($elm$html$Html$hr, _List_Nil, _List_Nil),
-									$author$project$Page$markdown(blocks)
-								])));
+						_List_fromArray(
+							[
+								A2($elm$html$Html$hr, _List_Nil, _List_Nil),
+								$author$project$Page$markdown(blocks)
+							]));
 				}(
 					$author$project$Page$parseBlocks(content.b8))));
 	});
