@@ -36,9 +36,8 @@ main =
                 |> Page.parseBlocks
                 |> (\blocks ->
                         [ metadataHtml content ]
-                            ++ Page.tableOfContent blocks
                             ++ [ Html.hr [] [], Page.markdown blocks ]
                    )
             )
-                |> Page.layout content.title []
+                |> Page.layout content.title Page.tableOfContent blocks
                 |> Ok

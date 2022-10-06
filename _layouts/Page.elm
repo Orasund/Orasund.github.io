@@ -179,7 +179,7 @@ layout title sidebarItems contentItems =
     , div [ class "sidebar" ]
         []
     , div [ class "sidebar2" ]
-        []
+        sidebarItems
     , div [ class "content" ]
         ([ h1 [ Attr.class "title" ] [ text title ] ] ++ contentItems)
     , footer
