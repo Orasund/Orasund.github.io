@@ -94,10 +94,10 @@ tableOfContent list =
                                         )
                                     |> String.concat
                         in
-                        ("...."
+                        ("        "
                             |> List.repeat (n - 1)
                             |> String.concat
-                        )
+                        ) ++ "• "
                             ++ text
                             |> Html.text
                             |> Layout.el []
