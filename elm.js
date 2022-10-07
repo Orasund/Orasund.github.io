@@ -9361,6 +9361,8 @@ var $Orasund$elm_layout$Layout$column = function (attrs) {
 			attrs));
 };
 var $elm$html$Html$hr = _VirtualDom_node('hr');
+var $author$project$Post$keywords = _List_fromArray(
+	['Elm', 'Functional Programming', 'TDD', 'video', 'book']);
 var $elm$html$Html$Attributes$align = $elm$html$Html$Attributes$stringProperty('align');
 var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
 var $elm$html$Html$blockquote = _VirtualDom_node('blockquote');
@@ -18192,6 +18194,30 @@ var $author$project$Post$main = A2(
 							]),
 						_List_fromArray(
 							[
+								A2(
+								$elm$html$Html$p,
+								_List_Nil,
+								_List_fromArray(
+									[
+										A2(
+										$elm$html$Html$strong,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$elm$html$Html$text('Keywords:')
+											])),
+										$elm$html$Html$text(' '),
+										$elm$html$Html$text(
+										A2(
+											$elm$core$String$join,
+											', ',
+											A2(
+												$elm$core$List$filter,
+												function (key) {
+													return A2($elm$core$String$contains, key, content.b8);
+												},
+												$author$project$Post$keywords)))
+									])),
 								A2($elm$html$Html$hr, _List_Nil, _List_Nil),
 								$author$project$Page$markdown(blocks)
 							]));

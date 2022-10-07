@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Thu, 06 Oct 2022 18:59:04 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 07 Oct 2022 03:47:39 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -167,7 +167,9 @@ Design Patterns for Functional programming are generally more abstract, hard to 
 
 Monad
 
-A monad is a fancy word for a data structure where the following function can ...]]></description>
+A monad is a fancy word for a data structure with an andThen function:
+
+andThe...]]></description>
         </item>
     </channel>
 </rss>
