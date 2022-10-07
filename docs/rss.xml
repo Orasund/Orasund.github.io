@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Fri, 07 Oct 2022 10:12:53 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 07 Oct 2022 16:57:22 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -14,24 +14,6 @@
             <link>https://example.com/posts</link>
         </image>
         <copyright>Copyright: Author</copyright>
-        <item>
-            <title><![CDATA[TDD, Where Did It All Go Wrong]]></title>
-            <link>https://example.com/posts/2022-05-29-tdd-where-did-it-all-go-wrong</link>
-            <guid>https://example.com/posts/2022-05-29-tdd-where-did-it-all-go-wrong</guid>
-            <pubDate>Sun, 29 May 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Source
-
-Type driven might be good, but it slows everything done.
-
-Pipeline slows down
-Time until the code gets shipped slows down
-Tests get added that actually don't help a lot
-Refactoring gets harder
-
-Instead one should focus the tests on the individual use cases.
-
-Make test that implement the feature not the implementation detail....]]></description>
-        </item>
         <item>
             <title><![CDATA[The Pragmatic Programmer]]></title>
             <link>https://example.com/posts/2022-05-29-the-pragmatic-programmer</link>
