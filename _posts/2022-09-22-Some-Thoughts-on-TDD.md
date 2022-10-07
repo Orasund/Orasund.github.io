@@ -1,6 +1,6 @@
 ---
 title: "Some Thoughts on Test Driven Development"
-tags: Collection
+tags: essay
 ---
 
 tltr;

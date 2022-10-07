@@ -2,9 +2,10 @@ module Post exposing (main, metadataHtml)
 
 import Elmstatic exposing (..)
 import Html exposing (..)
-import Html.Attributes as Attr exposing ( class, href)
-import Page
+import Html.Attributes as Attr exposing (class, href)
 import Layout
+import Page
+
 
 tagsToHtml : List String -> List (Html Never)
 tagsToHtml tags =
@@ -27,9 +28,11 @@ metadataHtml post =
             ++ tagsToHtml post.tags
         )
 
+
 keywords : List String
 keywords =
-    ["Elm","Functional Programming","TDD","video", "book"]
+    [ "Elm", "Functional Programming", "TDD", "Video", "Book" ]
+
 
 main : Elmstatic.Layout
 main =
@@ -38,26 +41,30 @@ main =
             (content.content
                 |> Page.parseBlocks
                 |> (\blocks ->
-                        [ metadataHtml content ]
-                            ++
-                            [ [Html.strong [] [Html.text "Keywords:"] 
-                            , Html.text " "
-                               , keywords |> List.filter (\key -> 
-                               content.content
-                                |> String.contains (key|> String.toLower)
-                                |> String.toLower
-                                )
-                               |> String.join ", " |> Html.text
-                               ] |> Html.p []
-                            , Html.hr [] []
-                            , Page.markdown blocks ]
+                        [ metadataHtml content
+                        , [ Html.strong [] [ Html.text "Keywords:" ]
+                          , Html.text " "
+                          , keywords
+                                |> List.filter
+                                    (\key ->
+                                        content.content
+                                            |> String.toLower
+                                            |> String.contains (key |> String.toLower)
+                                    )
+                                |> String.join ", "
+                                |> Html.text
+                          ]
+                            |> Html.p []
+                        , Html.hr [] []
+                        , Page.markdown blocks
+                        ]
                    )
             )
-                |> Page.layout content.title 
+                |> Page.layout content.title
                     (content.content
                         |> Page.parseBlocks
-                        |>Page.tableOfContent
-                        |> Layout.column [Attr.style "position" "sticky", Attr.style "top" "0"] 
+                        |> Page.tableOfContent
+                        |> Layout.column [ Attr.style "position" "sticky", Attr.style "top" "0" ]
                         |> List.singleton
                     )
                 |> Ok
