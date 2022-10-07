@@ -1,14 +1,16 @@
 module Site exposing (config)
 
 import DataSource
+import DataSource.Glob
 import Head
+import Html exposing (a)
 import Pages.Manifest as Manifest
 import Route
 import SiteConfig exposing (SiteConfig)
 
 
 type alias Data =
-    ()
+    List String
 
 
 config : SiteConfig Data
@@ -22,7 +24,11 @@ config =
 
 data : DataSource.DataSource Data
 data =
-    DataSource.succeed ()
+    DataSource.Glob.succeed (\slug -> slug)
+        |> DataSource.Glob.match (DataSource.Glob.literal "content/blog/")
+        |> DataSource.Glob.capture DataSource.Glob.wildcard
+        |> DataSource.Glob.match (DataSource.Glob.literal ".md")
+        |> DataSource.Glob.toDataSource
 
 
 head : Data -> List Head.Tag
