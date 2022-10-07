@@ -42,7 +42,11 @@ main =
                             ++
                             [ [Html.strong [] [Html.text "Keywords:"] 
                             , Html.text " "
-                               , keywords |> List.filter (\key -> content.content |> String.contains key)
+                               , keywords |> List.filter (\key -> 
+                               content.content
+                                |> String.contains (key|> String.toLower)
+                                |> String.toLower
+                                )
                                |> String.join ", " |> Html.text
                                ] |> Html.p []
                             , Html.hr [] []
