@@ -8,5 +8,8 @@
     "elm-tooling": "^1.6.0",
     "elmstatic": "^0.7.3"
   },
-  "postinstall": "elm-tooling install"
+  "postinstall": "elm-tooling install",
+  "dependencies": {
+    "elm-pages": "^2.1.11"
+  }
 }
