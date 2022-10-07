@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Fri, 07 Oct 2022 03:47:39 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 07 Oct 2022 09:49:13 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -43,7 +43,12 @@ Goals
 
 One new language every year -> exercism
 One technical book each quarter
-...]]></description>
+
+Chapter 20: Code Generators
+
+Write Code that writes Codes.
+
+This might resolve the need of meta programming, but is still subject to type-checking. Therefore is much more useful then Reflection....]]></description>
         </item>
         <item>
             <title><![CDATA[The Little Typer]]></title>
