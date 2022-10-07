@@ -9,24 +9,19 @@ Design Patterns for Functional programming are generally more abstract, hard to 
 
 # Monad
 
-A monad is a fancy word for a data structure where the following function can be implemented:
+A monad is a fancy word for a data structure with an `andThen` function:
 
 ```
-empty : Monad a
-
-map : (a -> b) -> Monad a -> Monad b
-
 andThen : (a -> Monad b) -> Monad a -> Monad b
 ```
 
-(Side-note: Without the andThen function, it would just be a (endo-)Functor)
+If you want to very fancy, you would say: 
 
-If you want to very fancy, you would say: "The Monad is a monoid in the category of (endo-)Functors". But with that you aren't really providing any additional insights.
+> The Monad is a monoid in the category of (endo-)Functors.
+
+But for starters its enough to know that its main feature is the `andThen` function.
 
 An example for a monad would be a list (andThen = flatMap).
-
-Optional is not a monad, because None will break the algebraic completeness of the monoid.
-
 
 Main use for Monads is doing effects. Famous monads are: Reader monad, writer monad,IO monad(Reader + Writer), lense monad
 
@@ -50,7 +45,7 @@ Join this up with a step function and you are all good to go
 step : (State,List Msg) -> (State,List Msg)
 ```
 
-Side note: `(State,List Msg)` is an IO monad. This is because by the fact that list is monad, it self is a monad. and it both reads and writes `State`.
+Side note: `(State,List Msg)` is an IO monad. This is because list is a monad and it both reads and writes `State`.
 
 # Domain Specific Languages
 

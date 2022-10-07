@@ -2,7 +2,7 @@ module Post exposing (main, metadataHtml)
 
 import Elmstatic exposing (..)
 import Html exposing (..)
-import Html.Attributes as Attr exposing (alt, attribute, class, href, src)
+import Html.Attributes as Attr exposing ( class, href)
 import Page
 import Layout
 
@@ -27,6 +27,9 @@ metadataHtml post =
             ++ tagsToHtml post.tags
         )
 
+keywords : List String
+keywords =
+    ["Elm","Functional Programming","TDD","video", "book"]
 
 main : Elmstatic.Layout
 main =
@@ -36,7 +39,14 @@ main =
                 |> Page.parseBlocks
                 |> (\blocks ->
                         [ metadataHtml content ]
-                            ++ [ Html.hr [] [], Page.markdown blocks ]
+                            ++
+                            [ [Html.strong [] [Html.text "Keywords:"] 
+                            , Html.text " "
+                               , keywords |> List.filter (\key -> content.content |> String.contains key)
+                               |> String.join ", " |> Html.text
+                               ] |> Html.p []
+                            , Html.hr [] []
+                            , Page.markdown blocks ]
                    )
             )
                 |> Page.layout content.title 
