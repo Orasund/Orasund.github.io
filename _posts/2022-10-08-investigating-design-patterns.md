@@ -6,6 +6,100 @@ tags: Collection
 I take my stand that design pattern are outdated in the days of functional programming.
 Here is me proving my point using Elm.
 
+# Structural Patterns
+
+## Adapter Pattern
+
+```
+computeXml : XML -> XML
+
+xmlToJson : XML -> Json
+
+jsonToXml : Json -> XML
+
+jsonAdapter : (XML -> XML) -> Json -> Json
+```
+
+A adapter is just a higher order function with a set of mappers.
+
+## Bridge Pattern
+
+The bridge pattern uses composition over inherence. This is the default behavior for functional programming.
+
+## Composite Pattern
+
+[https://refactoring.guru/design-patterns/composite](https://refactoring.guru/design-patterns/composite)
+
+```
+type Order
+    = Product { price : Int }
+    | Box (List Order)
+
+calculatePrice : Order -> Int
+calculatePrice order =
+    case order of
+        Product {price} ->
+            price
+        Box list ->
+            list
+                |> List.map calculatePrice
+                |> List.sum
+```
+
+The composite pattern is just a recursive type and a recursive function to go with it.
+
+Note the function on display is not tail recursive and therefore not the most efficient.
+
+## Decorator Pattern
+
+[https://refactoring.guru/design-patterns/decorator](https://refactoring.guru/design-patterns/decorator)
+
+```
+sendEmail : {email : String} -> String -> Cmd msg
+
+sendSms : {phone : String} -> String -> Cmd msg
+
+sendFacebook : {facebookId : String} -> String -> Cmd msg
+
+sendSlack : {slackId : String} -> String -> Cmd msg
+
+andThen : (String -> Cmd msg) -> (String,Cmd msg) -> (String,Cmd msg)
+```
+
+The decorator pattern makes no real sense in the context of functional programming, however we can produce the same behavior using the Monad pattern.
+
+In this example `(String,Cmd msg)` is the monad, passing the string to various functions.
+
+## Facade Pattern
+
+The facade pattern is essentially saying that one can write simpler modules that call more complicated onces.
+
+## Flyweight Pattern
+
+```
+type alias MovingParticle
+    { particle: Id
+    , state : ParticleState
+    }
+
+type alias Game =
+    { particles : Dict Id Particle
+    , movingParticles : Dict Position MovingParticle
+    }
+```
+
+The flyweight pattern states that for memory intense structures, one should store the common parts in a dictionary and only reference it by its id.
+
+## Proxy Pattern
+
+```
+pay : Int -> CreditCard -> CreditCard
+
+syncCreditCard : CreditCard -> Cmd msg
+```
+
+The proxy pattern simplifies time and resource intense computations by creating a proxy structure that simulates the computation and regularly syncs up with the real thing.
+
 # Behavioral Patterns
 
 ## Chain of Responsibility
@@ -41,9 +135,7 @@ paste : Segment -> Command
 
 undo : Command
 
-execute : Command -> Editor -> Editor
-execute command editor =
-    { editor | state = command editor state }
+execute : Command -> { model | state : State } -> { model | state : State}
 ```
 
 The Command pattern uses functions as data to separate the create of the function from the execution.
@@ -131,9 +223,9 @@ draft document =
     , publish =
         (\d ->
             if d.isAdmin then
-                Published
+                published d
             else
-                Moderation
+                moderation d
         )
     , render = renderDraft
     }
@@ -196,15 +288,6 @@ type alias Template =
 defaultTemplate : Template
 
 mineData : Template -> File -> Report
-mineData args file =
-    file
-    |> args.extractData
-    |> internalFunction1
-    |> args.parseData
-    |> internalFunction2
-    |> args.analyseData
-    |> internalFunction3
-    |> args.toReport
 ```
 
 The idea behind the template pattern is to have a record containing all subfunctions required for the task.
