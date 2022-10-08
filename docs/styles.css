@@ -15,14 +15,6 @@ body {
         "footer"
 }
 
-.sidebar {
-    display: none;
-}
-
-.sidebar2 {
-    display: none;
-}
-
 .content {
     grid-area: content;
 }
