@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Fri, 07 Oct 2022 18:21:27 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 08 Oct 2022 12:32:15 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -158,6 +158,32 @@ Monad
 A monad is a fancy word for a data structure with an andThen function:
 
 andThe...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Investigating Design Patterns]]></title>
+            <link>https://example.com/posts/2022-10-08-investigating-design-patterns</link>
+            <guid>https://example.com/posts/2022-10-08-investigating-design-patterns</guid>
+            <pubDate>Sat, 08 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[I take my stand that design pattern are outdated in the days of functional programming.
+Here is me proving my point using Elm.
+
+Behavioral Patterns
+
+Chain of Responsibility
+
+type Handler =
+    Request -> Maybe Response
+
+handleRequest : Request -> List Handler -> Maybe Response
+handleRequest request handlers =
+    case handlers of
+        [] -> Nothing
+        head :: tail ->
+            case head request of
+                Just head ->
+                    Just head
+                Nothing ->
+   ...]]></description>
         </item>
     </channel>
 </rss>
