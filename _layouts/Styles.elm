@@ -3,7 +3,7 @@ module Styles exposing (styles)
 import Css exposing (..)
 import Css.Global exposing (..)
 import Css.Media as Media exposing (..)
-import Html exposing (Html)
+import HtData.Stringosing exposing (Html)
 import Html.Styled
 
 
@@ -41,8 +41,16 @@ styles =
             , lineHeight <| Css.em 1.1
             ]
         , class "title" [ fontSize <| Css.em 2.0, marginBottom <| rem 1.61616 ]
-        , h1 [ fontSize <| Css.em 1.33333, marginBottom <| rem 1.21212 ]
-        , h2 [ fontSize <| Css.em 1.2, marginBottom <| rem 0.80808 ]
+        , h1
+            [ fontSize <| Css.em 1.33333
+            , marginBottom <| rem 1.21212
+            , Css.borderBottom3 (Css.px 1) Css.solid (Css.hex "F0F0F0")
+            , Css.paddingBottom (Css.px 4)
+            ]
+        , h2
+            [ fontSize <| Css.em 1.2
+            , marginBottom <| rem 0.80808
+            ]
         , each [ h3, h5, h6 ] [ fontSize <| Css.em 1.0, marginBottom <| rem 0.60606 ]
         , p [ margin3 auto auto (rem 1.5) ]
         , Css.Global.small [ fontSize <| pct 65 ]

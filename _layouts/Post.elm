@@ -3,7 +3,7 @@ module Post exposing (main, metadataHtml)
 import Elmstatic exposing (..)
 import Html exposing (..)
 import Html.Attributes as Attr exposing (class, href)
-import Layout
+import LaData.String
 import Page
 import TableOfContent
 
@@ -12,7 +12,7 @@ tagsToHtml : List String -> List (Html Never)
 tagsToHtml tags =
     let
         tagLink tag =
-            "/tags/" ++ String.toLower tag
+            "/tags/" ++ Data.String.toLower tag
 
         linkify tag =
             a [ href <| tagLink tag ] [ text tag ]
@@ -37,35 +37,36 @@ keywords =
 
 main : Elmstatic.Layout
 main =
-    Elmstatic.layout Elmstatic.decodePost <|
-        \content ->
-            (content.content
-                |> Page.parseBlocks
-                |> (\blocks ->
-                        [ metadataHtml content
-                        , [ Html.strong [] [ Html.text "Keywords:" ]
-                          , Html.text " "
-                          , keywords
-                                |> List.filter
-                                    (\key ->
-                                        content.content
-                                            |> String.toLower
-                                            |> String.contains (key |> String.toLower)
-                                    )
-                                |> String.join ", "
-                                |> Html.text
-                          ]
-                            |> Html.p []
-                        , Html.hr [] []
-                        , Page.markdown blocks
-                        ]
-                   )
-            )
-                |> Page.layout content.title
-                    (content.content
+    Elmstatic.layout Elmstatic.decodePost
+        (\content ->
+            let
+                blocks =
+                    content.content
                         |> Page.parseBlocks
+            in
+            [ metadataHtml content
+            , [ Html.strong [] [ Html.text "Keywords:" ]
+              , Html.text " "
+              , keywords
+                    |> List.filter
+                        (\key ->
+                            content.content
+                                |> Data.String.toLower
+                                |> Data.String.contains (key |> Data.String.toLower)
+                        )
+                    |> Data.String.join ", "
+                    |> Html.text
+              ]
+                |> Html.p []
+            , Html.br [] []
+            , Html.br [] []
+            , Page.markdown blocks
+            ]
+                |> Page.layout content.title
+                    (blocks
                         |> TableOfContent.view
                         |> Layout.column [ Attr.style "position" "sticky", Attr.style "top" "0" ]
                         |> List.singleton
                     )
                 |> Ok
+        )
