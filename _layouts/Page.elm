@@ -50,24 +50,28 @@ markdownRender =
     { record
         | heading =
             \{ level, rawText, children } ->
+                let
+                    attrs =
+                        [ Attr.id (Data.String.toUrlSaveVersion rawText) ]
+                in
                 case level of
                     Block.H1 ->
-                        Html.h1 [ Attr.id (Data.String.toUrlSaveVersion rawText) ] children
+                        Html.h1 attrs children
 
                     Block.H2 ->
-                        Html.h2 [] children
+                        Html.h2 attrs children
 
                     Block.H3 ->
-                        Html.h3 [] children
+                        Html.h3 attrs children
 
                     Block.H4 ->
-                        Html.h4 [] children
+                        Html.h4 attrs children
 
                     Block.H5 ->
-                        Html.h5 [] children
+                        Html.h5 attrs children
 
                     Block.H6 ->
-                        Html.h6 [] children
+                        Html.h6 attrs children
     }
 
 
