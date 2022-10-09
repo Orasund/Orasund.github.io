@@ -18101,7 +18101,101 @@ var $author$project$Page$parseBlocks = function (s) {
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
 };
-var $author$project$Page$tableOfContent = function (list) {
+var $author$project$TableOfContent$Node = $elm$core$Basics$identity;
+var $author$project$TableOfContent$addSubNode = F2(
+	function (node, _v0) {
+		var list = _v0;
+		if (list.b) {
+			var _v2 = list.a;
+			var string = _v2.a;
+			var tail = list.b;
+			return A2(
+				$elm$core$List$cons,
+				_Utils_Tuple2(string, node),
+				tail);
+		} else {
+			return node;
+		}
+	});
+var $author$project$TableOfContent$addToNode = F2(
+	function (string, _v0) {
+		var list = _v0;
+		return A2(
+			$elm$core$List$cons,
+			_Utils_Tuple2(string, _List_Nil),
+			list);
+	});
+var $author$project$TableOfContent$reverse = function (_v0) {
+	var list = _v0;
+	return $elm$core$List$reverse(list);
+};
+var $author$project$TableOfContent$toNodes = function (l) {
+	var rec = F3(
+		function (n, node, list) {
+			rec:
+			while (true) {
+				if (list.b) {
+					var _v1 = list.a;
+					var n0 = _v1.a;
+					var text = _v1.b;
+					var tail = list.b;
+					if (_Utils_eq(n, n0)) {
+						var $temp$n = n,
+							$temp$node = A2($author$project$TableOfContent$addToNode, text, node),
+							$temp$list = tail;
+						n = $temp$n;
+						node = $temp$node;
+						list = $temp$list;
+						continue rec;
+					} else {
+						if (_Utils_cmp(n, n0) < 0) {
+							return function (_v2) {
+								var newNode = _v2.a;
+								var rest = _v2.b;
+								return A3(
+									rec,
+									n,
+									A2(
+										$author$project$TableOfContent$addSubNode,
+										$author$project$TableOfContent$reverse(newNode),
+										node),
+									rest);
+							}(
+								A3(rec, n + 1, _List_Nil, list));
+						} else {
+							return _Utils_Tuple2(node, list);
+						}
+					}
+				} else {
+					return _Utils_Tuple2(node, list);
+				}
+			}
+		});
+	return $author$project$TableOfContent$reverse(
+		A3(rec, 1, _List_Nil, l).a);
+};
+var $author$project$TableOfContent$viewNodes = function (_v0) {
+	var list = _v0;
+	return A2(
+		$elm$html$Html$ul,
+		_List_Nil,
+		A2(
+			$elm$core$List$map,
+			function (_v1) {
+				var text = _v1.a;
+				var node = _v1.b;
+				return A2(
+					$elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							$elm$html$Html$text(text),
+							$author$project$TableOfContent$viewNodes(node)
+						]));
+			},
+			list));
+};
+var $author$project$TableOfContent$view = function (list) {
 	return _List_fromArray(
 		[
 			A2(
@@ -18111,61 +18205,49 @@ var $author$project$Page$tableOfContent = function (list) {
 				[
 					$elm$html$Html$text('Table of Content')
 				])),
-			A2(
-			$elm$html$Html$ul,
-			_List_Nil,
-			A2(
-				$elm$core$List$filterMap,
-				function (block) {
-					if (block.$ === 4) {
-						var headingLevel = block.a;
-						var inlines = block.b;
-						var text = $elm$core$String$concat(
-							A2(
-								$elm$core$List$map,
-								function (inline) {
-									if (inline.$ === 7) {
-										var s = inline.a;
-										return s;
-									} else {
-										return '';
-									}
-								},
-								inlines));
-						var n = function () {
-							switch (headingLevel) {
-								case 0:
-									return 1;
-								case 1:
-									return 2;
-								case 2:
-									return 3;
-								case 3:
-									return 4;
-								case 4:
-									return 5;
-								default:
-									return 6;
-							}
-						}();
-						return $elm$core$Maybe$Just(
-							A2(
-								$Orasund$elm_layout$Layout$el,
-								_List_Nil,
+			$author$project$TableOfContent$viewNodes(
+			$author$project$TableOfContent$toNodes(
+				A2(
+					$elm$core$List$filterMap,
+					function (block) {
+						if (block.$ === 4) {
+							var headingLevel = block.a;
+							var inlines = block.b;
+							var text = $elm$core$String$concat(
 								A2(
-									$elm$html$Html$li,
-									_List_Nil,
-									$elm$core$List$singleton(
-										$elm$html$Html$text(
-											_Utils_ap(
-												$elm$core$String$concat(
-													A2($elm$core$List$repeat, n - 1, '....')),
-												text))))));
-					} else {
-						return $elm$core$Maybe$Nothing;
-					}
-				},
-				list))
+									$elm$core$List$map,
+									function (inline) {
+										if (inline.$ === 7) {
+											var s = inline.a;
+											return s;
+										} else {
+											return '';
+										}
+									},
+									inlines));
+							var n = function () {
+								switch (headingLevel) {
+									case 0:
+										return 1;
+									case 1:
+										return 2;
+									case 2:
+										return 3;
+									case 3:
+										return 4;
+									case 4:
+										return 5;
+									default:
+										return 6;
+								}
+							}();
+							return $elm$core$Maybe$Just(
+								_Utils_Tuple2(n, text));
+						} else {
+							return $elm$core$Maybe$Nothing;
+						}
+					},
+					list)))
 		]);
 };
 var $author$project$Post$main = A2(
@@ -18184,7 +18266,7 @@ var $author$project$Post$main = A2(
 								A2($elm$html$Html$Attributes$style, 'position', 'sticky'),
 								A2($elm$html$Html$Attributes$style, 'top', '0')
 							]),
-						$author$project$Page$tableOfContent(
+						$author$project$TableOfContent$view(
 							$author$project$Page$parseBlocks(content.b8)))),
 				function (blocks) {
 					return _List_fromArray(
