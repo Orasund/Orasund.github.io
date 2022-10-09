@@ -1,8 +1,8 @@
-module Page exposing (footer, header, layout, main, markdown, parseBlocks, tableOfContent)
+module Page exposing (footer, header, layout, main, markdown, parseBlocks)
 
 import Elmstatic exposing (..)
 import Html exposing (..)
-import Html.Attributes as Attr exposing ( attribute, class, href)
+import Html.Attributes as Attr exposing (attribute, class, href)
 import Layout
 import Markdown.Block
 import Markdown.Parser
@@ -50,65 +50,6 @@ markdown list =
             [ Html.text string ]
     )
         |> Html.div [ attribute "class" "markdown" ]
-
-
-tableOfContent : List Markdown.Block.Block -> List (Html Never)
-tableOfContent list =
-    [ Html.h1 [] [ Html.text "Table of Content" ]
-    , list
-        |> List.filterMap
-            (\block ->
-                case block of
-                    Markdown.Block.Heading headingLevel inlines ->
-                        let
-                            n =
-                                case headingLevel of
-                                    Markdown.Block.H1 ->
-                                        1
-
-                                    Markdown.Block.H2 ->
-                                        2
-
-                                    Markdown.Block.H3 ->
-                                        3
-
-                                    Markdown.Block.H4 ->
-                                        4
-
-                                    Markdown.Block.H5 ->
-                                        5
-
-                                    Markdown.Block.H6 ->
-                                        6
-
-                            text =
-                                inlines
-                                    |> List.map
-                                        (\inline ->
-                                            case inline of
-                                                Markdown.Block.Text s ->
-                                                    s
-
-                                                _ ->
-                                                    ""
-                                        )
-                                    |> String.concat
-                        in
-                        ("...."
-                            |> List.repeat (n - 1)
-                            |> String.concat
-                        ) ++ text
-                            |> Html.text
-                            |> List.singleton
-                            |> Html.li []
-                            |> Layout.el []
-                            |> Just
-
-                    _ ->
-                        Nothing
-            )
-        |> Html.ul []
-    ]
 
 
 parseBlocks : String -> List Markdown.Block.Block

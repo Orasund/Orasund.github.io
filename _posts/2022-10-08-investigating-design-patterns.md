@@ -75,11 +75,11 @@ The builder pattern use a seperate builder to collect all the information needed
 
 ## ❌ Singleton Pattern
 
-The singleton pattern are default behavior for functional programming
+The singleton pattern is the default behavior for functional programming.
 
 ## ❌ Prototype Pattern
 
-Coping is the default behavior of functional programming, there the prototype makes no sense in this context.
+Coping is the default behavior of functional programming, therefor the prototype makes no sense in this context.
 
 # Structural Patterns
 
@@ -210,7 +210,7 @@ paste : Segment -> Command
 
 undo : Command
 
-execute : Command -> { model | state : State } -> { model | state : State}
+execute : Command -> State -> State
 ```
 
 The Command pattern uses functions as data to separate the create of the function from the execution.

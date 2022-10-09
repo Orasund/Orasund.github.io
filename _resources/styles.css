@@ -28,6 +28,14 @@ body {
     grid-area: footer;
 }
 
+.sidebar {
+    display: none;
+}
+
+.sidebar2 {
+    display: none;
+}
+
 @media only screen and (min-width: 800px) {
     body {
         grid-template-rows: 64px 1fr 64px;
@@ -40,9 +48,11 @@ body {
 
     .sidebar {
         grid-area: sidebar;
+        display: block;
     }
 
     .sidebar2 {
         grid-area: sidebar2;
+        display: block;
     }
 }

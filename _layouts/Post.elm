@@ -5,6 +5,7 @@ import Html exposing (..)
 import Html.Attributes as Attr exposing (class, href)
 import Layout
 import Page
+import TableOfContent
 
 
 tagsToHtml : List String -> List (Html Never)
@@ -63,7 +64,7 @@ main =
                 |> Page.layout content.title
                     (content.content
                         |> Page.parseBlocks
-                        |> Page.tableOfContent
+                        |> TableOfContent.view
                         |> Layout.column [ Attr.style "position" "sticky", Attr.style "top" "0" ]
                         |> List.singleton
                     )
