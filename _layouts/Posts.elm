@@ -2,7 +2,7 @@ module Posts exposing (main)
 
 import Elmstatic exposing (..)
 import Html exposing (..)
-import Html.Attributes as Attr exposing (href)
+import Html.Attributes as Attr
 import Page
 import Post
 
@@ -12,7 +12,7 @@ main =
     let
         postItem post =
             div []
-                [ a [ href ("/" ++ post.link) ] [ h2 [] [ text post.title ] ]
+                [ a [ Attr.href ("/" ++ post.link) ] [ h2 [] [ text post.title ] ]
                 , Post.metadataHtml post
                 ]
 

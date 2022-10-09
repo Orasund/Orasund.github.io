@@ -3,7 +3,7 @@ module Styles exposing (styles)
 import Css exposing (..)
 import Css.Global exposing (..)
 import Css.Media as Media exposing (..)
-import HtData.Stringosing exposing (Html)
+import Html exposing (Html)
 import Html.Styled
 
 

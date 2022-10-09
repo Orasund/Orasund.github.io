@@ -4,6 +4,7 @@ import Data.String
 import Elmstatic exposing (..)
 import Html exposing (..)
 import Html.Attributes as Attr exposing (attribute, class, href)
+import Layout
 import Markdown.Block as Block
 import Markdown.Parser
 import Markdown.Renderer
@@ -91,7 +92,7 @@ parseBlocks s =
         Err errs ->
             errs
                 |> List.map Markdown.Parser.deadEndToString
-                |> Data.String.join ","
+                |> String.join ","
                 |> (++) "Parsing Error: "
                 |> Block.Text
                 |> List.singleton
@@ -139,7 +140,7 @@ footer =
             [ twitterIcon ]
             |> Layout.el [ class "link" ]
       ]
-        |> Layout.row ([ Layout.spacing 16 ] ++ Layout.centered)
+        |> Layout.row (Layout.spacing 16 :: Layout.centered)
     ]
         |> Layout.row [ Layout.spaceBetween, class "footer" ]
 
@@ -152,7 +153,7 @@ layout title sidebarItems contentItems =
     , div [ class "sidebar2" ]
         sidebarItems
     , div [ class "content" ]
-        ([ h1 [ Attr.class "title" ] [ text title ] ] ++ contentItems)
+        (h1 [ Attr.class "title" ] [ text title ] :: contentItems)
     , footer
     , Elmstatic.stylesheet "/styles.css"
     , Styles.styles

@@ -1,7 +1,8 @@
 module TableOfContent exposing (..)
 
+import Data.String
 import Html exposing (Html)
-import Layout
+import Html.Attributes as Attr
 import Markdown.Block
 
 
@@ -64,7 +65,7 @@ viewNodes (Node list) =
     list
         |> List.map
             (\( text, node ) ->
-                [ Html.text text
+                [ Html.a [ "#" ++ (text |> Data.String.toUrlSaveVersion) |> Attr.href ] [ Html.text text ]
                 , node
                     |> viewNodes
                 ]

@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Sun, 09 Oct 2022 12:30:59 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 09 Oct 2022 15:08:19 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -164,26 +164,11 @@ andThe...]]></description>
             <link>https://example.com/posts/2022-10-08-investigating-design-patterns</link>
             <guid>https://example.com/posts/2022-10-08-investigating-design-patterns</guid>
             <pubDate>Sat, 08 Oct 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[I take my stand that design pattern are outdated in the days of functional programming.
-Here is me proving my point using Elm.
+            <description><![CDATA[There is this myth, that functional programming does not have any design patterns. See Functional Design Patterns by Scott Wlaschin
 
-I will use ✅ for patterns that have a place in function programming and ❌ for patterns that are to easy to call them a pattern or just simply outdated.
+I wanted to know myself if this is actually a valid statement and if not how many design pattern are actually outdated in the days of functional programming. My language of choice will be Elm.
 
-Creational Patterns
-
-❌ Factory Pattern
-
-https://refactoring.guru/design-patterns/factory-method
-
-type TrasportationType
-    = Road
-    | Sea
-
-createTruck : Transport
-
-createShip : Transport
-
-transportFactory : Transport...]]></description>
+I will use ✅ for patterns that have a place in function programming and ❌ for patterns that are too easy to really call them a "pattern" or for patterns that are simply outd...]]></description>
         </item>
     </channel>
 </rss>

@@ -3,7 +3,7 @@ module Post exposing (main, metadataHtml)
 import Elmstatic exposing (..)
 import Html exposing (..)
 import Html.Attributes as Attr exposing (class, href)
-import LaData.String
+import Layout
 import Page
 import TableOfContent
 
@@ -12,7 +12,7 @@ tagsToHtml : List String -> List (Html Never)
 tagsToHtml tags =
     let
         tagLink tag =
-            "/tags/" ++ Data.String.toLower tag
+            "/tags/" ++ String.toLower tag
 
         linkify tag =
             a [ href <| tagLink tag ] [ text tag ]
@@ -51,10 +51,10 @@ main =
                     |> List.filter
                         (\key ->
                             content.content
-                                |> Data.String.toLower
-                                |> Data.String.contains (key |> Data.String.toLower)
+                                |> String.toLower
+                                |> String.contains (key |> String.toLower)
                         )
-                    |> Data.String.join ", "
+                    |> String.join ", "
                     |> Html.text
               ]
                 |> Html.p []

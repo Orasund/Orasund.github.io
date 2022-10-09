@@ -173,6 +173,6 @@ layout decoder view =
                                 { title = ""
                                 , body = [ htmlTemplate content.siteTitle <| viewHtml ]
                                 }
-        , update = \msg contentJson -> ( contentJson, Cmd.none )
+        , update = \_ contentJson -> ( contentJson, Cmd.none )
         , subscriptions = \_ -> Sub.none
         }
