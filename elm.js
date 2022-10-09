@@ -5799,29 +5799,7 @@ var $author$project$Page$header = A2(
 				[
 					$Orasund$elm_layout$Layout$spacing(16)
 				]),
-			_List_fromArray(
-				[
-					A2(
-					$elm$html$Html$a,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$href('/about')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('About')
-						])),
-					A2(
-					$elm$html$Html$a,
-					_List_fromArray(
-						[
-							$elm$html$Html$Attributes$href('/contact')
-						]),
-					_List_fromArray(
-						[
-							$elm$html$Html$text('Contact')
-						]))
-				]))
+			_List_Nil)
 		]));
 var $rtfeldman$elm_css$Css$Structure$Selector = F3(
 	function (a, b, c) {
