@@ -6,6 +6,81 @@ tags: Collection
 I take my stand that design pattern are outdated in the days of functional programming.
 Here is me proving my point using Elm.
 
+I will use ✅ for patterns that have a place in function programming and ❌ for patterns that are to easy to call them a pattern or just simply outdated.
+
+# Creational Patterns
+
+## ❌ Factory Pattern
+
+[https://refactoring.guru/design-patterns/factory-method](https://refactoring.guru/design-patterns/factory-method)
+
+```
+type TrasportationType
+    = Road
+    | Sea
+
+createTruck : Transport
+
+createShip : Transport
+
+transportFactory : TransportationType -> Transport
+```
+
+The factory pattern is a function that takes some additional arguments to decide how to construct a structure.
+
+## Abstract Factory Pattern
+
+[https://refactoring.guru/design-patterns/abstract-factory](https://refactoring.guru/design-patterns/abstract-factory)
+
+```
+type FurnitureType
+    = Chair
+    | CoffeeTable
+    | Sofa
+
+type FurnitureStyle
+    = Victorian
+    | Modern
+
+modernFactory : FurnitureType -> Furniture
+
+victorianFactory : FurnitureType -> Furniture
+
+furnitureFactory : FurnitureStyle -> FurnitureType -> Furniture
+```
+
+An abstract factory pattern is just using a partial function.
+
+## Builder Pattern
+
+[https://refactoring.guru/design-patterns/builder](https://refactoring.guru/design-patterns/builder)
+
+```
+newHouse : HouseBuilder
+
+withWalls : WallDesign -> HouseBuilder -> HouseBuilder
+
+withDoors : DoorDesign -> HouseBuilder -> HouseBuilder
+
+withWindows : WindowDesign -> HouseBuilder -> HouseBuilder
+
+withRoof : RoofDesign -> HouseBuilder -> HouseBuilder
+
+withGarage : GarageDesign -> HouseBuilder -> HouseBuilder
+
+build : HouseBuilder -> House
+```
+
+The builder pattern use a seperate builder to collect all the information needed for constructing the desired structure.
+
+## Singleton Pattern
+
+The singleton pattern are default behavior for functional programming
+
+## Prototype Pattern
+
+Coping is the default behavior of functional programming, there the prototype makes no sense in this context.
+
 # Structural Patterns
 
 ## Adapter Pattern
