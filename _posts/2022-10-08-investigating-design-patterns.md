@@ -28,7 +28,7 @@ transportFactory : TransportationType -> Transport
 
 The factory pattern is a function that takes some additional arguments to decide how to construct a structure.
 
-## Abstract Factory Pattern
+## ❌ Abstract Factory Pattern
 
 [https://refactoring.guru/design-patterns/abstract-factory](https://refactoring.guru/design-patterns/abstract-factory)
 
@@ -51,7 +51,7 @@ furnitureFactory : FurnitureStyle -> FurnitureType -> Furniture
 
 An abstract factory pattern is just using a partial function.
 
-## Builder Pattern
+## ✅ Builder Pattern
 
 [https://refactoring.guru/design-patterns/builder](https://refactoring.guru/design-patterns/builder)
 
@@ -73,17 +73,17 @@ build : HouseBuilder -> House
 
 The builder pattern use a seperate builder to collect all the information needed for constructing the desired structure.
 
-## Singleton Pattern
+## ❌ Singleton Pattern
 
 The singleton pattern are default behavior for functional programming
 
-## Prototype Pattern
+## ❌ Prototype Pattern
 
 Coping is the default behavior of functional programming, there the prototype makes no sense in this context.
 
 # Structural Patterns
 
-## Adapter Pattern
+## ❌ Adapter Pattern
 
 ```
 computeXml : XML -> XML
@@ -97,11 +97,11 @@ jsonAdapter : (XML -> XML) -> Json -> Json
 
 A adapter is just a higher order function with a set of mappers.
 
-## Bridge Pattern
+## ❌ Bridge Pattern
 
 The bridge pattern uses composition over inherence. This is the default behavior for functional programming.
 
-## Composite Pattern
+## ❌ Composite Pattern
 
 [https://refactoring.guru/design-patterns/composite](https://refactoring.guru/design-patterns/composite)
 
@@ -125,7 +125,7 @@ The composite pattern is just a recursive type and a recursive function to go wi
 
 Note the function on display is not tail recursive and therefore not the most efficient.
 
-## Decorator Pattern
+## ❌ Decorator Pattern
 
 [https://refactoring.guru/design-patterns/decorator](https://refactoring.guru/design-patterns/decorator)
 
@@ -145,11 +145,11 @@ The decorator pattern makes no real sense in the context of functional programmi
 
 In this example `(String,Cmd msg)` is the monad, passing the string to various functions.
 
-## Facade Pattern
+## ❌ Facade Pattern
 
 The facade pattern is essentially saying that one can write simpler modules that call more complicated onces.
 
-## Flyweight Pattern
+## ✅ Flyweight Pattern
 
 ```
 type alias MovingParticle
@@ -165,7 +165,7 @@ type alias Game =
 
 The flyweight pattern states that for memory intense structures, one should store the common parts in a dictionary and only reference it by its id.
 
-## Proxy Pattern
+## ✅ Proxy Pattern
 
 ```
 pay : Int -> CreditCard -> CreditCard
@@ -177,7 +177,7 @@ The proxy pattern simplifies time and resource intense computations by creating 
 
 # Behavioral Patterns
 
-## Chain of Responsibility
+## ✅ Chain of Responsibility
 
 ```
 type Handler =
@@ -196,7 +196,7 @@ handleRequest request handlers =
 ```
 The chain of responsibility is a list of possible implementation. We go through the list and find the first implementation that is successful.
 
-## Command
+## ❌ Command
 
 ```
 type alias Command =
@@ -215,11 +215,11 @@ execute : Command -> { model | state : State } -> { model | state : State}
 
 The Command pattern uses functions as data to separate the create of the function from the execution.
 
-## Iterator
+## ❌ Iterator
 
 In functional programming, Folding takes the role of iterators
 
-## Mediator Pattern
+## ✅ Mediator Pattern
 
 ```
 type alias Mediator =
@@ -239,7 +239,7 @@ notify component mediator =
 
 The Mediator is a Dict containing update functions.
 
-## Memento Pattern
+## ❌ Memento Pattern
 
 ```
 type Editor =
@@ -260,7 +260,7 @@ undo (Editor (state,list)) =
 
 The Memento pattern is an opaque non empty list with functions to push onto and pull from the list.
 
-## Observer Pattern
+## ✅ Observer Pattern
 
 ```
 type alias Model =
@@ -281,7 +281,7 @@ notifySubscriber model =
 
 The Observer Pattern is nothing more then folding over a list of updateFunctions.
 
-## State Pattern
+## ✅ State Pattern
 
 [https://refactoring.guru/design-patterns/state](https://refactoring.guru/design-patterns/state)
 
@@ -325,11 +325,11 @@ renderModeration : Document -> Html msg
 
 renderPublished : Document -> Html msg
 ```
-The main idea is to but the function in the record. This way it can chance during runtime. 
+The main idea is to put the function in the record. This way it can chance during runtime. 
 
 I would however only advice this pattern, if a state machine does not do the job.
 
-## Strategy Pattern
+## ❌ Strategy Pattern
 
 [https://refactoring.guru/design-patterns/strategy](https://refactoring.guru/design-patterns/strategy)
 
@@ -348,7 +348,7 @@ publicTransportStrategy : RouteStrategy
 
 The strategy pattern is nothing more than a higher order function. 
 
-## Template Pattern
+## ✅ Template Pattern
 
 [https://refactoring.guru/design-patterns/template-method](https://refactoring.guru/design-patterns/template-method)
 
@@ -367,7 +367,7 @@ mineData : Template -> File -> Report
 
 The idea behind the template pattern is to have a record containing all subfunctions required for the task.
 
-## Visitor Pattern
+## ❌ Visitor Pattern
 
 [https://refactoring.guru/design-patterns/visitor](https://refactoring.guru/design-patterns/visitor)
 
