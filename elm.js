@@ -9760,26 +9760,24 @@ var $author$project$Page$markdownRender = function () {
 				var level = _v0.di;
 				var rawText = _v0.dv;
 				var children = _v0.c0;
+				var attrs = _List_fromArray(
+					[
+						$elm$html$Html$Attributes$id(
+						$author$project$Data$String$toUrlSaveVersion(rawText))
+					]);
 				switch (level) {
 					case 0:
-						return A2(
-							$elm$html$Html$h1,
-							_List_fromArray(
-								[
-									$elm$html$Html$Attributes$id(
-									$author$project$Data$String$toUrlSaveVersion(rawText))
-								]),
-							children);
+						return A2($elm$html$Html$h1, attrs, children);
 					case 1:
-						return A2($elm$html$Html$h2, _List_Nil, children);
+						return A2($elm$html$Html$h2, attrs, children);
 					case 2:
-						return A2($elm$html$Html$h3, _List_Nil, children);
+						return A2($elm$html$Html$h3, attrs, children);
 					case 3:
-						return A2($elm$html$Html$h4, _List_Nil, children);
+						return A2($elm$html$Html$h4, attrs, children);
 					case 4:
-						return A2($elm$html$Html$h5, _List_Nil, children);
+						return A2($elm$html$Html$h5, attrs, children);
 					default:
-						return A2($elm$html$Html$h6, _List_Nil, children);
+						return A2($elm$html$Html$h6, attrs, children);
 				}
 			}
 		});
