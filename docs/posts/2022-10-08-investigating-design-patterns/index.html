@@ -1,12 +1,48 @@
-<!doctype html><html><head><title>Investigating Design Patterns | Functional Fieldnotes</title><meta charset="utf-8"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/languages/elm.min.js"></script><script>hljs.initHighlightingOnLoad();</script><link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/styles/default.min.css" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Open+Sans|Proza+Libre|Inconsolata" rel="stylesheet" type="text/css"></head><body><div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center;" class="navigation"><div style="display: flex;"><a href="/posts">Functional Fieldnotes</a></div><div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px;"><a href="/about">About</a><a href="/contact">Contact</a></div></div><div class="sidebar"></div><div class="sidebar2"><div style="display: flex; flex-direction: column; position: sticky; top: 0px;"><h1>Table of Content</h1><ul><div style="display: flex;"><li>Structural Patterns</li></div><div style="display: flex;"><li>....Adapter Pattern</li></div><div style="display: flex;"><li>....Bridge Pattern</li></div><div style="display: flex;"><li>....Composite Pattern</li></div><div style="display: flex;"><li>....Decorator Pattern</li></div><div style="display: flex;"><li>....Facade Pattern</li></div><div style="display: flex;"><li>....Flyweight Pattern</li></div><div style="display: flex;"><li>....Proxy Pattern</li></div><div style="display: flex;"><li>Behavioral Patterns</li></div><div style="display: flex;"><li>....Chain of Responsibility</li></div><div style="display: flex;"><li>....Command</li></div><div style="display: flex;"><li>....Iterator</li></div><div style="display: flex;"><li>....Mediator Pattern</li></div><div style="display: flex;"><li>....Memento Pattern</li></div><div style="display: flex;"><li>....Observer Pattern</li></div><div style="display: flex;"><li>....State Pattern</li></div><div style="display: flex;"><li>....Strategy Pattern</li></div><div style="display: flex;"><li>....Template Pattern</li></div><div style="display: flex;"><li>....Visitor Pattern</li></div></ul></div></div><div class="content"><h1 class="title">Investigating Design Patterns</h1><div class="post-metadata"><span>2022-10-08</span><span>•</span><a href="/tags/collection">Collection</a></div><p><strong>Keywords:</strong> Elm, Functional Programming, Book</p><hr><div class="markdown"><p>I take my stand that design pattern are outdated in the days of functional programming.
-Here is me proving my point using Elm.</p><h1>Structural Patterns</h1><h2>Adapter Pattern</h2><pre><code>computeXml : XML -&gt; XML
+<!doctype html><html><head><title>Investigating Design Patterns | Functional Fieldnotes</title><meta charset="utf-8"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/languages/elm.min.js"></script><script>hljs.initHighlightingOnLoad();</script><link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/styles/default.min.css" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Open+Sans|Proza+Libre|Inconsolata" rel="stylesheet" type="text/css"></head><body><div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center;" class="navigation"><div style="display: flex;"><a href="/posts">Functional Fieldnotes</a></div><div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px;"><a href="/about">About</a><a href="/contact">Contact</a></div></div><div class="sidebar"></div><div class="sidebar2"><div style="display: flex; flex-direction: column; position: sticky; top: 0px;"><h1>Table of Content</h1><ul><div style="display: flex;"><li>Creational Patterns</li></div><div style="display: flex;"><li>....❌ Factory Pattern</li></div><div style="display: flex;"><li>....❌ Abstract Factory Pattern</li></div><div style="display: flex;"><li>....✅ Builder Pattern</li></div><div style="display: flex;"><li>....❌ Singleton Pattern</li></div><div style="display: flex;"><li>....❌ Prototype Pattern</li></div><div style="display: flex;"><li>Structural Patterns</li></div><div style="display: flex;"><li>....❌ Adapter Pattern</li></div><div style="display: flex;"><li>....❌ Bridge Pattern</li></div><div style="display: flex;"><li>....❌ Composite Pattern</li></div><div style="display: flex;"><li>....❌ Decorator Pattern</li></div><div style="display: flex;"><li>....❌ Facade Pattern</li></div><div style="display: flex;"><li>....✅ Flyweight Pattern</li></div><div style="display: flex;"><li>....✅ Proxy Pattern</li></div><div style="display: flex;"><li>Behavioral Patterns</li></div><div style="display: flex;"><li>....✅ Chain of Responsibility</li></div><div style="display: flex;"><li>....❌ Command</li></div><div style="display: flex;"><li>....❌ Iterator</li></div><div style="display: flex;"><li>....✅ Mediator Pattern</li></div><div style="display: flex;"><li>....❌ Memento Pattern</li></div><div style="display: flex;"><li>....✅ Observer Pattern</li></div><div style="display: flex;"><li>....✅ State Pattern</li></div><div style="display: flex;"><li>....❌ Strategy Pattern</li></div><div style="display: flex;"><li>....✅ Template Pattern</li></div><div style="display: flex;"><li>....❌ Visitor Pattern</li></div></ul></div></div><div class="content"><h1 class="title">Investigating Design Patterns</h1><div class="post-metadata"><span>2022-10-08</span><span>•</span><a href="/tags/collection">Collection</a></div><p><strong>Keywords:</strong> Elm, Functional Programming, Book</p><hr><div class="markdown"><p>I take my stand that design pattern are outdated in the days of functional programming.
+Here is me proving my point using Elm.</p><p>I will use ✅ for patterns that have a place in function programming and ❌ for patterns that are to easy to call them a pattern or just simply outdated.</p><h1>Creational Patterns</h1><h2>❌ Factory Pattern</h2><p><a href="https://refactoring.guru/design-patterns/factory-method">https://refactoring.guru/design-patterns/factory-method</a></p><pre><code>type TrasportationType
+    = Road
+    | Sea
+
+createTruck : Transport
+
+createShip : Transport
+
+transportFactory : TransportationType -&gt; Transport
+</code></pre><p>The factory pattern is a function that takes some additional arguments to decide how to construct a structure.</p><h2>❌ Abstract Factory Pattern</h2><p><a href="https://refactoring.guru/design-patterns/abstract-factory">https://refactoring.guru/design-patterns/abstract-factory</a></p><pre><code>type FurnitureType
+    = Chair
+    | CoffeeTable
+    | Sofa
+
+type FurnitureStyle
+    = Victorian
+    | Modern
+
+modernFactory : FurnitureType -&gt; Furniture
+
+victorianFactory : FurnitureType -&gt; Furniture
+
+furnitureFactory : FurnitureStyle -&gt; FurnitureType -&gt; Furniture
+</code></pre><p>An abstract factory pattern is just using a partial function.</p><h2>✅ Builder Pattern</h2><p><a href="https://refactoring.guru/design-patterns/builder">https://refactoring.guru/design-patterns/builder</a></p><pre><code>newHouse : HouseBuilder
+
+withWalls : WallDesign -&gt; HouseBuilder -&gt; HouseBuilder
+
+withDoors : DoorDesign -&gt; HouseBuilder -&gt; HouseBuilder
+
+withWindows : WindowDesign -&gt; HouseBuilder -&gt; HouseBuilder
+
+withRoof : RoofDesign -&gt; HouseBuilder -&gt; HouseBuilder
+
+withGarage : GarageDesign -&gt; HouseBuilder -&gt; HouseBuilder
+
+build : HouseBuilder -&gt; House
+</code></pre><p>The builder pattern use a seperate builder to collect all the information needed for constructing the desired structure.</p><h2>❌ Singleton Pattern</h2><p>The singleton pattern are default behavior for functional programming</p><h2>❌ Prototype Pattern</h2><p>Coping is the default behavior of functional programming, there the prototype makes no sense in this context.</p><h1>Structural Patterns</h1><h2>❌ Adapter Pattern</h2><pre><code>computeXml : XML -&gt; XML
 
 xmlToJson : XML -&gt; Json
 
 jsonToXml : Json -&gt; XML
 
 jsonAdapter : (XML -&gt; XML) -&gt; Json -&gt; Json
-</code></pre><p>A adapter is just a higher order function with a set of mappers.</p><h2>Bridge Pattern</h2><p>The bridge pattern uses composition over inherence. This is the default behavior for functional programming.</p><h2>Composite Pattern</h2><p><a href="https://refactoring.guru/design-patterns/composite">https://refactoring.guru/design-patterns/composite</a></p><pre><code>type Order
+</code></pre><p>A adapter is just a higher order function with a set of mappers.</p><h2>❌ Bridge Pattern</h2><p>The bridge pattern uses composition over inherence. This is the default behavior for functional programming.</p><h2>❌ Composite Pattern</h2><p><a href="https://refactoring.guru/design-patterns/composite">https://refactoring.guru/design-patterns/composite</a></p><pre><code>type Order
     = Product { price : Int }
     | Box (List Order)
 
@@ -19,7 +55,7 @@ calculatePrice order =
             list
                 |&gt; List.map calculatePrice
                 |&gt; List.sum
-</code></pre><p>The composite pattern is just a recursive type and a recursive function to go with it.</p><p>Note the function on display is not tail recursive and therefore not the most efficient.</p><h2>Decorator Pattern</h2><p><a href="https://refactoring.guru/design-patterns/decorator">https://refactoring.guru/design-patterns/decorator</a></p><pre><code>sendEmail : {email : String} -&gt; String -&gt; Cmd msg
+</code></pre><p>The composite pattern is just a recursive type and a recursive function to go with it.</p><p>Note the function on display is not tail recursive and therefore not the most efficient.</p><h2>❌ Decorator Pattern</h2><p><a href="https://refactoring.guru/design-patterns/decorator">https://refactoring.guru/design-patterns/decorator</a></p><pre><code>sendEmail : {email : String} -&gt; String -&gt; Cmd msg
 
 sendSms : {phone : String} -&gt; String -&gt; Cmd msg
 
@@ -28,7 +64,7 @@ sendFacebook : {facebookId : String} -&gt; String -&gt; Cmd msg
 sendSlack : {slackId : String} -&gt; String -&gt; Cmd msg
 
 andThen : (String -&gt; Cmd msg) -&gt; (String,Cmd msg) -&gt; (String,Cmd msg)
-</code></pre><p>The decorator pattern makes no real sense in the context of functional programming, however we can produce the same behavior using the Monad pattern.</p><p>In this example <code>(String,Cmd msg)</code> is the monad, passing the string to various functions.</p><h2>Facade Pattern</h2><p>The facade pattern is essentially saying that one can write simpler modules that call more complicated onces.</p><h2>Flyweight Pattern</h2><pre><code>type alias MovingParticle
+</code></pre><p>The decorator pattern makes no real sense in the context of functional programming, however we can produce the same behavior using the Monad pattern.</p><p>In this example <code>(String,Cmd msg)</code> is the monad, passing the string to various functions.</p><h2>❌ Facade Pattern</h2><p>The facade pattern is essentially saying that one can write simpler modules that call more complicated onces.</p><h2>✅ Flyweight Pattern</h2><pre><code>type alias MovingParticle
     { particle: Id
     , state : ParticleState
     }
@@ -37,10 +73,10 @@ type alias Game =
     { particles : Dict Id Particle
     , movingParticles : Dict Position MovingParticle
     }
-</code></pre><p>The flyweight pattern states that for memory intense structures, one should store the common parts in a dictionary and only reference it by its id.</p><h2>Proxy Pattern</h2><pre><code>pay : Int -&gt; CreditCard -&gt; CreditCard
+</code></pre><p>The flyweight pattern states that for memory intense structures, one should store the common parts in a dictionary and only reference it by its id.</p><h2>✅ Proxy Pattern</h2><pre><code>pay : Int -&gt; CreditCard -&gt; CreditCard
 
 syncCreditCard : CreditCard -&gt; Cmd msg
-</code></pre><p>The proxy pattern simplifies time and resource intense computations by creating a proxy structure that simulates the computation and regularly syncs up with the real thing.</p><h1>Behavioral Patterns</h1><h2>Chain of Responsibility</h2><pre><code>type Handler =
+</code></pre><p>The proxy pattern simplifies time and resource intense computations by creating a proxy structure that simulates the computation and regularly syncs up with the real thing.</p><h1>Behavioral Patterns</h1><h2>✅ Chain of Responsibility</h2><pre><code>type Handler =
     Request -&gt; Maybe Response
 
 handleRequest : Request -&gt; List Handler -&gt; Maybe Response
@@ -53,7 +89,7 @@ handleRequest request handlers =
                     Just head
                 Nothing -&gt;
                     handleRequest request tail
-</code></pre><p>The chain of responsibility is a list of possible implementation. We go through the list and find the first implementation that is successful.</p><h2>Command</h2><pre><code>type alias Command =
+</code></pre><p>The chain of responsibility is a list of possible implementation. We go through the list and find the first implementation that is successful.</p><h2>❌ Command</h2><pre><code>type alias Command =
     State -&gt; State
 
 copy : String -&gt; Command
@@ -65,7 +101,7 @@ paste : Segment -&gt; Command
 undo : Command
 
 execute : Command -&gt; { model | state : State } -&gt; { model | state : State}
-</code></pre><p>The Command pattern uses functions as data to separate the create of the function from the execution.</p><h2>Iterator</h2><p>In functional programming, Folding takes the role of iterators</p><h2>Mediator Pattern</h2><pre><code>type alias Mediator =
+</code></pre><p>The Command pattern uses functions as data to separate the create of the function from the execution.</p><h2>❌ Iterator</h2><p>In functional programming, Folding takes the role of iterators</p><h2>✅ Mediator Pattern</h2><pre><code>type alias Mediator =
     { components : Dict String (State -&gt; State)
     , state : State
     }
@@ -78,7 +114,7 @@ notify component mediator =
                 |&gt; Dict.get component
     in
     {mediator | state = fun mediator.state}
-</code></pre><p>The Mediator is a Dict containing update functions.</p><h2>Memento Pattern</h2><pre><code>type Editor =
+</code></pre><p>The Mediator is a Dict containing update functions.</p><h2>❌ Memento Pattern</h2><pre><code>type Editor =
     Editor (State,List State)
 
 save : Editor -&gt; Editor
@@ -92,7 +128,7 @@ undo (Editor (state,list)) =
             Editor (head, tail)
         [] -&gt; 
             Editor (state,list)
-</code></pre><p>The Memento pattern is an opaque non empty list with functions to push onto and pull from the list.</p><h2>Observer Pattern</h2><pre><code>type alias Model =
+</code></pre><p>The Memento pattern is an opaque non empty list with functions to push onto and pull from the list.</p><h2>✅ Observer Pattern</h2><pre><code>type alias Model =
     { subscriber : List (State -&gt; State)
     , state : State
     }
@@ -106,7 +142,7 @@ notifySubscriber model =
                 (\fun state -&gt; fun state )
                 model.state
     }
-</code></pre><p>The Observer Pattern is nothing more then folding over a list of updateFunctions.</p><h2>State Pattern</h2><p><a href="https://refactoring.guru/design-patterns/state">https://refactoring.guru/design-patterns/state</a></p><pre><code>type alias State =
+</code></pre><p>The Observer Pattern is nothing more then folding over a list of updateFunctions.</p><h2>✅ State Pattern</h2><p><a href="https://refactoring.guru/design-patterns/state">https://refactoring.guru/design-patterns/state</a></p><pre><code>type alias State =
     { document : Document
     , publish : Document -&gt; State
     , render : Document -&gt; Html msg
@@ -144,7 +180,7 @@ renderDraft : Document -&gt; Html msg
 renderModeration : Document -&gt; Html msg
 
 renderPublished : Document -&gt; Html msg
-</code></pre><p>The main idea is to but the function in the record. This way it can chance during runtime.</p><p>I would however only advice this pattern, if a state machine does not do the job.</p><h2>Strategy Pattern</h2><p><a href="https://refactoring.guru/design-patterns/strategy">https://refactoring.guru/design-patterns/strategy</a></p><pre><code>type alias RouteStrategy =
+</code></pre><p>The main idea is to put the function in the record. This way it can chance during runtime.</p><p>I would however only advice this pattern, if a state machine does not do the job.</p><h2>❌ Strategy Pattern</h2><p><a href="https://refactoring.guru/design-patterns/strategy">https://refactoring.guru/design-patterns/strategy</a></p><pre><code>type alias RouteStrategy =
     Point -&gt; Route -&gt; Route
 
 buildRoute: RouteStrategy -&gt; List Point -&gt; Route
@@ -154,7 +190,7 @@ roadStrategy : RouteStrategy
 walkingStrategy : RouteStrategy
 
 publicTransportStrategy : RouteStrategy
-</code></pre><p>The strategy pattern is nothing more than a higher order function.</p><h2>Template Pattern</h2><p><a href="https://refactoring.guru/design-patterns/template-method">https://refactoring.guru/design-patterns/template-method</a></p><pre><code>type alias Template =
+</code></pre><p>The strategy pattern is nothing more than a higher order function.</p><h2>✅ Template Pattern</h2><p><a href="https://refactoring.guru/design-patterns/template-method">https://refactoring.guru/design-patterns/template-method</a></p><pre><code>type alias Template =
     { extractData : File -&gt; String
     , parseData : String -&gt; Data
     , analyseData : Data -&gt; Analysis
@@ -164,7 +200,7 @@ publicTransportStrategy : RouteStrategy
 defaultTemplate : Template
 
 mineData : Template -&gt; File -&gt; Report
-</code></pre><p>The idea behind the template pattern is to have a record containing all subfunctions required for the task.</p><h2>Visitor Pattern</h2><p><a href="https://refactoring.guru/design-patterns/visitor">https://refactoring.guru/design-patterns/visitor</a></p><pre><code>type alias ExportVisitor a =
+</code></pre><p>The idea behind the template pattern is to have a record containing all subfunctions required for the task.</p><h2>❌ Visitor Pattern</h2><p><a href="https://refactoring.guru/design-patterns/visitor">https://refactoring.guru/design-patterns/visitor</a></p><pre><code>type alias ExportVisitor a =
     a -&gt; Excel
 
 exportFromCity : ExportVisitor City

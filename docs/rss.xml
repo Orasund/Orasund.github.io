@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Sat, 08 Oct 2022 17:26:35 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 09 Oct 2022 10:59:46 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -167,27 +167,23 @@ andThe...]]></description>
             <description><![CDATA[I take my stand that design pattern are outdated in the days of functional programming.
 Here is me proving my point using Elm.
 
-Structural Patterns
+I will use ✅ for patterns that have a place in function programming and ❌ for patterns that are to easy to call them a pattern or just simply outdated.
 
-Adapter Pattern
+Creational Patterns
 
-computeXml : XML -> XML
+❌ Factory Pattern
 
-xmlToJson : XML -> Json
+https://refactoring.guru/design-patterns/factory-method
 
-jsonToXml : Json -> XML
+type TrasportationType
+    = Road
+    | Sea
 
-jsonAdapter : (XML -> XML) -> Json -> Json
+createTruck : Transport
 
-A adapter is just a higher order function with a set of mappers.
+createShip : Transport
 
-Bridge Pattern
-
-The bridge pattern uses composition over inherence. This is the default behavior for functional programming.
-
-Composite Pattern
-
-http...]]></description>
+transportFactory : Transport...]]></description>
         </item>
     </channel>
 </rss>
