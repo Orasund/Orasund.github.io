@@ -2,11 +2,11 @@
 title: "Investigating Design Patterns"
 tags: Collection
 ---
+There is this myth, that functional programming does not have any design patterns. [See Functional Design Patterns by Scott Wlaschin](https://www.youtube.com/watch?v=srQt1NAHYC0)
 
-I take my stand that design pattern are outdated in the days of functional programming.
-Here is me proving my point using Elm.
+I wanted to know myself if this is actually a valid statement and if not how many design pattern are actually outdated in the days of functional programming. My language of choice will be Elm.
 
-I will use ✅ for patterns that have a place in function programming and ❌ for patterns that are to easy to call them a pattern or just simply outdated.
+I will use ✅ for patterns that have a place in function programming and ❌ for patterns that are too easy to really call them a "pattern" or for patterns that are simply outdated.
 
 # Creational Patterns
 
@@ -26,7 +26,7 @@ createShip : Transport
 transportFactory : TransportationType -> Transport
 ```
 
-The factory pattern is a function that takes some additional arguments to decide how to construct a structure.
+The factory pattern is just a function that takes some additional arguments to decide how to construct a structure.
 
 ## ❌ Abstract Factory Pattern
 
@@ -49,7 +49,7 @@ victorianFactory : FurnitureType -> Furniture
 furnitureFactory : FurnitureStyle -> FurnitureType -> Furniture
 ```
 
-An abstract factory pattern is just using a partial function.
+An abstract factory pattern is just a partial function.
 
 ## ✅ Builder Pattern
 
@@ -213,11 +213,11 @@ undo : Command
 execute : Command -> State -> State
 ```
 
-The Command pattern uses functions as data to separate the create of the function from the execution.
+The Command pattern uses functions as data to separate the creation of the function from the execution.
 
 ## ❌ Iterator
 
-In functional programming, Folding takes the role of iterators
+Folding takes the role of iterators in functional programming.
 
 ## ✅ Mediator Pattern
 
@@ -237,7 +237,7 @@ notify component mediator =
     {mediator | state = fun mediator.state}
 ```
 
-The Mediator is a Dict containing update functions.
+The Mediator is a dictionary containing update functions.
 
 ## ❌ Memento Pattern
 
@@ -279,7 +279,7 @@ notifySubscriber model =
     }
 ```
 
-The Observer Pattern is nothing more then folding over a list of updateFunctions.
+The Observer Pattern is nothing more then folding over a list of update functions.
 
 ## ✅ State Pattern
 
@@ -325,7 +325,9 @@ renderModeration : Document -> Html msg
 
 renderPublished : Document -> Html msg
 ```
-The main idea is to put the function in the record. This way it can chance during runtime. 
+The article argues against a state machine, as it might not scale that well.
+
+Instead, the State pattern uses functions inside a record. This way it can chance during runtime. 
 
 I would however only advice this pattern, if a state machine does not do the job.
 
@@ -382,4 +384,4 @@ exportFromIndustry : ExportVisitor Industry
 exportFromSightSeeing : ExportVisitor Excel
 ```
 
-A Visitor is just a function where the implementation depends on the input. Note how it does not matter how `City`, `Industry` and `Visitor` relate with each other. In the example they are part of a Union Type, but this does not have to be.
+A Visitor is just a function where the implementation depends on the input. Note how it does not matter how `City`, `Industry` and `Visitor` relate with each other. In the example they are part of a Union Type, but this does not has to be.

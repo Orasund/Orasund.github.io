@@ -1,10 +1,10 @@
 module Page exposing (footer, header, layout, main, markdown, parseBlocks)
 
+import Data.String
 import Elmstatic exposing (..)
 import Html exposing (..)
 import Html.Attributes as Attr exposing (attribute, class, href)
-import Layout
-import Markdown.Block
+import Markdown.Block as Block
 import Markdown.Parser
 import Markdown.Renderer
 import Styles
@@ -40,9 +40,39 @@ M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-
     Html.node "svg" [ attribute "width" "32", attribute "height" "32", attribute "viewBox" "0 0 16 16" ] [ pathNode ]
 
 
-markdown : List Markdown.Block.Block -> Html Never
+markdownRender : Markdown.Renderer.Renderer (Html msg)
+markdownRender =
+    let
+        record =
+            Markdown.Renderer.defaultHtmlRenderer
+    in
+    { record
+        | heading =
+            \{ level, rawText, children } ->
+                case level of
+                    Block.H1 ->
+                        Html.h1 [ Attr.id (Data.String.toUrlSaveVersion rawText) ] children
+
+                    Block.H2 ->
+                        Html.h2 [] children
+
+                    Block.H3 ->
+                        Html.h3 [] children
+
+                    Block.H4 ->
+                        Html.h4 [] children
+
+                    Block.H5 ->
+                        Html.h5 [] children
+
+                    Block.H6 ->
+                        Html.h6 [] children
+    }
+
+
+markdown : List Block.Block -> Html Never
 markdown list =
-    (case Markdown.Renderer.render Markdown.Renderer.defaultHtmlRenderer list of
+    (case Markdown.Renderer.render markdownRender list of
         Ok listHtml ->
             listHtml
 
@@ -52,7 +82,7 @@ markdown list =
         |> Html.div [ attribute "class" "markdown" ]
 
 
-parseBlocks : String -> List Markdown.Block.Block
+parseBlocks : String -> List Block.Block
 parseBlocks s =
     case Markdown.Parser.parse s of
         Ok list ->
@@ -61,11 +91,11 @@ parseBlocks s =
         Err errs ->
             errs
                 |> List.map Markdown.Parser.deadEndToString
-                |> String.join ","
+                |> Data.String.join ","
                 |> (++) "Parsing Error: "
-                |> Markdown.Block.Text
+                |> Block.Text
                 |> List.singleton
-                |> Markdown.Block.Paragraph
+                |> Block.Paragraph
                 |> List.singleton
 
 
