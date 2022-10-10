@@ -1,4 +1,4 @@
-<!doctype html><html><head><title>Simple Software | Functional Fieldnotes</title><meta charset="utf-8"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/languages/elm.min.js"></script><script>hljs.initHighlightingOnLoad();</script><link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/styles/default.min.css" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Open+Sans|Proza+Libre|Inconsolata" rel="stylesheet" type="text/css"></head><body><div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center;" class="navigation"><div style="display: flex;"><a href="/posts">Functional Fieldnotes</a></div><div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px;"></div></div><div class="sidebar"><h2>Posts</h2><ul><li>The Pragmatic Programmer</li><li>The Little Typer</li><li>Terminology Overview</li><li>Tracery Io</li><li>Some Thoughts On TDD</li><li>Simple Software</li><li>Exploring Monads</li><li>Functional Design Patterns</li><li>Investigating Design Patterns</li></ul></div><div class="sidebar2"><div style="display: flex; flex-direction: column; position: sticky; top: 0px;"><h2>Table of Content</h2><ol><li><a href="#Keep_it_Simple_and_Stupid">Keep it Simple and Stupid</a><ol></ol></li><li><a href="#Functional_First">Functional First</a><ol></ol></li><li><a href="#Types_over_Tests">Types over Tests</a><ol></ol></li><li><a href="#Refactoring_is_half_the_job">Refactoring is half the job</a><ol></ol></li></ol></div></div><div class="content"><h1 class="title">Simple Software</h1><div class="post-metadata"><span>2022-10-05</span><span>•</span><a href="/tags/functional programming">functional programming</a></div><p><strong>Keywords:</strong> Functional Programming</p><br><br><div class="markdown"><p>I would describe my programming philosophy as "creating simple software".
+<!doctype html><html><head><title>Simple Software | Functional Fieldnotes</title><meta charset="utf-8"><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/languages/elm.min.js"></script><script>hljs.initHighlightingOnLoad();</script><link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/styles/default.min.css" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Open+Sans|Proza+Libre|Inconsolata" rel="stylesheet" type="text/css"></head><body><div style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center;" class="navigation"><div style="display: flex;"><a href="/posts">Functional Fieldnotes</a></div><div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 16px;"></div></div><div class="sidebar"><h2>Posts</h2><a href="/posts/2022-05-29-the-pragmatic-programmer.md">The Pragmatic Programmer</a><br><a href="/posts/2022-06-11-the-little-typer.md">The Little Typer</a><br><a href="/posts/2022-07-27-terminology-overview.md">Terminology Overview</a><br><a href="/posts/2022-09-18-tracery-io.md">Tracery Io</a><br><a href="/posts/2022-09-22-Some-Thoughts-on-TDD.md">Some Thoughts On TDD</a><br><a href="/posts/2022-10-05-simple-software.md">Simple Software</a><br><a href="/posts/2022-10-06-exploring-monads.md">Exploring Monads</a><br><a href="/posts/2022-10-06-functional-design-patterns.md">Functional Design Patterns</a><br><a href="/posts/2022-10-08-investigating-design-patterns.md">Investigating Design Patterns</a></div><div class="sidebar2"><div style="display: flex; flex-direction: column; position: sticky; top: 0px;"><h2>Table of Content</h2><ol><li><a href="#Keep_it_Simple_and_Stupid">Keep it Simple and Stupid</a><ol></ol></li><li><a href="#Functional_First">Functional First</a><ol></ol></li><li><a href="#Types_over_Tests">Types over Tests</a><ol></ol></li><li><a href="#Refactoring_is_half_the_job">Refactoring is half the job</a><ol></ol></li></ol></div></div><div class="content"><h1 class="title">Simple Software</h1><div class="post-metadata"><span>2022-10-05</span><span>•</span><a href="/tags/functional programming">functional programming</a></div><p><strong>Keywords:</strong> Functional Programming</p><br><br><div class="markdown"><p>I would describe my programming philosophy as "creating simple software".
 Here is what i mean by that.</p><h1 id="Keep_it_Simple_and_Stupid">Keep it Simple and Stupid</h1><p>There are a lot of programming paradims and trends floating around.
 But for actual, every day work these are often a complete overkill.
 Things may be simple and they may be boring. Thats good. That's exactly what we are looking after.
@@ -25,7 +25,7 @@ M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-
     background-color:#ffffff;
     color:#363636;
     font-family:Open Sans, Arial, sans-serif;
-    font-size:18px;
+    font-size:16px;
     line-height:1.4em;
 }
 
@@ -83,6 +83,14 @@ ul {
 
 ol {
     padding-inline-start:30px;
+}
+
+.sidebar, .sidebar2 {
+    font-size:0.8em;
+}
+
+.sidebar  h1, .sidebar  h2, .sidebar  h3, .sidebar2  h1, .sidebar2  h2, .sidebar2  h3 {
+    margin:0;
 }
 
 .header-logo {

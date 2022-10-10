@@ -8919,6 +8919,8 @@ var $rtfeldman$elm_css$Css$Preprocess$WithMedia = F2(
 		return {$: 4, a: a, b: b};
 	});
 var $rtfeldman$elm_css$Css$Media$withMedia = $rtfeldman$elm_css$Css$Preprocess$WithMedia;
+var $rtfeldman$elm_css$Css$UnitlessInteger = 0;
+var $rtfeldman$elm_css$Css$zero = {bx: 0, at: 0, U: 0, au: 0, av: 0, ab: 0, ac: 0, dp: 0, W: 0, a7: 0, aD: '', aT: 0, bU: '0'};
 var $author$project$Styles$styles = function () {
 	var wideScreen = $rtfeldman$elm_css$Css$Media$withMedia(
 		_List_fromArray(
@@ -8968,7 +8970,7 @@ var $author$project$Styles$styles = function () {
 								}($rtfeldman$elm_css$Css$sansSerif)
 								])),
 							$rtfeldman$elm_css$Css$fontSize(
-							$rtfeldman$elm_css$Css$px(18)),
+							$rtfeldman$elm_css$Css$px(16)),
 							$rtfeldman$elm_css$Css$lineHeight(
 							$rtfeldman$elm_css$Css$em(1.4))
 						])),
@@ -9080,6 +9082,30 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							A2($rtfeldman$elm_css$Css$property, 'padding-inline-start', '30px')
+						])),
+					A2(
+					$rtfeldman$elm_css$Css$Global$each,
+					_List_fromArray(
+						[
+							$rtfeldman$elm_css$Css$Global$class('sidebar'),
+							$rtfeldman$elm_css$Css$Global$class('sidebar2')
+						]),
+					_List_fromArray(
+						[
+							$rtfeldman$elm_css$Css$fontSize(
+							$rtfeldman$elm_css$Css$em(0.8)),
+							$rtfeldman$elm_css$Css$Global$descendants(
+							_List_fromArray(
+								[
+									A2(
+									$rtfeldman$elm_css$Css$Global$each,
+									_List_fromArray(
+										[$rtfeldman$elm_css$Css$Global$h1, $rtfeldman$elm_css$Css$Global$h2, $rtfeldman$elm_css$Css$Global$h3]),
+									_List_fromArray(
+										[
+											$rtfeldman$elm_css$Css$margin($rtfeldman$elm_css$Css$zero)
+										]))
+								]))
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
@@ -9357,9 +9383,26 @@ var $Orasund$elm_layout$Layout$column = function (attrs) {
 				]),
 			attrs));
 };
+var $elm$core$List$intersperse = F2(
+	function (sep, xs) {
+		if (!xs.b) {
+			return _List_Nil;
+		} else {
+			var hd = xs.a;
+			var tl = xs.b;
+			var step = F2(
+				function (x, rest) {
+					return A2(
+						$elm$core$List$cons,
+						sep,
+						A2($elm$core$List$cons, x, rest));
+				});
+			var spersed = A3($elm$core$List$foldr, step, _List_Nil, tl);
+			return A2($elm$core$List$cons, hd, spersed);
+		}
+	});
 var $author$project$Post$keywords = _List_fromArray(
 	['Elm', 'Functional Programming', 'TDD', 'Video', 'Book']);
-var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$Attributes$align = $elm$html$Html$Attributes$stringProperty('align');
 var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
 var $elm$html$Html$blockquote = _VirtualDom_node('blockquote');
@@ -9383,6 +9426,7 @@ var $elm$html$Html$h6 = _VirtualDom_node('h6');
 var $elm$html$Html$hr = _VirtualDom_node('hr');
 var $elm$html$Html$img = _VirtualDom_node('img');
 var $elm$html$Html$input = _VirtualDom_node('input');
+var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$ol = _VirtualDom_node('ol');
 var $dillonkearns$elm_markdown$Markdown$HtmlRenderer$HtmlRenderer = $elm$core$Basics$identity;
 var $dillonkearns$elm_markdown$Markdown$Html$resultOr = F2(
@@ -18315,31 +18359,35 @@ var $author$project$Post$main = A2(
 				$author$project$Page$layout,
 				content.aC,
 				{
-					cs: _List_fromArray(
-						[
-							A2(
+					cs: A2(
+						$elm$core$List$cons,
+						A2(
 							$elm$html$Html$h2,
 							_List_Nil,
 							_List_fromArray(
 								[
 									$elm$html$Html$text('Posts')
 								])),
-							A2(
-							$elm$html$Html$ul,
-							_List_Nil,
+						A2(
+							$elm$core$List$intersperse,
+							A2($elm$html$Html$br, _List_Nil, _List_Nil),
 							A2(
 								$elm$core$List$map,
 								function (_v0) {
 									var title = _v0.aC;
 									var path = _v0.O;
 									return A2(
-										$elm$html$Html$li,
-										_List_Nil,
-										$elm$core$List$singleton(
-											$elm$html$Html$text(title)));
+										$elm$html$Html$a,
+										_List_fromArray(
+											[
+												$elm$html$Html$Attributes$href('/posts/' + path)
+											]),
+										_List_fromArray(
+											[
+												$elm$html$Html$text(title)
+											]));
 								},
-								$author$project$Generated$Toc$posts))
-						]),
+								$author$project$Generated$Toc$posts))),
 					cH: $elm$core$List$singleton(
 						A2(
 							$Orasund$elm_layout$Layout$column,
