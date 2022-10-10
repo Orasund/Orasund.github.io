@@ -65,6 +65,15 @@ main =
             ]
                 |> Page.layout content.title
                     { leftSidebar =
+                        blocks
+                            |> TableOfContent.view
+                            |> Layout.column
+                                [ Attr.style "position" "sticky"
+                                , Attr.style "top" "0"
+                                , Attr.style "padding" "8px"
+                                ]
+                            |> List.singleton
+                    , rightSidebar =
                         Html.h2 [] [ Html.text "Posts" ]
                             :: (Generated.Toc.posts
                                     |> List.map
@@ -73,10 +82,7 @@ main =
                                         )
                                     |> List.intersperse (Html.br [] [])
                                )
-                    , rightSidebar =
-                        blocks
-                            |> TableOfContent.view
-                            |> Layout.column [ Attr.style "position" "sticky", Attr.style "top" "0" ]
+                            |> Layout.column [ Attr.style "padding" "8px" ]
                             |> List.singleton
                     }
                 |> Ok
