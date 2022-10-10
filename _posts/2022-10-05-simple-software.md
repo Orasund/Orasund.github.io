@@ -1,8 +1,7 @@
 ---
 title: "Simple Software"
-tags: essay
+tags: [Functional Programming]
 ---
-
 I would describe my programming philosophy as "creating simple software".
 Here is what i mean by that.
 

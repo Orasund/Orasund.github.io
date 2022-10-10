@@ -1,6 +1,6 @@
 ---
 title: "Investigating Design Patterns"
-tags: Collection
+tags: [Elm,Functional Programming,Monad]
 ---
 There is this myth, that functional programming does not have any design patterns. [See Functional Design Patterns by Scott Wlaschin](https://www.youtube.com/watch?v=srQt1NAHYC0)
 

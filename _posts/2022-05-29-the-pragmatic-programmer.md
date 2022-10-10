@@ -1,8 +1,7 @@
 ---
 title: "The Pragmatic Programmer"
-tags: book
+tags: []
 ---
-
 # Chapter 5: Your Knowledge Portfolio (Page 37 in pdf)
 
 Goals

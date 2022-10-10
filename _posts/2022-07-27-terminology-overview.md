@@ -1,8 +1,7 @@
 ---
 title: "Terminology Overview"
-tags: Collection
+tags: [Functional Programming,TDD]
 ---
-
 **MODERN** Terminology. If something is not here... maybe its outdated?
 
 # Code Structuring

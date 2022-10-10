@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Mon, 10 Oct 2022 03:50:46 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 10 Oct 2022 14:56:46 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -37,7 +37,8 @@ This might resolve the need of meta programming, but is still subject to type-ch
             <link>https://example.com/posts/2022-06-11-the-little-typer</link>
             <guid>https://example.com/posts/2022-06-11-the-little-typer</guid>
             <pubDate>Sat, 11 Jun 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[...]]></description>
+            <description><![CDATA[Not yet read
+...]]></description>
         </item>
         <item>
             <title><![CDATA[Terminology Overview]]></title>
@@ -63,7 +64,7 @@ Behaviour Driven Design (BDD)
   Daniel Terho...]]></description>
         </item>
         <item>
-            <title><![CDATA[Tracery.io]]></title>
+            <title><![CDATA[Tracery Io]]></title>
             <link>https://example.com/posts/2022-09-18-tracery-io</link>
             <guid>https://example.com/posts/2022-09-18-tracery-io</guid>
             <pubDate>Sun, 18 Sep 2022 00:00:00 GMT</pubDate>
@@ -79,7 +80,7 @@ made with tracery
 ...]]></description>
         </item>
         <item>
-            <title><![CDATA[Some Thoughts on Test Driven Development]]></title>
+            <title><![CDATA[Some Thoughts On TDD]]></title>
             <link>https://example.com/posts/2022-09-22-Some-Thoughts-on-TDD</link>
             <guid>https://example.com/posts/2022-09-22-Some-Thoughts-on-TDD</guid>
             <pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate>

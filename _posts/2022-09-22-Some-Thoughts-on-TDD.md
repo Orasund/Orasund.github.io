@@ -1,8 +1,7 @@
 ---
-title: "Some Thoughts on Test Driven Development"
-tags: essay
+title: "Some Thoughts On TDD"
+tags: [Elm,Functional Programming,TDD]
 ---
-
 tltr;
 * Make less tests with higher coverage.
 * Write that are more valuable than the time they take to run.

@@ -1,8 +1,7 @@
 ---
 title: "Exploring Monads"
-tags: essay
+tags: [Monad]
 ---
-
 # Categories
 
 > Categories are algebraically closed sets of functions.
