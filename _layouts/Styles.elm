@@ -54,7 +54,7 @@ styles =
         , each [ h3, h5, h6 ] [ fontSize <| Css.em 1.0, marginBottom <| rem 0.60606 ]
         , p [ margin3 auto auto (rem 1.5) ]
         , Css.Global.small [ fontSize <| pct 65 ]
-        , Css.Global.ul [ Css.marginInlineStart <| Css.px 30 ]
+        , Css.Global.ul [ Css.property "padding-inline-start" "30px" ]
         , class "header-logo"
             [ paddingTop <| px 6
             , textAlign center
