@@ -145,13 +145,13 @@ footer =
         |> Layout.row [ Layout.spaceBetween, class "footer" ]
 
 
-layout : String -> List (Html Never) -> List (Html Never) -> List (Html Never)
-layout title sidebarItems contentItems =
+layout : String -> { leftSidebar : List (Html Never), rightSidebar : List (Html Never) } -> List (Html Never) -> List (Html Never)
+layout title { leftSidebar, rightSidebar } contentItems =
     [ header
     , div [ class "sidebar" ]
-        []
+        leftSidebar
     , div [ class "sidebar2" ]
-        sidebarItems
+        rightSidebar
     , div [ class "content" ]
         (h1 [ Attr.class "title" ] [ text title ] :: contentItems)
     , footer
@@ -168,5 +168,5 @@ main =
                 |> parseBlocks
                 |> markdown
                 |> List.singleton
-                |> layout content.title []
+                |> layout content.title { leftSidebar = [], rightSidebar = [] }
                 |> Ok

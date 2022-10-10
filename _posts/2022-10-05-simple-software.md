@@ -1,6 +1,6 @@
 ---
 title: "Simple Software"
-tags: [Functional Programming]
+tags: [functional programming]
 ---
 I would describe my programming philosophy as "creating simple software".
 Here is what i mean by that.

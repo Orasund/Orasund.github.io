@@ -71,12 +71,12 @@ viewNodes (Node list) =
                 ]
                     |> Html.li []
             )
-        |> Html.ul []
+        |> Html.ol []
 
 
 view : List Markdown.Block.Block -> List (Html Never)
 view list =
-    [ Html.h1 [] [ Html.text "Table of Content" ]
+    [ Html.h2 [] [ Html.text "Table of Content" ]
     , list
         |> List.filterMap
             (\block ->

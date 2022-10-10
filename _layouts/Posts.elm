@@ -29,4 +29,7 @@ main =
     in
     Elmstatic.layout Elmstatic.decodePostList <|
         \content ->
-            Ok <| Page.layout content.title [] <| postListContent <| sortPosts content.posts
+            sortPosts content.posts
+                |> postListContent
+                |> Page.layout content.title { leftSidebar = [], rightSidebar = [] }
+                |> Ok

@@ -1,6 +1,7 @@
 module Post exposing (main, metadataHtml)
 
 import Elmstatic exposing (..)
+import Generated.Toc
 import Html exposing (..)
 import Html.Attributes as Attr exposing (class, href)
 import Layout
@@ -63,10 +64,22 @@ main =
             , Page.markdown blocks
             ]
                 |> Page.layout content.title
-                    (blocks
-                        |> TableOfContent.view
-                        |> Layout.column [ Attr.style "position" "sticky", Attr.style "top" "0" ]
-                        |> List.singleton
-                    )
+                    { leftSidebar =
+                        [ Html.h2 [] [ Html.text "Posts" ]
+                        , Generated.Toc.posts
+                            |> List.map
+                                (\{ title, path } ->
+                                    Html.text title
+                                        |> List.singleton
+                                        |> Html.li []
+                                )
+                            |> Html.ul []
+                        ]
+                    , rightSidebar =
+                        blocks
+                            |> TableOfContent.view
+                            |> Layout.column [ Attr.style "position" "sticky", Attr.style "top" "0" ]
+                            |> List.singleton
+                    }
                 |> Ok
         )

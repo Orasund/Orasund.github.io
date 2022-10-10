@@ -1,6 +1,6 @@
 ---
 title: "Functional Design Patterns"
-tags: [Functional Programming,Monad]
+tags: [functional programming,monad,state machine]
 ---
 There is this myth, that functional programming does not have any design patterns. [See Functional Design Patterns by Scott Wlaschin](https://www.youtube.com/watch?v=srQt1NAHYC0)
 

@@ -1,6 +1,6 @@
 ---
 title: "Terminology Overview"
-tags: [Functional Programming,TDD]
+tags: [functional programming,tdd]
 ---
 **MODERN** Terminology. If something is not here... maybe its outdated?
 

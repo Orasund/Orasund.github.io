@@ -1,6 +1,6 @@
 ---
 title: "Exploring Monads"
-tags: [Monad]
+tags: [monad]
 ---
 # Categories
 

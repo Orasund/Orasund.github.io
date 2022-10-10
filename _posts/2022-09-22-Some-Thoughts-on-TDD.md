@@ -1,6 +1,6 @@
 ---
 title: "Some Thoughts On TDD"
-tags: [Elm,Functional Programming,TDD]
+tags: [elm,functional programming,tdd]
 ---
 tltr;
 * Make less tests with higher coverage.

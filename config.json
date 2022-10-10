@@ -20,9 +20,10 @@
         }
     },
     "tags": [
-        "Elm",
-        "Functional Programming",
-        "TDD",
-        "Monad"
+        "elm",
+        "functional programming",
+        "tdd",
+        "monad",
+        "state machine"
     ]
 }
