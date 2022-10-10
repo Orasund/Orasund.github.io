@@ -15,7 +15,7 @@ I will use ✅ for patterns that have a place in function programming and ❌ fo
 [https://refactoring.guru/design-patterns/factory-method](https://refactoring.guru/design-patterns/factory-method)
 
 ```
-type TrasportationType
+type TransportationType
     = Road
     | Sea
 
@@ -161,8 +161,7 @@ The facade pattern is essentially saying that one can write simpler modules that
 
 ## ✅ Flyweight Pattern
 
-[https://refactoring.guru/design-patterns/flyweight]
-(https://refactoring.guru/design-patterns/flyweight)
+[https://refactoring.guru/design-patterns/flyweight](https://refactoring.guru/design-patterns/flyweight)
 
 ```
 type alias MovingParticle
@@ -412,3 +411,7 @@ exportFromSightSeeing : ExportVisitor Excel
 ```
 
 A Visitor is just a function where the implementation depends on the input. Note how it does not matter how `City`, `Industry` and `Visitor` relate with each other. In the example they are part of a Union Type, but this does not has to be.
+
+---
+
+[Join the discussion on discourse](https://discourse.elm-lang.org/t/investigating-design-patterns/8695)
