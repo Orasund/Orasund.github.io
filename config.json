@@ -20,9 +20,9 @@
         }
     },
     "tags": [
-        "video",
-        "book",
-        "Collection",
-        "essay"
+        "Elm",
+        "Functional Programming",
+        "TDD",
+        "Monad"
     ]
 }

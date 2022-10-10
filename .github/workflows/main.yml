@@ -65,7 +65,8 @@ jobs:
         run: npx --no-install elm-tooling install
       
       # Finally, run whatever you want.
-
+      - name: generate Markdown
+        run: node generate.js
       - name: elmstatic build
         run: npx --no-install elmstatic build
       - name: Commit files

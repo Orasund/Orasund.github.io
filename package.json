@@ -2,7 +2,8 @@
   "private": true,
   "name": "Orasund.github.io",
   "scripts": {
-    "postinstall": "elm-tooling install"
+    "postinstall": "elm-tooling install",
+    "build": "node generate.js"
   },
   "devDependencies": {
     "elm-tooling": "^1.6.0",
