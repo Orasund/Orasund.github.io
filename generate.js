@@ -6,7 +6,7 @@ const parseTitle = name => {
     const array = (/([^-]+-[^-]+-[^-]+)-([^.]+)/).exec(name)
     return (array === null)
         ? null
-        : { date: array[1], title: toTitleCase(array[2].replace(/-/g, " ")) }
+        : { date: array[1], title: toTitleCase(array[2].replace(/-/g, " ")), path: array[0] }
 }
 
 const inputPath = path.normalize("markdown/")
@@ -55,7 +55,7 @@ const content =
             const title = parseTitle(it)
             return (title === null)
                 ? []
-                : ["{path = \"" + it + "\", title = \"" + title.title + "\"}\n"]
+                : ["{path = \"" + title.path + "\", title = \"" + title.title + "\"}\n"]
         })
         .join("  , ")
     + "  ]"
