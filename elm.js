@@ -18359,44 +18359,52 @@ var $author$project$Post$main = A2(
 				$author$project$Page$layout,
 				content.aC,
 				{
-					cs: A2(
-						$elm$core$List$cons,
-						A2(
-							$elm$html$Html$h2,
-							_List_Nil,
-							_List_fromArray(
-								[
-									$elm$html$Html$text('Posts')
-								])),
-						A2(
-							$elm$core$List$intersperse,
-							A2($elm$html$Html$br, _List_Nil, _List_Nil),
-							A2(
-								$elm$core$List$map,
-								function (_v0) {
-									var title = _v0.aC;
-									var path = _v0.O;
-									return A2(
-										$elm$html$Html$a,
-										_List_fromArray(
-											[
-												$elm$html$Html$Attributes$href('/posts/' + path)
-											]),
-										_List_fromArray(
-											[
-												$elm$html$Html$text(title)
-											]));
-								},
-								$author$project$Generated$Toc$posts))),
-					cH: $elm$core$List$singleton(
+					cs: $elm$core$List$singleton(
 						A2(
 							$Orasund$elm_layout$Layout$column,
 							_List_fromArray(
 								[
 									A2($elm$html$Html$Attributes$style, 'position', 'sticky'),
-									A2($elm$html$Html$Attributes$style, 'top', '0')
+									A2($elm$html$Html$Attributes$style, 'top', '0'),
+									A2($elm$html$Html$Attributes$style, 'padding', '8px')
 								]),
-							$author$project$TableOfContent$view(blocks)))
+							$author$project$TableOfContent$view(blocks))),
+					cH: $elm$core$List$singleton(
+						A2(
+							$Orasund$elm_layout$Layout$column,
+							_List_fromArray(
+								[
+									A2($elm$html$Html$Attributes$style, 'padding', '8px')
+								]),
+							A2(
+								$elm$core$List$cons,
+								A2(
+									$elm$html$Html$h2,
+									_List_Nil,
+									_List_fromArray(
+										[
+											$elm$html$Html$text('Posts')
+										])),
+								A2(
+									$elm$core$List$intersperse,
+									A2($elm$html$Html$br, _List_Nil, _List_Nil),
+									A2(
+										$elm$core$List$map,
+										function (_v0) {
+											var title = _v0.aC;
+											var path = _v0.O;
+											return A2(
+												$elm$html$Html$a,
+												_List_fromArray(
+													[
+														$elm$html$Html$Attributes$href('/posts/' + path)
+													]),
+												_List_fromArray(
+													[
+														$elm$html$Html$text(title)
+													]));
+										},
+										$author$project$Generated$Toc$posts)))))
 				},
 				_List_fromArray(
 					[
