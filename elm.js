@@ -9269,6 +9269,7 @@ var $author$project$Page$layout = F3(
 			]);
 	});
 var $elm$html$Html$span = _VirtualDom_node('span');
+var $elm$core$Char$toUpper = _Char_toUpper;
 var $author$project$Post$tagsToHtml = function (tags) {
 	var tagLink = function (tag) {
 		return '/tags/' + $elm$core$String$toLower(tag);
@@ -9283,7 +9284,27 @@ var $author$project$Post$tagsToHtml = function (tags) {
 				]),
 			_List_fromArray(
 				[
-					$elm$html$Html$text(tag)
+					$elm$html$Html$text(
+					A2(
+						$elm$core$String$join,
+						' ',
+						A2(
+							$elm$core$List$map,
+							function (s) {
+								var _v0 = $elm$core$String$toList(s);
+								if (_v0.b) {
+									var head = _v0.a;
+									var tail = _v0.b;
+									return $elm$core$String$fromList(
+										A2(
+											$elm$core$List$cons,
+											$elm$core$Char$toUpper(head),
+											tail));
+								} else {
+									return '';
+								}
+							},
+							A2($elm$core$String$split, ' ', tag))))
 				]));
 	};
 	return A2($elm$core$List$map, linkify, tags);
@@ -9383,8 +9404,6 @@ var $Orasund$elm_layout$Layout$column = function (attrs) {
 				]),
 			attrs));
 };
-var $author$project$Post$keywords = _List_fromArray(
-	['Elm', 'Functional Programming', 'TDD', 'Video', 'Book']);
 var $elm$html$Html$Attributes$align = $elm$html$Html$Attributes$stringProperty('align');
 var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
 var $elm$html$Html$blockquote = _VirtualDom_node('blockquote');
@@ -18391,35 +18410,6 @@ var $author$project$Post$main = A2(
 				_List_fromArray(
 					[
 						$author$project$Post$metadataHtml(content),
-						A2(
-						$elm$html$Html$p,
-						_List_Nil,
-						_List_fromArray(
-							[
-								A2(
-								$elm$html$Html$strong,
-								_List_Nil,
-								_List_fromArray(
-									[
-										$elm$html$Html$text('Keywords:')
-									])),
-								$elm$html$Html$text(' '),
-								$elm$html$Html$text(
-								A2(
-									$elm$core$String$join,
-									', ',
-									A2(
-										$elm$core$List$filter,
-										function (key) {
-											return A2(
-												$elm$core$String$contains,
-												$elm$core$String$toLower(key),
-												$elm$core$String$toLower(content.b7));
-										},
-										$author$project$Post$keywords)))
-							])),
-						A2($elm$html$Html$br, _List_Nil, _List_Nil),
-						A2($elm$html$Html$br, _List_Nil, _List_Nil),
 						$author$project$Page$markdown(blocks)
 					])));
 	});
