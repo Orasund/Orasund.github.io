@@ -16,7 +16,23 @@ tagsToHtml tags =
             "/tags/" ++ String.toLower tag
 
         linkify tag =
-            a [ href <| tagLink tag ] [ text tag ]
+            a [ href <| tagLink tag ]
+                [ tag
+                    |> String.split " "
+                    |> List.map
+                        (\s ->
+                            case String.toList s of
+                                head :: tail ->
+                                    Char.toUpper head
+                                        :: tail
+                                        |> String.fromList
+
+                                [] ->
+                                    ""
+                        )
+                    |> String.join " "
+                    |> text
+                ]
     in
     List.map linkify tags
 
@@ -31,11 +47,6 @@ metadataHtml post =
         )
 
 
-keywords : List String
-keywords =
-    [ "Elm", "Functional Programming", "TDD", "Video", "Book" ]
-
-
 main : Elmstatic.Layout
 main =
     Elmstatic.layout Elmstatic.decodePost
@@ -46,21 +57,6 @@ main =
                         |> Page.parseBlocks
             in
             [ metadataHtml content
-            , [ Html.strong [] [ Html.text "Keywords:" ]
-              , Html.text " "
-              , keywords
-                    |> List.filter
-                        (\key ->
-                            content.content
-                                |> String.toLower
-                                |> String.contains (key |> String.toLower)
-                        )
-                    |> String.join ", "
-                    |> Html.text
-              ]
-                |> Html.p []
-            , Html.br [] []
-            , Html.br [] []
             , Page.markdown blocks
             ]
                 |> Page.layout content.title
