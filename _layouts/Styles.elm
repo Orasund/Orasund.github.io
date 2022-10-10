@@ -57,7 +57,7 @@ styles =
         , Css.Global.ul [ Css.property "padding-inline-start" "30px" ]
         , Css.Global.ol [ Css.property "padding-inline-start" "30px" ]
         , each [ class "sidebar", class "sidebar2" ]
-            [ fontSize <| Css.em 0.8
+            [ fontSize <| Css.em 0.9
             , descendants [ each [ h1, h2, h3 ] [ Css.margin Css.zero ] ]
             ]
         , class "header-logo"

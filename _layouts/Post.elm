@@ -74,13 +74,14 @@ main =
                                 ]
                             |> List.singleton
                     , rightSidebar =
-                        Html.h2 [] [ Html.text "Posts" ]
-                            :: (Generated.Toc.posts
+                        [ Html.h2 [] [ Html.text "Posts" ]
+                        , Html.br [] []
+                        ]
+                            ++ (Generated.Toc.posts
                                     |> List.map
                                         (\{ title, path } ->
                                             Html.a [ "/posts/" ++ path |> Attr.href ] [ Html.text title ]
                                         )
-                                    |> List.intersperse (Html.br [] [])
                                )
                             |> Layout.column [ Attr.style "padding" "8px" ]
                             |> List.singleton
