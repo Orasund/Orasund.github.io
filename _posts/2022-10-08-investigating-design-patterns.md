@@ -75,15 +75,21 @@ The builder pattern use a seperate builder to collect all the information needed
 
 ## ❌ Singleton Pattern
 
+[https://refactoring.guru/design-patterns/singleton](https://refactoring.guru/design-patterns/singleton)
+
 The singleton pattern is the default behavior for functional programming.
 
 ## ❌ Prototype Pattern
+
+[https://refactoring.guru/design-patterns/prototype](https://refactoring.guru/design-patterns/prototype)
 
 Coping is the default behavior of functional programming, therefor the prototype makes no sense in this context.
 
 # Structural Patterns
 
 ## ❌ Adapter Pattern
+
+[https://refactoring.guru/design-patterns/adapter](https://refactoring.guru/design-patterns/adapter)
 
 ```
 computeXml : XML -> XML
@@ -98,6 +104,8 @@ jsonAdapter : (XML -> XML) -> Json -> Json
 A adapter is just a higher order function with a set of mappers.
 
 ## ❌ Bridge Pattern
+
+[https://refactoring.guru/design-patterns/bridge](https://refactoring.guru/design-patterns/bridge)
 
 The bridge pattern uses composition over inherence. This is the default behavior for functional programming.
 
@@ -147,9 +155,14 @@ In this example `(String,Cmd msg)` is the monad, passing the string to various f
 
 ## ❌ Facade Pattern
 
+[https://refactoring.guru/design-patterns/facade](https://refactoring.guru/design-patterns/facade)
+
 The facade pattern is essentially saying that one can write simpler modules that call more complicated onces.
 
 ## ✅ Flyweight Pattern
+
+[https://refactoring.guru/design-patterns/flyweight]
+(https://refactoring.guru/design-patterns/flyweight)
 
 ```
 type alias MovingParticle
@@ -167,6 +180,8 @@ The flyweight pattern states that for memory intense structures, one should stor
 
 ## ✅ Proxy Pattern
 
+[https://refactoring.guru/design-patterns/proxy](https://refactoring.guru/design-patterns/proxy)
+
 ```
 pay : Int -> CreditCard -> CreditCard
 
@@ -178,6 +193,8 @@ The proxy pattern simplifies time and resource intense computations by creating 
 # Behavioral Patterns
 
 ## ✅ Chain of Responsibility
+
+[https://refactoring.guru/design-patterns/chain-of-responsibility](https://refactoring.guru/design-patterns/chain-of-responsibility)
 
 ```
 type Handler =
@@ -198,6 +215,8 @@ The chain of responsibility is a list of possible implementation. We go through 
 
 ## ❌ Command
 
+[https://refactoring.guru/design-patterns/command](https://refactoring.guru/design-patterns/command)
+
 ```
 type alias Command =
     State -> State
@@ -217,9 +236,13 @@ The Command pattern uses functions as data to separate the creation of the funct
 
 ## ❌ Iterator
 
+[https://refactoring.guru/design-patterns/iterator](https://refactoring.guru/design-patterns/iterator)
+
 Folding takes the role of iterators in functional programming.
 
 ## ✅ Mediator Pattern
+
+[https://refactoring.guru/design-patterns/mediator](https://refactoring.guru/design-patterns/mediator)
 
 ```
 type alias Mediator =
@@ -241,6 +264,8 @@ The Mediator is a dictionary containing update functions.
 
 ## ❌ Memento Pattern
 
+[https://refactoring.guru/design-patterns/memento](https://refactoring.guru/design-patterns/memento)
+
 ```
 type Editor =
     Editor (State,List State)
@@ -261,6 +286,8 @@ undo (Editor (state,list)) =
 The Memento pattern is an opaque non empty list with functions to push onto and pull from the list.
 
 ## ✅ Observer Pattern
+
+[https://refactoring.guru/design-patterns/observer](https://refactoring.guru/design-patterns/observer)
 
 ```
 type alias Model =
