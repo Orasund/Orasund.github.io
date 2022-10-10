@@ -24,7 +24,7 @@ styles =
             , backgroundColor <| hex "ffffff"
             , Css.color <| hex "363636"
             , fontFamilies [ "Open Sans", "Arial", .value sansSerif ]
-            , fontSize <| px 18
+            , fontSize <| px 16
             , lineHeight <| Css.em 1.4
             ]
         , a
@@ -56,6 +56,10 @@ styles =
         , Css.Global.small [ fontSize <| pct 65 ]
         , Css.Global.ul [ Css.property "padding-inline-start" "30px" ]
         , Css.Global.ol [ Css.property "padding-inline-start" "30px" ]
+        , each [ class "sidebar", class "sidebar2" ]
+            [ fontSize <| Css.em 0.8
+            , descendants [ each [ h1, h2, h3 ] [ Css.margin Css.zero ] ]
+            ]
         , class "header-logo"
             [ paddingTop <| px 6
             , textAlign center

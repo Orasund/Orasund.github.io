@@ -65,16 +65,14 @@ main =
             ]
                 |> Page.layout content.title
                     { leftSidebar =
-                        [ Html.h2 [] [ Html.text "Posts" ]
-                        , Generated.Toc.posts
-                            |> List.map
-                                (\{ title, path } ->
-                                    Html.text title
-                                        |> List.singleton
-                                        |> Html.li []
-                                )
-                            |> Html.ul []
-                        ]
+                        Html.h2 [] [ Html.text "Posts" ]
+                            :: (Generated.Toc.posts
+                                    |> List.map
+                                        (\{ title, path } ->
+                                            Html.a [ "/posts/" ++ path |> Attr.href ] [ Html.text title ]
+                                        )
+                                    |> List.intersperse (Html.br [] [])
+                               )
                     , rightSidebar =
                         blocks
                             |> TableOfContent.view
