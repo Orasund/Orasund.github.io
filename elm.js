@@ -9093,7 +9093,7 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
-							$rtfeldman$elm_css$Css$em(0.8)),
+							$rtfeldman$elm_css$Css$em(0.9)),
 							$rtfeldman$elm_css$Css$Global$descendants(
 							_List_fromArray(
 								[
@@ -9383,24 +9383,6 @@ var $Orasund$elm_layout$Layout$column = function (attrs) {
 				]),
 			attrs));
 };
-var $elm$core$List$intersperse = F2(
-	function (sep, xs) {
-		if (!xs.b) {
-			return _List_Nil;
-		} else {
-			var hd = xs.a;
-			var tl = xs.b;
-			var step = F2(
-				function (x, rest) {
-					return A2(
-						$elm$core$List$cons,
-						sep,
-						A2($elm$core$List$cons, x, rest));
-				});
-			var spersed = A3($elm$core$List$foldr, step, _List_Nil, tl);
-			return A2($elm$core$List$cons, hd, spersed);
-		}
-	});
 var $author$project$Post$keywords = _List_fromArray(
 	['Elm', 'Functional Programming', 'TDD', 'Video', 'Book']);
 var $elm$html$Html$Attributes$align = $elm$html$Html$Attributes$stringProperty('align');
@@ -18376,35 +18358,35 @@ var $author$project$Post$main = A2(
 								[
 									A2($elm$html$Html$Attributes$style, 'padding', '8px')
 								]),
-							A2(
-								$elm$core$List$cons,
+							_Utils_ap(
+								_List_fromArray(
+									[
+										A2(
+										$elm$html$Html$h2,
+										_List_Nil,
+										_List_fromArray(
+											[
+												$elm$html$Html$text('Posts')
+											])),
+										A2($elm$html$Html$br, _List_Nil, _List_Nil)
+									]),
 								A2(
-									$elm$html$Html$h2,
-									_List_Nil,
-									_List_fromArray(
-										[
-											$elm$html$Html$text('Posts')
-										])),
-								A2(
-									$elm$core$List$intersperse,
-									A2($elm$html$Html$br, _List_Nil, _List_Nil),
-									A2(
-										$elm$core$List$map,
-										function (_v0) {
-											var title = _v0.aC;
-											var path = _v0.O;
-											return A2(
-												$elm$html$Html$a,
-												_List_fromArray(
-													[
-														$elm$html$Html$Attributes$href('/posts/' + path)
-													]),
-												_List_fromArray(
-													[
-														$elm$html$Html$text(title)
-													]));
-										},
-										$author$project$Generated$Toc$posts)))))
+									$elm$core$List$map,
+									function (_v0) {
+										var title = _v0.aC;
+										var path = _v0.O;
+										return A2(
+											$elm$html$Html$a,
+											_List_fromArray(
+												[
+													$elm$html$Html$Attributes$href('/posts/' + path)
+												]),
+											_List_fromArray(
+												[
+													$elm$html$Html$text(title)
+												]));
+									},
+									$author$project$Generated$Toc$posts))))
 				},
 				_List_fromArray(
 					[
