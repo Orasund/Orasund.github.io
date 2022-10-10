@@ -34,14 +34,14 @@ withRoof : RoofDesign -&gt; HouseBuilder -&gt; HouseBuilder
 withGarage : GarageDesign -&gt; HouseBuilder -&gt; HouseBuilder
 
 build : HouseBuilder -&gt; House
-</code></pre><p>The builder pattern use a seperate builder to collect all the information needed for constructing the desired structure.</p><h2 id="__Singleton_Pattern">❌ Singleton Pattern</h2><p>The singleton pattern is the default behavior for functional programming.</p><h2 id="__Prototype_Pattern">❌ Prototype Pattern</h2><p>Coping is the default behavior of functional programming, therefor the prototype makes no sense in this context.</p><h1 id="Structural_Patterns">Structural Patterns</h1><h2 id="__Adapter_Pattern">❌ Adapter Pattern</h2><pre><code>computeXml : XML -&gt; XML
+</code></pre><p>The builder pattern use a seperate builder to collect all the information needed for constructing the desired structure.</p><h2 id="__Singleton_Pattern">❌ Singleton Pattern</h2><p><a href="https://refactoring.guru/design-patterns/singleton">https://refactoring.guru/design-patterns/singleton</a></p><p>The singleton pattern is the default behavior for functional programming.</p><h2 id="__Prototype_Pattern">❌ Prototype Pattern</h2><p><a href="https://refactoring.guru/design-patterns/prototype">https://refactoring.guru/design-patterns/prototype</a></p><p>Coping is the default behavior of functional programming, therefor the prototype makes no sense in this context.</p><h1 id="Structural_Patterns">Structural Patterns</h1><h2 id="__Adapter_Pattern">❌ Adapter Pattern</h2><p><a href="https://refactoring.guru/design-patterns/adapter">https://refactoring.guru/design-patterns/adapter</a></p><pre><code>computeXml : XML -&gt; XML
 
 xmlToJson : XML -&gt; Json
 
 jsonToXml : Json -&gt; XML
 
 jsonAdapter : (XML -&gt; XML) -&gt; Json -&gt; Json
-</code></pre><p>A adapter is just a higher order function with a set of mappers.</p><h2 id="__Bridge_Pattern">❌ Bridge Pattern</h2><p>The bridge pattern uses composition over inherence. This is the default behavior for functional programming.</p><h2 id="__Composite_Pattern">❌ Composite Pattern</h2><p><a href="https://refactoring.guru/design-patterns/composite">https://refactoring.guru/design-patterns/composite</a></p><pre><code>type Order
+</code></pre><p>A adapter is just a higher order function with a set of mappers.</p><h2 id="__Bridge_Pattern">❌ Bridge Pattern</h2><p><a href="https://refactoring.guru/design-patterns/bridge">https://refactoring.guru/design-patterns/bridge</a></p><p>The bridge pattern uses composition over inherence. This is the default behavior for functional programming.</p><h2 id="__Composite_Pattern">❌ Composite Pattern</h2><p><a href="https://refactoring.guru/design-patterns/composite">https://refactoring.guru/design-patterns/composite</a></p><pre><code>type Order
     = Product { price : Int }
     | Box (List Order)
 
@@ -63,7 +63,8 @@ sendFacebook : {facebookId : String} -&gt; String -&gt; Cmd msg
 sendSlack : {slackId : String} -&gt; String -&gt; Cmd msg
 
 andThen : (String -&gt; Cmd msg) -&gt; (String,Cmd msg) -&gt; (String,Cmd msg)
-</code></pre><p>The decorator pattern makes no real sense in the context of functional programming, however we can produce the same behavior using the Monad pattern.</p><p>In this example <code>(String,Cmd msg)</code> is the monad, passing the string to various functions.</p><h2 id="__Facade_Pattern">❌ Facade Pattern</h2><p>The facade pattern is essentially saying that one can write simpler modules that call more complicated onces.</p><h2 id="__Flyweight_Pattern">✅ Flyweight Pattern</h2><pre><code>type alias MovingParticle
+</code></pre><p>The decorator pattern makes no real sense in the context of functional programming, however we can produce the same behavior using the Monad pattern.</p><p>In this example <code>(String,Cmd msg)</code> is the monad, passing the string to various functions.</p><h2 id="__Facade_Pattern">❌ Facade Pattern</h2><p><a href="https://refactoring.guru/design-patterns/facade">https://refactoring.guru/design-patterns/facade</a></p><p>The facade pattern is essentially saying that one can write simpler modules that call more complicated onces.</p><h2 id="__Flyweight_Pattern">✅ Flyweight Pattern</h2><p>[https://refactoring.guru/design-patterns/flyweight]
+(https://refactoring.guru/design-patterns/flyweight)</p><pre><code>type alias MovingParticle
     { particle: Id
     , state : ParticleState
     }
@@ -72,10 +73,10 @@ type alias Game =
     { particles : Dict Id Particle
     , movingParticles : Dict Position MovingParticle
     }
-</code></pre><p>The flyweight pattern states that for memory intense structures, one should store the common parts in a dictionary and only reference it by its id.</p><h2 id="__Proxy_Pattern">✅ Proxy Pattern</h2><pre><code>pay : Int -&gt; CreditCard -&gt; CreditCard
+</code></pre><p>The flyweight pattern states that for memory intense structures, one should store the common parts in a dictionary and only reference it by its id.</p><h2 id="__Proxy_Pattern">✅ Proxy Pattern</h2><p><a href="https://refactoring.guru/design-patterns/proxy">https://refactoring.guru/design-patterns/proxy</a></p><pre><code>pay : Int -&gt; CreditCard -&gt; CreditCard
 
 syncCreditCard : CreditCard -&gt; Cmd msg
-</code></pre><p>The proxy pattern simplifies time and resource intense computations by creating a proxy structure that simulates the computation and regularly syncs up with the real thing.</p><h1 id="Behavioral_Patterns">Behavioral Patterns</h1><h2 id="__Chain_of_Responsibility">✅ Chain of Responsibility</h2><pre><code>type Handler =
+</code></pre><p>The proxy pattern simplifies time and resource intense computations by creating a proxy structure that simulates the computation and regularly syncs up with the real thing.</p><h1 id="Behavioral_Patterns">Behavioral Patterns</h1><h2 id="__Chain_of_Responsibility">✅ Chain of Responsibility</h2><p><a href="https://refactoring.guru/design-patterns/chain-of-responsibility">https://refactoring.guru/design-patterns/chain-of-responsibility</a></p><pre><code>type Handler =
     Request -&gt; Maybe Response
 
 handleRequest : Request -&gt; List Handler -&gt; Maybe Response
@@ -88,7 +89,7 @@ handleRequest request handlers =
                     Just head
                 Nothing -&gt;
                     handleRequest request tail
-</code></pre><p>The chain of responsibility is a list of possible implementation. We go through the list and find the first implementation that is successful.</p><h2 id="__Command">❌ Command</h2><pre><code>type alias Command =
+</code></pre><p>The chain of responsibility is a list of possible implementation. We go through the list and find the first implementation that is successful.</p><h2 id="__Command">❌ Command</h2><p><a href="https://refactoring.guru/design-patterns/command">https://refactoring.guru/design-patterns/command</a></p><pre><code>type alias Command =
     State -&gt; State
 
 copy : String -&gt; Command
@@ -100,7 +101,7 @@ paste : Segment -&gt; Command
 undo : Command
 
 execute : Command -&gt; State -&gt; State
-</code></pre><p>The Command pattern uses functions as data to separate the creation of the function from the execution.</p><h2 id="__Iterator">❌ Iterator</h2><p>Folding takes the role of iterators in functional programming.</p><h2 id="__Mediator_Pattern">✅ Mediator Pattern</h2><pre><code>type alias Mediator =
+</code></pre><p>The Command pattern uses functions as data to separate the creation of the function from the execution.</p><h2 id="__Iterator">❌ Iterator</h2><p><a href="https://refactoring.guru/design-patterns/iterator">https://refactoring.guru/design-patterns/iterator</a></p><p>Folding takes the role of iterators in functional programming.</p><h2 id="__Mediator_Pattern">✅ Mediator Pattern</h2><p><a href="https://refactoring.guru/design-patterns/mediator">https://refactoring.guru/design-patterns/mediator</a></p><pre><code>type alias Mediator =
     { components : Dict String (State -&gt; State)
     , state : State
     }
@@ -113,7 +114,7 @@ notify component mediator =
                 |&gt; Dict.get component
     in
     {mediator | state = fun mediator.state}
-</code></pre><p>The Mediator is a dictionary containing update functions.</p><h2 id="__Memento_Pattern">❌ Memento Pattern</h2><pre><code>type Editor =
+</code></pre><p>The Mediator is a dictionary containing update functions.</p><h2 id="__Memento_Pattern">❌ Memento Pattern</h2><p><a href="https://refactoring.guru/design-patterns/memento">https://refactoring.guru/design-patterns/memento</a></p><pre><code>type Editor =
     Editor (State,List State)
 
 save : Editor -&gt; Editor
@@ -127,7 +128,7 @@ undo (Editor (state,list)) =
             Editor (head, tail)
         [] -&gt; 
             Editor (state,list)
-</code></pre><p>The Memento pattern is an opaque non empty list with functions to push onto and pull from the list.</p><h2 id="__Observer_Pattern">✅ Observer Pattern</h2><pre><code>type alias Model =
+</code></pre><p>The Memento pattern is an opaque non empty list with functions to push onto and pull from the list.</p><h2 id="__Observer_Pattern">✅ Observer Pattern</h2><p><a href="https://refactoring.guru/design-patterns/observer">https://refactoring.guru/design-patterns/observer</a></p><pre><code>type alias Model =
     { subscriber : List (State -&gt; State)
     , state : State
     }
@@ -267,6 +268,10 @@ p {
 
 small {
     font-size:65%;
+}
+
+ul {
+    margin-inline-start:30px;
 }
 
 .header-logo {
