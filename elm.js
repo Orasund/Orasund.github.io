@@ -18159,15 +18159,15 @@ var $author$project$Page$parseBlocks = function (s) {
 };
 var $author$project$Generated$Toc$posts = _List_fromArray(
 	[
-		{O: '2022-05-29-the-pragmatic-programmer.md', aC: 'The Pragmatic Programmer'},
-		{O: '2022-06-11-the-little-typer.md', aC: 'The Little Typer'},
-		{O: '2022-07-27-terminology-overview.md', aC: 'Terminology Overview'},
-		{O: '2022-09-18-tracery-io.md', aC: 'Tracery Io'},
-		{O: '2022-09-22-Some-Thoughts-on-TDD.md', aC: 'Some Thoughts On TDD'},
-		{O: '2022-10-05-simple-software.md', aC: 'Simple Software'},
-		{O: '2022-10-06-exploring-monads.md', aC: 'Exploring Monads'},
-		{O: '2022-10-06-functional-design-patterns.md', aC: 'Functional Design Patterns'},
-		{O: '2022-10-08-investigating-design-patterns.md', aC: 'Investigating Design Patterns'}
+		{O: '2022-05-29-the-pragmatic-programmer', aC: 'The Pragmatic Programmer'},
+		{O: '2022-06-11-the-little-typer', aC: 'The Little Typer'},
+		{O: '2022-07-27-terminology-overview', aC: 'Terminology Overview'},
+		{O: '2022-09-18-tracery-io', aC: 'Tracery Io'},
+		{O: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
+		{O: '2022-10-05-simple-software', aC: 'Simple Software'},
+		{O: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
+		{O: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
+		{O: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'}
 	]);
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
