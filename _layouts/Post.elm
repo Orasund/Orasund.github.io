@@ -61,16 +61,6 @@ main =
             ]
                 |> Page.layout content.title
                     { leftSidebar =
-                        blocks
-                            |> TableOfContent.view
-                            |> Layout.column
-                                [ Attr.style "position" "sticky"
-                                , Attr.style "top" "0"
-                                , Attr.style "padding" "8px"
-                                , Attr.style "float" "right" 
-                                ]
-                            |> List.singleton
-                    , rightSidebar =
                         [ Html.h2 [] [ Html.text "Posts" ]
                         , Html.br [] []
                         ]
@@ -81,6 +71,16 @@ main =
                                         )
                                )
                             |> Layout.column [ Attr.style "padding" "8px" ]
+                            |> List.singleton
+                    , rightSidebar =
+                        blocks
+                            |> TableOfContent.view
+                            |> Layout.column
+                                [ Attr.style "position" "sticky"
+                                , Attr.style "top" "0"
+                                , Attr.style "padding" "8px"
+                                , Attr.style "float" "right" 
+                                ]
                             |> List.singleton
                     }
                 |> Ok
