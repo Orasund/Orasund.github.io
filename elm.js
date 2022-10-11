@@ -18291,17 +18291,6 @@ var $author$project$Post$main = A2(
 							$Orasund$elm_layout$Layout$column,
 							_List_fromArray(
 								[
-									A2($elm$html$Html$Attributes$style, 'position', 'sticky'),
-									A2($elm$html$Html$Attributes$style, 'top', '0'),
-									A2($elm$html$Html$Attributes$style, 'padding', '8px'),
-									A2($elm$html$Html$Attributes$style, 'float', 'right')
-								]),
-							$author$project$TableOfContent$view(blocks))),
-					cH: $elm$core$List$singleton(
-						A2(
-							$Orasund$elm_layout$Layout$column,
-							_List_fromArray(
-								[
 									A2($elm$html$Html$Attributes$style, 'padding', '8px')
 								]),
 							_Utils_ap(
@@ -18332,7 +18321,18 @@ var $author$project$Post$main = A2(
 													$elm$html$Html$text(title)
 												]));
 									},
-									$author$project$Generated$Toc$posts))))
+									$author$project$Generated$Toc$posts)))),
+					cH: $elm$core$List$singleton(
+						A2(
+							$Orasund$elm_layout$Layout$column,
+							_List_fromArray(
+								[
+									A2($elm$html$Html$Attributes$style, 'position', 'sticky'),
+									A2($elm$html$Html$Attributes$style, 'top', '0'),
+									A2($elm$html$Html$Attributes$style, 'padding', '8px'),
+									A2($elm$html$Html$Attributes$style, 'float', 'right')
+								]),
+							$author$project$TableOfContent$view(blocks)))
 				},
 				_List_fromArray(
 					[
