@@ -70,7 +70,10 @@ main =
                                             Html.a [ "/posts/" ++ path |> Attr.href ] [ Html.text title ]
                                         )
                                )
-                            |> Layout.column [ Attr.style "padding" "8px" ]
+                            |> Layout.column
+                                [ Attr.style "padding" "8px"
+                                , Attr.style "float" "right" 
+                                ]
                             |> List.singleton
                     , rightSidebar =
                         blocks
@@ -79,7 +82,6 @@ main =
                                 [ Attr.style "position" "sticky"
                                 , Attr.style "top" "0"
                                 , Attr.style "padding" "8px"
-                                , Attr.style "float" "right" 
                                 ]
                             |> List.singleton
                     }
