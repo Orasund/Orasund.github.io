@@ -18291,7 +18291,8 @@ var $author$project$Post$main = A2(
 							$Orasund$elm_layout$Layout$column,
 							_List_fromArray(
 								[
-									A2($elm$html$Html$Attributes$style, 'padding', '8px')
+									A2($elm$html$Html$Attributes$style, 'padding', '8px'),
+									A2($elm$html$Html$Attributes$style, 'float', 'right')
 								]),
 							_Utils_ap(
 								_List_fromArray(
@@ -18329,8 +18330,7 @@ var $author$project$Post$main = A2(
 								[
 									A2($elm$html$Html$Attributes$style, 'position', 'sticky'),
 									A2($elm$html$Html$Attributes$style, 'top', '0'),
-									A2($elm$html$Html$Attributes$style, 'padding', '8px'),
-									A2($elm$html$Html$Attributes$style, 'float', 'right')
+									A2($elm$html$Html$Attributes$style, 'padding', '8px')
 								]),
 							$author$project$TableOfContent$view(blocks)))
 				},
