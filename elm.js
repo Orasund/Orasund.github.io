@@ -5189,7 +5189,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {cf: fragment, ci: host, O: path, cx: port_, cA: protocol, cB: query};
+		return {cf: fragment, ci: host, J: path, cx: port_, cA: protocol, cB: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -5830,7 +5830,7 @@ var $rtfeldman$elm_css$Css$Global$typeSelector = F2(
 	});
 var $rtfeldman$elm_css$Css$Global$a = $rtfeldman$elm_css$Css$Global$typeSelector('a');
 var $rtfeldman$elm_css$Css$Structure$Compatible = 0;
-var $rtfeldman$elm_css$Css$auto = {cZ: 0, e: 0, ao: 0, a1: 0, di: 0, at: 0, U: 0, M: 0, aw: 0, J: 0, be: 0, aB: 0, F: 0, bU: 'auto'};
+var $rtfeldman$elm_css$Css$auto = {cZ: 0, e: 0, ao: 0, a1: 0, di: 0, at: 0, U: 0, N: 0, aw: 0, K: 0, be: 0, aB: 0, F: 0, bU: 'auto'};
 var $rtfeldman$elm_css$Css$Preprocess$AppendProperty = function (a) {
 	return {$: 0, a: a};
 };
@@ -6074,7 +6074,7 @@ var $rtfeldman$elm_css$Css$Internal$lengthConverter = F3(
 			av: 0,
 			ab: 0,
 			ac: 0,
-			M: 0,
+			N: 0,
 			W: numericValue,
 			aA: 0,
 			aD: unitLabel,
@@ -7880,7 +7880,7 @@ var $rtfeldman$elm_css$Css$erroneousHex = function (str) {
 	return {
 		aG: 1,
 		aI: 0,
-		L: 0,
+		M: 0,
 		aK: 0,
 		aP: 0,
 		bU: $rtfeldman$elm_css$Css$withPrecedingHash(str)
@@ -8139,7 +8139,7 @@ var $rtfeldman$elm_css$Css$validHex = F5(
 			return {
 				aG: alpha / 255,
 				aI: blue,
-				L: 0,
+				M: 0,
 				aK: green,
 				aP: red,
 				bU: $rtfeldman$elm_css$Css$withPrecedingHash(str)
@@ -8264,7 +8264,7 @@ var $rtfeldman$elm_css$Css$Media$minWidth = function (value) {
 	return A2($rtfeldman$elm_css$Css$Media$feature, 'min-width', value);
 };
 var $rtfeldman$elm_css$Css$monospace = {_: 0, bU: 'monospace'};
-var $rtfeldman$elm_css$Css$none = {aj: 0, b1: 0, C: 0, e: 0, r: 0, dd: 0, cm: 0, bw: 0, av: 0, ab: 0, M: 0, h: 0, f: 0, bA: 0, a7: 0, du: 0, J: 0, a9: 0, dA: 0, az: 0, ah: 0, F: 0, o: 0, dF: 0, bU: 'none'};
+var $rtfeldman$elm_css$Css$none = {aj: 0, b1: 0, C: 0, e: 0, r: 0, dd: 0, cm: 0, bw: 0, av: 0, ab: 0, N: 0, h: 0, f: 0, bA: 0, a7: 0, du: 0, K: 0, a9: 0, dA: 0, az: 0, ah: 0, F: 0, o: 0, dF: 0, bU: 'none'};
 var $rtfeldman$elm_css$Css$Global$ol = $rtfeldman$elm_css$Css$Global$typeSelector('ol');
 var $rtfeldman$elm_css$Css$Structure$OnlyQuery = F2(
 	function (a, b) {
@@ -18100,15 +18100,16 @@ var $author$project$Page$parseBlocks = function (s) {
 };
 var $author$project$Generated$Toc$posts = _List_fromArray(
 	[
-		{O: '2022-05-29-the-pragmatic-programmer', aC: 'The Pragmatic Programmer'},
-		{O: '2022-06-11-the-little-typer', aC: 'The Little Typer'},
-		{O: '2022-07-27-terminology-overview', aC: 'Terminology Overview'},
-		{O: '2022-09-18-tracery-io', aC: 'Tracery Io'},
-		{O: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
-		{O: '2022-10-05-simple-software', aC: 'Simple Software'},
-		{O: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
-		{O: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
-		{O: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'}
+		{J: '2022-05-29-the-pragmatic-programmer', aC: 'The Pragmatic Programmer'},
+		{J: '2022-06-11-the-little-typer', aC: 'The Little Typer'},
+		{J: '2022-07-27-terminology-overview', aC: 'Terminology Overview'},
+		{J: '2022-09-18-tracery-io', aC: 'Tracery Io'},
+		{J: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
+		{J: '2022-10-05-simple-software', aC: 'Simple Software'},
+		{J: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
+		{J: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
+		{J: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
+		{J: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'}
 	]);
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
@@ -18315,7 +18316,7 @@ var $author$project$Post$main = A2(
 									$elm$core$List$map,
 									function (_v0) {
 										var title = _v0.aC;
-										var path = _v0.O;
+										var path = _v0.J;
 										return A2(
 											$elm$html$Html$a,
 											_List_fromArray(

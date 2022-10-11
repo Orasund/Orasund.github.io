@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Tue, 11 Oct 2022 04:56:19 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 11 Oct 2022 06:02:17 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -170,6 +170,23 @@ andThe...]]></description>
 I wanted to know myself if this is actually a valid statement and if not how many design pattern are actually outdated in the days of functional programming. My language of choice will be Elm.
 
 I will use ✅ for patterns that have a place in function programming and ❌ for patterns that are too easy to really call them a "pattern" or for patterns that are simply outd...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Formal Methods, Type Theory And The Real World]]></title>
+            <link>https://example.com/posts/2022-10-11-formal-methods,-type-theory-and-the-real-world</link>
+            <guid>https://example.com/posts/2022-10-11-formal-methods,-type-theory-and-the-real-world</guid>
+            <pubDate>Tue, 11 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[While studing at the university, I had the feeling, that there was this perfect solution out there, how to validate code. And the industry is just not seeing it.
+Well, it turns out, I was the one not seeing the truth.
+
+Formal Methods
+
+Formal Methods was the holy grail of doing things right. JUST write a proof that your programm is currect and you're done.
+
+Hore Calculus
+
+The is to define a mathematical calculus, so that we can reason about computer programs.
+That way we can actually prove that t...]]></description>
         </item>
     </channel>
 </rss>
