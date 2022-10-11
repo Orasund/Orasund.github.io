@@ -9316,7 +9316,6 @@ var $author$project$Posts$main = function () {
 		});
 }();
 var $author$project$Tag$main = $author$project$Posts$main;
-var $elm$html$Html$br = _VirtualDom_node('br');
 var $Orasund$elm_layout$Layout$column = function (attrs) {
 	return $elm$html$Html$div(
 		_Utils_ap(
@@ -9330,6 +9329,7 @@ var $Orasund$elm_layout$Layout$column = function (attrs) {
 var $elm$html$Html$Attributes$align = $elm$html$Html$Attributes$stringProperty('align');
 var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
 var $elm$html$Html$blockquote = _VirtualDom_node('blockquote');
+var $elm$html$Html$br = _VirtualDom_node('br');
 var $elm$json$Json$Encode$bool = _Json_wrap;
 var $elm$html$Html$Attributes$boolProperty = F2(
 	function (key, bool) {
@@ -18303,8 +18303,7 @@ var $author$project$Post$main = A2(
 										_List_fromArray(
 											[
 												$elm$html$Html$text('Posts')
-											])),
-										A2($elm$html$Html$br, _List_Nil, _List_Nil)
+											]))
 									]),
 								A2(
 									$elm$core$List$map,
@@ -18312,15 +18311,17 @@ var $author$project$Post$main = A2(
 										var title = _v0.aC;
 										var path = _v0.H;
 										return A2(
-											$elm$html$Html$a,
-											_List_fromArray(
-												[
-													$elm$html$Html$Attributes$href('/posts/' + path)
-												]),
-											_List_fromArray(
-												[
-													$elm$html$Html$text(title)
-												]));
+											$elm$html$Html$p,
+											_List_Nil,
+											$elm$core$List$singleton(
+												A2(
+													$elm$html$Html$a,
+													_List_fromArray(
+														[
+															$elm$html$Html$Attributes$href('/posts/' + path)
+														]),
+													$elm$core$List$singleton(
+														$elm$html$Html$text(title)))));
 									},
 									$author$project$Generated$Toc$posts)))),
 					cH: $elm$core$List$singleton(
