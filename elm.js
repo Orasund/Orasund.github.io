@@ -9026,7 +9026,9 @@ var $author$project$Styles$styles = function () {
 										[
 											$rtfeldman$elm_css$Css$margin($rtfeldman$elm_css$Css$zero)
 										]))
-								]))
+								])),
+							$rtfeldman$elm_css$Css$paddingTop(
+							$rtfeldman$elm_css$Css$px(64))
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
