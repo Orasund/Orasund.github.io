@@ -67,6 +67,7 @@ main =
                                 [ Attr.style "position" "sticky"
                                 , Attr.style "top" "0"
                                 , Attr.style "padding" "8px"
+                                , Attr.style "float" "right" 
                                 ]
                             |> List.singleton
                     , rightSidebar =
