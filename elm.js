@@ -5189,7 +5189,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {cf: fragment, ci: host, J: path, cx: port_, cA: protocol, cB: query};
+		return {cf: fragment, ci: host, H: path, cx: port_, cA: protocol, cB: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -18100,16 +18100,17 @@ var $author$project$Page$parseBlocks = function (s) {
 };
 var $author$project$Generated$Toc$posts = _List_fromArray(
 	[
-		{J: '2022-05-29-the-pragmatic-programmer', aC: 'The Pragmatic Programmer'},
-		{J: '2022-06-11-the-little-typer', aC: 'The Little Typer'},
-		{J: '2022-07-27-terminology-overview', aC: 'Terminology Overview'},
-		{J: '2022-09-18-tracery-io', aC: 'Tracery Io'},
-		{J: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
-		{J: '2022-10-05-simple-software', aC: 'Simple Software'},
-		{J: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
-		{J: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
-		{J: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
-		{J: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'}
+		{H: '2022-05-29-the-pragmatic-programmer', aC: 'The Pragmatic Programmer'},
+		{H: '2022-06-11-the-little-typer', aC: 'The Little Typer'},
+		{H: '2022-07-27-terminology-overview', aC: 'Terminology Overview'},
+		{H: '2022-09-18-tracery-io', aC: 'Tracery Io'},
+		{H: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
+		{H: '2022-10-05-simple-software', aC: 'Simple Software'},
+		{H: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
+		{H: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
+		{H: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
+		{H: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
+		{H: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'}
 	]);
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
@@ -18316,7 +18317,7 @@ var $author$project$Post$main = A2(
 									$elm$core$List$map,
 									function (_v0) {
 										var title = _v0.aC;
-										var path = _v0.J;
+										var path = _v0.H;
 										return A2(
 											$elm$html$Html$a,
 											_List_fromArray(
