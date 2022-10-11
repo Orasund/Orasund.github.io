@@ -56,6 +56,7 @@ styles =
         , each [ class "sidebar", class "sidebar2" ]
             [ fontSize <| Css.em 0.9
             , descendants [ each [ h1, h2, h3 ] [ Css.margin Css.zero ] ]
+            , 64 |> px |> paddingTop
             ]
         , class "header-logo"
             [ paddingTop <| px 6
