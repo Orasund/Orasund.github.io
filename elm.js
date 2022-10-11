@@ -18291,7 +18291,8 @@ var $author$project$Post$main = A2(
 								[
 									A2($elm$html$Html$Attributes$style, 'position', 'sticky'),
 									A2($elm$html$Html$Attributes$style, 'top', '0'),
-									A2($elm$html$Html$Attributes$style, 'padding', '8px')
+									A2($elm$html$Html$Attributes$style, 'padding', '8px'),
+									A2($elm$html$Html$Attributes$style, 'float', 'right')
 								]),
 							$author$project$TableOfContent$view(blocks))),
 					cH: $elm$core$List$singleton(
