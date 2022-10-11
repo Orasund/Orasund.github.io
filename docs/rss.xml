@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Tue, 11 Oct 2022 09:41:36 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 11 Oct 2022 09:52:15 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -199,6 +199,8 @@ Attribute selector
 
 Source
 
+[..]
+
 Did you know you could write
 
 [data-type='primary'] {
@@ -231,7 +233,7 @@ You can also do some pattern machting
 
 /* A href that ends with .com */
 [href$='.com'] {
-  color: ...]]></description>
+  c...]]></description>
         </item>
     </channel>
 </rss>
