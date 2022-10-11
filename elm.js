@@ -8243,73 +8243,6 @@ var $rtfeldman$elm_css$Css$hex = function (str) {
 	}
 	return $rtfeldman$elm_css$Css$erroneousHex(str);
 };
-var $elm$core$String$endsWith = _String_endsWith;
-var $rtfeldman$elm_css$Css$makeImportant = function (str) {
-	return A2(
-		$elm$core$String$endsWith,
-		' !important',
-		$elm$core$String$toLower(str)) ? str : (str + ' !important');
-};
-var $rtfeldman$elm_css$Css$Preprocess$ApplyStyles = function (a) {
-	return {$: 6, a: a};
-};
-var $rtfeldman$elm_css$Css$Preprocess$ExtendSelector = F2(
-	function (a, b) {
-		return {$: 1, a: a, b: b};
-	});
-var $rtfeldman$elm_css$Css$Preprocess$mapAllLastProperty = F2(
-	function (update, styles) {
-		if (!styles.b) {
-			return styles;
-		} else {
-			if (!styles.b.b) {
-				var only = styles.a;
-				return _List_fromArray(
-					[
-						A2($rtfeldman$elm_css$Css$Preprocess$mapLastProperty, update, only)
-					]);
-			} else {
-				var first = styles.a;
-				var rest = styles.b;
-				return A2(
-					$elm$core$List$cons,
-					first,
-					A2($rtfeldman$elm_css$Css$Preprocess$mapAllLastProperty, update, rest));
-			}
-		}
-	});
-var $rtfeldman$elm_css$Css$Preprocess$mapLastProperty = F2(
-	function (update, style) {
-		switch (style.$) {
-			case 0:
-				var property = style.a;
-				return $rtfeldman$elm_css$Css$Preprocess$AppendProperty(
-					update(property));
-			case 1:
-				var selector = style.a;
-				var styles = style.b;
-				return A2(
-					$rtfeldman$elm_css$Css$Preprocess$ExtendSelector,
-					selector,
-					A2($rtfeldman$elm_css$Css$Preprocess$mapAllLastProperty, update, styles));
-			case 2:
-				return style;
-			case 3:
-				return style;
-			case 4:
-				return style;
-			case 5:
-				return style;
-			default:
-				var otherStyles = style.a;
-				return $rtfeldman$elm_css$Css$Preprocess$ApplyStyles(
-					A2(
-						$rtfeldman$elm_css$Css$Structure$mapLast,
-						$rtfeldman$elm_css$Css$Preprocess$mapLastProperty(update),
-						otherStyles));
-		}
-	});
-var $rtfeldman$elm_css$Css$important = $rtfeldman$elm_css$Css$Preprocess$mapLastProperty($rtfeldman$elm_css$Css$makeImportant);
 var $rtfeldman$elm_css$Css$inlineBlock = {r: 0, bU: 'inline-block'};
 var $rtfeldman$elm_css$Css$left = $rtfeldman$elm_css$Css$prop1('left');
 var $rtfeldman$elm_css$Css$lineHeight = $rtfeldman$elm_css$Css$prop1('line-height');
@@ -8338,7 +8271,6 @@ var $rtfeldman$elm_css$Css$Structure$OnlyQuery = F2(
 		return {$: 1, a: a, b: b};
 	});
 var $rtfeldman$elm_css$Css$Media$only = $rtfeldman$elm_css$Css$Structure$OnlyQuery;
-var $rtfeldman$elm_css$Css$overflowX = $rtfeldman$elm_css$Css$prop1('overflow-x');
 var $rtfeldman$elm_css$Css$Global$p = $rtfeldman$elm_css$Css$Global$typeSelector('p');
 var $rtfeldman$elm_css$Css$padding = $rtfeldman$elm_css$Css$prop1('padding');
 var $rtfeldman$elm_css$Css$paddingBottom = $rtfeldman$elm_css$Css$prop1('padding-bottom');
@@ -8347,7 +8279,6 @@ var $rtfeldman$elm_css$Css$paddingRight = $rtfeldman$elm_css$Css$prop1('padding-
 var $rtfeldman$elm_css$Css$paddingTop = $rtfeldman$elm_css$Css$prop1('padding-top');
 var $rtfeldman$elm_css$Css$PercentageUnits = 0;
 var $rtfeldman$elm_css$Css$pct = A2($rtfeldman$elm_css$Css$Internal$lengthConverter, 0, '%');
-var $rtfeldman$elm_css$Css$Global$pre = $rtfeldman$elm_css$Css$Global$typeSelector('pre');
 var $rtfeldman$elm_css$Css$PxUnits = 0;
 var $rtfeldman$elm_css$Css$px = A2($rtfeldman$elm_css$Css$Internal$lengthConverter, 0, 'px');
 var $rtfeldman$elm_css$Css$RemUnits = 0;
@@ -8355,11 +8286,13 @@ var $rtfeldman$elm_css$Css$rem = A2($rtfeldman$elm_css$Css$Internal$lengthConver
 var $rtfeldman$elm_css$Css$sansSerif = {_: 0, bU: 'sans-serif'};
 var $rtfeldman$elm_css$Css$Structure$Screen = 1;
 var $rtfeldman$elm_css$Css$Media$screen = 1;
-var $rtfeldman$elm_css$Css$scroll = {aH: 0, b1: 0, cm: 0, aw: 0, dB: 0, bU: 'scroll'};
 var $rtfeldman$elm_css$Css$Global$small = $rtfeldman$elm_css$Css$Global$typeSelector('small');
 var $rtfeldman$elm_css$Css$solid = {C: 0, ag: 0, bU: 'solid'};
 var $rtfeldman$elm_css$Css$Global$span = $rtfeldman$elm_css$Css$Global$typeSelector('span');
 var $rtfeldman$elm_css$Css$Global$svg = $rtfeldman$elm_css$Css$Global$typeSelector('svg');
+var $rtfeldman$elm_css$Css$Preprocess$ApplyStyles = function (a) {
+	return {$: 6, a: a};
+};
 var $rtfeldman$elm_css$Css$Internal$property = F2(
 	function (key, value) {
 		return $rtfeldman$elm_css$Css$Preprocess$AppendProperty(key + (':' + value));
@@ -8943,7 +8876,9 @@ var $author$project$Styles$styles = function () {
 					function ($) {
 					return $.bU;
 				}($rtfeldman$elm_css$Css$monospace)
-				]))
+				])),
+			$rtfeldman$elm_css$Css$borderRadius(
+			$rtfeldman$elm_css$Css$px(8))
 		]);
 	return $rtfeldman$elm_css$Html$Styled$toUnstyled(
 		$rtfeldman$elm_css$Css$Global$global(
@@ -8982,20 +8917,6 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$textDecoration($rtfeldman$elm_css$Css$none)
 						])),
 					$rtfeldman$elm_css$Css$Global$code(codeStyle),
-					$rtfeldman$elm_css$Css$Global$pre(
-					_List_fromArray(
-						[
-							$rtfeldman$elm_css$Css$Global$descendants(
-							_List_fromArray(
-								[
-									$rtfeldman$elm_css$Css$Global$code(
-									_List_fromArray(
-										[
-											$rtfeldman$elm_css$Css$important(
-											$rtfeldman$elm_css$Css$overflowX($rtfeldman$elm_css$Css$scroll))
-										]))
-								]))
-						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$each,
 					_List_fromArray(
@@ -15387,6 +15308,7 @@ var $elm$core$String$dropRight = F2(
 	function (n, string) {
 		return (n < 1) ? string : A3($elm$core$String$slice, 0, -n, string);
 	});
+var $elm$core$String$endsWith = _String_endsWith;
 var $dillonkearns$elm_markdown$Markdown$Heading$dropTrailingHashes = function (headingString) {
 	return A2($elm$core$String$endsWith, '#', headingString) ? $dillonkearns$elm_markdown$Markdown$Heading$dropTrailingHashes(
 		A2($elm$core$String$dropRight, 1, headingString)) : headingString;
