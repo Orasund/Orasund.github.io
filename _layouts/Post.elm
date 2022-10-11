@@ -62,17 +62,21 @@ main =
                 |> Page.layout content.title
                     { leftSidebar =
                         [ Html.h2 [] [ Html.text "Posts" ]
-                        , Html.br [] []
                         ]
                             ++ (Generated.Toc.posts
                                     |> List.map
                                         (\{ title, path } ->
-                                            Html.a [ "/posts/" ++ path |> Attr.href ] [ Html.text title ]
+                                            title
+                                                |> Html.text
+                                                |> List.singleton
+                                                |> Html.a [ "/posts/" ++ path |> Attr.href ]
+                                                |> List.singleton
+                                                |> Html.p []
                                         )
                                )
                             |> Layout.column
                                 [ Attr.style "padding" "8px"
-                                , Attr.style "float" "right" 
+                                , Attr.style "float" "right"
                                 ]
                             |> List.singleton
                     , rightSidebar =
