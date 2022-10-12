@@ -35,23 +35,37 @@ styles =
         , code codeStyle
         , each [ h1, h2, h3, h4, h5, h6 ]
             [ fontFamilies [ "Proza Libre", "Helvetica", .value sansSerif ]
-            , lineHeight <| Css.em 1.1
+            , lineHeight <| Css.px 40
             ]
-        , class "title" [ fontSize <| Css.em 2.0, marginBottom <| rem 1.61616 ]
+        , class "title"
+            [ fontSize <| Css.em 2.0
+            , Css.property "margin-block-start" "24px"
+            , Css.property "margin-block-end" "24px"
+            ]
         , h1
             [ fontSize <| Css.em 1.33333
-            , marginBottom <| rem 1.21212
             , Css.borderBottom3 (Css.px 1) Css.solid (Css.hex "363636")
-            , Css.paddingBottom (Css.px 4)
+            , Css.property "margin-block-start" "24px"
+            , Css.property "margin-block-end" "15px"
             ]
         , h2
             [ fontSize <| Css.em 1.2
             , marginBottom <| rem 0.80808
+            , Css.property "margin-block-start" "24px"
+            , Css.property "margin-block-end" "8px"
             ]
-        , each [ h3, h5, h6 ] [ fontSize <| Css.em 1.0, marginBottom <| rem 0.60606 ]
+        , each [ h3, h5, h6 ]
+            [ fontSize <| Css.em 1.0
+            , Css.property "margin-block-start" "16px"
+            , Css.property "margin-block-end" "8px"
+            ]
         , Css.Global.small [ fontSize <| pct 65 ]
         , Css.Global.ul [ Css.property "padding-inline-start" "30px" ]
         , Css.Global.ol [ Css.property "padding-inline-start" "30px" ]
+        , Css.Global.p 
+            [ Css.property "margin-block-start" "8px"
+            , Css.property "margin-block-end" "8px"
+            ]
         , each [ class "sidebar", class "sidebar2" ]
             [ fontSize <| Css.em 0.9
             , descendants [ each [ h1, h2, h3 ] [ Css.margin Css.zero ] ]
@@ -81,8 +95,9 @@ styles =
             , Css.padding <| Css.px 16
             ]
         , class "post-metadata"
-            [ marginTop <| Css.em -0.5
-            , marginBottom <| Css.em 2.0
+            [ Css.height <| Css.px 32
+            , marginTop <| Css.px -8
+            , marginBottom <| Css.px 32
             , descendants
                 [ each [ a, span ]
                     [ display inlineBlock
