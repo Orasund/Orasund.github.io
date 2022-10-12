@@ -5841,6 +5841,18 @@ var $rtfeldman$elm_css$Css$property = F2(
 var $rtfeldman$elm_css$Css$backgroundColor = function (c) {
 	return A2($rtfeldman$elm_css$Css$property, 'background-color', c.bU);
 };
+var $rtfeldman$elm_css$Css$prop2 = F3(
+	function (key, argA, argB) {
+		return A2(
+			$rtfeldman$elm_css$Css$property,
+			key,
+			A2(
+				$elm$core$String$join,
+				' ',
+				_List_fromArray(
+					[argA.bU, argB.bU])));
+	});
+var $rtfeldman$elm_css$Css$backgroundSize2 = $rtfeldman$elm_css$Css$prop2('background-size');
 var $rtfeldman$elm_css$Css$prop1 = F2(
 	function (key, arg) {
 		return A2($rtfeldman$elm_css$Css$property, key, arg.bU);
@@ -8907,7 +8919,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$fontSize(
 							$rtfeldman$elm_css$Css$px(16)),
 							$rtfeldman$elm_css$Css$lineHeight(
-							$rtfeldman$elm_css$Css$em(1.4))
+							$rtfeldman$elm_css$Css$px(24))
 						])),
 					$rtfeldman$elm_css$Css$Global$a(
 					_List_fromArray(
@@ -9070,7 +9082,12 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$maxWidth(
 							$rtfeldman$elm_css$Css$vw(100)),
 							$rtfeldman$elm_css$Css$padding(
-							$rtfeldman$elm_css$Css$px(16))
+							$rtfeldman$elm_css$Css$px(16)),
+							A2($rtfeldman$elm_css$Css$property, 'background-image', 'linear-gradient(#e6eef4 1px, transparent 0), ' + 'linear-gradient(90deg, #e6eef4 1px, transparent 0)'),
+							A2(
+							$rtfeldman$elm_css$Css$backgroundSize2,
+							$rtfeldman$elm_css$Css$px(24),
+							$rtfeldman$elm_css$Css$px(24))
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
