@@ -64,6 +64,7 @@ main =
                         [ Html.h2 [] [ Html.text "Posts" ]
                         ]
                             ++ (Generated.Toc.posts
+                                    |> List.sortBy (\{path} -> path)
                                     |> List.map
                                         (\{ title, path } ->
                                             title
@@ -71,8 +72,10 @@ main =
                                                 |> List.singleton
                                                 |> Html.a [ "/posts/" ++ path |> Attr.href ]
                                                 |> List.singleton
-                                                |> Html.p []
+                                                |> Html.li []
                                         )
+                                    |> Html.ul []
+                                    |> List.singleton
                                )
                             |> Layout.column
                                 [ Attr.style "padding" "8px"
