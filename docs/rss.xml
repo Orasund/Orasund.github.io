@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://example.com/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Wed, 12 Oct 2022 05:57:25 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 12 Oct 2022 08:33:13 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -15,9 +15,9 @@
         </image>
         <copyright>Copyright: Author</copyright>
         <item>
-            <title><![CDATA[The Pragmatic Programmer]]></title>
-            <link>https://example.com/posts/2022-05-29-the-pragmatic-programmer</link>
-            <guid>https://example.com/posts/2022-05-29-the-pragmatic-programmer</guid>
+            <title><![CDATA[Reading The Pragmatic Programmer]]></title>
+            <link>https://example.com/posts/2022-05-29-Reading-The-Pragmatic-Programmer</link>
+            <guid>https://example.com/posts/2022-05-29-Reading-The-Pragmatic-Programmer</guid>
             <pubDate>Sun, 29 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Chapter 5: Your Knowledge Portfolio (Page 37 in pdf)
 
@@ -33,17 +33,17 @@ Write Code that writes Codes.
 This might resolve the need of meta programming, but is still subject to type-checking. Therefore is much more useful then Reflection....]]></description>
         </item>
         <item>
-            <title><![CDATA[The Little Typer]]></title>
-            <link>https://example.com/posts/2022-06-11-the-little-typer</link>
-            <guid>https://example.com/posts/2022-06-11-the-little-typer</guid>
+            <title><![CDATA[Reading The Little Typer]]></title>
+            <link>https://example.com/posts/2022-06-11-Reading-The-Little-Typer</link>
+            <guid>https://example.com/posts/2022-06-11-Reading-The-Little-Typer</guid>
             <pubDate>Sat, 11 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Not yet read
 ...]]></description>
         </item>
         <item>
             <title><![CDATA[Terminology Overview]]></title>
-            <link>https://example.com/posts/2022-07-27-terminology-overview</link>
-            <guid>https://example.com/posts/2022-07-27-terminology-overview</guid>
+            <link>https://example.com/posts/2022-07-27-Terminology-Overview</link>
+            <guid>https://example.com/posts/2022-07-27-Terminology-Overview</guid>
             <pubDate>Wed, 27 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[MODERN Terminology. If something is not here... maybe its outdated?
 
@@ -64,9 +64,9 @@ Behaviour Driven Design (BDD)
   Daniel Terho...]]></description>
         </item>
         <item>
-            <title><![CDATA[Tracery Io]]></title>
-            <link>https://example.com/posts/2022-09-18-tracery-io</link>
-            <guid>https://example.com/posts/2022-09-18-tracery-io</guid>
+            <title><![CDATA[Tracery Language]]></title>
+            <link>https://example.com/posts/2022-09-18-Tracery-Language</link>
+            <guid>https://example.com/posts/2022-09-18-Tracery-Language</guid>
             <pubDate>Sun, 18 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Practical Low-Effort PCG: Tracery and data-oriented PCG authoring
 https://www.youtube.com/watch?v=Np9FRl847qM

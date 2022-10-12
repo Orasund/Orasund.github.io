@@ -7884,6 +7884,7 @@ var $rtfeldman$elm_css$Css$Global$h3 = $rtfeldman$elm_css$Css$Global$typeSelecto
 var $rtfeldman$elm_css$Css$Global$h4 = $rtfeldman$elm_css$Css$Global$typeSelector('h4');
 var $rtfeldman$elm_css$Css$Global$h5 = $rtfeldman$elm_css$Css$Global$typeSelector('h5');
 var $rtfeldman$elm_css$Css$Global$h6 = $rtfeldman$elm_css$Css$Global$typeSelector('h6');
+var $rtfeldman$elm_css$Css$height = $rtfeldman$elm_css$Css$prop1('height');
 var $rtfeldman$elm_css$Css$withPrecedingHash = function (str) {
 	return A2($elm$core$String$startsWith, '#', str) ? str : A2($elm$core$String$cons, '#', str);
 };
@@ -8280,8 +8281,8 @@ var $rtfeldman$elm_css$Css$Structure$OnlyQuery = F2(
 		return {$: 1, a: a, b: b};
 	});
 var $rtfeldman$elm_css$Css$Media$only = $rtfeldman$elm_css$Css$Structure$OnlyQuery;
+var $rtfeldman$elm_css$Css$Global$p = $rtfeldman$elm_css$Css$Global$typeSelector('p');
 var $rtfeldman$elm_css$Css$padding = $rtfeldman$elm_css$Css$prop1('padding');
-var $rtfeldman$elm_css$Css$paddingBottom = $rtfeldman$elm_css$Css$prop1('padding-bottom');
 var $rtfeldman$elm_css$Css$paddingLeft = $rtfeldman$elm_css$Css$prop1('padding-left');
 var $rtfeldman$elm_css$Css$paddingRight = $rtfeldman$elm_css$Css$prop1('padding-right');
 var $rtfeldman$elm_css$Css$paddingTop = $rtfeldman$elm_css$Css$prop1('padding-top');
@@ -8941,7 +8942,7 @@ var $author$project$Styles$styles = function () {
 								}($rtfeldman$elm_css$Css$sansSerif)
 								])),
 							$rtfeldman$elm_css$Css$lineHeight(
-							$rtfeldman$elm_css$Css$em(1.1))
+							$rtfeldman$elm_css$Css$px(40))
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
@@ -8950,23 +8951,21 @@ var $author$project$Styles$styles = function () {
 						[
 							$rtfeldman$elm_css$Css$fontSize(
 							$rtfeldman$elm_css$Css$em(2.0)),
-							$rtfeldman$elm_css$Css$marginBottom(
-							$rtfeldman$elm_css$Css$rem(1.61616))
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '24px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '24px')
 						])),
 					$rtfeldman$elm_css$Css$Global$h1(
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
 							$rtfeldman$elm_css$Css$em(1.33333)),
-							$rtfeldman$elm_css$Css$marginBottom(
-							$rtfeldman$elm_css$Css$rem(1.21212)),
 							A3(
 							$rtfeldman$elm_css$Css$borderBottom3,
 							$rtfeldman$elm_css$Css$px(1),
 							$rtfeldman$elm_css$Css$solid,
 							$rtfeldman$elm_css$Css$hex('363636')),
-							$rtfeldman$elm_css$Css$paddingBottom(
-							$rtfeldman$elm_css$Css$px(4))
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '24px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '15px')
 						])),
 					$rtfeldman$elm_css$Css$Global$h2(
 					_List_fromArray(
@@ -8974,7 +8973,9 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$fontSize(
 							$rtfeldman$elm_css$Css$em(1.2)),
 							$rtfeldman$elm_css$Css$marginBottom(
-							$rtfeldman$elm_css$Css$rem(0.80808))
+							$rtfeldman$elm_css$Css$rem(0.80808)),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '24px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '8px')
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$each,
@@ -8984,8 +8985,8 @@ var $author$project$Styles$styles = function () {
 						[
 							$rtfeldman$elm_css$Css$fontSize(
 							$rtfeldman$elm_css$Css$em(1.0)),
-							$rtfeldman$elm_css$Css$marginBottom(
-							$rtfeldman$elm_css$Css$rem(0.60606))
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '16px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '8px')
 						])),
 					$rtfeldman$elm_css$Css$Global$small(
 					_List_fromArray(
@@ -9002,6 +9003,12 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							A2($rtfeldman$elm_css$Css$property, 'padding-inline-start', '30px')
+						])),
+					$rtfeldman$elm_css$Css$Global$p(
+					_List_fromArray(
+						[
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '8px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '8px')
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$each,
@@ -9091,10 +9098,12 @@ var $author$project$Styles$styles = function () {
 					'post-metadata',
 					_List_fromArray(
 						[
+							$rtfeldman$elm_css$Css$height(
+							$rtfeldman$elm_css$Css$px(32)),
 							$rtfeldman$elm_css$Css$marginTop(
-							$rtfeldman$elm_css$Css$em(-0.5)),
+							$rtfeldman$elm_css$Css$px(-8)),
 							$rtfeldman$elm_css$Css$marginBottom(
-							$rtfeldman$elm_css$Css$em(2.0)),
+							$rtfeldman$elm_css$Css$px(32)),
 							$rtfeldman$elm_css$Css$Global$descendants(
 							_List_fromArray(
 								[
@@ -18085,10 +18094,10 @@ var $author$project$Page$parseBlocks = function (s) {
 };
 var $author$project$Generated$Toc$posts = _List_fromArray(
 	[
-		{H: '2022-05-29-the-pragmatic-programmer', aC: 'The Pragmatic Programmer'},
-		{H: '2022-06-11-the-little-typer', aC: 'The Little Typer'},
-		{H: '2022-07-27-terminology-overview', aC: 'Terminology Overview'},
-		{H: '2022-09-18-tracery-io', aC: 'Tracery Io'},
+		{H: '2022-05-29-Reading-The-Pragmatic-Programmer', aC: 'Reading The Pragmatic Programmer'},
+		{H: '2022-06-11-Reading-The-Little-Typer', aC: 'Reading The Little Typer'},
+		{H: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
+		{H: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
 		{H: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
 		{H: '2022-10-05-simple-software', aC: 'Simple Software'},
 		{H: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},

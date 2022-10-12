@@ -1,5 +1,5 @@
 ---
-title: "Tracery Io"
+title: "Tracery Language"
 tags: []
 ---
 Practical Low-Effort PCG: Tracery and data-oriented PCG authoring
