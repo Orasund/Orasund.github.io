@@ -36,10 +36,10 @@ body {
     display: none;
 }
 
-@media only screen and (min-width: 761px) {
+@media only screen and (min-width: 801px) {
     body {
         grid-template-rows: 64px 1fr 64px;
-        grid-template-columns: 1fr minmax(400px, 761px) 1fr;
+        grid-template-columns: 1fr minmax(400px, 801px) 1fr;
         grid-template-areas:
             "navigation navigation navigation"
             "sidebar     content    sidebar2"
