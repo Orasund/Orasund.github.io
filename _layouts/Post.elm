@@ -65,6 +65,7 @@ main =
                         ]
                             ++ (Generated.Toc.posts
                                     |> List.sortBy (\{path} -> path)
+                                    |> List.reverse
                                     |> List.map
                                         (\{ title, path } ->
                                             title
