@@ -18310,13 +18310,14 @@ var $author$project$Post$main = A2(
 															$elm$core$List$singleton(
 																$elm$html$Html$text(title)))));
 											},
-											A2(
-												$elm$core$List$sortBy,
-												function (_v0) {
-													var path = _v0.H;
-													return path;
-												},
-												$author$project$Generated$Toc$posts))))))),
+											$elm$core$List$reverse(
+												A2(
+													$elm$core$List$sortBy,
+													function (_v0) {
+														var path = _v0.H;
+														return path;
+													},
+													$author$project$Generated$Toc$posts)))))))),
 					cH: $elm$core$List$singleton(
 						A2(
 							$Orasund$elm_layout$Layout$column,
