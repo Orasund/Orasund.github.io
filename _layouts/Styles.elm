@@ -26,7 +26,7 @@ styles =
             , Css.color <| hex "363636"
             , fontFamilies [ "Open Sans", "Arial", .value sansSerif ]
             , fontSize <| px 16
-            , lineHeight <| Css.em 1.4
+            , lineHeight <| Css.px 24
             ]
         , a
             [ Css.color <| hex "348aa7"
@@ -72,6 +72,10 @@ styles =
         , class "content"
             [ Css.maxWidth <| vw 100
             , Css.padding <| Css.px 16
+            , "linear-gradient(#e6eef4 1px, transparent 0), "
+                ++ "linear-gradient(90deg, #e6eef4 1px, transparent 0)"
+                |> Css.property "background-image"
+            , Css.backgroundSize2 (Css.px 24) (Css.px 24)
             ]
         , class "footer"
             [ textAlign center
