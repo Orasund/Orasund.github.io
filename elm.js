@@ -5829,8 +5829,6 @@ var $rtfeldman$elm_css$Css$Global$typeSelector = F2(
 			]);
 	});
 var $rtfeldman$elm_css$Css$Global$a = $rtfeldman$elm_css$Css$Global$typeSelector('a');
-var $rtfeldman$elm_css$Css$Structure$Compatible = 0;
-var $rtfeldman$elm_css$Css$auto = {cZ: 0, e: 0, ao: 0, a1: 0, di: 0, at: 0, U: 0, N: 0, aw: 0, K: 0, be: 0, aB: 0, F: 0, bU: 'auto'};
 var $rtfeldman$elm_css$Css$Preprocess$AppendProperty = function (a) {
 	return {$: 0, a: a};
 };
@@ -6072,6 +6070,7 @@ var $rtfeldman$elm_css$Css$Global$each = F2(
 						snippetCreators))));
 	});
 var $rtfeldman$elm_css$Css$EmUnits = 0;
+var $rtfeldman$elm_css$Css$Structure$Compatible = 0;
 var $rtfeldman$elm_css$Css$Internal$lengthConverter = F3(
 	function (units, unitLabel, numericValue) {
 		return {
@@ -8256,10 +8255,8 @@ var $rtfeldman$elm_css$Css$hex = function (str) {
 	return $rtfeldman$elm_css$Css$erroneousHex(str);
 };
 var $rtfeldman$elm_css$Css$inlineBlock = {r: 0, bU: 'inline-block'};
-var $rtfeldman$elm_css$Css$left = $rtfeldman$elm_css$Css$prop1('left');
 var $rtfeldman$elm_css$Css$lineHeight = $rtfeldman$elm_css$Css$prop1('line-height');
 var $rtfeldman$elm_css$Css$margin = $rtfeldman$elm_css$Css$prop1('margin');
-var $rtfeldman$elm_css$Css$margin3 = $rtfeldman$elm_css$Css$prop3('margin');
 var $rtfeldman$elm_css$Css$marginBottom = $rtfeldman$elm_css$Css$prop1('margin-bottom');
 var $rtfeldman$elm_css$Css$marginRight = $rtfeldman$elm_css$Css$prop1('margin-right');
 var $rtfeldman$elm_css$Css$marginTop = $rtfeldman$elm_css$Css$prop1('margin-top');
@@ -8283,7 +8280,6 @@ var $rtfeldman$elm_css$Css$Structure$OnlyQuery = F2(
 		return {$: 1, a: a, b: b};
 	});
 var $rtfeldman$elm_css$Css$Media$only = $rtfeldman$elm_css$Css$Structure$OnlyQuery;
-var $rtfeldman$elm_css$Css$Global$p = $rtfeldman$elm_css$Css$Global$typeSelector('p');
 var $rtfeldman$elm_css$Css$padding = $rtfeldman$elm_css$Css$prop1('padding');
 var $rtfeldman$elm_css$Css$paddingBottom = $rtfeldman$elm_css$Css$prop1('padding-bottom');
 var $rtfeldman$elm_css$Css$paddingLeft = $rtfeldman$elm_css$Css$prop1('padding-left');
@@ -8904,7 +8900,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$margin(
 							$rtfeldman$elm_css$Css$px(0)),
 							$rtfeldman$elm_css$Css$backgroundColor(
-							$rtfeldman$elm_css$Css$hex('ffffff')),
+							$rtfeldman$elm_css$Css$hex('fffbf8')),
 							$rtfeldman$elm_css$Css$color(
 							$rtfeldman$elm_css$Css$hex('363636')),
 							$rtfeldman$elm_css$Css$fontFamilies(
@@ -8917,9 +8913,9 @@ var $author$project$Styles$styles = function () {
 								}($rtfeldman$elm_css$Css$sansSerif)
 								])),
 							$rtfeldman$elm_css$Css$fontSize(
-							$rtfeldman$elm_css$Css$px(16)),
+							$rtfeldman$elm_css$Css$px(18)),
 							$rtfeldman$elm_css$Css$lineHeight(
-							$rtfeldman$elm_css$Css$px(24))
+							$rtfeldman$elm_css$Css$px(32))
 						])),
 					$rtfeldman$elm_css$Css$Global$a(
 					_List_fromArray(
@@ -8968,7 +8964,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$borderBottom3,
 							$rtfeldman$elm_css$Css$px(1),
 							$rtfeldman$elm_css$Css$solid,
-							$rtfeldman$elm_css$Css$hex('F0F0F0')),
+							$rtfeldman$elm_css$Css$hex('363636')),
 							$rtfeldman$elm_css$Css$paddingBottom(
 							$rtfeldman$elm_css$Css$px(4))
 						])),
@@ -8990,15 +8986,6 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$em(1.0)),
 							$rtfeldman$elm_css$Css$marginBottom(
 							$rtfeldman$elm_css$Css$rem(0.60606))
-						])),
-					$rtfeldman$elm_css$Css$Global$p(
-					_List_fromArray(
-						[
-							A3(
-							$rtfeldman$elm_css$Css$margin3,
-							$rtfeldman$elm_css$Css$auto,
-							$rtfeldman$elm_css$Css$auto,
-							$rtfeldman$elm_css$Css$rem(1.5))
 						])),
 					$rtfeldman$elm_css$Css$Global$small(
 					_List_fromArray(
@@ -9044,33 +9031,12 @@ var $author$project$Styles$styles = function () {
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
-					'header-logo',
-					_List_fromArray(
-						[
-							$rtfeldman$elm_css$Css$paddingTop(
-							$rtfeldman$elm_css$Css$px(6)),
-							$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$center),
-							$rtfeldman$elm_css$Css$backgroundColor(
-							$rtfeldman$elm_css$Css$hex('f2fae8')),
-							wideScreen(
-							_List_fromArray(
-								[
-									$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$left),
-									A3(
-									$rtfeldman$elm_css$Css$borderBottom3,
-									$rtfeldman$elm_css$Css$px(2),
-									$rtfeldman$elm_css$Css$solid,
-									$rtfeldman$elm_css$Css$hex('3c8765'))
-								]))
-						])),
-					A2(
-					$rtfeldman$elm_css$Css$Global$class,
 					'navigation',
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$center),
 							$rtfeldman$elm_css$Css$backgroundColor(
-							$rtfeldman$elm_css$Css$hex('f2fae8')),
+							$rtfeldman$elm_css$Css$hex('F0F0F0')),
 							$rtfeldman$elm_css$Css$padding(
 							$rtfeldman$elm_css$Css$px(16))
 						])),
@@ -9083,11 +9049,11 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$vw(100)),
 							$rtfeldman$elm_css$Css$padding(
 							$rtfeldman$elm_css$Css$px(16)),
-							A2($rtfeldman$elm_css$Css$property, 'background-image', 'linear-gradient(#e6eef4 1px, transparent 0), ' + 'linear-gradient(90deg, #e6eef4 1px, transparent 0)'),
+							A2($rtfeldman$elm_css$Css$property, 'background-image', 'linear-gradient(#F0F0F0 1px, transparent 0), ' + 'linear-gradient(90deg, #F0F0F0 1px, transparent 0)'),
 							A2(
 							$rtfeldman$elm_css$Css$backgroundSize2,
-							$rtfeldman$elm_css$Css$px(24),
-							$rtfeldman$elm_css$Css$px(24))
+							$rtfeldman$elm_css$Css$px(32),
+							$rtfeldman$elm_css$Css$px(32))
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
@@ -9343,6 +9309,7 @@ var $Orasund$elm_layout$Layout$column = function (attrs) {
 				]),
 			attrs));
 };
+var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$Attributes$align = $elm$html$Html$Attributes$stringProperty('align');
 var $elm$html$Html$Attributes$alt = $elm$html$Html$Attributes$stringProperty('alt');
 var $elm$html$Html$blockquote = _VirtualDom_node('blockquote');
@@ -9367,7 +9334,6 @@ var $elm$html$Html$h6 = _VirtualDom_node('h6');
 var $elm$html$Html$hr = _VirtualDom_node('hr');
 var $elm$html$Html$img = _VirtualDom_node('img');
 var $elm$html$Html$input = _VirtualDom_node('input');
-var $elm$html$Html$li = _VirtualDom_node('li');
 var $elm$html$Html$ol = _VirtualDom_node('ol');
 var $dillonkearns$elm_markdown$Markdown$HtmlRenderer$HtmlRenderer = $elm$core$Basics$identity;
 var $dillonkearns$elm_markdown$Markdown$Html$resultOr = F2(
@@ -18322,25 +18288,35 @@ var $author$project$Post$main = A2(
 												$elm$html$Html$text('Posts')
 											]))
 									]),
-								A2(
-									$elm$core$List$map,
-									function (_v0) {
-										var title = _v0.aC;
-										var path = _v0.H;
-										return A2(
-											$elm$html$Html$p,
-											_List_Nil,
-											$elm$core$List$singleton(
-												A2(
-													$elm$html$Html$a,
-													_List_fromArray(
-														[
-															$elm$html$Html$Attributes$href('/posts/' + path)
-														]),
+								$elm$core$List$singleton(
+									A2(
+										$elm$html$Html$ul,
+										_List_Nil,
+										A2(
+											$elm$core$List$map,
+											function (_v1) {
+												var title = _v1.aC;
+												var path = _v1.H;
+												return A2(
+													$elm$html$Html$li,
+													_List_Nil,
 													$elm$core$List$singleton(
-														$elm$html$Html$text(title)))));
-									},
-									$author$project$Generated$Toc$posts)))),
+														A2(
+															$elm$html$Html$a,
+															_List_fromArray(
+																[
+																	$elm$html$Html$Attributes$href('/posts/' + path)
+																]),
+															$elm$core$List$singleton(
+																$elm$html$Html$text(title)))));
+											},
+											A2(
+												$elm$core$List$sortBy,
+												function (_v0) {
+													var path = _v0.H;
+													return path;
+												},
+												$author$project$Generated$Toc$posts))))))),
 					cH: $elm$core$List$singleton(
 						A2(
 							$Orasund$elm_layout$Layout$column,
