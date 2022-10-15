@@ -8256,10 +8256,16 @@ var $rtfeldman$elm_css$Css$hex = function (str) {
 	}
 	return $rtfeldman$elm_css$Css$erroneousHex(str);
 };
+var $rtfeldman$elm_css$Css$Internal$IncompatibleUnits = 0;
+var $rtfeldman$elm_css$Css$initial = {bX: 0, bY: 0, aH: 0, bZ: 0, aj: 0, b_: 0, ak: 0, Q: 0, C: 0, aX: 0, M: 0, e: 0, r: 0, ao: 0, br: 0, aJ: 0, a0: 0, _: 0, z: 0, ap: 0, m: 0, T: 0, a1: 0, cq: 0, bw: 0, bx: 0, at: 0, U: 0, au: 0, av: 0, ab: 0, ac: 0, N: 0, a4: 0, h: 0, f: 0, bA: 0, dp: 0, W: 0, a7: 0, aw: 0, K: 0, be: 0, az: 0, ag: 0, aA: 0, aB: 0, ah: 0, F: 0, aD: '', aT: 0, bU: 'initial', aU: 0, Z: 0};
+var $rtfeldman$elm_css$Css$inherit = _Utils_update(
+	$rtfeldman$elm_css$Css$initial,
+	{bU: 'inherit'});
 var $rtfeldman$elm_css$Css$inlineBlock = {r: 0, bU: 'inline-block'};
 var $rtfeldman$elm_css$Css$lineHeight = $rtfeldman$elm_css$Css$prop1('line-height');
 var $rtfeldman$elm_css$Css$margin = $rtfeldman$elm_css$Css$prop1('margin');
 var $rtfeldman$elm_css$Css$marginBottom = $rtfeldman$elm_css$Css$prop1('margin-bottom');
+var $rtfeldman$elm_css$Css$marginLeft = $rtfeldman$elm_css$Css$prop1('margin-left');
 var $rtfeldman$elm_css$Css$marginRight = $rtfeldman$elm_css$Css$prop1('margin-right');
 var $rtfeldman$elm_css$Css$marginTop = $rtfeldman$elm_css$Css$prop1('margin-top');
 var $rtfeldman$elm_css$Css$maxWidth = $rtfeldman$elm_css$Css$prop1('max-width');
@@ -8268,6 +8274,7 @@ var $rtfeldman$elm_css$Css$none = {aj: 0, b1: 0, C: 0, e: 0, r: 0, dd: 0, cm: 0,
 var $rtfeldman$elm_css$Css$Global$ol = $rtfeldman$elm_css$Css$Global$typeSelector('ol');
 var $rtfeldman$elm_css$Css$Global$p = $rtfeldman$elm_css$Css$Global$typeSelector('p');
 var $rtfeldman$elm_css$Css$padding = $rtfeldman$elm_css$Css$prop1('padding');
+var $rtfeldman$elm_css$Css$padding2 = $rtfeldman$elm_css$Css$prop2('padding');
 var $rtfeldman$elm_css$Css$paddingLeft = $rtfeldman$elm_css$Css$prop1('padding-left');
 var $rtfeldman$elm_css$Css$paddingRight = $rtfeldman$elm_css$Css$prop1('padding-right');
 var $rtfeldman$elm_css$Css$paddingTop = $rtfeldman$elm_css$Css$prop1('padding-top');
@@ -8345,7 +8352,6 @@ var $rtfeldman$elm_css$Css$Internal$getOverloadedProperty = F3(
 			}
 		}
 	});
-var $rtfeldman$elm_css$Css$Internal$IncompatibleUnits = 0;
 var $rtfeldman$elm_css$Css$Internal$lengthForOverloadedProperty = A3($rtfeldman$elm_css$Css$Internal$lengthConverter, 0, '', 0);
 var $rtfeldman$elm_css$Css$textAlign = function (fn) {
 	return A3(
@@ -8908,7 +8914,11 @@ var $author$project$Styles$styles = function () {
 								}($rtfeldman$elm_css$Css$sansSerif)
 								])),
 							$rtfeldman$elm_css$Css$lineHeight(
-							$rtfeldman$elm_css$Css$px(32))
+							$rtfeldman$elm_css$Css$px(32)),
+							$rtfeldman$elm_css$Css$marginLeft(
+							$rtfeldman$elm_css$Css$px(-8)),
+							$rtfeldman$elm_css$Css$marginRight(
+							$rtfeldman$elm_css$Css$px(-8))
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
@@ -8918,7 +8928,16 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$fontSize(
 							$rtfeldman$elm_css$Css$em(1.8)),
 							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '0px'),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '64px')
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '64px'),
+							$rtfeldman$elm_css$Css$height($rtfeldman$elm_css$Css$inherit),
+							$rtfeldman$elm_css$Css$paddingLeft(
+							$rtfeldman$elm_css$Css$px(16)),
+							$rtfeldman$elm_css$Css$paddingRight(
+							$rtfeldman$elm_css$Css$px(16)),
+							$rtfeldman$elm_css$Css$marginLeft(
+							$rtfeldman$elm_css$Css$px(-24)),
+							$rtfeldman$elm_css$Css$marginRight(
+							$rtfeldman$elm_css$Css$px(-24))
 						])),
 					$rtfeldman$elm_css$Css$Global$h1(
 					_List_fromArray(
@@ -9023,8 +9042,10 @@ var $author$project$Styles$styles = function () {
 						[
 							$rtfeldman$elm_css$Css$maxWidth(
 							$rtfeldman$elm_css$Css$vw(100)),
-							$rtfeldman$elm_css$Css$padding(
-							$rtfeldman$elm_css$Css$px(32)),
+							A2(
+							$rtfeldman$elm_css$Css$padding2,
+							$rtfeldman$elm_css$Css$px(32),
+							$rtfeldman$elm_css$Css$px(40)),
 							A2($rtfeldman$elm_css$Css$property, 'background-image', 'linear-gradient(#F0F0F0 1px, transparent 0), ' + 'linear-gradient(90deg, #F0F0F0 1px, transparent 0)'),
 							A2(
 							$rtfeldman$elm_css$Css$backgroundSize2,
