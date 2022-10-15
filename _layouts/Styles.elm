@@ -2,7 +2,7 @@ module Styles exposing (styles)
 
 import Css exposing (..)
 import Css.Global exposing (..)
-import Css.Media as Media exposing (..)
+import Css.Media exposing (..)
 import Html exposing (Html)
 import Html.Styled
 
@@ -10,9 +10,6 @@ import Html.Styled
 styles : Html msg
 styles =
     let
-        wideScreen =
-            withMedia [ only screen [ Media.minWidth <| Css.px 600 ] ]
-
         codeStyle =
             [ fontFamilies [ "Inconsolata", .value monospace ]
             , Css.px 8 |> Css.borderRadius
@@ -46,7 +43,9 @@ styles =
             [ fontSize <| Css.em 1.33333
             , Css.borderBottom3 (Css.px 1) Css.solid (Css.hex "363636")
             , Css.property "margin-block-start" "64px"
-            , Css.property "margin-block-end" "31px"
+            , Css.property "margin-block-end" "32px"
+            , Css.boxSizing Css.borderBox
+            , Css.px 32 |> Css.height
             ]
         , h2
             [ fontSize <| Css.em 1.2
@@ -96,7 +95,7 @@ styles =
             ]
         , class "post-metadata"
             [ Css.height <| Css.px 32
-            , marginTop <| Css.px -32
+            , marginTop <| Css.px -64
             , marginBottom <| Css.px 32
             , descendants
                 [ each [ a, span ]
@@ -106,6 +105,7 @@ styles =
                 , a
                     [ borderRadius <| px 16
                     , backgroundColor <| hex "348aa7"
+                    , Css.color <| Css.hex "fff"
                     , paddingLeft <| px 8
                     , paddingRight <| px 8
                     , Css.px 24 |> Css.lineHeight

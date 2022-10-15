@@ -29,7 +29,7 @@ And whenever we are stuck, we just ask a human for help. This is the core idea o
 This can actually work quite well - assuming the human knows all the right answers.
 But for problems where the human isn't sure or the specification is wrong, this approach isn't really better than doing the proof manually.
 
-Wait... the Specification can we wrong?
+Wait... the Specification can be wrong?
 
 # Who Validates the Specification
 
