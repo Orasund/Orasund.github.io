@@ -5868,7 +5868,6 @@ var $rtfeldman$elm_css$Css$prop3 = F4(
 				_List_fromArray(
 					[argA.bU, argB.bU, argC.bU])));
 	});
-var $rtfeldman$elm_css$Css$border3 = $rtfeldman$elm_css$Css$prop3('border');
 var $rtfeldman$elm_css$Css$borderBottom3 = $rtfeldman$elm_css$Css$prop3('border-bottom');
 var $rtfeldman$elm_css$Css$borderRadius = $rtfeldman$elm_css$Css$prop1('border-radius');
 var $rtfeldman$elm_css$Css$center = $rtfeldman$elm_css$Css$prop1('center');
@@ -8942,7 +8941,7 @@ var $author$project$Styles$styles = function () {
 								}($rtfeldman$elm_css$Css$sansSerif)
 								])),
 							$rtfeldman$elm_css$Css$lineHeight(
-							$rtfeldman$elm_css$Css$px(40))
+							$rtfeldman$elm_css$Css$px(32))
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$class,
@@ -8950,9 +8949,9 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
-							$rtfeldman$elm_css$Css$em(2.0)),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '24px'),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '24px')
+							$rtfeldman$elm_css$Css$em(1.8)),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '0px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '64px')
 						])),
 					$rtfeldman$elm_css$Css$Global$h1(
 					_List_fromArray(
@@ -8964,8 +8963,8 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$px(1),
 							$rtfeldman$elm_css$Css$solid,
 							$rtfeldman$elm_css$Css$hex('363636')),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '24px'),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '15px')
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '64px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '31px')
 						])),
 					$rtfeldman$elm_css$Css$Global$h2(
 					_List_fromArray(
@@ -8974,8 +8973,8 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$em(1.2)),
 							$rtfeldman$elm_css$Css$marginBottom(
 							$rtfeldman$elm_css$Css$rem(0.80808)),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '24px'),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '8px')
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '32px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '32px')
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$each,
@@ -8985,8 +8984,8 @@ var $author$project$Styles$styles = function () {
 						[
 							$rtfeldman$elm_css$Css$fontSize(
 							$rtfeldman$elm_css$Css$em(1.0)),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '16px'),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '8px')
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '32px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '0px')
 						])),
 					$rtfeldman$elm_css$Css$Global$small(
 					_List_fromArray(
@@ -9007,8 +9006,8 @@ var $author$project$Styles$styles = function () {
 					$rtfeldman$elm_css$Css$Global$p(
 					_List_fromArray(
 						[
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '8px'),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '8px')
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '32px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '32px')
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$each,
@@ -9055,7 +9054,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$maxWidth(
 							$rtfeldman$elm_css$Css$vw(100)),
 							$rtfeldman$elm_css$Css$padding(
-							$rtfeldman$elm_css$Css$px(16)),
+							$rtfeldman$elm_css$Css$px(32)),
 							A2($rtfeldman$elm_css$Css$property, 'background-image', 'linear-gradient(#F0F0F0 1px, transparent 0), ' + 'linear-gradient(90deg, #F0F0F0 1px, transparent 0)'),
 							A2(
 							$rtfeldman$elm_css$Css$backgroundSize2,
@@ -9101,7 +9100,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$height(
 							$rtfeldman$elm_css$Css$px(32)),
 							$rtfeldman$elm_css$Css$marginTop(
-							$rtfeldman$elm_css$Css$px(-8)),
+							$rtfeldman$elm_css$Css$px(-32)),
 							$rtfeldman$elm_css$Css$marginBottom(
 							$rtfeldman$elm_css$Css$px(32)),
 							$rtfeldman$elm_css$Css$Global$descendants(
@@ -9120,19 +9119,16 @@ var $author$project$Styles$styles = function () {
 									$rtfeldman$elm_css$Css$Global$a(
 									_List_fromArray(
 										[
-											A3(
-											$rtfeldman$elm_css$Css$border3,
-											$rtfeldman$elm_css$Css$px(1),
-											$rtfeldman$elm_css$Css$solid,
-											$rtfeldman$elm_css$Css$hex('e0e0e0')),
 											$rtfeldman$elm_css$Css$borderRadius(
-											$rtfeldman$elm_css$Css$px(3)),
+											$rtfeldman$elm_css$Css$px(16)),
 											$rtfeldman$elm_css$Css$backgroundColor(
-											$rtfeldman$elm_css$Css$hex('f2fae8')),
+											$rtfeldman$elm_css$Css$hex('348aa7')),
 											$rtfeldman$elm_css$Css$paddingLeft(
-											$rtfeldman$elm_css$Css$px(5)),
+											$rtfeldman$elm_css$Css$px(8)),
 											$rtfeldman$elm_css$Css$paddingRight(
-											$rtfeldman$elm_css$Css$px(5))
+											$rtfeldman$elm_css$Css$px(8)),
+											$rtfeldman$elm_css$Css$lineHeight(
+											$rtfeldman$elm_css$Css$px(24))
 										]))
 								]))
 						]))
