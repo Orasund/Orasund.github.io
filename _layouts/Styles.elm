@@ -35,36 +35,36 @@ styles =
         , code codeStyle
         , each [ h1, h2, h3, h4, h5, h6 ]
             [ fontFamilies [ "Proza Libre", "Helvetica", .value sansSerif ]
-            , lineHeight <| Css.px 40
+            , lineHeight <| Css.px 32
             ]
         , class "title"
-            [ fontSize <| Css.em 2.0
-            , Css.property "margin-block-start" "24px"
-            , Css.property "margin-block-end" "24px"
+            [ fontSize <| Css.em 1.8
+            , Css.property "margin-block-start" "0px"
+            , Css.property "margin-block-end" "64px"
             ]
         , h1
             [ fontSize <| Css.em 1.33333
             , Css.borderBottom3 (Css.px 1) Css.solid (Css.hex "363636")
-            , Css.property "margin-block-start" "24px"
-            , Css.property "margin-block-end" "15px"
+            , Css.property "margin-block-start" "64px"
+            , Css.property "margin-block-end" "31px"
             ]
         , h2
             [ fontSize <| Css.em 1.2
             , marginBottom <| rem 0.80808
-            , Css.property "margin-block-start" "24px"
-            , Css.property "margin-block-end" "8px"
+            , Css.property "margin-block-start" "32px"
+            , Css.property "margin-block-end" "32px"
             ]
         , each [ h3, h5, h6 ]
             [ fontSize <| Css.em 1.0
-            , Css.property "margin-block-start" "16px"
-            , Css.property "margin-block-end" "8px"
+            , Css.property "margin-block-start" "32px"
+            , Css.property "margin-block-end" "0px"
             ]
         , Css.Global.small [ fontSize <| pct 65 ]
         , Css.Global.ul [ Css.property "padding-inline-start" "30px" ]
         , Css.Global.ol [ Css.property "padding-inline-start" "30px" ]
-        , Css.Global.p 
-            [ Css.property "margin-block-start" "8px"
-            , Css.property "margin-block-end" "8px"
+        , Css.Global.p
+            [ Css.property "margin-block-start" "32px"
+            , Css.property "margin-block-end" "32px"
             ]
         , each [ class "sidebar", class "sidebar2" ]
             [ fontSize <| Css.em 0.9
@@ -78,7 +78,7 @@ styles =
             ]
         , class "content"
             [ Css.maxWidth <| vw 100
-            , Css.padding <| Css.px 16
+            , Css.padding <| Css.px 32
             , "linear-gradient(#F0F0F0 1px, transparent 0), "
                 ++ "linear-gradient(90deg, #F0F0F0 1px, transparent 0)"
                 |> Css.property "background-image"
@@ -96,7 +96,7 @@ styles =
             ]
         , class "post-metadata"
             [ Css.height <| Css.px 32
-            , marginTop <| Css.px -8
+            , marginTop <| Css.px -32
             , marginBottom <| Css.px 32
             , descendants
                 [ each [ a, span ]
@@ -104,11 +104,11 @@ styles =
                     , marginRight <| px 5
                     ]
                 , a
-                    [ border3 (px 1) solid (hex "e0e0e0")
-                    , borderRadius <| px 3
-                    , backgroundColor <| hex "f2fae8"
-                    , paddingLeft <| px 5
-                    , paddingRight <| px 5
+                    [ borderRadius <| px 16
+                    , backgroundColor <| hex "348aa7"
+                    , paddingLeft <| px 8
+                    , paddingRight <| px 8
+                    , Css.px 24 |> Css.lineHeight
                     ]
                 ]
             ]
