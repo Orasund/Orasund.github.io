@@ -5869,7 +5869,10 @@ var $rtfeldman$elm_css$Css$prop3 = F4(
 					[argA.bU, argB.bU, argC.bU])));
 	});
 var $rtfeldman$elm_css$Css$borderBottom3 = $rtfeldman$elm_css$Css$prop3('border-bottom');
+var $rtfeldman$elm_css$Css$Structure$Compatible = 0;
+var $rtfeldman$elm_css$Css$borderBox = {bk: 0, aX: 0, bU: 'border-box'};
 var $rtfeldman$elm_css$Css$borderRadius = $rtfeldman$elm_css$Css$prop1('border-radius');
+var $rtfeldman$elm_css$Css$boxSizing = $rtfeldman$elm_css$Css$prop1('box-sizing');
 var $rtfeldman$elm_css$Css$center = $rtfeldman$elm_css$Css$prop1('center');
 var $rtfeldman$elm_css$Css$Structure$ClassSelector = function (a) {
 	return {$: 0, a: a};
@@ -6069,7 +6072,6 @@ var $rtfeldman$elm_css$Css$Global$each = F2(
 						snippetCreators))));
 	});
 var $rtfeldman$elm_css$Css$EmUnits = 0;
-var $rtfeldman$elm_css$Css$Structure$Compatible = 0;
 var $rtfeldman$elm_css$Css$Internal$lengthConverter = F3(
 	function (units, unitLabel, numericValue) {
 		return {
@@ -8261,25 +8263,9 @@ var $rtfeldman$elm_css$Css$marginBottom = $rtfeldman$elm_css$Css$prop1('margin-b
 var $rtfeldman$elm_css$Css$marginRight = $rtfeldman$elm_css$Css$prop1('margin-right');
 var $rtfeldman$elm_css$Css$marginTop = $rtfeldman$elm_css$Css$prop1('margin-top');
 var $rtfeldman$elm_css$Css$maxWidth = $rtfeldman$elm_css$Css$prop1('max-width');
-var $rtfeldman$elm_css$Css$Media$feature = F2(
-	function (key, _v0) {
-		var value = _v0.bU;
-		return {
-			cc: key,
-			bU: $elm$core$Maybe$Just(value)
-		};
-	});
-var $rtfeldman$elm_css$Css$Media$minWidth = function (value) {
-	return A2($rtfeldman$elm_css$Css$Media$feature, 'min-width', value);
-};
 var $rtfeldman$elm_css$Css$monospace = {_: 0, bU: 'monospace'};
 var $rtfeldman$elm_css$Css$none = {aj: 0, b1: 0, C: 0, e: 0, r: 0, dd: 0, cm: 0, bw: 0, av: 0, ab: 0, N: 0, h: 0, f: 0, bA: 0, a7: 0, du: 0, K: 0, a9: 0, dA: 0, az: 0, ah: 0, F: 0, o: 0, dF: 0, bU: 'none'};
 var $rtfeldman$elm_css$Css$Global$ol = $rtfeldman$elm_css$Css$Global$typeSelector('ol');
-var $rtfeldman$elm_css$Css$Structure$OnlyQuery = F2(
-	function (a, b) {
-		return {$: 1, a: a, b: b};
-	});
-var $rtfeldman$elm_css$Css$Media$only = $rtfeldman$elm_css$Css$Structure$OnlyQuery;
 var $rtfeldman$elm_css$Css$Global$p = $rtfeldman$elm_css$Css$Global$typeSelector('p');
 var $rtfeldman$elm_css$Css$padding = $rtfeldman$elm_css$Css$prop1('padding');
 var $rtfeldman$elm_css$Css$paddingLeft = $rtfeldman$elm_css$Css$prop1('padding-left');
@@ -8292,8 +8278,6 @@ var $rtfeldman$elm_css$Css$px = A2($rtfeldman$elm_css$Css$Internal$lengthConvert
 var $rtfeldman$elm_css$Css$RemUnits = 0;
 var $rtfeldman$elm_css$Css$rem = A2($rtfeldman$elm_css$Css$Internal$lengthConverter, 0, 'rem');
 var $rtfeldman$elm_css$Css$sansSerif = {_: 0, bU: 'sans-serif'};
-var $rtfeldman$elm_css$Css$Structure$Screen = 1;
-var $rtfeldman$elm_css$Css$Media$screen = 1;
 var $rtfeldman$elm_css$Css$Global$small = $rtfeldman$elm_css$Css$Global$typeSelector('small');
 var $rtfeldman$elm_css$Css$solid = {C: 0, ag: 0, bU: 'solid'};
 var $rtfeldman$elm_css$Css$Global$span = $rtfeldman$elm_css$Css$Global$typeSelector('span');
@@ -8855,26 +8839,9 @@ var $rtfeldman$elm_css$Css$verticalAlign = function (fn) {
 };
 var $rtfeldman$elm_css$Css$VwUnits = 0;
 var $rtfeldman$elm_css$Css$vw = A2($rtfeldman$elm_css$Css$Internal$lengthConverter, 0, 'vw');
-var $rtfeldman$elm_css$Css$Preprocess$WithMedia = F2(
-	function (a, b) {
-		return {$: 4, a: a, b: b};
-	});
-var $rtfeldman$elm_css$Css$Media$withMedia = $rtfeldman$elm_css$Css$Preprocess$WithMedia;
 var $rtfeldman$elm_css$Css$UnitlessInteger = 0;
 var $rtfeldman$elm_css$Css$zero = {bx: 0, at: 0, U: 0, au: 0, av: 0, ab: 0, ac: 0, dp: 0, W: 0, a7: 0, aD: '', aT: 0, bU: '0'};
 var $author$project$Styles$styles = function () {
-	var wideScreen = $rtfeldman$elm_css$Css$Media$withMedia(
-		_List_fromArray(
-			[
-				A2(
-				$rtfeldman$elm_css$Css$Media$only,
-				$rtfeldman$elm_css$Css$Media$screen,
-				_List_fromArray(
-					[
-						$rtfeldman$elm_css$Css$Media$minWidth(
-						$rtfeldman$elm_css$Css$px(600))
-					]))
-			]));
 	var codeStyle = _List_fromArray(
 		[
 			$rtfeldman$elm_css$Css$fontFamilies(
@@ -8964,7 +8931,10 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$solid,
 							$rtfeldman$elm_css$Css$hex('363636')),
 							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '64px'),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '31px')
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '32px'),
+							$rtfeldman$elm_css$Css$boxSizing($rtfeldman$elm_css$Css$borderBox),
+							$rtfeldman$elm_css$Css$height(
+							$rtfeldman$elm_css$Css$px(32))
 						])),
 					$rtfeldman$elm_css$Css$Global$h2(
 					_List_fromArray(
@@ -9100,7 +9070,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$height(
 							$rtfeldman$elm_css$Css$px(32)),
 							$rtfeldman$elm_css$Css$marginTop(
-							$rtfeldman$elm_css$Css$px(-32)),
+							$rtfeldman$elm_css$Css$px(-64)),
 							$rtfeldman$elm_css$Css$marginBottom(
 							$rtfeldman$elm_css$Css$px(32)),
 							$rtfeldman$elm_css$Css$Global$descendants(
@@ -9123,6 +9093,8 @@ var $author$project$Styles$styles = function () {
 											$rtfeldman$elm_css$Css$px(16)),
 											$rtfeldman$elm_css$Css$backgroundColor(
 											$rtfeldman$elm_css$Css$hex('348aa7')),
+											$rtfeldman$elm_css$Css$color(
+											$rtfeldman$elm_css$Css$hex('fff')),
 											$rtfeldman$elm_css$Css$paddingLeft(
 											$rtfeldman$elm_css$Css$px(8)),
 											$rtfeldman$elm_css$Css$paddingRight(
