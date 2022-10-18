@@ -9031,7 +9031,7 @@ var $author$project$Styles$styles = function () {
 						[
 							$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$center),
 							$rtfeldman$elm_css$Css$backgroundColor(
-							$rtfeldman$elm_css$Css$hex('F0F0F0')),
+							$rtfeldman$elm_css$Css$hex('a7e9ff')),
 							$rtfeldman$elm_css$Css$padding(
 							$rtfeldman$elm_css$Css$px(16))
 						])),
@@ -9046,7 +9046,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$padding2,
 							$rtfeldman$elm_css$Css$px(32),
 							$rtfeldman$elm_css$Css$px(40)),
-							A2($rtfeldman$elm_css$Css$property, 'background-image', 'linear-gradient(#F0F0F0 1px, transparent 0), ' + 'linear-gradient(90deg, #F0F0F0 1px, transparent 0)'),
+							A2($rtfeldman$elm_css$Css$property, 'background-image', 'linear-gradient(#a7e9ff 1px, transparent 0), ' + 'linear-gradient(90deg, #a7e9ff 1px, transparent 0)'),
 							A2(
 							$rtfeldman$elm_css$Css$backgroundSize2,
 							$rtfeldman$elm_css$Css$px(32),
@@ -18261,7 +18261,7 @@ var $author$project$Post$main = A2(
 	$author$project$Elmstatic$layout,
 	$author$project$Elmstatic$decodePost,
 	function (content) {
-		var blocks = $author$project$Page$parseBlocks(content.b7 + ('\n' + ('---' + 'Did you like this post or want to share some thought? Then please write me a message on [Elm Discourse](https://discourse.elm-lang.org/u/lucas_payr).')));
+		var blocks = $author$project$Page$parseBlocks(content.b7 + ('\n' + ('---\n' + 'Did you like this post or want to share some thoughts? Then ping me on [Elm Discourse](https://discourse.elm-lang.org/u/lucas_payr).')));
 		return $elm$core$Result$Ok(
 			A3(
 				$author$project$Page$layout,
