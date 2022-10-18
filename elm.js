@@ -8267,6 +8267,7 @@ var $rtfeldman$elm_css$Css$margin = $rtfeldman$elm_css$Css$prop1('margin');
 var $rtfeldman$elm_css$Css$marginBottom = $rtfeldman$elm_css$Css$prop1('margin-bottom');
 var $rtfeldman$elm_css$Css$marginLeft = $rtfeldman$elm_css$Css$prop1('margin-left');
 var $rtfeldman$elm_css$Css$marginRight = $rtfeldman$elm_css$Css$prop1('margin-right');
+var $rtfeldman$elm_css$Css$marginTop = $rtfeldman$elm_css$Css$prop1('margin-top');
 var $rtfeldman$elm_css$Css$maxWidth = $rtfeldman$elm_css$Css$prop1('max-width');
 var $rtfeldman$elm_css$Css$monospace = {_: 0, bU: 'monospace'};
 var $rtfeldman$elm_css$Css$none = {aj: 0, b1: 0, C: 0, e: 0, r: 0, dd: 0, cm: 0, bw: 0, av: 0, ab: 0, N: 0, h: 0, f: 0, bA: 0, a7: 0, du: 0, K: 0, a9: 0, dA: 0, az: 0, ah: 0, F: 0, o: 0, dF: 0, bU: 'none'};
@@ -8927,7 +8928,7 @@ var $author$project$Styles$styles = function () {
 							$rtfeldman$elm_css$Css$fontSize(
 							$rtfeldman$elm_css$Css$em(1.8)),
 							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '0px'),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '32px'),
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '64px'),
 							$rtfeldman$elm_css$Css$height($rtfeldman$elm_css$Css$inherit),
 							$rtfeldman$elm_css$Css$paddingLeft(
 							$rtfeldman$elm_css$Css$px(16)),
@@ -9088,6 +9089,8 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$height(
+							$rtfeldman$elm_css$Css$px(32)),
+							$rtfeldman$elm_css$Css$marginTop(
 							$rtfeldman$elm_css$Css$px(32)),
 							$rtfeldman$elm_css$Css$marginBottom(
 							$rtfeldman$elm_css$Css$px(32)),
@@ -18258,7 +18261,7 @@ var $author$project$Post$main = A2(
 	$author$project$Elmstatic$layout,
 	$author$project$Elmstatic$decodePost,
 	function (content) {
-		var blocks = $author$project$Page$parseBlocks(content.b7);
+		var blocks = $author$project$Page$parseBlocks(content.b7 + ('\n' + ('---' + 'Did you like this post or want to share some thought? Then please write me a message on [Elm Discourse](https://discourse.elm-lang.org/u/lucas_payr).')));
 		return $elm$core$Result$Ok(
 			A3(
 				$author$project$Page$layout,
