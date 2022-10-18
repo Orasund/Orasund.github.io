@@ -54,6 +54,9 @@ main =
             let
                 blocks =
                     content.content
+                        ++ "\n"
+                        ++ "---"
+                        ++ "Did you like this post or want to share some thought? Then please write me a message on [Elm Discourse](https://discourse.elm-lang.org/u/lucas_payr)."
                         |> Page.parseBlocks
             in
             [ metadataHtml content
@@ -64,7 +67,7 @@ main =
                         [ Html.h2 [] [ Html.text "Posts" ]
                         ]
                             ++ (Generated.Toc.posts
-                                    |> List.sortBy (\{path} -> path)
+                                    |> List.sortBy (\{ path } -> path)
                                     |> List.reverse
                                     |> List.map
                                         (\{ title, path } ->

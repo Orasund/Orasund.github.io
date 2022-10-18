@@ -39,7 +39,7 @@ styles =
         , class "title"
             [ fontSize <| Css.em 1.8
             , Css.property "margin-block-start" "0px"
-            , Css.property "margin-block-end" "32px"
+            , Css.property "margin-block-end" "64px"
             , Css.height Css.inherit
             , Css.px 16 |> Css.paddingLeft
             , Css.px 16 |> Css.paddingRight
@@ -102,6 +102,7 @@ styles =
             ]
         , class "post-metadata"
             [ Css.height <| Css.px 32
+            , marginTop <| Css.px 32
             , marginBottom <| Css.px 32
             , descendants
                 [ each [ a, span ]
