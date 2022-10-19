@@ -18265,7 +18265,7 @@ var $author$project$Post$main = A2(
 	$author$project$Elmstatic$layout,
 	$author$project$Elmstatic$decodePost,
 	function (content) {
-		var blocks = $author$project$Page$parseBlocks(content.b7 + ('\n' + ('---\n' + 'Did you like this post or want to share some thoughts? Then ping me on [Elm Discourse](https://discourse.elm-lang.org/u/lucas_payr).')));
+		var blocks = $author$project$Page$parseBlocks(content.b7 + ('\n' + ('\n' + ('---\n' + 'Did you like this post or want to share some thoughts? Then ping me on [Elm Discourse](https://discourse.elm-lang.org/u/lucas_payr).'))));
 		return $elm$core$Result$Ok(
 			A3(
 				$author$project$Page$layout,
