@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Wed, 19 Oct 2022 03:26:24 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Oct 2022 11:43:54 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -250,6 +250,30 @@ In Elm we like to use state machines to model our state. So something like the f
 
 type Model
     = Login...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Reading Clean Code]]></title>
+            <link>https://orasund.github.io/posts/2022-10-19-Reading-Clean-Code</link>
+            <guid>https://orasund.github.io/posts/2022-10-19-Reading-Clean-Code</guid>
+            <pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[The Boy Scout Rule
+
+> Leave the campground cleaner than you found it
+
+Meaningful Names
+
+> Use speaking names.
+
+Explain the code should be the same as reading the code out loud.
+
+-> This is exactly what I would call "self documenting code".
+
+> The length of a name should correspond to the size of its scope
+
+So finally we have solved the problem how to name linear(single use) variables:
+The outer most variable has the full name (say "model") going inwards the naming can be "m1","m2" and so on.
+
+Fu...]]></description>
         </item>
     </channel>
 </rss>
