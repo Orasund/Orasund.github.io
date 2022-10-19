@@ -18097,7 +18097,7 @@ var $author$project$Generated$Toc$posts = _List_fromArray(
 		{B: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
 		{B: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
 		{B: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
-		{B: '2022-10-19-Reading-Clean-Code', aC: 'Reading Clean Code'}
+		{B: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'}
 	]);
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);

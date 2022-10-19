@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Wed, 19 Oct 2022 16:02:21 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Oct 2022 18:19:28 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -252,9 +252,9 @@ type Model
     = Login...]]></description>
         </item>
         <item>
-            <title><![CDATA[Reading Clean Code]]></title>
-            <link>https://orasund.github.io/posts/2022-10-19-Reading-Clean-Code</link>
-            <guid>https://orasund.github.io/posts/2022-10-19-Reading-Clean-Code</guid>
+            <title><![CDATA[Reading: Clean Code]]></title>
+            <link>https://orasund.github.io/posts/2022-10-19-Reading:-Clean-Code</link>
+            <guid>https://orasund.github.io/posts/2022-10-19-Reading:-Clean-Code</guid>
             <pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[The Boy Scout Rule
 
