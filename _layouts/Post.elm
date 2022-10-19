@@ -55,6 +55,7 @@ main =
                 blocks =
                     content.content
                         ++ "\n"
+                        ++ "\n"
                         ++ "---\n"
                         ++ "Did you like this post or want to share some thoughts? Then ping me on [Elm Discourse](https://discourse.elm-lang.org/u/lucas_payr)."
                         |> Page.parseBlocks
