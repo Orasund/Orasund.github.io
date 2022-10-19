@@ -2,22 +2,22 @@
 <rss version="2.0">
     <channel>
         <title>Functional Fieldnotes</title>
-        <link>https://example.com/posts</link>
+        <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Tue, 18 Oct 2022 18:32:36 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Oct 2022 03:26:24 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
         <image>
             <title>Functional Fieldnotes</title>
-            <url>https://example.com/img/logo.png</url>
-            <link>https://example.com/posts</link>
+            <url>https://orasund.github.io/img/logo.png</url>
+            <link>https://orasund.github.io/posts</link>
         </image>
         <copyright>Copyright: Author</copyright>
         <item>
             <title><![CDATA[Reading The Pragmatic Programmer]]></title>
-            <link>https://example.com/posts/2022-05-29-Reading-The-Pragmatic-Programmer</link>
-            <guid>https://example.com/posts/2022-05-29-Reading-The-Pragmatic-Programmer</guid>
+            <link>https://orasund.github.io/posts/2022-05-29-Reading-The-Pragmatic-Programmer</link>
+            <guid>https://orasund.github.io/posts/2022-05-29-Reading-The-Pragmatic-Programmer</guid>
             <pubDate>Sun, 29 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Chapter 5: Your Knowledge Portfolio (Page 37 in pdf)
 
@@ -34,16 +34,16 @@ This might resolve the need of meta programming, but is still subject to type-ch
         </item>
         <item>
             <title><![CDATA[Reading The Little Typer]]></title>
-            <link>https://example.com/posts/2022-06-11-Reading-The-Little-Typer</link>
-            <guid>https://example.com/posts/2022-06-11-Reading-The-Little-Typer</guid>
+            <link>https://orasund.github.io/posts/2022-06-11-Reading-The-Little-Typer</link>
+            <guid>https://orasund.github.io/posts/2022-06-11-Reading-The-Little-Typer</guid>
             <pubDate>Sat, 11 Jun 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Not yet read
 ...]]></description>
         </item>
         <item>
             <title><![CDATA[Terminology Overview]]></title>
-            <link>https://example.com/posts/2022-07-27-Terminology-Overview</link>
-            <guid>https://example.com/posts/2022-07-27-Terminology-Overview</guid>
+            <link>https://orasund.github.io/posts/2022-07-27-Terminology-Overview</link>
+            <guid>https://orasund.github.io/posts/2022-07-27-Terminology-Overview</guid>
             <pubDate>Wed, 27 Jul 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[MODERN Terminology. If something is not here... maybe its outdated?
 
@@ -65,8 +65,8 @@ Behaviour Driven Design (BDD)
         </item>
         <item>
             <title><![CDATA[Tracery Language]]></title>
-            <link>https://example.com/posts/2022-09-18-Tracery-Language</link>
-            <guid>https://example.com/posts/2022-09-18-Tracery-Language</guid>
+            <link>https://orasund.github.io/posts/2022-09-18-Tracery-Language</link>
+            <guid>https://orasund.github.io/posts/2022-09-18-Tracery-Language</guid>
             <pubDate>Sun, 18 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Practical Low-Effort PCG: Tracery and data-oriented PCG authoring
 https://www.youtube.com/watch?v=Np9FRl847qM
@@ -81,8 +81,8 @@ made with tracery
         </item>
         <item>
             <title><![CDATA[Some Thoughts On TDD]]></title>
-            <link>https://example.com/posts/2022-09-22-Some-Thoughts-on-TDD</link>
-            <guid>https://example.com/posts/2022-09-22-Some-Thoughts-on-TDD</guid>
+            <link>https://orasund.github.io/posts/2022-09-22-Some-Thoughts-on-TDD</link>
+            <guid>https://orasund.github.io/posts/2022-09-22-Some-Thoughts-on-TDD</guid>
             <pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[tltr;
 Make less tests with higher coverage.
@@ -100,8 +100,8 @@ Daniel Terhorst-North about the creation of BDD
         </item>
         <item>
             <title><![CDATA[Simple Software]]></title>
-            <link>https://example.com/posts/2022-10-05-simple-software</link>
-            <guid>https://example.com/posts/2022-10-05-simple-software</guid>
+            <link>https://orasund.github.io/posts/2022-10-05-simple-software</link>
+            <guid>https://orasund.github.io/posts/2022-10-05-simple-software</guid>
             <pubDate>Wed, 05 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[I would describe my programming philosophy as "creating simple software".
 Here is what i mean by that.
@@ -117,8 +117,8 @@ The part about keeping your programm st...]]></description>
         </item>
         <item>
             <title><![CDATA[Exploring Monads]]></title>
-            <link>https://example.com/posts/2022-10-06-exploring-monads</link>
-            <guid>https://example.com/posts/2022-10-06-exploring-monads</guid>
+            <link>https://orasund.github.io/posts/2022-10-06-exploring-monads</link>
+            <guid>https://orasund.github.io/posts/2022-10-06-exploring-monads</guid>
             <pubDate>Thu, 06 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Categories
 
@@ -146,8 +146,8 @@ combine: Sem...]]></description>
         </item>
         <item>
             <title><![CDATA[Functional Design Patterns]]></title>
-            <link>https://example.com/posts/2022-10-06-functional-design-patterns</link>
-            <guid>https://example.com/posts/2022-10-06-functional-design-patterns</guid>
+            <link>https://orasund.github.io/posts/2022-10-06-functional-design-patterns</link>
+            <guid>https://orasund.github.io/posts/2022-10-06-functional-design-patterns</guid>
             <pubDate>Thu, 06 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[There is this myth, that functional programming does not have any design patterns. See Functional Design Patterns by Scott Wlaschin
 
@@ -162,8 +162,8 @@ andThe...]]></description>
         </item>
         <item>
             <title><![CDATA[Investigating Design Patterns]]></title>
-            <link>https://example.com/posts/2022-10-08-investigating-design-patterns</link>
-            <guid>https://example.com/posts/2022-10-08-investigating-design-patterns</guid>
+            <link>https://orasund.github.io/posts/2022-10-08-investigating-design-patterns</link>
+            <guid>https://orasund.github.io/posts/2022-10-08-investigating-design-patterns</guid>
             <pubDate>Sat, 08 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[There is this myth, that functional programming does not have any design patterns. See Functional Design Patterns by Scott Wlaschin
 
@@ -173,8 +173,8 @@ I will use ✅ for patterns that have a place in function programming and ❌ fo
         </item>
         <item>
             <title><![CDATA[Formal Methods, Type Theory And The Real World]]></title>
-            <link>https://example.com/posts/2022-10-11-formal-methods,-type-theory-and-the-real-world</link>
-            <guid>https://example.com/posts/2022-10-11-formal-methods,-type-theory-and-the-real-world</guid>
+            <link>https://orasund.github.io/posts/2022-10-11-formal-methods,-type-theory-and-the-real-world</link>
+            <guid>https://orasund.github.io/posts/2022-10-11-formal-methods,-type-theory-and-the-real-world</guid>
             <pubDate>Tue, 11 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[While studing at the university, I had the feeling, that there was this perfect solution out there, how to validate code. And the industry is just not seeing it.
 Well, it turns out, I was the one not seeing the truth.
@@ -190,8 +190,8 @@ That way we can actually prove that t...]]></description>
         </item>
         <item>
             <title><![CDATA[Relearn CSS]]></title>
-            <link>https://example.com/posts/2022-10-11-Relearn-CSS</link>
-            <guid>https://example.com/posts/2022-10-11-Relearn-CSS</guid>
+            <link>https://orasund.github.io/posts/2022-10-11-Relearn-CSS</link>
+            <guid>https://orasund.github.io/posts/2022-10-11-Relearn-CSS</guid>
             <pubDate>Tue, 11 Oct 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Lets Learn CSS in 2022.
 
@@ -234,6 +234,22 @@ You can also do some pattern machting
 /* A href that ends with .com */
 [href$='.com'] {
   c...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Comparing Elm With Kotlin]]></title>
+            <link>https://orasund.github.io/posts/2022-10-19-Comparing-Elm-With-Kotlin</link>
+            <guid>https://orasund.github.io/posts/2022-10-19-Comparing-Elm-With-Kotlin</guid>
+            <pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[I'm using Kotlin at work and Elm for hobby project. Every now and then I forget that im using Kotlin and try to write Kotlin in a more functional Style - just like i would in Elm.
+
+Today I want to showcase some of those gotcha moments and discuss reasons why Kotlin might have decided against a more functional approach.
+
+Pattern Matching Pairs/Tuples
+
+In Elm we like to use state machines to model our state. So something like the following might be considered idiomatic Elm.
+
+type Model
+    = Login...]]></description>
         </item>
     </channel>
 </rss>

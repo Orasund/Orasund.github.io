@@ -5189,7 +5189,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {cf: fragment, ci: host, H: path, cx: port_, cA: protocol, cB: query};
+		return {cf: fragment, ci: host, F: path, cx: port_, cA: protocol, cB: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -8257,11 +8257,12 @@ var $rtfeldman$elm_css$Css$hex = function (str) {
 	return $rtfeldman$elm_css$Css$erroneousHex(str);
 };
 var $rtfeldman$elm_css$Css$Internal$IncompatibleUnits = 0;
-var $rtfeldman$elm_css$Css$initial = {bX: 0, bY: 0, aH: 0, bZ: 0, aj: 0, b_: 0, ak: 0, Q: 0, C: 0, aX: 0, M: 0, e: 0, r: 0, ao: 0, br: 0, aJ: 0, a0: 0, _: 0, z: 0, ap: 0, m: 0, T: 0, a1: 0, cq: 0, bw: 0, bx: 0, at: 0, U: 0, au: 0, av: 0, ab: 0, ac: 0, N: 0, a4: 0, h: 0, f: 0, bA: 0, dp: 0, W: 0, a7: 0, aw: 0, K: 0, be: 0, az: 0, ag: 0, aA: 0, aB: 0, ah: 0, F: 0, aD: '', aT: 0, bU: 'initial', aU: 0, Z: 0};
+var $rtfeldman$elm_css$Css$initial = {bX: 0, bY: 0, aH: 0, bZ: 0, aj: 0, b_: 0, ak: 0, Q: 0, C: 0, aX: 0, M: 0, e: 0, r: 0, ao: 0, br: 0, aJ: 0, a0: 0, _: 0, z: 0, ap: 0, m: 0, T: 0, a1: 0, cq: 0, bw: 0, bx: 0, at: 0, U: 0, au: 0, av: 0, ab: 0, ac: 0, N: 0, a4: 0, h: 0, f: 0, bA: 0, dp: 0, W: 0, a7: 0, aw: 0, K: 0, be: 0, az: 0, ag: 0, aA: 0, aB: 0, ah: 0, G: 0, aD: '', aT: 0, bU: 'initial', aU: 0, Z: 0};
 var $rtfeldman$elm_css$Css$inherit = _Utils_update(
 	$rtfeldman$elm_css$Css$initial,
 	{bU: 'inherit'});
 var $rtfeldman$elm_css$Css$inlineBlock = {r: 0, bU: 'inline-block'};
+var $rtfeldman$elm_css$Css$justify = $rtfeldman$elm_css$Css$prop1('justify');
 var $rtfeldman$elm_css$Css$lineHeight = $rtfeldman$elm_css$Css$prop1('line-height');
 var $rtfeldman$elm_css$Css$margin = $rtfeldman$elm_css$Css$prop1('margin');
 var $rtfeldman$elm_css$Css$marginBottom = $rtfeldman$elm_css$Css$prop1('margin-bottom');
@@ -8270,7 +8271,7 @@ var $rtfeldman$elm_css$Css$marginRight = $rtfeldman$elm_css$Css$prop1('margin-ri
 var $rtfeldman$elm_css$Css$marginTop = $rtfeldman$elm_css$Css$prop1('margin-top');
 var $rtfeldman$elm_css$Css$maxWidth = $rtfeldman$elm_css$Css$prop1('max-width');
 var $rtfeldman$elm_css$Css$monospace = {_: 0, bU: 'monospace'};
-var $rtfeldman$elm_css$Css$none = {aj: 0, b1: 0, C: 0, e: 0, r: 0, dd: 0, cm: 0, bw: 0, av: 0, ab: 0, N: 0, h: 0, f: 0, bA: 0, a7: 0, du: 0, K: 0, a9: 0, dA: 0, az: 0, ah: 0, F: 0, o: 0, dF: 0, bU: 'none'};
+var $rtfeldman$elm_css$Css$none = {aj: 0, b1: 0, C: 0, e: 0, r: 0, dd: 0, cm: 0, bw: 0, av: 0, ab: 0, N: 0, h: 0, f: 0, bA: 0, a7: 0, du: 0, K: 0, a9: 0, dA: 0, az: 0, ah: 0, G: 0, o: 0, dF: 0, bU: 'none'};
 var $rtfeldman$elm_css$Css$Global$ol = $rtfeldman$elm_css$Css$Global$typeSelector('ol');
 var $rtfeldman$elm_css$Css$Global$p = $rtfeldman$elm_css$Css$Global$typeSelector('p');
 var $rtfeldman$elm_css$Css$padding = $rtfeldman$elm_css$Css$prop1('padding');
@@ -8996,7 +8997,8 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '32px'),
-							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '32px')
+							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '32px'),
+							$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$justify)
 						])),
 					A2(
 					$rtfeldman$elm_css$Css$Global$each,
@@ -18083,17 +18085,18 @@ var $author$project$Page$parseBlocks = function (s) {
 };
 var $author$project$Generated$Toc$posts = _List_fromArray(
 	[
-		{H: '2022-05-29-Reading-The-Pragmatic-Programmer', aC: 'Reading The Pragmatic Programmer'},
-		{H: '2022-06-11-Reading-The-Little-Typer', aC: 'Reading The Little Typer'},
-		{H: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
-		{H: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
-		{H: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
-		{H: '2022-10-05-simple-software', aC: 'Simple Software'},
-		{H: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
-		{H: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
-		{H: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
-		{H: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
-		{H: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'}
+		{F: '2022-05-29-Reading-The-Pragmatic-Programmer', aC: 'Reading The Pragmatic Programmer'},
+		{F: '2022-06-11-Reading-The-Little-Typer', aC: 'Reading The Little Typer'},
+		{F: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
+		{F: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
+		{F: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
+		{F: '2022-10-05-simple-software', aC: 'Simple Software'},
+		{F: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
+		{F: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
+		{F: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
+		{F: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
+		{F: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
+		{F: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'}
 	]);
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
@@ -18294,7 +18297,7 @@ var $author$project$Post$main = A2(
 											$elm$core$List$map,
 											function (_v1) {
 												var title = _v1.aC;
-												var path = _v1.H;
+												var path = _v1.F;
 												return A2(
 													$elm$html$Html$li,
 													_List_Nil,
@@ -18312,7 +18315,7 @@ var $author$project$Post$main = A2(
 												A2(
 													$elm$core$List$sortBy,
 													function (_v0) {
-														var path = _v0.H;
+														var path = _v0.F;
 														return path;
 													},
 													$author$project$Generated$Toc$posts)))))))),
