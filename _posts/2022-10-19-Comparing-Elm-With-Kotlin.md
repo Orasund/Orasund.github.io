@@ -80,4 +80,4 @@ I don't know the reason for this - the underlying implementation is a LinkedList
 
 Elm does not have Exceptions, it has Results. Kotlin also has results, but the Error Type is always Throwable. Not only that, Kotlin forces you to end the function with "Catching" if it returns a Result. To add insult to injury, you have to also create a function with the same name except "Catching".
 
-This is intentionally. [The Kotlin Language Developers are still thinking about the Result type](https://github.com/Kotlin/KEEP/blob/master/proposals/stdlib/result.md) and do not want to break production code once they change their mind. So they currently only allow Result for very specific contexts. But until then, we should use Exceptions instead.
+This is intentionally. [The Kotlin Language Developers are still thinking about the Result type](https://github.com/Kotlin/KEEP/blob/master/proposals/stdlib/result.md) and do not want to break production code once they change their mind. So they currently only allow Result for very specific contexts. But for now, we should use Exceptions instead.
