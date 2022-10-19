@@ -52,3 +52,6 @@ Don't duplicated code.
 > Don't Return Null
 
 -> Again, this feels outdated. Something you actually want to say "i can't do this" or "i was successful, but the result is empty". In these cases Null makes perfect sense. Its also very easy to handle (nowadays).
+
+[Video: Hot Garbage: Clean Code Is Dead
+](https://www.youtube.com/watch?v=s_fZFBgA11s)
