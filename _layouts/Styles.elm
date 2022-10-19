@@ -71,6 +71,7 @@ styles =
         , Css.Global.p
             [ Css.property "margin-block-start" "32px"
             , Css.property "margin-block-end" "32px"
+            , Css.textAlign Css.justify
             ]
         , each [ class "sidebar", class "sidebar2" ]
             [ fontSize <| Css.em 0.9

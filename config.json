@@ -1,5 +1,5 @@
 {
-    "siteTitle": "Functional Fieldnotes",
+    "siteTitle": "📒 Functional Fieldnotes",
     "outputDir": "docs",
     "copy": {
         "/posts": "/"
@@ -8,15 +8,15 @@
         "type": "rss",
         "title": "Functional Fieldnotes",
         "description": "Functional Fieldnotes",
-        "id": "https://example.com",
-        "link": "https://example.com/posts",
-        "image": "https://example.com/img/logo.png",
+        "id": "https://orasund.github.io",
+        "link": "https://orasund.github.io/posts",
+        "image": "https://orasund.github.io/img/logo.png",
         "copyright": "Copyright: Author",
         "language": "en",
         "generator": "Elmstatic",
         "author": {
-            "name": "Author",
-            "link": "https://example.com/about"
+            "name": "Lucas Payr",
+            "link": "https://orasund.github.io/about"
         }
     },
     "tags": [
