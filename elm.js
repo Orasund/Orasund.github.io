@@ -5485,6 +5485,7 @@ var $author$project$Elmstatic$inlineScript = function (js) {
 				$elm$html$Html$text(js)
 			]));
 };
+var $elm$html$Html$Attributes$name = $elm$html$Html$Attributes$stringProperty('name');
 var $author$project$Elmstatic$script = function (src) {
 	return A3(
 		$elm$html$Html$node,
@@ -5535,6 +5536,15 @@ var $author$project$Elmstatic$htmlTemplate = F2(
 							_List_fromArray(
 								[
 									A2($elm$html$Html$Attributes$attribute, 'charset', 'utf-8')
+								]),
+							_List_Nil),
+							A3(
+							$elm$html$Html$node,
+							'meta',
+							_List_fromArray(
+								[
+									$elm$html$Html$Attributes$name('viewport'),
+									A2($elm$html$Html$Attributes$attribute, 'content', 'width=device-width, initial-scale=1.0')
 								]),
 							_List_Nil),
 							$author$project$Elmstatic$script('//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js'),
@@ -8927,7 +8937,7 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
-							$rtfeldman$elm_css$Css$em(32)),
+							$rtfeldman$elm_css$Css$px(32)),
 							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '0px'),
 							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '64px'),
 							$rtfeldman$elm_css$Css$height($rtfeldman$elm_css$Css$inherit),
@@ -8944,7 +8954,7 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
-							$rtfeldman$elm_css$Css$em(24)),
+							$rtfeldman$elm_css$Css$px(24)),
 							A3(
 							$rtfeldman$elm_css$Css$borderBottom3,
 							$rtfeldman$elm_css$Css$px(1),
