@@ -3,6 +3,10 @@
 
 Clean Code/DRY Code might be good to read an maintain, but bad to refactor. Using the Boy Scout Rule is a good way of making code slowly more "clean/DRY". But whenever you need to change something, you don't have to follow the "clean rules" - leave that to a later state in the development.
 
+[Podcast: A Path to Better Programming • Robert "Uncle Bob" Martin & Allen Holub • GOTO 2021](https://www.youtube.com/watch?v=QnmRpHFoYLk)
+
+Bob Martin is questioning why Design Patterns are semingly nolonger relevant. Also from the conversation it seems like these books are lessens learned from the last 15 years. The idea is, what new developers should not reinvent the wheel but continue from where old developers have left off.
+
 # The Boy Scout Rule
 
 > Leave the campground cleaner than you found it
