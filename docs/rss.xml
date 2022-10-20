@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Wed, 19 Oct 2022 18:42:20 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 20 Oct 2022 02:47:48 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -15,9 +15,9 @@
         </image>
         <copyright>Copyright: Author</copyright>
         <item>
-            <title><![CDATA[Reading The Pragmatic Programmer]]></title>
-            <link>https://orasund.github.io/posts/2022-05-29-Reading-The-Pragmatic-Programmer</link>
-            <guid>https://orasund.github.io/posts/2022-05-29-Reading-The-Pragmatic-Programmer</guid>
+            <title><![CDATA[Reading: The Pragmatic Programmer]]></title>
+            <link>https://orasund.github.io/posts/2022-05-29-Reading:-The-Pragmatic-Programmer</link>
+            <guid>https://orasund.github.io/posts/2022-05-29-Reading:-The-Pragmatic-Programmer</guid>
             <pubDate>Sun, 29 May 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Chapter 5: Your Knowledge Portfolio (Page 37 in pdf)
 
@@ -31,14 +31,6 @@ Chapter 20: Code Generators
 Write Code that writes Codes.
 
 This might resolve the need of meta programming, but is still subject to type-checking. Therefore is much more useful then Reflection....]]></description>
-        </item>
-        <item>
-            <title><![CDATA[Reading The Little Typer]]></title>
-            <link>https://orasund.github.io/posts/2022-06-11-Reading-The-Little-Typer</link>
-            <guid>https://orasund.github.io/posts/2022-06-11-Reading-The-Little-Typer</guid>
-            <pubDate>Sat, 11 Jun 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[Not yet read
-...]]></description>
         </item>
         <item>
             <title><![CDATA[Terminology Overview]]></title>
@@ -256,7 +248,12 @@ type Model
             <link>https://orasund.github.io/posts/2022-10-19-Reading:-Clean-Code</link>
             <guid>https://orasund.github.io/posts/2022-10-19-Reading:-Clean-Code</guid>
             <pubDate>Wed, 19 Oct 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[The Boy Scout Rule
+            <description><![CDATA[[Video: Hot Garbage: Clean Code Is Dead
+](https://www.youtube.com/watch?v=s_fZFBgA11s)
+
+Clean Code/DRY Code might be good to read an maintain, but bad to refactor. Using the Boy Scout Rule is a good way of making code slowly more "clean/DRY". But whenever you need to change something, you don't have to follow the "clean rules" - leave that to a later state in the development.
+
+The Boy Scout Rule
 
 > Leave the campground cleaner than you found it
 
@@ -264,16 +261,7 @@ Meaningful Names
 
 > Use speaking names.
 
-Explain the code should be the same as reading the code out loud.
-
--> This is exactly what I would call "self documenting code".
-
-> The length of a name should correspond to the size of its scope
-
-So finally we have solved the problem how to name linear(single use) variables:
-The outer most variable has the full name (say "model") going inwards the naming can be "m1","m2" and so on.
-
-Fu...]]></description>
+Explain t...]]></description>
         </item>
     </channel>
 </rss>

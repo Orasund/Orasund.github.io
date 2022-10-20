@@ -5189,7 +5189,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {cf: fragment, ci: host, B: path, cx: port_, cA: protocol, cB: query};
+		return {cf: fragment, ci: host, F: path, cx: port_, cA: protocol, cB: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -8257,7 +8257,7 @@ var $rtfeldman$elm_css$Css$hex = function (str) {
 	return $rtfeldman$elm_css$Css$erroneousHex(str);
 };
 var $rtfeldman$elm_css$Css$Internal$IncompatibleUnits = 0;
-var $rtfeldman$elm_css$Css$initial = {bX: 0, bY: 0, aH: 0, bZ: 0, aj: 0, b_: 0, ak: 0, Q: 0, D: 0, aX: 0, M: 0, e: 0, r: 0, ao: 0, br: 0, aJ: 0, a0: 0, _: 0, z: 0, ap: 0, m: 0, T: 0, a1: 0, cq: 0, bw: 0, bx: 0, at: 0, U: 0, au: 0, av: 0, ab: 0, ac: 0, N: 0, a4: 0, h: 0, f: 0, bA: 0, dp: 0, W: 0, a7: 0, aw: 0, K: 0, be: 0, az: 0, ag: 0, aA: 0, aB: 0, ah: 0, G: 0, aD: '', aT: 0, bU: 'initial', aU: 0, Z: 0};
+var $rtfeldman$elm_css$Css$initial = {bX: 0, bY: 0, aH: 0, bZ: 0, aj: 0, b_: 0, ak: 0, Q: 0, C: 0, aX: 0, M: 0, e: 0, r: 0, ao: 0, br: 0, aJ: 0, a0: 0, _: 0, z: 0, ap: 0, m: 0, T: 0, a1: 0, cq: 0, bw: 0, bx: 0, at: 0, U: 0, au: 0, av: 0, ab: 0, ac: 0, N: 0, a4: 0, h: 0, f: 0, bA: 0, dp: 0, W: 0, a7: 0, aw: 0, K: 0, be: 0, az: 0, ag: 0, aA: 0, aB: 0, ah: 0, G: 0, aD: '', aT: 0, bU: 'initial', aU: 0, Z: 0};
 var $rtfeldman$elm_css$Css$inherit = _Utils_update(
 	$rtfeldman$elm_css$Css$initial,
 	{bU: 'inherit'});
@@ -8271,7 +8271,7 @@ var $rtfeldman$elm_css$Css$marginRight = $rtfeldman$elm_css$Css$prop1('margin-ri
 var $rtfeldman$elm_css$Css$marginTop = $rtfeldman$elm_css$Css$prop1('margin-top');
 var $rtfeldman$elm_css$Css$maxWidth = $rtfeldman$elm_css$Css$prop1('max-width');
 var $rtfeldman$elm_css$Css$monospace = {_: 0, bU: 'monospace'};
-var $rtfeldman$elm_css$Css$none = {aj: 0, b1: 0, D: 0, e: 0, r: 0, dd: 0, cm: 0, bw: 0, av: 0, ab: 0, N: 0, h: 0, f: 0, bA: 0, a7: 0, du: 0, K: 0, a9: 0, dA: 0, az: 0, ah: 0, G: 0, o: 0, dF: 0, bU: 'none'};
+var $rtfeldman$elm_css$Css$none = {aj: 0, b1: 0, C: 0, e: 0, r: 0, dd: 0, cm: 0, bw: 0, av: 0, ab: 0, N: 0, h: 0, f: 0, bA: 0, a7: 0, du: 0, K: 0, a9: 0, dA: 0, az: 0, ah: 0, G: 0, o: 0, dF: 0, bU: 'none'};
 var $rtfeldman$elm_css$Css$Global$ol = $rtfeldman$elm_css$Css$Global$typeSelector('ol');
 var $rtfeldman$elm_css$Css$Global$p = $rtfeldman$elm_css$Css$Global$typeSelector('p');
 var $rtfeldman$elm_css$Css$padding = $rtfeldman$elm_css$Css$prop1('padding');
@@ -8287,7 +8287,7 @@ var $rtfeldman$elm_css$Css$RemUnits = 0;
 var $rtfeldman$elm_css$Css$rem = A2($rtfeldman$elm_css$Css$Internal$lengthConverter, 0, 'rem');
 var $rtfeldman$elm_css$Css$sansSerif = {_: 0, bU: 'sans-serif'};
 var $rtfeldman$elm_css$Css$Global$small = $rtfeldman$elm_css$Css$Global$typeSelector('small');
-var $rtfeldman$elm_css$Css$solid = {D: 0, ag: 0, bU: 'solid'};
+var $rtfeldman$elm_css$Css$solid = {C: 0, ag: 0, bU: 'solid'};
 var $rtfeldman$elm_css$Css$Global$span = $rtfeldman$elm_css$Css$Global$typeSelector('span');
 var $rtfeldman$elm_css$Css$Global$svg = $rtfeldman$elm_css$Css$Global$typeSelector('svg');
 var $rtfeldman$elm_css$Css$Preprocess$ApplyStyles = function (a) {
@@ -8927,7 +8927,7 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
-							$rtfeldman$elm_css$Css$em(1.8)),
+							$rtfeldman$elm_css$Css$em(32)),
 							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '0px'),
 							A2($rtfeldman$elm_css$Css$property, 'margin-block-end', '64px'),
 							$rtfeldman$elm_css$Css$height($rtfeldman$elm_css$Css$inherit),
@@ -8944,7 +8944,7 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
-							$rtfeldman$elm_css$Css$em(1.33333)),
+							$rtfeldman$elm_css$Css$em(24)),
 							A3(
 							$rtfeldman$elm_css$Css$borderBottom3,
 							$rtfeldman$elm_css$Css$px(1),
@@ -8960,7 +8960,7 @@ var $author$project$Styles$styles = function () {
 					_List_fromArray(
 						[
 							$rtfeldman$elm_css$Css$fontSize(
-							$rtfeldman$elm_css$Css$em(1.2)),
+							$rtfeldman$elm_css$Css$px(22)),
 							$rtfeldman$elm_css$Css$marginBottom(
 							$rtfeldman$elm_css$Css$rem(0.80808)),
 							A2($rtfeldman$elm_css$Css$property, 'margin-block-start', '32px'),
@@ -12476,7 +12476,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines = function
 var $dillonkearns$elm_markdown$Markdown$InlineParser$Match = $elm$core$Basics$identity;
 var $dillonkearns$elm_markdown$Markdown$InlineParser$prepareChildMatch = F2(
 	function (parentMatch, childMatch) {
-		return {j: childMatch.j - parentMatch.x, v: childMatch.v, l: childMatch.l - parentMatch.x, n: childMatch.n, C: childMatch.C - parentMatch.x, x: childMatch.x - parentMatch.x, p: childMatch.p};
+		return {j: childMatch.j - parentMatch.x, v: childMatch.v, l: childMatch.l - parentMatch.x, n: childMatch.n, B: childMatch.B - parentMatch.x, x: childMatch.x - parentMatch.x, p: childMatch.p};
 	});
 var $dillonkearns$elm_markdown$Markdown$InlineParser$addChild = F2(
 	function (parentMatch, childMatch) {
@@ -12488,7 +12488,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$addChild = F2(
 				parentMatch.v),
 			l: parentMatch.l,
 			n: parentMatch.n,
-			C: parentMatch.C,
+			B: parentMatch.B,
 			x: parentMatch.x,
 			p: parentMatch.p
 		};
@@ -12500,7 +12500,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$organizeChildren = function
 		v: $dillonkearns$elm_markdown$Markdown$InlineParser$organizeMatches(match.v),
 		l: match.l,
 		n: match.n,
-		C: match.C,
+		B: match.B,
 		x: match.x,
 		p: match.p
 	};
@@ -12960,7 +12960,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$normalMatch = function (tex
 		v: _List_Nil,
 		l: 0,
 		n: $dillonkearns$elm_markdown$Markdown$Helpers$formatStr(text),
-		C: 0,
+		B: 0,
 		x: 0,
 		p: $dillonkearns$elm_markdown$Markdown$InlineParser$NormalType
 	};
@@ -12973,7 +12973,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$parseTextMatch = F3(
 			v: A3($dillonkearns$elm_markdown$Markdown$InlineParser$parseTextMatches, matchModel.n, _List_Nil, matchModel.v),
 			l: matchModel.l,
 			n: matchModel.n,
-			C: matchModel.C,
+			B: matchModel.B,
 			x: matchModel.x,
 			p: matchModel.p
 		};
@@ -14001,7 +14001,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$isStrikethroughTokenPair = 
 var $dillonkearns$elm_markdown$Markdown$InlineParser$HardLineBreakType = {$: 1};
 var $dillonkearns$elm_markdown$Markdown$InlineParser$tokenToMatch = F2(
 	function (token, type_) {
-		return {j: token.c + token.bx, v: _List_Nil, l: token.c, n: '', C: 0, x: 0, p: type_};
+		return {j: token.c + token.bx, v: _List_Nil, l: token.c, n: '', B: 0, x: 0, p: type_};
 	});
 var $dillonkearns$elm_markdown$Markdown$InlineParser$lineBreakTTM = F5(
 	function (remaining, tokens, matches, refs, rawText) {
@@ -14794,7 +14794,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$tokenPairToMatch = F7(
 			A3($elm$core$String$slice, textStart, textEnd, rawText));
 		var start = openToken.c;
 		var end = closeToken.c + closeToken.bx;
-		var match = {j: end, v: _List_Nil, l: start, n: text, C: textEnd, x: textStart, p: type_};
+		var match = {j: end, v: _List_Nil, l: start, n: text, B: textEnd, x: textStart, p: type_};
 		var matches = A2(
 			$elm$core$List$map,
 			function (_v0) {
@@ -14802,7 +14802,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$tokenPairToMatch = F7(
 				return A2($dillonkearns$elm_markdown$Markdown$InlineParser$prepareChildMatch, match, matchModel);
 			},
 			A4($dillonkearns$elm_markdown$Markdown$InlineParser$tokensToMatches, innerTokens, _List_Nil, references, rawText));
-		return {j: end, v: matches, l: start, n: text, C: textEnd, x: textStart, p: type_};
+		return {j: end, v: matches, l: start, n: text, B: textEnd, x: textStart, p: type_};
 	});
 var $dillonkearns$elm_markdown$Markdown$InlineParser$tokensToMatches = F4(
 	function (tokens, matches, references, rawText) {
@@ -18085,19 +18085,18 @@ var $author$project$Page$parseBlocks = function (s) {
 };
 var $author$project$Generated$Toc$posts = _List_fromArray(
 	[
-		{B: '2022-05-29-Reading-The-Pragmatic-Programmer', aC: 'Reading The Pragmatic Programmer'},
-		{B: '2022-06-11-Reading-The-Little-Typer', aC: 'Reading The Little Typer'},
-		{B: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
-		{B: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
-		{B: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
-		{B: '2022-10-05-simple-software', aC: 'Simple Software'},
-		{B: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
-		{B: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
-		{B: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
-		{B: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
-		{B: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
-		{B: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
-		{B: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'}
+		{F: '2022-05-29-Reading:-The-Pragmatic-Programmer', aC: 'Reading: The Pragmatic Programmer'},
+		{F: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
+		{F: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
+		{F: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
+		{F: '2022-10-05-simple-software', aC: 'Simple Software'},
+		{F: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
+		{F: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
+		{F: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
+		{F: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
+		{F: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
+		{F: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
+		{F: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'}
 	]);
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
@@ -18298,7 +18297,7 @@ var $author$project$Post$main = A2(
 											$elm$core$List$map,
 											function (_v1) {
 												var title = _v1.aC;
-												var path = _v1.B;
+												var path = _v1.F;
 												return A2(
 													$elm$html$Html$li,
 													_List_Nil,
@@ -18316,7 +18315,7 @@ var $author$project$Post$main = A2(
 												A2(
 													$elm$core$List$sortBy,
 													function (_v0) {
-														var path = _v0.B;
+														var path = _v0.F;
 														return path;
 													},
 													$author$project$Generated$Toc$posts)))))))),

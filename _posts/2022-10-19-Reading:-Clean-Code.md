@@ -2,6 +2,11 @@
 title: "Reading: Clean Code"
 tags: [functional programming]
 ---
+[Video: Hot Garbage: Clean Code Is Dead
+](https://www.youtube.com/watch?v=s_fZFBgA11s)
+
+Clean Code/DRY Code might be good to read an maintain, but bad to refactor. Using the Boy Scout Rule is a good way of making code slowly more "clean/DRY". But whenever you need to change something, you don't have to follow the "clean rules" - leave that to a later state in the development.
+
 # The Boy Scout Rule
 
 > Leave the campground cleaner than you found it
@@ -56,6 +61,3 @@ Don't duplicated code.
 > Don't Return Null
 
 -> Again, this feels outdated. Something you actually want to say "i can't do this" or "i was successful, but the result is empty". In these cases Null makes perfect sense. Its also very easy to handle (nowadays).
-
-[Video: Hot Garbage: Clean Code Is Dead
-](https://www.youtube.com/watch?v=s_fZFBgA11s)

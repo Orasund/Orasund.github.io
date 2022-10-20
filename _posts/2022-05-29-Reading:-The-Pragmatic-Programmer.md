@@ -1,5 +1,5 @@
 ---
-title: "Reading The Pragmatic Programmer"
+title: "Reading: The Pragmatic Programmer"
 tags: []
 ---
 # Chapter 5: Your Knowledge Portfolio (Page 37 in pdf)
