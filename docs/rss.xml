@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Thu, 20 Oct 2022 03:10:14 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 20 Oct 2022 06:57:35 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -253,15 +253,9 @@ type Model
 
 Clean Code/DRY Code might be good to read an maintain, but bad to refactor. Using the Boy Scout Rule is a good way of making code slowly more "clean/DRY". But whenever you need to change something, you don't have to follow the "clean rules" - leave that to a later state in the development.
 
-The Boy Scout Rule
+Podcast: A Path to Better Programming • Robert "Uncle Bob" Martin & Allen Holub • GOTO 2021
 
-> Leave the campground cleaner than you found it
-
-Meaningful Names
-
-> Use speaking names.
-
-Explain t...]]></description>
+Bob Martin is questioning w...]]></description>
         </item>
     </channel>
 </rss>
