@@ -14,4 +14,5 @@ posts =
   , {path = "2022-10-11-formal-methods,-type-theory-and-the-real-world", title = "Formal Methods, Type Theory And The Real World"}
   , {path = "2022-10-19-Comparing-Elm-With-Kotlin", title = "Comparing Elm With Kotlin"}
   , {path = "2022-10-19-Reading:-Clean-Code", title = "Reading: Clean Code"}
+  , {path = "2022-10-20-Reading:-The-Clean-Coder", title = "Reading: The Clean Coder"}
   ]

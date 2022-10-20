@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Thu, 20 Oct 2022 06:57:35 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 20 Oct 2022 09:56:30 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -256,6 +256,22 @@ Clean Code/DRY Code might be good to read an maintain, but bad to refactor. Usin
 Podcast: A Path to Better Programming • Robert "Uncle Bob" Martin & Allen Holub • GOTO 2021
 
 Bob Martin is questioning w...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Reading: The Clean Coder]]></title>
+            <link>https://orasund.github.io/posts/2022-10-20-Reading:-The-Clean-Coder</link>
+            <guid>https://orasund.github.io/posts/2022-10-20-Reading:-The-Clean-Coder</guid>
+            <pubDate>Thu, 20 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[QA should find nothing
+
+> You Must Know It Works
+
+> How much of the code should be tested with these automated unit tests? All of it!
+
+> Code is hard to test, because that code has been designed to be hard to test.
+
+> You must be able to make changes without exorbitant costs.
+...]]></description>
         </item>
     </channel>
 </rss>
