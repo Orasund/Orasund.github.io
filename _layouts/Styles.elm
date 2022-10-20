@@ -37,7 +37,7 @@ styles =
             , Css.px -8 |> Css.marginRight
             ]
         , class "title"
-            [ fontSize <| Css.em 32
+            [ fontSize <| Css.px 32
             , Css.property "margin-block-start" "0px"
             , Css.property "margin-block-end" "64px"
             , Css.height Css.inherit
@@ -47,7 +47,7 @@ styles =
             , Css.px -24 |> Css.marginRight
             ]
         , h1
-            [ fontSize <| Css.em 24
+            [ fontSize <| Css.px 24
             , Css.borderBottom3 (Css.px 1) Css.solid (Css.hex "363636")
             , Css.property "margin-block-start" "64px"
             , Css.property "margin-block-end" "32px"
