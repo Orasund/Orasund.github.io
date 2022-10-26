@@ -8279,7 +8279,6 @@ var $rtfeldman$elm_css$Css$marginBottom = $rtfeldman$elm_css$Css$prop1('margin-b
 var $rtfeldman$elm_css$Css$marginLeft = $rtfeldman$elm_css$Css$prop1('margin-left');
 var $rtfeldman$elm_css$Css$marginRight = $rtfeldman$elm_css$Css$prop1('margin-right');
 var $rtfeldman$elm_css$Css$marginTop = $rtfeldman$elm_css$Css$prop1('margin-top');
-var $rtfeldman$elm_css$Css$maxWidth = $rtfeldman$elm_css$Css$prop1('max-width');
 var $rtfeldman$elm_css$Css$monospace = {_: 0, bU: 'monospace'};
 var $rtfeldman$elm_css$Css$none = {aj: 0, b1: 0, D: 0, e: 0, r: 0, dd: 0, cm: 0, bw: 0, av: 0, ab: 0, N: 0, h: 0, f: 0, bA: 0, a7: 0, du: 0, K: 0, a9: 0, dA: 0, az: 0, ah: 0, G: 0, o: 0, dF: 0, bU: 'none'};
 var $rtfeldman$elm_css$Css$Global$ol = $rtfeldman$elm_css$Css$Global$typeSelector('ol');
@@ -8854,8 +8853,6 @@ var $rtfeldman$elm_css$Css$verticalAlign = function (fn) {
 		'vertical-align',
 		fn($rtfeldman$elm_css$Css$Internal$lengthForOverloadedProperty));
 };
-var $rtfeldman$elm_css$Css$VwUnits = 0;
-var $rtfeldman$elm_css$Css$vw = A2($rtfeldman$elm_css$Css$Internal$lengthConverter, 0, 'vw');
 var $rtfeldman$elm_css$Css$UnitlessInteger = 0;
 var $rtfeldman$elm_css$Css$zero = {bx: 0, at: 0, U: 0, au: 0, av: 0, ab: 0, ac: 0, dp: 0, W: 0, a7: 0, aD: '', aT: 0, bU: '0'};
 var $author$project$Styles$styles = function () {
@@ -9052,8 +9049,6 @@ var $author$project$Styles$styles = function () {
 					'content',
 					_List_fromArray(
 						[
-							$rtfeldman$elm_css$Css$maxWidth(
-							$rtfeldman$elm_css$Css$vw(100)),
 							A2(
 							$rtfeldman$elm_css$Css$padding2,
 							$rtfeldman$elm_css$Css$px(32),
