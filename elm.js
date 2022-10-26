@@ -5189,7 +5189,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {cf: fragment, ci: host, B: path, cx: port_, cA: protocol, cB: query};
+		return {cf: fragment, ci: host, z: path, cx: port_, cA: protocol, cB: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -6088,7 +6088,7 @@ var $rtfeldman$elm_css$Css$Internal$lengthConverter = F3(
 			bV: 0,
 			b3: 0,
 			ao: 0,
-			z: 0,
+			A: 0,
 			bx: 0,
 			at: 0,
 			U: 0,
@@ -8267,7 +8267,7 @@ var $rtfeldman$elm_css$Css$hex = function (str) {
 	return $rtfeldman$elm_css$Css$erroneousHex(str);
 };
 var $rtfeldman$elm_css$Css$Internal$IncompatibleUnits = 0;
-var $rtfeldman$elm_css$Css$initial = {bX: 0, bY: 0, aH: 0, bZ: 0, aj: 0, b_: 0, ak: 0, Q: 0, D: 0, aX: 0, M: 0, e: 0, r: 0, ao: 0, br: 0, aJ: 0, a0: 0, _: 0, z: 0, ap: 0, m: 0, T: 0, a1: 0, cq: 0, bw: 0, bx: 0, at: 0, U: 0, au: 0, av: 0, ab: 0, ac: 0, N: 0, a4: 0, h: 0, f: 0, bA: 0, dp: 0, W: 0, a7: 0, aw: 0, K: 0, be: 0, az: 0, ag: 0, aA: 0, aB: 0, ah: 0, G: 0, aD: '', aT: 0, bU: 'initial', aU: 0, Z: 0};
+var $rtfeldman$elm_css$Css$initial = {bX: 0, bY: 0, aH: 0, bZ: 0, aj: 0, b_: 0, ak: 0, Q: 0, D: 0, aX: 0, M: 0, e: 0, r: 0, ao: 0, br: 0, aJ: 0, a0: 0, _: 0, A: 0, ap: 0, m: 0, T: 0, a1: 0, cq: 0, bw: 0, bx: 0, at: 0, U: 0, au: 0, av: 0, ab: 0, ac: 0, N: 0, a4: 0, h: 0, f: 0, bA: 0, dp: 0, W: 0, a7: 0, aw: 0, K: 0, be: 0, az: 0, ag: 0, aA: 0, aB: 0, ah: 0, G: 0, aD: '', aT: 0, bU: 'initial', aU: 0, Z: 0};
 var $rtfeldman$elm_css$Css$inherit = _Utils_update(
 	$rtfeldman$elm_css$Css$initial,
 	{bU: 'inherit'});
@@ -18095,19 +18095,20 @@ var $author$project$Page$parseBlocks = function (s) {
 };
 var $author$project$Generated$Toc$posts = _List_fromArray(
 	[
-		{B: '2022-05-29-Reading:-The-Pragmatic-Programmer', aC: 'Reading: The Pragmatic Programmer'},
-		{B: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
-		{B: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
-		{B: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
-		{B: '2022-10-05-simple-software', aC: 'Simple Software'},
-		{B: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
-		{B: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
-		{B: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
-		{B: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
-		{B: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
-		{B: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
-		{B: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'},
-		{B: '2022-10-20-Reading:-The-Clean-Coder', aC: 'Reading: The Clean Coder'}
+		{z: '2022-05-29-Reading:-The-Pragmatic-Programmer', aC: 'Reading: The Pragmatic Programmer'},
+		{z: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
+		{z: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
+		{z: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
+		{z: '2022-10-05-simple-software', aC: 'Simple Software'},
+		{z: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
+		{z: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
+		{z: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
+		{z: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
+		{z: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
+		{z: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
+		{z: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'},
+		{z: '2022-10-20-Reading:-The-Clean-Coder', aC: 'Reading: The Clean Coder'},
+		{z: '2022-10-26-Reading:-Clean-Architecture', aC: 'Reading: Clean Architecture'}
 	]);
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
@@ -18308,7 +18309,7 @@ var $author$project$Post$main = A2(
 											$elm$core$List$map,
 											function (_v1) {
 												var title = _v1.aC;
-												var path = _v1.B;
+												var path = _v1.z;
 												return A2(
 													$elm$html$Html$li,
 													_List_Nil,
@@ -18326,7 +18327,7 @@ var $author$project$Post$main = A2(
 												A2(
 													$elm$core$List$sortBy,
 													function (_v0) {
-														var path = _v0.B;
+														var path = _v0.z;
 														return path;
 													},
 													$author$project$Generated$Toc$posts)))))))),

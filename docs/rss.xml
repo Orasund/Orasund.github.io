@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Tue, 25 Oct 2022 12:48:46 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Oct 2022 13:02:08 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -275,6 +275,33 @@ Bob Martin is questioning w...]]></description>
 > You ought to be able to describe all 24 patterns in the GOF book and have a working knowledge of many of the patterns in the POSA books.
 
 -> Really not sure about this one. I have very strong feeling aobut GOF and just s...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Reading: Clean Architecture]]></title>
+            <link>https://orasund.github.io/posts/2022-10-26-Reading:-Clean-Architecture</link>
+            <guid>https://orasund.github.io/posts/2022-10-26-Reading:-Clean-Architecture</guid>
+            <pubDate>Wed, 26 Oct 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[What is Design and Architecture
+
+> There is no difference between them. None at all.
+
+"Architecture" is used in context of high level. "Design" is more low level.
+
+A Tale of two values
+
+Paradigm Overview
+
+Strucuted(Imperative) Programming, Object Oriented Programing and Functional Programming
+
+Structured Programmings
+
+Not use goto, use ifThenElse and while/for instead.
+
+Object Oriented Programming
+
+Functions and variables should be grouped by the Objects that they transform.
+
+Functional Programm...]]></description>
         </item>
     </channel>
 </rss>
