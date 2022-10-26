@@ -15,4 +15,5 @@ posts =
   , {path = "2022-10-19-Comparing-Elm-With-Kotlin", title = "Comparing Elm With Kotlin"}
   , {path = "2022-10-19-Reading:-Clean-Code", title = "Reading: Clean Code"}
   , {path = "2022-10-20-Reading:-The-Clean-Coder", title = "Reading: The Clean Coder"}
+  , {path = "2022-10-26-Reading:-Clean-Architecture", title = "Reading: Clean Architecture"}
   ]
