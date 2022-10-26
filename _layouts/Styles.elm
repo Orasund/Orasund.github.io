@@ -84,8 +84,7 @@ styles =
             , Css.padding <| Css.px 16
             ]
         , class "content"
-            [ Css.maxWidth <| vw 100
-            , Css.padding2 (Css.px 32) (Css.px 40)
+            [ Css.padding2 (Css.px 32) (Css.px 40)
             , "linear-gradient(#a7e9ff 1px, transparent 0), "
                 ++ "linear-gradient(90deg, #a7e9ff 1px, transparent 0)"
                 |> Css.property "background-image"
