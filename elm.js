@@ -5802,7 +5802,7 @@ var $author$project$Page$header = function (siteTitle) {
 						]),
 					_List_fromArray(
 						[
-							$elm$html$Html$text(siteTitle)
+							$elm$html$Html$text('📒 Functional Fieldnotes')
 						]))),
 				A2(
 				$Orasund$elm_layout$Layout$row,
