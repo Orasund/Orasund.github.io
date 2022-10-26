@@ -7,12 +7,16 @@ body {
     display: grid;
     grid-gap: 20px 0;
     gap: 20px 0;
-    grid-template-columns: 641px;
+    grid-template-columns: auto 641px auto;
     grid-template-rows: 64px auto 64px;
     grid-template-areas:
-        "navigation"
-        "content"
-        "footer"
+        "navigation navigation navigation"
+        "empty content empty"
+        "footer footer footer"
+}
+
+.empty {
+    grid-area: empty;
 }
 
 .content {
