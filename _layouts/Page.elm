@@ -104,10 +104,10 @@ parseBlocks s =
                 |> List.singleton
 
 
-header : Html Never
-header =
+header : String -> Html Never
+header siteTitle =
     [ a [ href "/posts" ]
-        [ text "Functional Fieldnotes" ]
+        [ text siteTitle ]
         |> Layout.el []
     , []
         |> Layout.row [ Layout.spacing 16 ]
@@ -145,9 +145,9 @@ footer =
         |> Layout.row [ Layout.spaceBetween, class "footer" ]
 
 
-layout : String -> { leftSidebar : List (Html Never), rightSidebar : List (Html Never) } -> List (Html Never) -> List (Html Never)
-layout title { leftSidebar, rightSidebar } contentItems =
-    [ header
+layout : { siteTitle : String, title : String, leftSidebar : List (Html Never), rightSidebar : List (Html Never) } -> List (Html Never) -> List (Html Never)
+layout { siteTitle, title, leftSidebar, rightSidebar } contentItems =
+    [ header siteTitle
     , div [ class "sidebar" ]
         leftSidebar
     , div [ class "sidebar2" ]
@@ -168,5 +168,10 @@ main =
                 |> parseBlocks
                 |> markdown
                 |> List.singleton
-                |> layout content.title { leftSidebar = [], rightSidebar = [] }
+                |> layout
+                    { siteTitle = content.siteTitle
+                    , title = content.title
+                    , leftSidebar = []
+                    , rightSidebar = []
+                    }
                 |> Ok

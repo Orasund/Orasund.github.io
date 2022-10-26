@@ -31,5 +31,10 @@ main =
         \content ->
             sortPosts content.posts
                 |> postListContent
-                |> Page.layout content.title { leftSidebar = [], rightSidebar = [] }
+                |> Page.layout
+                    { siteTitle = content.siteTitle
+                    , title = content.title
+                    , leftSidebar = []
+                    , rightSidebar = []
+                    }
                 |> Ok

@@ -63,11 +63,12 @@ main =
             [ metadataHtml content
             , Page.markdown blocks
             ]
-                |> Page.layout content.title
-                    { leftSidebar =
-                        [ Html.h2 [] [ Html.text "Posts" ]
-                        ]
-                            ++ (Generated.Toc.posts
+                |> Page.layout
+                    { siteTitle = content.siteTitle
+                    , title = content.title
+                    , leftSidebar =
+                        Html.h2 [] [ Html.text "Posts" ]
+                            :: (Generated.Toc.posts
                                     |> List.sortBy (\{ path } -> path)
                                     |> List.reverse
                                     |> List.map
