@@ -5780,37 +5780,39 @@ var $author$project$Page$footer = A2(
 				]))
 		]));
 var $elm$html$Html$h1 = _VirtualDom_node('h1');
-var $author$project$Page$header = A2(
-	$Orasund$elm_layout$Layout$row,
-	_List_fromArray(
-		[
-			$elm$html$Html$Attributes$class('navigation'),
-			$Orasund$elm_layout$Layout$spaceBetween,
-			$Orasund$elm_layout$Layout$alignCenter
-		]),
-	_List_fromArray(
-		[
-			A2(
-			$Orasund$elm_layout$Layout$el,
-			_List_Nil,
-			A2(
-				$elm$html$Html$a,
+var $author$project$Page$header = function (siteTitle) {
+	return A2(
+		$Orasund$elm_layout$Layout$row,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('navigation'),
+				$Orasund$elm_layout$Layout$spaceBetween,
+				$Orasund$elm_layout$Layout$alignCenter
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$Orasund$elm_layout$Layout$el,
+				_List_Nil,
+				A2(
+					$elm$html$Html$a,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$href('/posts')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text(siteTitle)
+						]))),
+				A2(
+				$Orasund$elm_layout$Layout$row,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$href('/posts')
+						$Orasund$elm_layout$Layout$spacing(16)
 					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text('Functional Fieldnotes')
-					]))),
-			A2(
-			$Orasund$elm_layout$Layout$row,
-			_List_fromArray(
-				[
-					$Orasund$elm_layout$Layout$spacing(16)
-				]),
-			_List_Nil)
-		]));
+				_List_Nil)
+			]));
+};
 var $rtfeldman$elm_css$Css$Structure$Selector = F3(
 	function (a, b, c) {
 		return {$: 0, a: a, b: b, c: c};
@@ -9134,13 +9136,15 @@ var $author$project$Styles$styles = function () {
 						]))
 				])));
 }();
-var $author$project$Page$layout = F3(
-	function (title, _v0, contentItems) {
+var $author$project$Page$layout = F2(
+	function (_v0, contentItems) {
+		var siteTitle = _v0.bd;
+		var title = _v0.aC;
 		var leftSidebar = _v0.cs;
 		var rightSidebar = _v0.cH;
 		return _List_fromArray(
 			[
-				$author$project$Page$header,
+				$author$project$Page$header(siteTitle),
 				A2(
 				$elm$html$Html$div,
 				_List_fromArray(
@@ -9295,10 +9299,9 @@ var $author$project$Posts$main = function () {
 		$author$project$Elmstatic$decodePostList,
 		function (content) {
 			return $elm$core$Result$Ok(
-				A3(
+				A2(
 					$author$project$Page$layout,
-					content.aC,
-					{cs: _List_Nil, cH: _List_Nil},
+					{cs: _List_Nil, cH: _List_Nil, bd: content.bd, aC: content.aC},
 					postListContent(
 						sortPosts(content.dv))));
 		});
@@ -18273,9 +18276,8 @@ var $author$project$Post$main = A2(
 	function (content) {
 		var blocks = $author$project$Page$parseBlocks(content.b7 + ('\n' + ('\n' + ('---\n' + 'Did you like this post or want to share some thoughts? Then ping me on [Elm Discourse](https://discourse.elm-lang.org/u/lucas_payr).'))));
 		return $elm$core$Result$Ok(
-			A3(
+			A2(
 				$author$project$Page$layout,
-				content.aC,
 				{
 					cs: $elm$core$List$singleton(
 						A2(
@@ -18285,17 +18287,15 @@ var $author$project$Post$main = A2(
 									A2($elm$html$Html$Attributes$style, 'padding', '8px'),
 									A2($elm$html$Html$Attributes$style, 'float', 'right')
 								]),
-							_Utils_ap(
-								_List_fromArray(
-									[
-										A2(
-										$elm$html$Html$h2,
-										_List_Nil,
-										_List_fromArray(
-											[
-												$elm$html$Html$text('Posts')
-											]))
-									]),
+							A2(
+								$elm$core$List$cons,
+								A2(
+									$elm$html$Html$h2,
+									_List_Nil,
+									_List_fromArray(
+										[
+											$elm$html$Html$text('Posts')
+										])),
 								$elm$core$List$singleton(
 									A2(
 										$elm$html$Html$ul,
@@ -18335,7 +18335,9 @@ var $author$project$Post$main = A2(
 									A2($elm$html$Html$Attributes$style, 'top', '0'),
 									A2($elm$html$Html$Attributes$style, 'padding', '8px')
 								]),
-							$author$project$TableOfContent$view(blocks)))
+							$author$project$TableOfContent$view(blocks))),
+					bd: content.bd,
+					aC: content.aC
 				},
 				_List_fromArray(
 					[
@@ -18359,10 +18361,9 @@ var $author$project$Page$main = A2(
 	$author$project$Elmstatic$decodePage,
 	function (content) {
 		return $elm$core$Result$Ok(
-			A3(
+			A2(
 				$author$project$Page$layout,
-				content.aC,
-				{cs: _List_Nil, cH: _List_Nil},
+				{cs: _List_Nil, cH: _List_Nil, bd: content.bd, aC: content.aC},
 				$elm$core$List$singleton(
 					$author$project$Page$markdown(
 						$author$project$Page$parseBlocks(content.b7)))));
