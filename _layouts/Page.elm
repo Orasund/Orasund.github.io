@@ -107,7 +107,7 @@ parseBlocks s =
 header : String -> Html Never
 header siteTitle =
     [ a [ href "/posts" ]
-        [ text siteTitle ]
+        [ text "📒 Functional Fieldnotes" ]
         |> Layout.el []
     , []
         |> Layout.row [ Layout.spacing 16 ]
