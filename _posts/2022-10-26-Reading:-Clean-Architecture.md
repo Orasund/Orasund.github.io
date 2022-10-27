@@ -115,22 +115,73 @@ replaceAllAnimals : Animal -> World -> World
 
 This principle states that the implementation should not change for subtypes.
 
-I believe this is impossible to showcase in Elm. I would need a way to case a type into a subtype - But this would violate the soundness of the type system:
+Say we have a function that behaves seemingly completely different for Animals as for Buildings.
 
-> Assume we can construct a (non crashing) function `cast : a -> b`.
-> Then I can construct a value of type `Never`:
-> 
-> ```
-> never : Never
-> never =
->     cast ()
-> ```
->
-> But there can not be a value of type `Never`.
-> Therefore the type system is no longer sound.
+```
+type Entity
+    = Animal { lastEaten : Food }
+    | Building { people : List String }
 
-Quick refresh on the definition of `Never`:
+add : String -> Entity -> Entity
+add string entity =
+    case entity of
+        Animal _ ->
+            Animal {lastEaten = foodFromString string }
+        Building {people} ->
+            Building {people = string :: people} 
+```
 
-`Never` is a type with no value. It is used to tell the compiler, that something of type `Never` can never be called. For example the type `List Never` has a single value: `[]`.
+This is bad design, as it requires the user to know the implemented behavior. So instead we should split this function and maybe also rename it to something more useful.
+
+```
+feed : String -> Entity -> Maybe Entity
+feed string entity =
+    case entity of
+        Animal _ ->
+            Just (Animal {lastEaten = foodFromString string })
+        _ ->
+            Nothing
+
+enter : Entity -> Maybe Entity
+enter entity =
+    case entity of
+        Building {people} ->
+            Just (Building {people = string :: people})
+        _ ->
+            Nothing
+```
 
 ## The Interface Segregation Principle
+
+groups should only contain as little as possible.
+
+Going back to the previous example of joining animals and buildings into entities. Now assume we want to be really smart and replace the custom type with a record.
+
+```
+type alias Entity =
+    { name : String
+    , isOpen : Maybe Bool
+    , isHungry : Maybe Bool
+    }
+
+isCat entity =
+    entity.isHungry /= Nothing
+
+isBuilding entity =
+    entity.isOpen /= Nothing
+```
+
+Whenever we want to add or change a field related to cats, we would need to also check that the code related to buildings is still working.
+
+So instead, we should only group the most necessary fields.
+
+```
+type alias EntityState =
+    { name : String
+    , sort : EntitySort
+    }
+
+type EntitySort
+    = Animal { isHungry : Bool }
+    | Building { isOpen : Bool }
+```
