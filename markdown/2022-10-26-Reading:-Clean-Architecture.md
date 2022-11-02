@@ -1,7 +1,3 @@
----
-title: "Reading: Clean Architecture"
-tags: [elm,functional programming]
----
 # What is Design and Architecture
 
 > There is no difference between them. None at all.
