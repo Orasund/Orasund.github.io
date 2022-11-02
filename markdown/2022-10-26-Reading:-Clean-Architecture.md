@@ -181,3 +181,22 @@ type EntitySort
     = Animal { isHungry : Bool }
     | Building { isOpen : Bool }
 ```
+
+# Component Principles
+
+Components are "files" of the program.
+
+> Classes and modules that are grouped together into a component should be releaseable together.
+
+It does not specify how they should relate but instead, you should think about functions that live in the same file but are not related.
+
+> a component should not have multiple reasons to change.
+
+Adding a small feature should effect just a single file.
+
+> Classes and modules that tend to be reused together belong in the same component
+
+# What is Architecture?
+
+# Independence
+
