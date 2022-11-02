@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Wed, 02 Nov 2022 12:26:34 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 02 Nov 2022 12:40:57 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -281,11 +281,7 @@ Bob Martin is questioning w...]]></description>
             <link>https://orasund.github.io/posts/2022-10-26-Reading:-Clean-Architecture</link>
             <guid>https://orasund.github.io/posts/2022-10-26-Reading:-Clean-Architecture</guid>
             <pubDate>Wed, 26 Oct 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[
-title: "Reading: Clean Architecture"
-tags: [elm,functional programming]
-
-What is Design and Architecture
+            <description><![CDATA[What is Design and Architecture
 
 > There is no difference between them. None at all.
 
@@ -303,7 +299,9 @@ Not use goto, use ifThenElse and while/for instead.
 
 Object Oriented Programming
 
-Functions and variables ...]]></description>
+Functions and variables should be grouped by the Objects that they transform.
+
+Functional Programm...]]></description>
         </item>
     </channel>
 </rss>
