@@ -16,4 +16,5 @@ posts =
   , {path = "2022-10-19-Reading:-Clean-Code", title = "Reading: Clean Code"}
   , {path = "2022-10-20-Reading:-The-Clean-Coder", title = "Reading: The Clean Coder"}
   , {path = "2022-10-26-Reading:-Clean-Architecture", title = "Reading: Clean Architecture"}
+  , {path = "2022-11-10-c4-vs", title = "C4 Vs"}
   ]
