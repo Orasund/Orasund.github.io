@@ -198,6 +198,5 @@ Adding a small feature should effect just a single file.
 
 # What is Architecture?
 
-# Independence
+# BUSINESS RULES
 
-# BOUNDARIES: DRAWING LINES
