@@ -185,3 +185,23 @@ type EntitySort
     = Animal { isHungry : Bool }
     | Building { isOpen : Bool }
 ```
+## The Dependency Inversion Principle
+
+groups should only depend on abstractions of other groups.
+
+Say we want to specify what happens if (in our game) an animal entity collides with a building entity.
+
+```
+import Animal exposing (Animal)
+import Building exposing (Building)
+
+collidesWith : Animal -> Building -> Building
+```
+
+The dependency inversion principle states thats its better to be as general as possible. If the collision between two entities is possible, then we should cover all the cases, even if some - like two colliding buildings - might seems weird.
+
+```
+import Entity exposing (Entity)
+
+collidesWith : Entity -> Entity -> Entity
+```
