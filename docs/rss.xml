@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Wed, 26 Oct 2022 18:52:40 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 28 Nov 2022 10:16:55 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -302,6 +302,18 @@ Object Oriented Programming
 Functions and variables should be grouped by the Objects that they transform.
 
 Functional Programm...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[C4 Vs]]></title>
+            <link>https://orasund.github.io/posts/2022-11-10-c4-vs.-UML</link>
+            <guid>https://orasund.github.io/posts/2022-11-10-c4-vs.-UML</guid>
+            <pubDate>Thu, 10 Nov 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[https://www.youtube.com/watch?v=x2-rSnhpw0g&t=38s
+
+Always add a legend and use what you need.
+
+C4 are: (System) Context, Containers, Components, Code
+...]]></description>
         </item>
     </channel>
 </rss>
