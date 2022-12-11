@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Sun, 11 Dec 2022 03:27:47 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 11 Dec 2022 06:44:28 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -325,9 +325,9 @@ But whenever i do, I actually want a more general implementation that can use an
 
 > A bag is a set that can store a key multiple times.
 
-So I'd like to use this opportunity to discuss different ways how I have design libraries sofar and what benefits different design might be. After that i might go and actually implement this, but that's not part of this essay.
+So I'd like to use this opportunity to discuss different approaches to the problem and the benefits of different designs. After that I might go and actually implement it, but that's not part of this article.
 
-For each implementation we will first loo...]]></description>
+For each implementation we will first look at the data type,...]]></description>
         </item>
     </channel>
 </rss>
