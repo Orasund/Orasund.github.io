@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Sun, 11 Dec 2022 03:10:22 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 11 Dec 2022 03:27:47 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -314,6 +314,20 @@ Always add a legend and use what you need.
 
 C4 are: (System) Context, Containers, Components, Code
 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Designing A Type]]></title>
+            <link>https://orasund.github.io/posts/2022-12-10-Designing-A-Type</link>
+            <guid>https://orasund.github.io/posts/2022-12-10-Designing-A-Type</guid>
+            <pubDate>Sat, 10 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Whenever I write a game in Elm, i tend to use JohnBugner/elm-bag at some point.
+But whenever i do, I actually want a more general implementation that can use any type as key.
+
+> A bag is a set that can store a key multiple times.
+
+So I'd like to use this opportunity to discuss different ways how I have design libraries sofar and what benefits different design might be. After that i might go and actually implement this, but that's not part of this essay.
+
+For each implementation we will first loo...]]></description>
         </item>
     </channel>
 </rss>
