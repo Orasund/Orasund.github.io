@@ -3,9 +3,9 @@ But whenever i do, I actually want a more general implementation that can use an
 
 > A bag is a set that can store a key multiple times.
 
-So I'd like to use this opportunity to discuss different ways how I have design libraries sofar and what benefits different design might be. After that i might go and actually implement this, but that's not part of this essay.
+So I'd like to use this opportunity to discuss different approaches to the problem and the benefits of different designs. After that I might go and actually implement it, but that's not part of this article.
 
-For each implementation we will first look at the data type, then we will discuss three different functions: `empty`, `insert` and `toList`. We will then consider variations and look into benefits or possible pitfalls with it.
+For each implementation we will first look at the data type, then we will discuss three different functions: `empty`, `insert` and `toList`. We also consider variations and look into benefits or possible pitfalls.
 
 # Base Implementation
 
@@ -16,7 +16,7 @@ type alias AnyBag comparable =
     Dict comparable Int
 ```
 
-Let's start with an implementation that actually doesn't solve the problem at all. Instead we will try to design our functions such that i allows to get and set any key.
+Let's start with an type that actually still uses a comparable key. Instead we will try to design our functions around it.
 
 ``` elm
 empty : AnyBag comparable
@@ -44,7 +44,7 @@ toList decode key bag=
 
 To return a list we have to provide a function that converts the comparable type back into the key.
 
-Is implementation is of course not perfect. The first problem that you might have noticed already is that if we have to different bags, with different encoder/decoders, that the type does not give any information as to which encoder/decoder to use. We can fix this by using a phantom type (= an additional type variable that's not used in the implementation itself.)
+Is implementation is of course not perfect. The first problem that you might have noticed already is that if we have two different bags, with different encoder/decoders, that the type does not give any information as to which encoder/decoder to use. We can fix this by using a phantom type (= an additional type variable that's not used in the implementation itself.)
 
 ``` elm
 type AnyBag comparable key =
@@ -106,7 +106,7 @@ toList bag =
 
 Also converting to a list looks nice.
 
-Of course this only works if we can ensure that the functions don't change. On way to enforce this, we could use a Opaque type (= not exposing the constructor of the type).
+Of course this only works if we can ensure that the functions don't change. One way to enforce this, is to make the type opaque (= not exposing the constructor of the type).
 
 A downside to this approach is sadly that Elm can't compare functions and so we would run into a runtime error whenever we try to compare two `AnyBag`'s. However most often this is not a problem. 
 
@@ -143,7 +143,7 @@ type alias AnyBag comparable key =
     }
 ```
 
-It might not be obvious at first, why we included the key into the values of the dict. We will see the important's of that small change later.
+It might not be obvious at first, why we included the key into the values of the dict. We will see the importants of that small change later.
 
 ``` elm
 empty : (key -> comparable) -> AnyBag comparable key
@@ -171,17 +171,17 @@ insert key bag =
     }
 ```
 
-For inserting an item, we have a bit more code as before, but it should will be understandable.
+For inserting an item, we have a bit more code as before, but it should still be understandable.
 
 ``` elm
 toList : AnyBag comparable key -> List (key,Int)
 toList bag =
-    bag.dict |> Dict.values
+    Dict.values bag.dict
 ```
 
 For converting into a list we see our approach shine. By having the values already as `(key,Int)`, we just have to get them.
 
-As before we again need to ensure that the key and the first value of the tuple are always the same.
+However, we need to ensure that the key and the first value of the tuple are always the same.
 
 ``` elm
 isValid : AnyBag comparable key -> Bool
@@ -195,14 +195,14 @@ This is of course a liability. We are all humans and humans tend to do stupid th
 
 # Association Lists
 
-Up until this point we assumed that we are really needing a dictionary, however for small amounts of values an association list may be faster.
+Up until this point we assumed that we are really needing a dictionary, however for small amounts of keys an association list may be faster.
 
 ``` elm
 type alias AnyBag key =
-    Array (key,Int)
+    List (key,Int)
 ```
 
-The type is again trivially simple. Also notice how we now don't need to use a `comparable` type variable.
+The type is trivially simple. Also notice how we now don't need to use a `comparable` type variable.
 
 ``` elm
 empty : AnyBag key
@@ -255,6 +255,8 @@ toList bag =
             []
 ```
 
-One might naively believe that `toList` is not really needed. But for a real dictionary we would expect the result to have two properties: First we would expect each element to be unique (which in our implementation it not). Second the result is typically ordered - this is to ensure that the order does not change during time (which is also not valid as `insert` shuffles the elements around quite randomly).
+One might naively believe that `toList` is not really needed. But for a real dictionary we would expect the result to have two properties:
+* Each element should to be unique (which in our implementation it is not).
+* The list should be ordered - this is to ensure that the order does not change during time (which is also not valid as `insert` shuffles the elements around quite randomly).
 
 This design is nearly perfect with no obvious problem (at least not for me). Of course performance wise, searching a list take O(n) time, where as a map needs O(log n) times. This means that for larger sets of data the association list becomes unuseable. The exact n for which the search time gets larger depends on implementation details and should be tested. But as a rough rule of thumb: If you intend to store less then 100 different keys, then an association list might be your best choice both in usability and performance.
