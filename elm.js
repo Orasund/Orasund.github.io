@@ -5189,7 +5189,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {cf: fragment, ci: host, z: path, cx: port_, cA: protocol, cB: query};
+		return {cf: fragment, ci: host, y: path, cx: port_, cA: protocol, cB: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -18093,21 +18093,22 @@ var $author$project$Page$parseBlocks = function (s) {
 };
 var $author$project$Generated$Toc$posts = _List_fromArray(
 	[
-		{z: '2022-05-29-Reading:-The-Pragmatic-Programmer', aC: 'Reading: The Pragmatic Programmer'},
-		{z: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
-		{z: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
-		{z: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
-		{z: '2022-10-05-simple-software', aC: 'Simple Software'},
-		{z: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
-		{z: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
-		{z: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
-		{z: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
-		{z: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
-		{z: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
-		{z: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'},
-		{z: '2022-10-20-Reading:-The-Clean-Coder', aC: 'Reading: The Clean Coder'},
-		{z: '2022-10-26-Reading:-Clean-Architecture', aC: 'Reading: Clean Architecture'},
-		{z: '2022-11-10-c4-vs', aC: 'C4 Vs'}
+		{y: '2022-05-29-Reading:-The-Pragmatic-Programmer', aC: 'Reading: The Pragmatic Programmer'},
+		{y: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
+		{y: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
+		{y: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
+		{y: '2022-10-05-simple-software', aC: 'Simple Software'},
+		{y: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
+		{y: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
+		{y: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
+		{y: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
+		{y: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
+		{y: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
+		{y: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'},
+		{y: '2022-10-20-Reading:-The-Clean-Coder', aC: 'Reading: The Clean Coder'},
+		{y: '2022-10-26-Reading:-Clean-Architecture', aC: 'Reading: Clean Architecture'},
+		{y: '2022-11-10-c4-vs', aC: 'C4 Vs'},
+		{y: '2022-12-10-Designing-A-Type', aC: 'Designing A Type'}
 	]);
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
@@ -18305,7 +18306,7 @@ var $author$project$Post$main = A2(
 											$elm$core$List$map,
 											function (_v1) {
 												var title = _v1.aC;
-												var path = _v1.z;
+												var path = _v1.y;
 												return A2(
 													$elm$html$Html$li,
 													_List_Nil,
@@ -18323,7 +18324,7 @@ var $author$project$Post$main = A2(
 												A2(
 													$elm$core$List$sortBy,
 													function (_v0) {
-														var path = _v0.z;
+														var path = _v0.y;
 														return path;
 													},
 													$author$project$Generated$Toc$posts)))))))),
