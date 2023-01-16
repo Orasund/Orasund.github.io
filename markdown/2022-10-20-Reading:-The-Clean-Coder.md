@@ -10,7 +10,7 @@
 
 > You ought to be able to describe all 24 patterns in the GOF book and have a working knowledge of many of the patterns in the POSA books.
 
--> Really not sure about this one. I have very strong feeling aobut GOF and just seeing that POSA has 4 books, with nearly now real reviews or cretique on the subject, im not so sure about this.
+-> Really not sure about this one. I have very strong feeling aobut GOF and just seeing that POSA has 4 books, with nearly no real reviews or cretique on the subject, im not so sure about this.
 
 > You should know the SOLID principles
 
@@ -21,3 +21,18 @@
 * **Liskov Substitution Principle** - FP does not have Inheritance, so this is always true
 * **Interface Segregation Principle** - Still holds true for FP: Keep interfaces small so that users don’t end up depending on things they don’t need.
 * **Dependency Inversion Principle** - It turns out that for FP this principle is natural by design. Function composition and Higher-order functions come in handy here, allowing to swap the implementation of concrete details when needed.
+
+# Chapter 4 - Coding
+
+> Much has been written about the hyper-productive state known as “flow.”
+Some programmers call it “the Zone.”
+
+> Avoid the Zone. This state of consciousness is not really hyper-productive and is
+certainly not infallible. It’s really just a mild meditative state in which
+certain rational faculties are diminished in favor of a sense of speed.
+
+> Nowadays when I feel myself slipping into the Zone, I walk away for a few
+minutes. I clear my head by answering a few emails or looking at some
+tweets.
+
+-> I'm really not seeing his point there. I do not have the feeling that the quality sufferes when im in the flow. In the contrary, the friction between my thoughts and the implementation of those thought is less than none. That does not mean that my thoughts are perfect, and yes errors still happen. But the flow is more to get an idea down onto paper. Sometimes im also in the flow, while doing test-coverage. It quite a different type of flow, more like a trance, but still i never have experienced the quality of my code to drop during that time.
