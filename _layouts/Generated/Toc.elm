@@ -18,4 +18,5 @@ posts =
   , {path = "2022-10-26-Reading:-Clean-Architecture", title = "Reading: Clean Architecture"}
   , {path = "2022-11-10-c4-vs", title = "C4 Vs"}
   , {path = "2022-12-10-Designing-A-Type", title = "Designing A Type"}
+  , {path = "2023-02-15-Writing-View-APIs", title = "Writing View APIs"}
   ]

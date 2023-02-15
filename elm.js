@@ -5189,7 +5189,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {cf: fragment, ci: host, y: path, cx: port_, cA: protocol, cB: query};
+		return {cf: fragment, ci: host, x: path, cx: port_, cA: protocol, cB: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -12484,7 +12484,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines = function
 var $dillonkearns$elm_markdown$Markdown$InlineParser$Match = $elm$core$Basics$identity;
 var $dillonkearns$elm_markdown$Markdown$InlineParser$prepareChildMatch = F2(
 	function (parentMatch, childMatch) {
-		return {j: childMatch.j - parentMatch.x, v: childMatch.v, l: childMatch.l - parentMatch.x, n: childMatch.n, C: childMatch.C - parentMatch.x, x: childMatch.x - parentMatch.x, p: childMatch.p};
+		return {j: childMatch.j - parentMatch.y, v: childMatch.v, l: childMatch.l - parentMatch.y, n: childMatch.n, C: childMatch.C - parentMatch.y, y: childMatch.y - parentMatch.y, p: childMatch.p};
 	});
 var $dillonkearns$elm_markdown$Markdown$InlineParser$addChild = F2(
 	function (parentMatch, childMatch) {
@@ -12497,7 +12497,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$addChild = F2(
 			l: parentMatch.l,
 			n: parentMatch.n,
 			C: parentMatch.C,
-			x: parentMatch.x,
+			y: parentMatch.y,
 			p: parentMatch.p
 		};
 	});
@@ -12509,7 +12509,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$organizeChildren = function
 		l: match.l,
 		n: match.n,
 		C: match.C,
-		x: match.x,
+		y: match.y,
 		p: match.p
 	};
 };
@@ -12969,7 +12969,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$normalMatch = function (tex
 		l: 0,
 		n: $dillonkearns$elm_markdown$Markdown$Helpers$formatStr(text),
 		C: 0,
-		x: 0,
+		y: 0,
 		p: $dillonkearns$elm_markdown$Markdown$InlineParser$NormalType
 	};
 };
@@ -12982,7 +12982,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$parseTextMatch = F3(
 			l: matchModel.l,
 			n: matchModel.n,
 			C: matchModel.C,
-			x: matchModel.x,
+			y: matchModel.y,
 			p: matchModel.p
 		};
 		if (!parsedMatches.b) {
@@ -14009,7 +14009,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$isStrikethroughTokenPair = 
 var $dillonkearns$elm_markdown$Markdown$InlineParser$HardLineBreakType = {$: 1};
 var $dillonkearns$elm_markdown$Markdown$InlineParser$tokenToMatch = F2(
 	function (token, type_) {
-		return {j: token.c + token.bx, v: _List_Nil, l: token.c, n: '', C: 0, x: 0, p: type_};
+		return {j: token.c + token.bx, v: _List_Nil, l: token.c, n: '', C: 0, y: 0, p: type_};
 	});
 var $dillonkearns$elm_markdown$Markdown$InlineParser$lineBreakTTM = F5(
 	function (remaining, tokens, matches, refs, rawText) {
@@ -14802,7 +14802,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$tokenPairToMatch = F7(
 			A3($elm$core$String$slice, textStart, textEnd, rawText));
 		var start = openToken.c;
 		var end = closeToken.c + closeToken.bx;
-		var match = {j: end, v: _List_Nil, l: start, n: text, C: textEnd, x: textStart, p: type_};
+		var match = {j: end, v: _List_Nil, l: start, n: text, C: textEnd, y: textStart, p: type_};
 		var matches = A2(
 			$elm$core$List$map,
 			function (_v0) {
@@ -14810,7 +14810,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$tokenPairToMatch = F7(
 				return A2($dillonkearns$elm_markdown$Markdown$InlineParser$prepareChildMatch, match, matchModel);
 			},
 			A4($dillonkearns$elm_markdown$Markdown$InlineParser$tokensToMatches, innerTokens, _List_Nil, references, rawText));
-		return {j: end, v: matches, l: start, n: text, C: textEnd, x: textStart, p: type_};
+		return {j: end, v: matches, l: start, n: text, C: textEnd, y: textStart, p: type_};
 	});
 var $dillonkearns$elm_markdown$Markdown$InlineParser$tokensToMatches = F4(
 	function (tokens, matches, references, rawText) {
@@ -18093,22 +18093,23 @@ var $author$project$Page$parseBlocks = function (s) {
 };
 var $author$project$Generated$Toc$posts = _List_fromArray(
 	[
-		{y: '2022-05-29-Reading:-The-Pragmatic-Programmer', aC: 'Reading: The Pragmatic Programmer'},
-		{y: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
-		{y: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
-		{y: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
-		{y: '2022-10-05-simple-software', aC: 'Simple Software'},
-		{y: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
-		{y: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
-		{y: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
-		{y: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
-		{y: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
-		{y: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
-		{y: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'},
-		{y: '2022-10-20-Reading:-The-Clean-Coder', aC: 'Reading: The Clean Coder'},
-		{y: '2022-10-26-Reading:-Clean-Architecture', aC: 'Reading: Clean Architecture'},
-		{y: '2022-11-10-c4-vs', aC: 'C4 Vs'},
-		{y: '2022-12-10-Designing-A-Type', aC: 'Designing A Type'}
+		{x: '2022-05-29-Reading:-The-Pragmatic-Programmer', aC: 'Reading: The Pragmatic Programmer'},
+		{x: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
+		{x: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
+		{x: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
+		{x: '2022-10-05-simple-software', aC: 'Simple Software'},
+		{x: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
+		{x: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
+		{x: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
+		{x: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
+		{x: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
+		{x: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
+		{x: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'},
+		{x: '2022-10-20-Reading:-The-Clean-Coder', aC: 'Reading: The Clean Coder'},
+		{x: '2022-10-26-Reading:-Clean-Architecture', aC: 'Reading: Clean Architecture'},
+		{x: '2022-11-10-c4-vs', aC: 'C4 Vs'},
+		{x: '2022-12-10-Designing-A-Type', aC: 'Designing A Type'},
+		{x: '2023-02-15-Writing-View-APIs', aC: 'Writing View APIs'}
 	]);
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
@@ -18306,7 +18307,7 @@ var $author$project$Post$main = A2(
 											$elm$core$List$map,
 											function (_v1) {
 												var title = _v1.aC;
-												var path = _v1.y;
+												var path = _v1.x;
 												return A2(
 													$elm$html$Html$li,
 													_List_Nil,
@@ -18324,7 +18325,7 @@ var $author$project$Post$main = A2(
 												A2(
 													$elm$core$List$sortBy,
 													function (_v0) {
-														var path = _v0.y;
+														var path = _v0.x;
 														return path;
 													},
 													$author$project$Generated$Toc$posts)))))))),

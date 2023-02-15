@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Wed, 15 Feb 2023 19:13:28 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 15 Feb 2023 19:57:39 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -328,6 +328,23 @@ But whenever i do, I actually want a more general implementation that can use an
 So I'd like to use this opportunity to discuss different approaches to the problem and the benefits of different designs. After that I might go and actually implement it, but that's not part of this article.
 
 For each implementation we will first look at the data type,...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Writing View APIs]]></title>
+            <link>https://orasund.github.io/posts/2023-02-15-Writing-View-APIs</link>
+            <guid>https://orasund.github.io/posts/2023-02-15-Writing-View-APIs</guid>
+            <pubDate>Wed, 15 Feb 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[I recently stumpled appon my old version of elm-ui-widgets and started thinking.
+Over the span of 4 year my style of programming views changed and it was interesting to see my mindshift.
+
+We will now use the example of a dialog window to see and appraoch it from different directions.
+
+> A Dialog is a pop-up window that overlays everything else.
+
+A dialog maybe have a shade that makes the background less visible.
+And the shade might be clickable. If so, then the dialog should close again.
+
+I'd al...]]></description>
         </item>
     </channel>
 </rss>
