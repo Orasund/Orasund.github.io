@@ -4,7 +4,7 @@
         <title>Functional Fieldnotes</title>
         <link>https://orasund.github.io/posts</link>
         <description>Functional Fieldnotes</description>
-        <lastBuildDate>Mon, 20 Mar 2023 10:25:35 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 20 Mar 2023 10:29:51 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Elmstatic</generator>
         <language>en</language>
@@ -345,6 +345,34 @@ A dialog maybe have a shade that makes the background less visible.
 And the shade might be clickable. If so, then the dialog should close again.
 
 I'd al...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Refresher On Vue]]></title>
+            <link>https://orasund.github.io/posts/2023-03-20-Refresher-on-Vue</link>
+            <guid>https://orasund.github.io/posts/2023-03-20-Refresher-on-Vue</guid>
+            <pubDate>Mon, 20 Mar 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[https://vuejs.org/guide
+
+Getting Started
+
+Introduction
+
+For a functional style, one should use the Composition API, however it is a bit trickier to get started.
+Option API does not really use Types, where as the Composition API does.
+
+> Go with Composition API + Single-File Components if you plan to build full applications with Vue.
+
+Essentials
+
+Creating an Application
+
+> An application instance won't render anything until its .mount() method is called.
+
+Template
+
+{{in text}}
+
+v-html:"injecting ...]]></description>
         </item>
     </channel>
 </rss>
