@@ -25,3 +25,5 @@ Option API does not really use Types, where as the Composition API does.
 
 `:id="shortcut for bind`
 
+> Functions called inside binding expressions will be called every time the component updates, so they should not have any side effects, such as changing data or triggering asynchronous operations.
+
