@@ -5004,22 +5004,22 @@ var $elm$core$Array$builderToArray = F2(
 		if (!builder.s) {
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
-				$elm$core$Elm$JsArray$length(builder.u),
+				$elm$core$Elm$JsArray$length(builder.v),
 				$elm$core$Array$shiftStep,
 				$elm$core$Elm$JsArray$empty,
-				builder.u);
+				builder.v);
 		} else {
 			var treeLen = builder.s * $elm$core$Array$branchFactor;
 			var depth = $elm$core$Basics$floor(
 				A2($elm$core$Basics$logBase, $elm$core$Array$branchFactor, treeLen - 1));
-			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.w) : builder.w;
+			var correctNodeList = reverseNodeList ? $elm$core$List$reverse(builder.x) : builder.x;
 			var tree = A2($elm$core$Array$treeFromBuilder, correctNodeList, builder.s);
 			return A4(
 				$elm$core$Array$Array_elm_builtin,
-				$elm$core$Elm$JsArray$length(builder.u) + treeLen,
+				$elm$core$Elm$JsArray$length(builder.v) + treeLen,
 				A2($elm$core$Basics$max, 5, depth * $elm$core$Array$shiftStep),
 				tree,
-				builder.u);
+				builder.v);
 		}
 	});
 var $elm$core$Basics$idiv = _Basics_idiv;
@@ -5032,7 +5032,7 @@ var $elm$core$Array$initializeHelp = F5(
 				return A2(
 					$elm$core$Array$builderToArray,
 					false,
-					{w: nodeList, s: (len / $elm$core$Array$branchFactor) | 0, u: tail});
+					{x: nodeList, s: (len / $elm$core$Array$branchFactor) | 0, v: tail});
 			} else {
 				var leaf = $elm$core$Array$Leaf(
 					A3($elm$core$Elm$JsArray$initialize, $elm$core$Array$branchFactor, fromIndex, fn));
@@ -5189,7 +5189,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {cf: fragment, ci: host, x: path, cx: port_, cA: protocol, cB: query};
+		return {cf: fragment, ci: host, u: path, cx: port_, cA: protocol, cB: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -12454,7 +12454,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$matchToInline = function (_
 				$dillonkearns$elm_markdown$Markdown$Inline$Link,
 				url,
 				maybeTitle,
-				$dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines(match.v));
+				$dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines(match.w));
 		case 5:
 			var _v4 = _v1.a;
 			var url = _v4.a;
@@ -12463,7 +12463,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$matchToInline = function (_
 				$dillonkearns$elm_markdown$Markdown$Inline$Image,
 				url,
 				maybeTitle,
-				$dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines(match.v));
+				$dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines(match.w));
 		case 6:
 			var model = _v1.a;
 			return $dillonkearns$elm_markdown$Markdown$Inline$HtmlInline(model);
@@ -12472,10 +12472,10 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$matchToInline = function (_
 			return A2(
 				$dillonkearns$elm_markdown$Markdown$Inline$Emphasis,
 				length,
-				$dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines(match.v));
+				$dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines(match.w));
 		default:
 			return $dillonkearns$elm_markdown$Markdown$Inline$Strikethrough(
-				$dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines(match.v));
+				$dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines(match.w));
 	}
 };
 var $dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines = function (matches) {
@@ -12484,16 +12484,16 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$matchesToInlines = function
 var $dillonkearns$elm_markdown$Markdown$InlineParser$Match = $elm$core$Basics$identity;
 var $dillonkearns$elm_markdown$Markdown$InlineParser$prepareChildMatch = F2(
 	function (parentMatch, childMatch) {
-		return {j: childMatch.j - parentMatch.y, v: childMatch.v, l: childMatch.l - parentMatch.y, n: childMatch.n, C: childMatch.C - parentMatch.y, y: childMatch.y - parentMatch.y, p: childMatch.p};
+		return {j: childMatch.j - parentMatch.y, w: childMatch.w, l: childMatch.l - parentMatch.y, n: childMatch.n, C: childMatch.C - parentMatch.y, y: childMatch.y - parentMatch.y, p: childMatch.p};
 	});
 var $dillonkearns$elm_markdown$Markdown$InlineParser$addChild = F2(
 	function (parentMatch, childMatch) {
 		return {
 			j: parentMatch.j,
-			v: A2(
+			w: A2(
 				$elm$core$List$cons,
 				A2($dillonkearns$elm_markdown$Markdown$InlineParser$prepareChildMatch, parentMatch, childMatch),
-				parentMatch.v),
+				parentMatch.w),
 			l: parentMatch.l,
 			n: parentMatch.n,
 			C: parentMatch.C,
@@ -12505,7 +12505,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$organizeChildren = function
 	var match = _v4;
 	return {
 		j: match.j,
-		v: $dillonkearns$elm_markdown$Markdown$InlineParser$organizeMatches(match.v),
+		w: $dillonkearns$elm_markdown$Markdown$InlineParser$organizeMatches(match.w),
 		l: match.l,
 		n: match.n,
 		C: match.C,
@@ -12965,7 +12965,7 @@ var $dillonkearns$elm_markdown$Markdown$Helpers$formatStr = function (str) {
 var $dillonkearns$elm_markdown$Markdown$InlineParser$normalMatch = function (text) {
 	return {
 		j: 0,
-		v: _List_Nil,
+		w: _List_Nil,
 		l: 0,
 		n: $dillonkearns$elm_markdown$Markdown$Helpers$formatStr(text),
 		C: 0,
@@ -12978,7 +12978,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$parseTextMatch = F3(
 		var matchModel = _v2;
 		var updtMatch = {
 			j: matchModel.j,
-			v: A3($dillonkearns$elm_markdown$Markdown$InlineParser$parseTextMatches, matchModel.n, _List_Nil, matchModel.v),
+			w: A3($dillonkearns$elm_markdown$Markdown$InlineParser$parseTextMatches, matchModel.n, _List_Nil, matchModel.w),
 			l: matchModel.l,
 			n: matchModel.n,
 			C: matchModel.C,
@@ -14009,7 +14009,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$isStrikethroughTokenPair = 
 var $dillonkearns$elm_markdown$Markdown$InlineParser$HardLineBreakType = {$: 1};
 var $dillonkearns$elm_markdown$Markdown$InlineParser$tokenToMatch = F2(
 	function (token, type_) {
-		return {j: token.c + token.bx, v: _List_Nil, l: token.c, n: '', C: 0, y: 0, p: type_};
+		return {j: token.c + token.bx, w: _List_Nil, l: token.c, n: '', C: 0, y: 0, p: type_};
 	});
 var $dillonkearns$elm_markdown$Markdown$InlineParser$lineBreakTTM = F5(
 	function (remaining, tokens, matches, refs, rawText) {
@@ -14802,7 +14802,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$tokenPairToMatch = F7(
 			A3($elm$core$String$slice, textStart, textEnd, rawText));
 		var start = openToken.c;
 		var end = closeToken.c + closeToken.bx;
-		var match = {j: end, v: _List_Nil, l: start, n: text, C: textEnd, y: textStart, p: type_};
+		var match = {j: end, w: _List_Nil, l: start, n: text, C: textEnd, y: textStart, p: type_};
 		var matches = A2(
 			$elm$core$List$map,
 			function (_v0) {
@@ -14810,7 +14810,7 @@ var $dillonkearns$elm_markdown$Markdown$InlineParser$tokenPairToMatch = F7(
 				return A2($dillonkearns$elm_markdown$Markdown$InlineParser$prepareChildMatch, match, matchModel);
 			},
 			A4($dillonkearns$elm_markdown$Markdown$InlineParser$tokensToMatches, innerTokens, _List_Nil, references, rawText));
-		return {j: end, v: matches, l: start, n: text, C: textEnd, y: textStart, p: type_};
+		return {j: end, w: matches, l: start, n: text, C: textEnd, y: textStart, p: type_};
 	});
 var $dillonkearns$elm_markdown$Markdown$InlineParser$tokensToMatches = F4(
 	function (tokens, matches, references, rawText) {
@@ -18093,23 +18093,24 @@ var $author$project$Page$parseBlocks = function (s) {
 };
 var $author$project$Generated$Toc$posts = _List_fromArray(
 	[
-		{x: '2022-05-29-Reading:-The-Pragmatic-Programmer', aC: 'Reading: The Pragmatic Programmer'},
-		{x: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
-		{x: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
-		{x: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
-		{x: '2022-10-05-simple-software', aC: 'Simple Software'},
-		{x: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
-		{x: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
-		{x: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
-		{x: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
-		{x: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
-		{x: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
-		{x: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'},
-		{x: '2022-10-20-Reading:-The-Clean-Coder', aC: 'Reading: The Clean Coder'},
-		{x: '2022-10-26-Reading:-Clean-Architecture', aC: 'Reading: Clean Architecture'},
-		{x: '2022-11-10-c4-vs', aC: 'C4 Vs'},
-		{x: '2022-12-10-Designing-A-Type', aC: 'Designing A Type'},
-		{x: '2023-02-15-Writing-View-APIs', aC: 'Writing View APIs'}
+		{u: '2022-05-29-Reading:-The-Pragmatic-Programmer', aC: 'Reading: The Pragmatic Programmer'},
+		{u: '2022-07-27-Terminology-Overview', aC: 'Terminology Overview'},
+		{u: '2022-09-18-Tracery-Language', aC: 'Tracery Language'},
+		{u: '2022-09-22-Some-Thoughts-on-TDD', aC: 'Some Thoughts On TDD'},
+		{u: '2022-10-05-simple-software', aC: 'Simple Software'},
+		{u: '2022-10-06-exploring-monads', aC: 'Exploring Monads'},
+		{u: '2022-10-06-functional-design-patterns', aC: 'Functional Design Patterns'},
+		{u: '2022-10-08-investigating-design-patterns', aC: 'Investigating Design Patterns'},
+		{u: '2022-10-11-Relearn-CSS', aC: 'Relearn CSS'},
+		{u: '2022-10-11-formal-methods,-type-theory-and-the-real-world', aC: 'Formal Methods, Type Theory And The Real World'},
+		{u: '2022-10-19-Comparing-Elm-With-Kotlin', aC: 'Comparing Elm With Kotlin'},
+		{u: '2022-10-19-Reading:-Clean-Code', aC: 'Reading: Clean Code'},
+		{u: '2022-10-20-Reading:-The-Clean-Coder', aC: 'Reading: The Clean Coder'},
+		{u: '2022-10-26-Reading:-Clean-Architecture', aC: 'Reading: Clean Architecture'},
+		{u: '2022-11-10-c4-vs', aC: 'C4 Vs'},
+		{u: '2022-12-10-Designing-A-Type', aC: 'Designing A Type'},
+		{u: '2023-02-15-Writing-View-APIs', aC: 'Writing View APIs'},
+		{u: '2023-03-20-Refresher-on-Vue', aC: 'Refresher On Vue'}
 	]);
 var $elm$core$String$concat = function (strings) {
 	return A2($elm$core$String$join, '', strings);
@@ -18307,7 +18308,7 @@ var $author$project$Post$main = A2(
 											$elm$core$List$map,
 											function (_v1) {
 												var title = _v1.aC;
-												var path = _v1.x;
+												var path = _v1.u;
 												return A2(
 													$elm$html$Html$li,
 													_List_Nil,
@@ -18325,7 +18326,7 @@ var $author$project$Post$main = A2(
 												A2(
 													$elm$core$List$sortBy,
 													function (_v0) {
-														var path = _v0.x;
+														var path = _v0.u;
 														return path;
 													},
 													$author$project$Generated$Toc$posts)))))))),
