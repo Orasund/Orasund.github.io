@@ -47,3 +47,7 @@ Use `ref` over `reactive`. `ref` will always update the view, where as `reactive
 ## Conditional Rendering
 
 > Generally speaking, v-if has higher toggle costs while v-show has higher initial render costs. So prefer v-show if you need to toggle something very often, and prefer v-if if the condition is unlikely to change at runtime.
+
+## List Rendering
+
+`v-model` can be used on inputs of different types, <textarea>, and <select> elements.
