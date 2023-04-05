@@ -6,7 +6,7 @@ which words you use and how you can combine your indiviual programming styles in
 
 I now present ten programming practices, that i consider a good set of rules that make things generally easier without much tradeoff.
 
-## 1. Keep it stupid and simple
+## 1. Keep it simple and stupid
 
 You might feel inclined to write a perfect algorithm, that solves your problem to perfection.
 It might be the perfect fit for this one design pattern you always wanted to used at some point.
@@ -35,3 +35,16 @@ The resulting algorithm should really be as straight forward as possible. A juni
 For the places where you might need a trick, you explain what trick you are using and why.
 This should be enough for any developer to really be able to maintain the code.
 
+## 2. The scout rule - Leave the coder cleaner than before
+
+You always write the cleanest code possible - of course you do.
+But you can't enforce the same for all your team members.
+You only have that much time and its simply impossible to look over every Pull Request.
+
+That's where the scout rule comes to the rescue and really steals the show:
+
+Whenever you encoder some bad code - just clean it up a bit. Most of the time you already did too much. The moment you ask yourself if you might rewrite this one function, you might already go a bit overboard. Think simple: whats the smallest change that would make the biggest impact?
+
+It also does not have to just be you cleaning up. Your team can help. A junior developer might not spot bad code right away or might start refactoring parts that where perfectly fine - but these refactors most often start a conversation with the junior developer. And you can be sure, they will definetly learn and profit from it. The next time they encounter the same code smell, they will definelty know what to do.
+
+Now, that you and your team pratice the scout rule, you might even notice that you don't have to always write perfectly clean code. It's okey to just quickly get the idea out and only later come back and clean it up.
