@@ -19,4 +19,12 @@ The first chapter covers everything to make a language turing complete. The exam
 
 # 2. Building Abstractions with Data
 
+In the second chapter we define tuple as our primary data. It can be defined as
+
+``` javascript
+const tuple = (a,b) => (f) => f(a,b)
+const head = (t) => t((a,b) => a)
+const tail = (t) => t((a,b) => b)
+```
+
 ## Hierarchical Data and the Closure Property --Bookmark
