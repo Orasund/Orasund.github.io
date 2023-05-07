@@ -16,3 +16,7 @@ when introducing higher order function, the book uses named functions instead of
 ## Conclusion
 
 The first chapter covers everything to make a language turing complete. The example are standard textbook examples.
+
+# 2. Building Abstractions with Data
+
+## Hierarchical Data and the Closure Property --Bookmark
