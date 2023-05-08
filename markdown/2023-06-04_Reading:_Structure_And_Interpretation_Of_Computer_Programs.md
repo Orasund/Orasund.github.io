@@ -19,12 +19,25 @@ The first chapter covers everything to make a language turing complete. The exam
 
 # 2. Building Abstractions with Data
 
-In the second chapter we define tuple as our primary data. It can be defined as
+In the second chapter we define pair as our primary data. It can be defined as
 
 ``` javascript
-const tuple = (a,b) => (f) => f(a,b)
+const pair = (a,b) => (f) => f(a,b)
 const head = (t) => t((a,b) => a)
 const tail = (t) => t((a,b) => b)
 ```
 
-## Hierarchical Data and the Closure Property --Bookmark
+We also define list using the pair implementation
+
+``` javascript
+const emptyList = null
+const cons = (e,list) => pair(e,list) 
+```
+
+and trees by using list as elements of lists.
+
+Next they started defining a painter using matricies. With the painter we can define different operations on images.
+
+
+
+## 2.3 Symbolic Data --Bookmark
