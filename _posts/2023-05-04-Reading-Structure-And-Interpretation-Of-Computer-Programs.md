@@ -1,5 +1,5 @@
 ---
-title: "Reading: Structure And Interpretation Of Computer Programs"
+title: "Reading Structure And Interpretation Of Computer Programs"
 tags: []
 ---
 # 1. Building Abstractions with Functions

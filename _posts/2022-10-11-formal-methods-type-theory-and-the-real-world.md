@@ -1,5 +1,5 @@
 ---
-title: "Formal Methods, Type Theory And The Real World"
+title: "Formal Methods Type Theory And The Real World"
 tags: [elm,functional programming]
 ---
 While studing at the university, I had the feeling, that there was this perfect solution out there, how to validate code. And the industry is just not seeing it.

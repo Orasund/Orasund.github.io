@@ -1,5 +1,5 @@
 ---
-title: "Watching: The Functional Programmers Toolkit"
+title: "Watching The Functional Programmers Toolkit"
 tags: [monad]
 ---
 https://www.youtube.com/watch?v=Nrp_LZ-XGsY

@@ -1,5 +1,5 @@
 ---
-title: "Reading: Cognitive Loads In Programming"
+title: "Reading Cognitive Loads In Programming"
 tags: []
 ---
 https://rpeszek.github.io/posts/2022-08-30-code-cognitiveload.html

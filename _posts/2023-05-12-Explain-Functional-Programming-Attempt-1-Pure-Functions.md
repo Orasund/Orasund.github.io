@@ -1,5 +1,5 @@
 ---
-title: "Explain Functional Programming: Attempt 1 Pure Functions"
+title: "Explain Functional Programming Attempt 1 Pure Functions"
 tags: [functional programming]
 ---
 **About this Series**

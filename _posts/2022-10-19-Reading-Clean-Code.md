@@ -1,5 +1,5 @@
 ---
-title: "Reading: Clean Code"
+title: "Reading Clean Code"
 tags: [functional programming,clean code]
 ---
 [Video: Hot Garbage: Clean Code Is Dead
