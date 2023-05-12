@@ -1,3 +1,7 @@
+---
+title: "Functional Geekery"
+tags: [functional programming,clean code]
+---
 https://www.functionalgeekery.com/
 
 # Episode 1 – Robert C. Martin (Author of Clean Code)

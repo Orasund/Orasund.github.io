@@ -22,5 +22,8 @@ posts =
   , {path = "2023-03-20-Refresher-on-Vue", title = "Refresher On Vue"}
   , {path = "2023-04-03-Watching:-The-Functional-Programmers-Toolkit", title = "Watching: The Functional Programmers Toolkit"}
   , {path = "2023-04-05-Three-programming-practices-for-working-in-teams", title = "Three Programming Practices For Working In Teams"}
-  , {path = "2023-05-12_Explain_Functional_Programming:_Attempt_1_-_Pure_Functions", title = "_Pure_Functions"}
+  , {path = "2023-05-02-Functional-Geekery", title = "Functional Geekery"}
+  , {path = "2023-05-04-Reading:-Structure-And-Interpretation-Of-Computer-Programs", title = "Reading: Structure And Interpretation Of Computer Programs"}
+  , {path = "2023-05-12-Explain-Functional-Programming:-Attempt-1-Pure-Functions", title = "Explain Functional Programming: Attempt 1 Pure Functions"}
+  , {path = "2023-05-12-Reading:-Cognitive-Loads-in-Programming", title = "Reading: Cognitive Loads In Programming"}
   ]
