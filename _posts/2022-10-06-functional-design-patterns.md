@@ -1,13 +1,15 @@
 ---
 title: "Functional Design Patterns"
-tags: [functional programming,monad,state machine]
+tags: [Functional Programming]
 ---
+# Functional Design Patterns
+
 There is this myth, that functional programming does not have any design patterns. [See Functional Design Patterns by Scott Wlaschin](https://www.youtube.com/watch?v=srQt1NAHYC0)
 
 While this might hold for some of the more known patterns, it is definitely not true in general.
 Design Patterns for Functional programming are generally more abstract, hard to pin it down to a use case. I would see it more like a set of tools that you can use, but don't have to.
 
-# Monad
+## Monad
 
 A monad is a fancy word for a data structure with an `andThen` function:
 
@@ -25,7 +27,7 @@ An example for a monad would be a list (andThen = flatMap).
 
 Main use for Monads is doing effects. Famous monads are: Reader monad, writer monad,IO monad(Reader + Writer), lense monad
 
-# State Machines
+## State Machines
 
 Basic idea is to define an algebraic data type that specifies allows state transitions and to then have a run function that can manipulate state base on an input:
 
@@ -47,7 +49,7 @@ step : (State,List Msg) -> (State,List Msg)
 
 Side note: `(State,List Msg)` is an IO monad. This is because list is a monad and it both reads and writes `State`.
 
-# Domain Specific Languages
+## Domain Specific Languages
 
 A DSL is very powerful. Its number one selling points should be: "A Langauges tailed to your exact company and your use case." Its the highest of all APIs, because you can actually program in it.
 

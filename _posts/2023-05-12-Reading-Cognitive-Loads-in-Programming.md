@@ -2,6 +2,8 @@
 title: "Reading Cognitive Loads In Programming"
 tags: []
 ---
+# Reading: Cognitive Loads in Programming
+
 https://rpeszek.github.io/posts/2022-08-30-code-cognitiveload.html
 
 > Cognitive load theory defines cognitive load as the amount of information that working memory holds at one time. The idea is that the human brain is limited in that capacity. Psychologists have identified the load to be about 3-52 “units of information” (also called “chunks”). This space appears to be quite limited.

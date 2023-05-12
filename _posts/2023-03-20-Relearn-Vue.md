@@ -1,25 +1,27 @@
 ---
-title: "Refresher On Vue"
+title: "Relearn Vue"
 tags: []
 ---
+# Relearn: Vue
+
 https://vuejs.org/guide
 
-# Getting Started
+## Getting Started
 
-## Introduction
+### Introduction
 
 For a functional style, one should use the Composition API, however it is a bit trickier to get started.
 Option API does not really use Types, where as the Composition API does.
 
 > Go with Composition API + Single-File Components if you plan to build full applications with Vue.
 
-# Essentials
+## Essentials
 
-## Creating an Application
+### Creating an Application
 
 > An application instance won't render anything until its .mount() method is called.
 
-## Template Syntax
+### Template Syntax
 
 `{{in text}}`
 
@@ -33,7 +35,7 @@ Option API does not really use Types, where as the Composition API does.
 
 > If your component has a someAttr property instead of someattr, your code won't work. Templates inside Single-File Components are not subject to this constraint.
 
-## Reactivity Fundamentals
+### Reactivity Fundamentals
 
 > The reactive() API has two limitations:
 > 
@@ -48,10 +50,10 @@ Use `ref` over `reactive`. `ref` will always update the view, where as `reactive
 
 > If a new ref is assigned to a property linked to an existing ref, it will replace the old ref
 
-## Conditional Rendering
+### Conditional Rendering
 
 > Generally speaking, v-if has higher toggle costs while v-show has higher initial render costs. So prefer v-show if you need to toggle something very often, and prefer v-if if the condition is unlikely to change at runtime.
 
-## List Rendering
+### List Rendering
 
 `v-model` can be used on inputs of different types, <textarea>, and <select> elements.

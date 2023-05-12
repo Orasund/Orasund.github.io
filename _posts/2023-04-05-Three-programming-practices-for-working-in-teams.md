@@ -1,7 +1,9 @@
 ---
 title: "Three Programming Practices For Working In Teams"
-tags: [clean code]
+tags: [Clean Code]
 ---
+# Three Programming Practices For Working in Teams
+
 If you work on your own, you can get away with quite a lot of things that one would otherwise consider bad practices.
 
 However, as soon as you work in a team things change. 

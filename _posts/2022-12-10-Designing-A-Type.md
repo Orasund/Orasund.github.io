@@ -1,7 +1,9 @@
 ---
 title: "Designing A Type"
-tags: [elm]
+tags: [Elm]
 ---
+# Designing A Type
+
 Whenever I write a game in Elm, i tend to use [JohnBugner/elm-bag](https://dark.elm.dmy.fr/packages/JohnBugner/elm-bag/latest/) at some point.
 But whenever i do, I actually want a more general implementation that can use any type as key.
 
@@ -11,7 +13,7 @@ So I'd like to use this opportunity to discuss different approaches to the probl
 
 For each implementation we will first look at the data type, then we will discuss three different functions: `empty`, `insert` and `toList`. We also consider variations and look into benefits or possible pitfalls.
 
-# Base Implementation
+## Base Implementation
 
 Let's start by a very basic implementation. I will purposefully try not to be smart about this, so that we than can discuss different implementations bases on this one.
 
@@ -57,7 +59,7 @@ type AnyBag comparable key =
 
 The second problem we might notice is that you always have to provide the same encoder and decoder and if you use the wrong function, you will get a wrong result. 
 
-# Type with Functions
+## Type with Functions
 
 An idea for how you could ensure that the encoder and decoder function always are the same, is to add them to the type definition itself.
 
@@ -134,7 +136,7 @@ insert a bag =
     |> Maybe.withDefault bag
 ```
 
-# Type with just the encoder
+## Type with just the encoder
 
 We have seen that the decoder could make some problems. So lets design a type that does not need a decoder.
 
@@ -197,7 +199,7 @@ isValid bag =
 
 This is of course a liability. We are all humans and humans tend to do stupid things. So now more then ever, we should make the type opaque to really ensure nobody can shoot themselves in the foot. However there are downsides to using opaque types. In particular nobody can extend your library without rewriting the type and who knows how long you intend to maintain your library.
 
-# Association Lists
+## Association Lists
 
 Up until this point we assumed that we are really needing a dictionary, however for small amounts of keys an association list may be faster.
 

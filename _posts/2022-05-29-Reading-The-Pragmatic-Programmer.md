@@ -1,15 +1,17 @@
 ---
 title: "Reading The Pragmatic Programmer"
-tags: []
+tags: [Book]
 ---
-# Chapter 5: Your Knowledge Portfolio (Page 37 in pdf)
+# Reading: The Pragmatic Programmer
+
+## Chapter 5: Your Knowledge Portfolio (Page 37 in pdf)
 
 Goals
 
 * One new language every year -> exercism
 * One technical book each quarter
 
-# Chapter 20: Code Generators
+## Chapter 20: Code Generators
 
 Write Code that writes Codes.
 

@@ -1,7 +1,9 @@
 ---
 title: "Writing View APIs"
-tags: [elm]
+tags: [Elm]
 ---
+# Opinion: Writing View API
+
 I recently stumpled appon my old version of [elm-ui-widgets](https://package.elm-lang.org/packages/Orasund/elm-ui-widgets/latest/) and started thinking.
 Over the span of 4 year my style of programming views changed and it was interesting to see my mindshift.
 
@@ -14,7 +16,7 @@ And the shade might be clickable. If so, then the dialog should close again.
 
 I'd also like to customize the shade and the content of the dialog.
 
-# 2019 - Components
+## 2019 - Components
 
 My first approach was done as part of a [game engine called pixelEngine](https://package.elm-lang.org/packages/Orasund/pixelengine/latest/).
 It looked something like this:
@@ -69,7 +71,7 @@ Html.div []
     model.secondDialog
 ```
 
-# 2020 - View Function
+## 2020 - View Function
 
 In 2020 I heared that one should not use components, but instead view functions are the way to go.
 However I had now idea how this should look like. So in the early version of [elm-ui-widgets](https://package.elm-lang.org/packages/Orasund/elm-ui-widgets/latest/)
@@ -109,7 +111,7 @@ Element.column
   ]
 ```
 
-# 2021 Multiple Modals
+## 2021 Multiple Modals
 
 In 2021 I started to notice that in nearly every application i wrote, there was an edge case where multiple dialogs would be present at the same time.
 And I always needed to only show the shade behind the top most modal so i grouped the dialogs and renamed it into multiModal.
@@ -160,7 +162,7 @@ Element.column
 
 We clearly have to do more and more work, but it's also far easier to customize things.
 
-# 2022 Just a Stack
+## 2022 Just a Stack
 
 In 2022 I started a new package called [elm-layout](https://package.elm-lang.org/packages/Orasund/elm-layout/latest/). The idea was to do as little as possible.
 And so implemented a function that displays element on top of eachother and nothing more.
