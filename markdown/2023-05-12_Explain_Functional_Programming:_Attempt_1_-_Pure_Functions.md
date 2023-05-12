@@ -36,7 +36,7 @@ Side effects are anything that changes something outside the function.
 `postUser` is a remote calls so that is definetly a side effects.
 But `getUser` while not modifying anything, it still triggers a process on a computer somewhere on the world.
 
-Now come a tricky question: Is `user.money -= 20;` a side effect?
+Now comes a tricky question: Is `user.money -= 20;` a side effect?
 One might argue that the user is defined inside the function, so modifing them is allowed.
 
 And that might be correct, but it actually just depends on how strict you define "pure".
