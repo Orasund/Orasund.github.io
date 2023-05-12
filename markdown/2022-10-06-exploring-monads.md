@@ -1,10 +1,12 @@
-# Categories
+# Exploring Monads
+
+## Categories
 
 > Categories are algebraically closed sets of functions.
 
 We are mostly interested in functions from Types to Types or in other words, in the Category of Types.
 
-# Functors
+## Functors
 
 A functor is a function from one category to another.
 
@@ -20,7 +22,7 @@ Example:
 map: (a -> b) -> Optional<a> -> Optional<b>
 ```
 
-# Semi-Group
+## Semi-Group
 
 A semi group has a combine function defined
 
@@ -34,7 +36,7 @@ Example would be:
 join: String -> String -> String
 ```
 
-# Monoid
+## Monoid
 
 A monoid is a structure where the following can be defined
 
@@ -52,7 +54,7 @@ combine: Int -> Int -> Int
 empty : Int
 ```
 
-# Monads
+## Monads
 
 A monad is a bit more complicated:
 

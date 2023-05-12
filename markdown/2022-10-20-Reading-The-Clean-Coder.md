@@ -1,3 +1,5 @@
+# Reading: The Clean Coder
+
 > QA should find nothing
 
 > You Must Know It Works
@@ -22,7 +24,7 @@
 * **Interface Segregation Principle** - Still holds true for FP: Keep interfaces small so that users don’t end up depending on things they don’t need.
 * **Dependency Inversion Principle** - It turns out that for FP this principle is natural by design. Function composition and Higher-order functions come in handy here, allowing to swap the implementation of concrete details when needed.
 
-# Chapter 4 - Coding
+## Chapter 4 - Coding
 
 > Much has been written about the hyper-productive state known as “flow.”
 Some programmers call it “the Zone.”

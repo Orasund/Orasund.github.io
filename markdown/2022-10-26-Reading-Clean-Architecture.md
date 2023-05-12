@@ -1,30 +1,32 @@
-# What is Design and Architecture
+# Reading: Clean Architecture
+
+## What is Design and Architecture
 
 > There is no difference between them. None at all.
 
 "Architecture" is used in context of high level. "Design" is more low level.
 
-# A Tale of two values
+## A Tale of two values
 
-# Paradigm Overview
+## Paradigm Overview
 
 Strucuted(Imperative) Programming, Object Oriented Programing and Functional Programming
 
-## Structured Programmings
+### Structured Programmings
 
 Not use `goto`, use `ifThenElse` and `while`/`for` instead.
 
-## Object Oriented Programming
+### Object Oriented Programming
 
 Functions and variables should be grouped by the Objects that they transform.
 
-## Functional Programming
+### Functional Programming
 
 Functions should not change existing values.
 
 > One of the most common compromises in regards to immutability is to separate the application into mutable and immutable components.
 
-### Event Sourcing
+#### Event Sourcing
 
 aka. Event Stream
 
@@ -32,7 +34,7 @@ Main Idea: Assume all events can be stored in a single list/stream.
 
 You might not actually store everything for eternity and you might need a lot of storage to do so, but as a benefit you can work completely with pure functions.
 
-# Design Principles
+## Design Principles
 
 aka SOLID Principles
 
@@ -40,7 +42,7 @@ Solid principles look at groupings. (in OOP Objects, in PF namespaces and types)
 
 SOLID Principles is about designing the interactions between groups - interfaces, types, compositions, inheritances.
 
-## Single Responsibility Principle
+### Single Responsibility Principle
 
 A group should only ever have one common attribute.
 
@@ -83,7 +85,7 @@ isHungry : Animal -> Bool
 isOpen : Building -> Bool
 ```
 
-## The Open-Closed Principle
+### The Open-Closed Principle
 
 External groups should not be able to change design decisions.
 
@@ -107,7 +109,7 @@ module World.Extra exposing (replaceAllAnimals)
 replaceAllAnimals : Animal -> World -> World
 ```
 
-## The Liskov substitution principle
+### The Liskov substitution principle
 
 This principle states that the implementation should not change for subtypes.
 
@@ -147,7 +149,7 @@ enter entity =
             Nothing
 ```
 
-## The Interface Segregation Principle
+### The Interface Segregation Principle
 
 groups should only contain as little as possible.
 
@@ -182,7 +184,7 @@ type EntitySort
     | Building { isOpen : Bool }
 ```
 
-# Component Principles
+## Component Principles
 
 Components are "files" of the program.
 
@@ -196,7 +198,7 @@ Adding a small feature should effect just a single file.
 
 > Classes and modules that tend to be reused together belong in the same component
 
-# What is Architecture?
+## What is Architecture?
 
-# BUSINESS RULES
+## BUSINESS RULES
 

@@ -1,7 +1,9 @@
+# Simple Software
+
 I would describe my programming philosophy as "creating simple software".
 Here is what i mean by that.
 
-# Keep it Simple and Stupid
+## Keep it Simple and Stupid
 
 There are a lot of programming paradims and trends floating around.
 But for actual, every day work these are often a complete overkill.
@@ -12,7 +14,7 @@ The part about keeping your programm stupid is meant in relation to your algorit
 Make thinks as dumb as possible. Find short cuts or ask if the requirements can be adjusted to make a solution easier.
 By restricting yourself so simple algorithms, you are forces to think of design decitions that really give you the money for their buck.
 
-# Functional First
+## Functional First
 
 Functional programming is a bit of a hidden gem.
 It provides you with a tool to build powerful programmings with simple fuctions.
@@ -22,7 +24,7 @@ However, functional is not always the best solution.
 Thats why we should be flexible enough to include some OOP whenever the functional apporach does not work.
 But personally i really do believe, that starting with a functional apprach will most often result in the best approach.
 
-# Types over Tests
+## Types over Tests
 
 Try to model as many requirements as much as possible directly in your types and models.
 And then you only write tests for the requirements that you can't describe by a type.
@@ -33,7 +35,7 @@ So for assuming you type system is complex enough, you can actually formulate yo
 
 In practice this only goes so far, but it really sells the point.
 
-# Refactoring is half the job
+## Refactoring is half the job
 
 Refactoring should always be part of the development process.
 Allowing refactoring to happen naturally, gives you a very agile and flexible code base.

@@ -1,3 +1,5 @@
+# Explain FP (Attempt 1): Pure Functions
+
 **About this Series**
 _I noticed that for some reason its really hard to explain functional programming in a couple of sentences without getting to technical or theoretical.
 I'd like to have a clear definition written down, one that I can show my colleges and that I can use to differentiate FP from OOP._
@@ -5,7 +7,7 @@ I'd like to have a clear definition written down, one that I can show my college
 _In this series I try to explain functional programming. 
 If my explaination falls apart, I have to start again but each time looking at it from a different persective._
 
-# Pure Functions
+## Pure Functions
 
 Functional Programming is about thinking and using pure functions.
 

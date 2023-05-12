@@ -1,10 +1,12 @@
+# Relearn CSS
+
 Lets [Learn CSS](https://web.dev/learn/css) in 2022.
 
-# Attribute selector
+## Attribute selector
 
 [Source](https://web.dev/learn/css/selectors/#attribute-selector)
 
-## [..]
+### [..]
 
 Did you know you could write
 
@@ -53,9 +55,9 @@ You can also do some pattern machting
 
 if you really wanna feel special.
 
-# Pseudo-elements
+## Pseudo-elements
 
-## ::first-letter
+### ::first-letter
 
 Heres some magic for you:
 
@@ -68,7 +70,7 @@ p::first-letter {
 
 this will make the first letter golden. like WOW.
 
-## ::first-line
+### ::first-line
 
 Need the first line?
 
@@ -81,7 +83,7 @@ p::first-line {
 
 Easy.
 
-## Other tricks
+### Other tricks
 
 Similarly, we have
 * `::backdrop` (for the backend of some element),
@@ -90,9 +92,9 @@ Similarly, we have
 * `::placeholder` for placeholder text in inputs and
 * `::cues` for subtitles in videos.
 
-# Pseudo-classses
+## Pseudo-classses
 
-## Some more tricks
+### Some more tricks
 
 Here some more pseudo classes: 
 
@@ -102,9 +104,9 @@ Here some more pseudo classes:
 * `:not` - for negativ selection
 * `:is` - for either or selection
 
-# Functions
+## Functions
 
-## var()
+### var()
 
 Writing Variables is easy.
 
@@ -118,7 +120,7 @@ Writing Variables is easy.
 }
 ```
 
-## attr()
+### attr()
 
 you can even get the value of an attribute.
 
@@ -128,7 +130,7 @@ a::after {
 }
 ```
 
-## url()
+### url()
 
 You can also fetch data from an url
 
@@ -138,7 +140,7 @@ You can also fetch data from an url
 }
 ```
 
-## calc()
+### calc()
 
 You can actually also do proper maths
 
@@ -148,7 +150,7 @@ You can actually also do proper maths
 }
 ```
 
-## min() and max()
+### min() and max()
 
 Taking minima and maxima of two values is also possible
 
@@ -159,7 +161,7 @@ Taking minima and maxima of two values is also possible
 }
 ```
 
-## polygon()
+### polygon()
 
 You can even clip items
 
@@ -169,7 +171,7 @@ You can even clip items
 }
 ```
 
-## scaleX() and scaleY()
+### scaleX() and scaleY()
 
 ```
 .my-element {

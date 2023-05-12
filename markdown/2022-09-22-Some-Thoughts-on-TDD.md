@@ -1,9 +1,11 @@
+# Some Thoughts on TDD
+
 tltr;
 * Make less tests with higher coverage.
 * Write that are more valuable than the time they take to run.
 * Use tests as requirements not as documentation.
 
-# What is TDD
+## What is TDD
 
 The core idea of TDD is to first write down your requirements as tests and then implement them. If all tests passed, then you can assume that you implemented a correct soluction.
 
@@ -16,7 +18,7 @@ This style is very hard to actually pull off, as you are required to actually ha
 
 Thats why the industry mostly uses TDD as a synonym for a high code coverage.
 
-# Reasons against TDD
+## Reasons against TDD
 
 From my experience the original intend of TDD was been completely lost:
 If someone says they develop test driven, then they don't mean that they start with test and that they see their tests as some form of specification.
@@ -44,14 +46,14 @@ My guess for a reason, why this might be the case, would be the more expressive 
 A type annotation is in a sense a proof (see Curry–Howard correspondence). So i somehow see a relation to the whole validate vs verify topic.
 But that a topic for another day.
 
-## Mocking leads to false assumtions
+### Mocking leads to false assumtions
 Mocking is needed to acutally archive TDD but this might result in false mocks. But writing tests without mocks can be done. The solution is to seperate effects from logic and then only test the logic. To tests effect we can use system tests.
 
-## Code Coverage of 80% does not come naturally
+### Code Coverage of 80% does not come naturally
 I've never seen anyone actually do TDD in a way where they end up with a code coverage of 80% by their first attempt. Most often you have around 50% by the first try, then check your code coverage and create the missing tests. Thats because a lot of tests are useless(Mocking a lot with no real data) or testing unwanted behaviour(Fail states).
 
-## Harder to refactor
+### Harder to refactor
 If you go for a bottom-up approach, then you are also directly testing implementation decitions. This means whenever you want to switch to a different implementation, you will have to adapt or rewrite all associated tests.
 
-## Longer Pipeline Time
+### Longer Pipeline Time
 A project with a code coverage of 80% or a bottom-up-TDD approach will take much longer as to complete the pipeline. This slows down development my a massive amount. It's not only that the CD/CI process takes longer, developers are thrown out of their flow if they have to wait 30 to 60min just to see if the PR is green or not.

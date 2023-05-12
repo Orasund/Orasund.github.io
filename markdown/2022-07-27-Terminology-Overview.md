@@ -1,6 +1,8 @@
+# Terminology Overview
+
 **MODERN** Terminology. If something is not here... maybe its outdated?
 
-# Code Structuring
+## Code Structuring
 
 * Test Driven Design (TDD)
 
@@ -20,7 +22,7 @@
 
   Group programms into domain specifc sections -> might be split into microservices later.
   
-# Writing Code
+## Writing Code
 
 * Functional Programming
 

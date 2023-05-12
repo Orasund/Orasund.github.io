@@ -1,4 +1,6 @@
-# 1. Building Abstractions with Functions
+# Reading: Structure And Interpretation Of Computer Programs
+
+## 1. Building Abstractions with Functions
 
 In the first chapter we define
 
@@ -13,11 +15,11 @@ substitution Model of a function := Beta reduction
 
 when introducing higher order function, the book uses named functions instead of unnamed lambda functions
 
-## Conclusion
+### Conclusion
 
 The first chapter covers everything to make a language turing complete. The example are standard textbook examples.
 
-# 2. Building Abstractions with Data
+## 2. Building Abstractions with Data
 
 In the second chapter we define pair as our primary data. It can be defined as
 
@@ -40,4 +42,4 @@ Next they started defining a painter using matricies. With the painter we can de
 
 
 
-## 2.3 Symbolic Data --Bookmark
+### 2.3 Symbolic Data --Bookmark

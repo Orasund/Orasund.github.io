@@ -1,3 +1,5 @@
+# Investigating Design Patterns
+
 There is this myth, that functional programming does not have any design patterns. [See Functional Design Patterns by Scott Wlaschin](https://www.youtube.com/watch?v=srQt1NAHYC0)
 
 I wanted to know myself if this is actually a valid statement and if not how many design pattern are actually outdated in the days of functional programming. My language of choice will be Elm.
