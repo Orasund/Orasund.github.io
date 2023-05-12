@@ -9,12 +9,9 @@ const parseTitle = name => {
         : { date: array[1], title: toTitleCase(array[2].replace(/-/g, " ")), path: array[0] }
 }
 
-const inputPath = path.normalize("markdown/")
+const inputPath = path.normalize("_markdown/")
 const outputPath = path.normalize("_posts/")
 const configPath = path.normalize("config.json")
-const elmFilesPath = path.normalize("_layouts/")
-const generatedModule = "Generated"
-const tocFileName = "Toc"
 const possibleTags = JSON.parse(fs.readFileSync(configPath)).tags
 
 const postNames = fs.readdirSync(inputPath)
@@ -23,7 +20,7 @@ fs.rmSync(outputPath, { recursive: true, force: true })
 fs.mkdirSync(outputPath)
 
 /*************************
- * create indiviual files
+ * create individual files
  * ***********************/
 postNames.forEach(name => {
     const post = fs.readFileSync(path.normalize(inputPath + "/" + name)).toString()
@@ -41,22 +38,3 @@ postNames.forEach(name => {
             )
     fs.writeFileSync(path.normalize(outputPath + "/" + name), content)
 })
-
-/*************************
- * create table of content
- * ***********************/
-const content =
-    "module " + generatedModule + "." + tocFileName + " exposing (..)\n"
-    + "\n"
-    + "\n"
-    + "posts =\n"
-    + "  [ " + postNames
-        .flatMap(it => {
-            const title = parseTitle(it)
-            return (title === null)
-                ? []
-                : ["{path = \"" + title.path + "\", title = \"" + title.title + "\"}\n"]
-        })
-        .join("  , ")
-    + "  ]"
-fs.writeFileSync(path.normalize(elmFilesPath + "/" + generatedModule + "/" + tocFileName + ".elm"), content)
