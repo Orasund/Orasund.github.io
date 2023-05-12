@@ -54,16 +54,6 @@ jobs:
           NO_ELM_TOOLING_INSTALL: 1
         run: npm ci
       
-      # Install tools from elm-tooling.json, unless we restored them from
-      # cache. package-lock.json and elm-tooling.json can change independently,
-      # so we need to install separately based on what was restored from cache.
-      # This is run even if we restored ~/.elm from cache to be 100% sure
-      # node_modules/.bin/ contains links to all your tools. `elm-tooling
-      # install` runs very fast when there’s nothing new to download so
-      # skipping the step doesn’t save much time.
-      - name: elm-tooling install
-        run: npx --no-install elm-tooling install
-      
       # Finally, run whatever you want.
       - name: generate Markdown
         run: node generate.js
