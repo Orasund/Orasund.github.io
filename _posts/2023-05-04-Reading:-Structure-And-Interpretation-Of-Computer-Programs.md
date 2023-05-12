@@ -1,3 +1,7 @@
+---
+title: "Reading: Structure And Interpretation Of Computer Programs"
+tags: []
+---
 # 1. Building Abstractions with Functions
 
 In the first chapter we define
