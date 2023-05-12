@@ -3,8 +3,7 @@ name: CI
 on:
   push:
     branches:
-       - "never"
-#      - "master"
+       - "master"
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -68,8 +67,6 @@ jobs:
       # Finally, run whatever you want.
       - name: generate Markdown
         run: node generate.js
-      - name: elmstatic build
-        run: npx --no-install elmstatic build
       - name: Commit files
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
