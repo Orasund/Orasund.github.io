@@ -11,8 +11,8 @@ const parseTitle = name => {
 
 const inputPath = path.normalize("_markdown/")
 const outputPath = path.normalize("_posts/")
-const configPath = path.normalize("config.json")
-const possibleTags = JSON.parse(fs.readFileSync(configPath)).tags
+const configPath = path.normalize("tags.json")
+const possibleTags = JSON.parse(fs.readFileSync(configPath))
 
 const postNames = fs.readdirSync(inputPath)
 
