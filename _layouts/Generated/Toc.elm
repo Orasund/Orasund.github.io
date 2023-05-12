@@ -20,4 +20,7 @@ posts =
   , {path = "2022-12-10-Designing-A-Type", title = "Designing A Type"}
   , {path = "2023-02-15-Writing-View-APIs", title = "Writing View APIs"}
   , {path = "2023-03-20-Refresher-on-Vue", title = "Refresher On Vue"}
+  , {path = "2023-04-03-Watching:-The-Functional-Programmers-Toolkit", title = "Watching: The Functional Programmers Toolkit"}
+  , {path = "2023-04-05-Three-programming-practices-for-working-in-teams", title = "Three Programming Practices For Working In Teams"}
+  , {path = "2023-05-12_Explain_Functional_Programming:_Attempt_1_-_Pure_Functions", title = "_Pure_Functions"}
   ]
