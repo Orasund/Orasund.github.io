@@ -1,4 +1,5 @@
 title: "Functional Fieldnotes"
+theme: minima
 asciidoc: {}
 asciidoctor:
   base_dir: :docdir
