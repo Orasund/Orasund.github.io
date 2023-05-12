@@ -1,5 +1,5 @@
 ---
-title: "Reading: The Clean Coder"
+title: "Reading The Clean Coder"
 tags: [functional programming]
 ---
 > QA should find nothing

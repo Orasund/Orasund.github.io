@@ -1,5 +1,5 @@
 ---
-title: "Reading: Clean Architecture"
+title: "Reading Clean Architecture"
 tags: [functional programming]
 ---
 # What is Design and Architecture
