@@ -44,6 +44,19 @@ Finally we look at how to define packages using tagged types and a lookup table 
 
 At the end we define our own type system to support subtyping.
 
-## passing messages to sub functions
+### passing messages to sub functions
 
 > This style of programming is called message passing. The name comes from the image that a data object is an entity that receives the requested operation name as a “message.”
+
+## 3. Modularity, Objects, and State
+
+In the third chapter we define mutability.
+
+We then model object by using stateful functions with subfunctions.
+
+
+We finish by defining a stream
+
+```
+stream = (head,() => computeTail () )
+```
