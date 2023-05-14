@@ -44,6 +44,23 @@ and trees by using list as elements of lists.
 
 Next they started defining a painter using matricies. With the painter we can define different operations on images.
 
+Finally we look at how to define packages using tagged types and a lookup table for packages to be "installed" in.
+
+At the end we define our own type system to support subtyping.
+
+### passing messages to sub functions
+
+> This style of programming is called message passing. The name comes from the image that a data object is an entity that receives the requested operation name as a “message.”
+
+## 3. Modularity, Objects, and State
+
+In the third chapter we define mutability.
+
+We then model object by using stateful functions with subfunctions.
 
 
-### 2.3 Symbolic Data --Bookmark
+We finish by defining a stream
+
+```
+stream = (head,() => computeTail () )
+```

@@ -24,3 +24,4 @@ https://github.com/fantasyland/fantasy-land and also https://github.com/puffnfre
 
 ## Episode 9 - William E. Byrd (Creator of miniKanren)
 
+## Episode 11 - Simon Peyton Jones
