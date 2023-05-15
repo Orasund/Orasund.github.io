@@ -16,8 +16,6 @@ Good Book to read: [Functional Javascript](https://www.amazon.com/gp/product/144
 
 https://github.com/fantasyland/fantasy-land and also https://github.com/puffnfresh/bilby.js
 
-## Episode 8 - Jessica Kerr
+## Episode 12 – Adi Bolboaca
 
-## Episode 9 - William E. Byrd (Creator of miniKanren)
-
-## Episode 11 - Simon Peyton Jones
+https://pharo.org/ (successor to Smalltalk)
