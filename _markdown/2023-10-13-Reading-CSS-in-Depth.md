@@ -25,3 +25,9 @@ globally set box-sizing to border-box
   box-sizing: inherit;
 }
 ```
+
+Use display: table for columns of equal height
+
+#### 3.2.3 Using min-height and max-height
+
+TODO
