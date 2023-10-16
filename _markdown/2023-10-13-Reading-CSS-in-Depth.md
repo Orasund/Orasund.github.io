@@ -28,6 +28,8 @@ globally set box-sizing to border-box
 
 Use display: table for columns of equal height
 
-#### 3.2.3 Using min-height and max-height
+## Part 2 - Mastering layout
+
+### 4.4 Media objects and block formatting contexts
 
 TODO
