@@ -30,6 +30,6 @@ Use display: table for columns of equal height
 
 ## Part 2 - Mastering layout
 
-### 4.4 Media objects and block formatting contexts
+### 5.2.1 Using the flex-basis property
 
 TODO
