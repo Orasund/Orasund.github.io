@@ -30,7 +30,7 @@ Use display: table for columns of equal height
 
 ## Part 2 - Mastering layout
 
-### 5.4  Alignment, spacing, and other details
+### 6.1  Web layout is here
 
 TODO
 
