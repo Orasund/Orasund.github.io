@@ -30,7 +30,7 @@ Use display: table for columns of equal height
 
 ## Part 2 - Mastering layout
 
-### 6.1  Web layout is here
+### 7 Positioning and stacking contexts
 
 TODO
 
