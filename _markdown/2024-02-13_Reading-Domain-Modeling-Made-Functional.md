@@ -37,4 +37,8 @@ Event Storming is a type of workshop where the participates define Events in the
 > * ‘New customer request received’
 > * ‘New customer registered’
 
+## Understanding the Domain
+
+### Documenting the Domain
+
 //TODO
