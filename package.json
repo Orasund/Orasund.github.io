@@ -1,9 +1,0 @@
-{
-  "private": true,
-  "name": "Orasund.github.io",
-  "scripts": {
-    "build": "node generate.js"
-  },
-  "devDependencies": {},
-  "dependencies": {}
-}
