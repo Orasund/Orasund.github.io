@@ -41,4 +41,13 @@ Event Storming is a type of workshop where the participates define Events in the
 
 ## A Functional Architecture
 
+> We stressed earlier that it is important to get the boundaries right, but of course, this is hard to do at the beginning of a project, and we should expect that the boundaries will change as we learn more about the domain. It’s a lot easier to refactor a monolith, so a good practice is build the system as a monolith initially, and refactor to decoupled containers only as needed.
+
+Who specifies the API?
+* shared kernel - Consumer and Supplier work on the API together (common lib)
+* consumer-driven - Consumer specifies the API and the Supplier implements it (One-way API)
+* conformist - The Supplier delivers the API that the consumer must work with it (Thrid-Party API)
+
+# Modeling the Domain
+
 //TODO
