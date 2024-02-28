@@ -39,6 +39,6 @@ Event Storming is a type of workshop where the participates define Events in the
 
 ## Understanding the Domain
 
-### Documenting the Domain
+## A Functional Architecture
 
 //TODO
