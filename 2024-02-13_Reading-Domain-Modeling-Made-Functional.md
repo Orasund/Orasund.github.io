@@ -47,7 +47,3 @@ Who specifies the API?
 * shared kernel - Consumer and Supplier work on the API together (common lib)
 * consumer-driven - Consumer specifies the API and the Supplier implements it (One-way API)
 * conformist - The Supplier delivers the API that the consumer must work with it (Thrid-Party API)
-
-# Modeling the Domain
-
-//TODO
